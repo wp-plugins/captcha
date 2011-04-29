@@ -5,10 +5,10 @@
  */
 /*
 Plugin Name: Captcha
-Plugin URI: 
+Plugin URI:  http://bestwebsoft.com/plugin/
 Description: Plugin Captcha intended to prove that the visitor is a human being and not a spam robot. Plugin asks the visitor to answer a math question.
 Author: BestWebSoft
-Version: 1.01
+Version: 1.02
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -43,7 +43,7 @@ $cptch_admin_fields_enable = array (
 $cptch_admin_fields_actions = array (
 		array( 'cptch_math_action_plus', 'Plus (+)', 'Plus' ),
 		array( 'cptch_math_action_minus', 'Minus (-)', 'Minus' ),
-		array( 'cptch_math_action_increase', 'Increase (*)', 'Increase' ),
+		array( 'cptch_math_action_increase', 'Multiply (*)', 'Increase' ),
 );
 
 // This fields for the 'Difficulty for CAPTCHA' block which is located at the admin setting captcha page
@@ -122,11 +122,10 @@ if( 1 == $cptch_options['cptch_comments_form'] ) {
 		add_action( 'comment_form_after_fields', 'cptch_comment_form');
 		add_action( 'comment_form_logged_in_after', 'cptch_comment_form');
 		add_filter( 'preprocess_comment', 'cptch_comment_post' );
-	} else {
-     // for WP before WP 3.0
-		add_action( 'comment_form', 'cptch_comment_form' );
-		add_filter( 'preprocess_comment', 'cptch_comment_post' );
 	}
+	// for WP before WP 3.0
+	add_action( 'comment_form', 'cptch_comment_form' );
+	add_filter( 'preprocess_comment', 'cptch_comment_post' );	
 }
 // Add captcha in the register form
 if( 1 == $cptch_options['cptch_register_form'] ) {
@@ -137,6 +136,34 @@ if( 1 == $cptch_options['cptch_register_form'] ) {
 if( 1 == $cptch_options['cptch_lost_password_form'] ) {
 	add_action( 'lostpassword_form', 'cptch_register_form' );
 	add_action( 'lostpassword_post', 'cptch_lostpassword_post', 10, 3 );
+}
+
+// adds "Settings" link to the plugin action page
+add_filter( 'plugin_action_links', 'cptch_plugin_action_links',10,2);
+
+//Additional links on the plugin page
+add_filter('plugin_row_meta', 'cptch_register_plugin_links',10,2);
+
+function cptch_plugin_action_links( $links, $file ) {
+		//Static so we don't call plugin_basename on every plugin row.
+	static $this_plugin;
+	if ( ! $this_plugin ) $this_plugin = plugin_basename(__FILE__);
+
+	if ( $file == $this_plugin ){
+			 $settings_link = '<a href="options-general.php?page=captcha/captcha.php">' . __('Settings', 'captcha') . '</a>';
+			 array_unshift( $links, $settings_link );
+		}
+	return $links;
+} // end function cptch_plugin_action_links
+
+function cptch_register_plugin_links($links, $file) {
+	$base = plugin_basename(__FILE__);
+	if ($file == $base) {
+		$links[] = '<a href="options-general.php?page=captcha/captcha.php">' . __('Settings','captcha') . '</a>';
+		$links[] = '<a href="http://wordpress.org/extend/plugins/captcha/faq/" target="_blank">' . __('FAQ','captcha') . '</a>';
+		$links[] = '<a href="Mailto:plugin@bestwebsoft.com">' . __('Support','captcha') . '</a>';
+	}
+	return $links;
 }
 
 // Function for display captcha settings page in the admin area
@@ -195,7 +222,7 @@ function cptch_settings_page() {
 			<?php foreach( $cptch_admin_fields_enable as $fields ) { ?>
 					<input type="checkbox" name="<?php echo $fields[0]; ?>" value="<?php echo $cptch_options[ $fields[0] ]; ?>" <?php if( 1 == $cptch_options[$fields[0]] ) echo "checked=\"checked\""; ?> /><label for="<?php echo $fields[0]; ?>"><?php echo $fields[1]; ?></label><br />
 			<?php } ?>
-					<span style="color: #888888;font-size: 10px;">If you would like to customize this plugin for a custom form, please contact us via <a href="Mailto:admin@bestwebsoft.com">email</a> or on <a href="http://bestwebsoft.com/" target="_blank">site</a></span>
+					<span style="color: #888888;font-size: 10px;">If you would like to customize this plugin for a custom form, please contact us via <a href="Mailto:plugin@bestwebsoft.com">plugin@bestwebsoft.com</a> or fill in our contact form on our site <a href="http://bestwebsoft.com/contact/" target="_blank">http://bestwebsoft.com/contact/</a></span>
 				</td>
 			</tr>
 			<tr valign="top">
