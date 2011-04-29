@@ -122,10 +122,11 @@ if( 1 == $cptch_options['cptch_comments_form'] ) {
 		add_action( 'comment_form_after_fields', 'cptch_comment_form');
 		add_action( 'comment_form_logged_in_after', 'cptch_comment_form');
 		add_filter( 'preprocess_comment', 'cptch_comment_post' );
-	}
+	} else {
 	// for WP before WP 3.0
 	add_action( 'comment_form', 'cptch_comment_form' );
 	add_filter( 'preprocess_comment', 'cptch_comment_post' );	
+	}
 }
 // Add captcha in the register form
 if( 1 == $cptch_options['cptch_register_form'] ) {
