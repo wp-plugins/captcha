@@ -3,9 +3,9 @@ Contributors: bestwebsoft
 Contributors: bestwebsoft
 Donate link: http://bestwebsoft.com/
 Tags: captcha, math captcha, text captcha, spam, antispam, login, registration, comment, lost password, capcha, catcha, captha
-Requires at least: 3.1
-Tested up to: 3.1
-Stable tag: 2011.1.02
+Requires at least: 3.0
+Tested up to: 3.1.3
+Stable tag: 2011.1.03
 
 This plugin allows you to implement super security captcha form into web forms.
 
@@ -39,6 +39,9 @@ Captcha plugin allows you to protect your website from spam using math logic whi
 
 == Changelog ==
 
+= 1.03 =
+Ability to add BestWebSoft Contact Form plugin into a Captcha plugin from wp-admin via Settings panel.
+
 = 1.02 =
 * Added "Settings", "FAQ", "Support" links to the plugin action page.
 * Added links on the plugins page.
@@ -47,6 +50,9 @@ Captcha plugin allows you to protect your website from spam using math logic whi
 * Mathematical actions choosing functionality and level of difficulty was implemented.
 
 == Upgrade Notice ==
+
+= 1.03 =
+Ability to add BestWebSoft Contact Form plugin into a Captcha plugin from wp-admin via Settings panel.
 
 = 1.02 =
 Added "Settings", "FAQ", "Support" links to the plugin action page. Added links on the plugins page.

@@ -8,7 +8,7 @@ Plugin Name: Captcha
 Plugin URI:  http://bestwebsoft.com/plugin/
 Description: Plugin Captcha intended to prove that the visitor is a human being and not a spam robot. Plugin asks the visitor to answer a math question.
 Author: BestWebSoft
-Version: 1.02
+Version: 1.03
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -53,6 +53,24 @@ $cptch_admin_fields_difficulty = array (
 );
 
 add_action( 'admin_menu', 'add_cptch_admin_menu' );
+
+$active_plugins = get_option('active_plugins');
+if( 0 < count( preg_grep( '/contact-form\/contact_form.php/', $active_plugins ) ) )
+{
+	$cptch_options = get_option( 'cptch_options' );
+	if( $cptch_options['cptch_contact_form'] == 1)
+	{
+		add_filter('cntctfrm_display_captcha', 'cptch_contact_form');
+		add_filter('cntctfrm_check_form', 'cptch_check_contact_form');
+	}
+	if( $cptch_options['cptch_contact_form'] == 0 )
+	{
+		remove_filter('cntctfrm_display_captcha', 'cptch_contact_form');
+		remove_filter('cntctfrm_check_form', 'cptch_check_contact_form');
+	}
+}
+
+
 
 function add_cptch_admin_menu() {
 	add_options_page( "Captcha Options", "Captcha", 'manage_options',  __FILE__, 'cptch_settings_page' );
@@ -192,6 +210,14 @@ function cptch_settings_page() {
 				else
 					$cptch_request_options[$key] = "";
 			}
+			if( isset( $_REQUEST['cptch_contact_form'] ) )
+			{
+				$cptch_request_options['cptch_contact_form'] = $_REQUEST['cptch_contact_form'];
+			}
+			else
+			{
+				$cptch_request_options['cptch_contact_form'] = 0;
+			}
 		}
 
 		// array merge incase this version has added new options
@@ -221,8 +247,17 @@ function cptch_settings_page() {
 				<th scope="row">Enable CAPTCHA on the: </th>
 				<td>
 			<?php foreach( $cptch_admin_fields_enable as $fields ) { ?>
-					<input type="checkbox" name="<?php echo $fields[0]; ?>" value="<?php echo $cptch_options[ $fields[0] ]; ?>" <?php if( 1 == $cptch_options[$fields[0]] ) echo "checked=\"checked\""; ?> /><label for="<?php echo $fields[0]; ?>"><?php echo $fields[1]; ?></label><br />
-			<?php } ?>
+					<input type="checkbox" name="<?php echo $fields[0]; ?>" value="<?php echo $fields[0]; ?>" <?php if( 1 == $cptch_options[$fields[0]] ) echo "checked=\"checked\""; ?> /><label for="<?php echo $fields[0]; ?>"><?php echo $fields[1]; ?></label><br />
+			<?php } 
+			$active_plugins = get_option('active_plugins');
+			if(0 < count( preg_grep( '/contact-form\/contact_form.php/', $active_plugins ) ) )
+			{ ?>
+					<input type="checkbox" name="cptch_contact_form" value="1" <?php if( 1 == $cptch_options['cptch_contact_form'] ) echo "checked=\"checked\""; ?> /><label for="cptch_contact_form">Contact form</label> <span style="color: #888888;font-size: 10px;">(power by bestwebsoft.com)</span><br />
+			<?php } 
+			else
+			{ ?>
+					<input disabled='disabled' type="checkbox" name="cptch_contact_form" value="1" <?php if( 1 == $cptch_options['cptch_contact_form'] ) echo "checked=\"checked\""; ?> /><label for="cptch_contact_form">Contact form</label> <span style="color: #888888;font-size: 10px;">(power by bestwebsoft.com) <a href="">download contact form</a></span><br /><br />
+			<?php }?>
 					<span style="color: #888888;font-size: 10px;">If you would like to customize this plugin for a custom form, please contact us via <a href="Mailto:plugin@bestwebsoft.com">plugin@bestwebsoft.com</a> or fill in our contact form on our site <a href="http://bestwebsoft.com/contact/" target="_blank">http://bestwebsoft.com/contact/</a></span>
 				</td>
 			</tr>
@@ -517,7 +552,7 @@ function cptch_display_captcha()
 	$str_math_expretion = "";
 	// First part of mathematical expression
 	if( 0 == $rand_input )
-		$str_math_expretion .= "<input type=\"text\" name=\"cptch_number\" value=\"\" maxlength=\"1\" size=\"1\" style=\"width:20px;\" />";
+		$str_math_expretion .= "<input type=\"text\" name=\"cptch_number\" value=\"\" maxlength=\"1\" size=\"1\" style=\"width:20px;margin-bottom:0;\" />";
 	else if ( 0 == $rand_number_string || 0 == $cptch_options["cptch_difficulty_number"] )
 		$str_math_expretion .= $number_string[$array_math_expretion[0]];
 	else
@@ -528,7 +563,7 @@ function cptch_display_captcha()
 	
 	// Second part of mathematical expression
 	if( 1 == $rand_input )
-		$str_math_expretion .= " <input type=\"text\" name=\"cptch_number\" value=\"\" maxlength=\"1\" size=\"1\" style=\"width:20px;\" />";
+		$str_math_expretion .= " <input type=\"text\" name=\"cptch_number\" value=\"\" maxlength=\"1\" size=\"1\" style=\"width:20px;margin-bottom:0;\" />";
 	else if ( 1 == $rand_number_string || 0 == $cptch_options["cptch_difficulty_number"] )
 		$str_math_expretion .= " ".$number_string[$array_math_expretion[1]];
 	else
@@ -539,7 +574,7 @@ function cptch_display_captcha()
 	
 	// Add result of mathematical expression
 	if( 2 == $rand_input ) {
-		$str_math_expretion .= " <input type=\"text\" name=\"cptch_number\" value=\"\" maxlength=\"2\" size=\"1\" style=\"width:20px;\" />";
+		$str_math_expretion .= " <input type=\"text\" name=\"cptch_number\" value=\"\" maxlength=\"2\" size=\"1\" style=\"width:20px;margin-bottom:0;\" />";
 	} else if ( 2 == $rand_number_string || 0 == $cptch_options["cptch_difficulty_number"] ) {
 		if( $array_math_expretion[2] < 10 )
 			$str_math_expretion .= " ".$number_string[$array_math_expretion[2]];
@@ -603,4 +638,45 @@ function decode( $String, $Key )
 		return $DecodedString;
 }
 
+// this function adds captcha to the contact form
+function cptch_contact_form($error_message) {
+	//session_start();
+	$cptch_options = get_option( 'cptch_options' );
+	
+	// captcha html - login form
+	echo '<p>';
+	if( "" != $cptch_options['cptch_label_form'] )	
+		echo '<label>'. $cptch_options['cptch_label_form'] .'</label><br />';
+	else
+		echo '<br />';
+	if( isset( $error_message['error_captcha'] ) )
+	{
+		echo "<span style='color:red'>". $error_message['error_captcha'] ."</span><br />";
+	}
+	cptch_display_captcha();
+	echo '</p>';
+} //  end function cptch_contact_form
+
+// this function check captcha in the contact form
+function cptch_check_contact_form()
+{
+	global $str_key;
+	$str_key = "123";
+	if(isset( $_REQUEST['cntctfrm_contact_action'] ))
+	{
+		// If captcha doesn't entered
+		if ( "" ==  $_REQUEST['cptch_number'] ) {
+			return false;
+		}
+		
+		// Check entered captcha
+		if ( 0 == strcasecmp( trim( decode( $_REQUEST['cptch_result'], $str_key ) ), $_REQUEST['cptch_number'] ) ) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+	else
+		return false;
+} //  end function cptch_check_contact_form
 ?>
