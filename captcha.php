@@ -8,7 +8,7 @@ Plugin Name: Captcha
 Plugin URI:  http://bestwebsoft.com/plugin/
 Description: Plugin Captcha intended to prove that the visitor is a human being and not a spam robot. Plugin asks the visitor to answer a math question.
 Author: BestWebSoft
-Version: 1.03
+Version: 1.04
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -55,22 +55,20 @@ $cptch_admin_fields_difficulty = array (
 add_action( 'admin_menu', 'add_cptch_admin_menu' );
 
 $active_plugins = get_option('active_plugins');
-if( 0 < count( preg_grep( '/contact-form\/contact_form.php/', $active_plugins ) ) )
+if( 0 < count( preg_grep( '/contact-form-plugin\/contact_form.php/', $active_plugins ) ) )
 {
 	$cptch_options = get_option( 'cptch_options' );
 	if( $cptch_options['cptch_contact_form'] == 1)
 	{
-		add_filter('cntctfrm_display_captcha', 'cptch_contact_form');
-		add_filter('cntctfrm_check_form', 'cptch_check_contact_form');
+		add_filter('cntctfrm_display_captcha', 'cptch_custom_form');
+		add_filter('cntctfrm_check_form', 'cptch_check_custom_form');
 	}
 	if( $cptch_options['cptch_contact_form'] == 0 )
 	{
-		remove_filter('cntctfrm_display_captcha', 'cptch_contact_form');
-		remove_filter('cntctfrm_check_form', 'cptch_check_contact_form');
+		remove_filter('cntctfrm_display_captcha', 'cptch_custom_form');
+		remove_filter('cntctfrm_check_form', 'cptch_check_custom_form');
 	}
 }
-
-
 
 function add_cptch_admin_menu() {
 	add_options_page( "Captcha Options", "Captcha", 'manage_options',  __FILE__, 'cptch_settings_page' );
@@ -250,7 +248,7 @@ function cptch_settings_page() {
 					<input type="checkbox" name="<?php echo $fields[0]; ?>" value="<?php echo $fields[0]; ?>" <?php if( 1 == $cptch_options[$fields[0]] ) echo "checked=\"checked\""; ?> /><label for="<?php echo $fields[0]; ?>"><?php echo $fields[1]; ?></label><br />
 			<?php } 
 			$active_plugins = get_option('active_plugins');
-			if(0 < count( preg_grep( '/contact-form\/contact_form.php/', $active_plugins ) ) )
+			if(0 < count( preg_grep( '/contact-form-plugin\/contact_form.php/', $active_plugins ) ) )
 			{ ?>
 					<input type="checkbox" name="cptch_contact_form" value="1" <?php if( 1 == $cptch_options['cptch_contact_form'] ) echo "checked=\"checked\""; ?> /><label for="cptch_contact_form">Contact form</label> <span style="color: #888888;font-size: 10px;">(power by bestwebsoft.com)</span><br />
 			<?php } 
@@ -638,27 +636,28 @@ function decode( $String, $Key )
 		return $DecodedString;
 }
 
-// this function adds captcha to the contact form
-function cptch_contact_form($error_message) {
-	//session_start();
+// this function adds captcha to the custom form
+function cptch_custom_form($error_message) {
 	$cptch_options = get_option( 'cptch_options' );
+	$content = "";
 	
 	// captcha html - login form
-	echo '<p>';
+	$content .= '<p>';
 	if( "" != $cptch_options['cptch_label_form'] )	
-		echo '<label>'. $cptch_options['cptch_label_form'] .'</label><br />';
+		$content .= '<label>'. $cptch_options['cptch_label_form'] .'</label><br />';
 	else
-		echo '<br />';
+		$content .= '<br />';
 	if( isset( $error_message['error_captcha'] ) )
 	{
-		echo "<span style='color:red'>". $error_message['error_captcha'] ."</span><br />";
+		$content .= "<span style='color:red'>". $error_message['error_captcha'] ."</span><br />";
 	}
-	cptch_display_captcha();
-	echo '</p>';
+	$content .= cptch_display_captcha_custom();
+	$content .= '</p>';
+	return $content ;
 } //  end function cptch_contact_form
 
-// this function check captcha in the contact form
-function cptch_check_contact_form()
+// this function check captcha in the custom form
+function cptch_check_custom_form()
 {
 	global $str_key;
 	$str_key = "123";
@@ -679,4 +678,115 @@ function cptch_check_contact_form()
 	else
 		return false;
 } //  end function cptch_check_contact_form
+
+// Functionality of the captcha logic work for custom form
+function cptch_display_captcha_custom()
+{
+	global $cptch_options;
+
+	// Key for encoding
+	global $str_key;
+	$str_key = "123";
+	$content = "";
+	
+	// In letters presentation of numbers 0-9
+	$number_string = array('null', 'one','two','three','four','five','six','seven','eight','nine');
+	// In letters presentation of numbers 11 -19
+	$number_two_string = array(1=>'eleven','twelve','thirteen','fourteen','fifteen','sixteen','seventeen','eighteen','nineteen');
+	// In letters presentation of numbers 10, 20, 30, 40, 50, 60, 70, 80, 90
+	$number_three_string = array(1=>'ten','twenty','thirty','forty','fifty','sixty','seventy','eighty','ninety');
+	// The array of math actions
+	$math_actions = array();
+
+	// If value for Plus on the settings page is set
+	if( 1 == $cptch_options['cptch_math_action_plus'] )
+		$math_actions[] = '+';
+	// If value for Minus on the settings page is set
+	if( 1 == $cptch_options['cptch_math_action_minus'] )
+		$math_actions[] = '-';
+	// If value for Increase on the settings page is set
+	if( 1 == $cptch_options['cptch_math_action_increase'] )
+		$math_actions[] = '*';
+		
+	// Which field from three will be the input to enter required value
+	$rand_input = rand( 0, 2 );
+	// Which field from three will be the letters presentation of numbers
+	$rand_number_string = rand( 0, 2 );
+	// If don't check Word in setting page - $rand_number_string not display
+	if( 0 == $cptch_options["cptch_difficulty_word"])
+		$rand_number_string = -1;
+	// Set value for $rand_number_string while $rand_input = $rand_number_string
+	while($rand_input == $rand_number_string) {
+		$rand_number_string = rand( 0, 2 );
+	}
+	// What is math action to display in the form
+	$rand_math_action = rand( 0, count($math_actions) - 1 );
+
+	$array_math_expretion = array();
+
+	// Add first part of mathematical expression
+	$array_math_expretion[0] = rand( 1, 9 );
+	// Add second part of mathematical expression
+	$array_math_expretion[1] = rand( 1, 9 );
+	// Calculation of the mathematical expression result
+	switch( $rand_math_action ) {
+		case "0":
+			$array_math_expretion[2] = $array_math_expretion[0] + $array_math_expretion[1];
+			break;
+		case "1":
+			// Result must not be equal to the negative number
+			if($array_math_expretion[0] < $array_math_expretion[1]) {
+				$number										= $array_math_expretion[0];
+				$array_math_expretion[0]	= $array_math_expretion[1];
+				$array_math_expretion[1]	= $number;
+			}
+			$array_math_expretion[2] = $array_math_expretion[0] - $array_math_expretion[1];
+			break;
+		case "2":
+			$array_math_expretion[2] = $array_math_expretion[0] * $array_math_expretion[1];
+			break;
+	}
+	
+	// String for display
+	$str_math_expretion = "";
+	// First part of mathematical expression
+	if( 0 == $rand_input )
+		$str_math_expretion .= "<input type=\"text\" name=\"cptch_number\" value=\"\" maxlength=\"1\" size=\"1\" style=\"width:20px;margin-bottom:0;\" />";
+	else if ( 0 == $rand_number_string || 0 == $cptch_options["cptch_difficulty_number"] )
+		$str_math_expretion .= $number_string[$array_math_expretion[0]];
+	else
+		$str_math_expretion .= $array_math_expretion[0];
+	
+	// Add math action
+	$str_math_expretion .= " ".$math_actions[$rand_math_action];
+	
+	// Second part of mathematical expression
+	if( 1 == $rand_input )
+		$str_math_expretion .= " <input type=\"text\" name=\"cptch_number\" value=\"\" maxlength=\"1\" size=\"1\" style=\"width:20px;margin-bottom:0;\" />";
+	else if ( 1 == $rand_number_string || 0 == $cptch_options["cptch_difficulty_number"] )
+		$str_math_expretion .= " ".$number_string[$array_math_expretion[1]];
+	else
+		$str_math_expretion .= " ".$array_math_expretion[1];
+	
+	// Add =
+	$str_math_expretion .= " = ";
+	
+	// Add result of mathematical expression
+	if( 2 == $rand_input ) {
+		$str_math_expretion .= " <input type=\"text\" name=\"cptch_number\" value=\"\" maxlength=\"2\" size=\"1\" style=\"width:20px;margin-bottom:0;\" />";
+	} else if ( 2 == $rand_number_string || 0 == $cptch_options["cptch_difficulty_number"] ) {
+		if( $array_math_expretion[2] < 10 )
+			$str_math_expretion .= " ".$number_string[$array_math_expretion[2]];
+		else if( $array_math_expretion[2] < 20 && $array_math_expretion[2] > 10 )
+			$str_math_expretion .= " ".$number_two_string[ $array_math_expretion[2] % 10 ];
+		else
+			$str_math_expretion .= " ".$number_three_string[ $array_math_expretion[2] / 10 ]." ".( 0 != $array_math_expretion[2] % 10 ? $number_string[ $array_math_expretion[2] % 10 ] : '');
+	} else {
+		$str_math_expretion .= $array_math_expretion[2];
+	}
+	// Add hidden field with encoding result
+	$content .= '<input type="hidden" name="cptch_result" value="'.$str = encode( $array_math_expretion[$rand_input], $str_key ).'" />';
+	$content .= $str_math_expretion; 
+	return $content;
+}
 ?>

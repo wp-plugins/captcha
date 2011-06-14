@@ -39,6 +39,9 @@ Captcha plugin allows you to protect your website from spam using math logic whi
 
 == Changelog ==
 
+= 1.04 =
+The bug of the captcha output is fixed in this version. Please upgrade the Captcha plugin immediately. Thank you.
+
 = 1.03 =
 Ability to add BestWebSoft Contact Form plugin into a Captcha plugin from wp-admin via Settings panel.
 
@@ -50,6 +53,9 @@ Ability to add BestWebSoft Contact Form plugin into a Captcha plugin from wp-adm
 * Mathematical actions choosing functionality and level of difficulty was implemented.
 
 == Upgrade Notice ==
+
+= 1.04 =
+The bug of the captcha output is fixed in this version. Please upgrade the Captcha plugin immediately. Thank you
 
 = 1.03 =
 Ability to add BestWebSoft Contact Form plugin into a Captcha plugin from wp-admin via Settings panel.
