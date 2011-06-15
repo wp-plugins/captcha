@@ -5,7 +5,7 @@ Donate link: http://bestwebsoft.com/
 Tags: captcha, math captcha, text captcha, spam, antispam, login, registration, comment, lost password, capcha, catcha, captha
 Requires at least: 3.0
 Tested up to: 3.1.3
-Stable tag: 2011.1.03
+Stable tag: 2011.1.04
 
 This plugin allows you to implement super security captcha form into web forms.
 
