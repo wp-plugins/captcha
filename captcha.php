@@ -109,7 +109,7 @@ if( ! function_exists( 'bws_add_menu_render' ) ) {
 
 function add_cptch_admin_menu() {
 	add_menu_page(__('BWS Plugins'), __('BWS Plugins'), 'edit_themes', 'my_new_menu', 'bws_add_menu_render', ' ', 90); 
-	add_submenu_page('my_new_menu', 'Captcha Options', 'Captcha', 'edit_themes', __FILE__, 'cptch_settings_page');
+	add_submenu_page('my_new_menu', 'Captcha Options', 'Captcha', 'edit_themes', "captcha.php", 'cptch_settings_page');
 
 	//add_options_page( "Captcha Options", "Captcha", 'manage_options',  __FILE__, 'cptch_settings_page' );
 
@@ -207,7 +207,7 @@ function cptch_plugin_action_links( $links, $file ) {
 	if ( ! $this_plugin ) $this_plugin = plugin_basename(__FILE__);
 
 	if ( $file == $this_plugin ){
-			 $settings_link = '<a href="admin.php?page=captcha/captcha.php">' . __('Settings', 'captcha') . '</a>';
+			 $settings_link = '<a href="admin.php?page=captcha.php">' . __('Settings', 'captcha') . '</a>';
 			 array_unshift( $links, $settings_link );
 		}
 	return $links;
@@ -216,7 +216,7 @@ function cptch_plugin_action_links( $links, $file ) {
 function cptch_register_plugin_links($links, $file) {
 	$base = plugin_basename(__FILE__);
 	if ($file == $base) {
-		$links[] = '<a href="admin.php?page=captcha/captcha.php">' . __('Settings','captcha') . '</a>';
+		$links[] = '<a href="admin.php?page=captcha.php">' . __('Settings','captcha') . '</a>';
 		$links[] = '<a href="http://wordpress.org/extend/plugins/captcha/faq/" target="_blank">' . __('FAQ','captcha') . '</a>';
 		$links[] = '<a href="Mailto:plugin@bestwebsoft.com">' . __('Support','captcha') . '</a>';
 	}
@@ -285,7 +285,7 @@ function cptch_settings_page() {
 	<h2>Captcha Options</h2>
 	<div class="updated fade" <?php if( ! isset( $_REQUEST['cptch_form_submit'] ) || $error != "" ) echo "style=\"display:none\""; ?>><p><strong><?php echo $message; ?></strong></p></div>
 	<div class="error" <?php if( "" == $error ) echo "style=\"display:none\""; ?>><p><strong><?php echo $error; ?></strong></p></div>
-	<form method="post" action="options-general.php?page=captcha/captcha.php">
+	<form method="post" action="admin.php?page=captcha.php">
 		<table class="form-table">
 			<tr valign="top">
 				<th scope="row">Enable CAPTCHA on the: </th>
