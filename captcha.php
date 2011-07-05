@@ -1,14 +1,10 @@
 <?php
-/**
- * @package Portfolio
- * @version 1
- */
 /*
 Plugin Name: Captcha
 Plugin URI:  http://bestwebsoft.com/plugin/
 Description: Plugin Captcha intended to prove that the visitor is a human being and not a spam robot. Plugin asks the visitor to answer a math question.
 Author: BestWebSoft
-Version: 1.04
+Version: 2.01
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -52,6 +48,29 @@ $cptch_admin_fields_difficulty = array (
 		array( 'cptch_difficulty_word', 'Words', 'Words' ),
 );
 
+if( ! function_exists( 'bws_plugin_header' ) ) {
+	function bws_plugin_header() {
+		global $post_type;
+		?>
+		<style>
+		#adminmenu #toplevel_page_my_new_menu div.wp-menu-image
+		{
+			background: url("<?php echo get_bloginfo('url');?>/wp-content/plugins/captcha/images/icon_16.png") no-repeat scroll center center transparent;
+		}
+		#adminmenu #toplevel_page_my_new_menu:hover div.wp-menu-image, #adminmenu #toplevel_page_my_new_menu.wp-has-current-submenu div.wp-menu-image
+		{
+			background: url("<?php echo get_bloginfo('url');?>/wp-content/plugins/captcha/images/icon_16_c.png") no-repeat scroll center center transparent;
+		}	
+		.wrap #icon-options-general.icon32-bws
+		{
+			background: url("<?php echo get_bloginfo('url');?>/wp-content/plugins/captcha/images/icon_36.png") no-repeat scroll left top transparent;
+		}
+		</style>
+		<?php
+	}
+}
+
+add_action('admin_head', 'bws_plugin_header');
 add_action( 'admin_menu', 'add_cptch_admin_menu' );
 
 $active_plugins = get_option('active_plugins');
@@ -70,8 +89,29 @@ if( 0 < count( preg_grep( '/contact-form-plugin\/contact_form.php/', $active_plu
 	}
 }
 
+if( ! function_exists( 'bws_add_menu_render' ) ) {
+	function bws_add_menu_render() {
+		global $title;
+		?>
+		<div class="wrap">
+			<div class="icon32 icon32-bws" id="icon-options-general"></div>
+			<h2><?php echo $title;?></h2>
+			<p><a href="http://wordpress.org/extend/plugins/captcha/">Captcha</a></p>
+			<p><a href="http://wordpress.org/extend/plugins/contact-form-plugin/">Contact Form</a></p>
+			<p><a href="http://wordpress.org/extend/plugins/facebook-button-plugin/">Facebook Like Button Plugin</a></p>
+			<p><a href="http://wordpress.org/extend/plugins/twitter-plugin/">Twitter Plugin</a></p>
+			<p><a href="http://wordpress.org/extend/plugins/portfolio/">Portfolio</a></p>
+			<span style="color: rgb(136, 136, 136); font-size: 10px;">If you have any questions, please contact us via plugin@bestwebsoft.com or fill in our contact form on our site <a href="http://bestwebsoft.com/contact/">http://bestwebsoft.com/contact/</a></span>
+		</div>
+		<?php
+	}
+}
+
 function add_cptch_admin_menu() {
-	add_options_page( "Captcha Options", "Captcha", 'manage_options',  __FILE__, 'cptch_settings_page' );
+	add_menu_page(__('BWS Plugins'), __('BWS Plugins'), 'edit_themes', 'my_new_menu', 'bws_add_menu_render', ' ', 90); 
+	add_submenu_page('my_new_menu', 'Captcha Options', 'Captcha', 'edit_themes', __FILE__, 'cptch_settings_page');
+
+	//add_options_page( "Captcha Options", "Captcha", 'manage_options',  __FILE__, 'cptch_settings_page' );
 
 	//call register settings function
 	add_action( 'admin_init', 'register_cptch_settings' );
@@ -167,7 +207,7 @@ function cptch_plugin_action_links( $links, $file ) {
 	if ( ! $this_plugin ) $this_plugin = plugin_basename(__FILE__);
 
 	if ( $file == $this_plugin ){
-			 $settings_link = '<a href="options-general.php?page=captcha/captcha.php">' . __('Settings', 'captcha') . '</a>';
+			 $settings_link = '<a href="admin.php?page=captcha/captcha.php">' . __('Settings', 'captcha') . '</a>';
 			 array_unshift( $links, $settings_link );
 		}
 	return $links;
@@ -176,7 +216,7 @@ function cptch_plugin_action_links( $links, $file ) {
 function cptch_register_plugin_links($links, $file) {
 	$base = plugin_basename(__FILE__);
 	if ($file == $base) {
-		$links[] = '<a href="options-general.php?page=captcha/captcha.php">' . __('Settings','captcha') . '</a>';
+		$links[] = '<a href="admin.php?page=captcha/captcha.php">' . __('Settings','captcha') . '</a>';
 		$links[] = '<a href="http://wordpress.org/extend/plugins/captcha/faq/" target="_blank">' . __('FAQ','captcha') . '</a>';
 		$links[] = '<a href="Mailto:plugin@bestwebsoft.com">' . __('Support','captcha') . '</a>';
 	}
@@ -235,7 +275,13 @@ function cptch_settings_page() {
 	// Display form on the setting page
 ?>
 <div class="wrap">
-	<div class="icon32" id="icon-options-general"><br></div>
+	<style>
+	.wrap #icon-options-general.icon32-bws
+	{
+		 background: url("../wp-content/plugins/captcha/images/icon_36.png") no-repeat scroll left top transparent;
+	}
+	</style>
+	<div class="icon32 icon32-bws" id="icon-options-general"></div>
 	<h2>Captcha Options</h2>
 	<div class="updated fade" <?php if( ! isset( $_REQUEST['cptch_form_submit'] ) || $error != "" ) echo "style=\"display:none\""; ?>><p><strong><?php echo $message; ?></strong></p></div>
 	<div class="error" <?php if( "" == $error ) echo "style=\"display:none\""; ?>><p><strong><?php echo $error; ?></strong></p></div>
