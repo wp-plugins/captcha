@@ -4,7 +4,7 @@ Plugin Name: Captcha
 Plugin URI:  http://bestwebsoft.com/plugin/
 Description: Plugin Captcha intended to prove that the visitor is a human being and not a spam robot. Plugin asks the visitor to answer a math question.
 Author: BestWebSoft
-Version: 2.02
+Version: 2.03
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -177,12 +177,10 @@ if( 1 == $cptch_options['cptch_comments_form'] ) {
 	if( version_compare($wp_version,'3','>=') ) { // wp 3.0 +
 		add_action( 'comment_form_after_fields', 'cptch_comment_form');
 		add_action( 'comment_form_logged_in_after', 'cptch_comment_form');
-		add_filter( 'preprocess_comment', 'cptch_comment_post' );
-	} else {
+	}
 	// for WP before WP 3.0
 	add_action( 'comment_form', 'cptch_comment_form' );
 	add_filter( 'preprocess_comment', 'cptch_comment_post' );	
-	}
 }
 // Add captcha in the register form
 if( 1 == $cptch_options['cptch_register_form'] ) {
