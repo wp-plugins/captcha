@@ -5,7 +5,7 @@ Donate link: http://bestwebsoft.com/
 Tags: captcha, math captcha, text captcha, spam, antispam, login, registration, comment, lost password, capcha, catcha, captha
 Requires at least: 3.0
 Tested up to: 3.2
-Stable tag: 2011.2.03
+Stable tag: 2011.2.04
 
 This plugin allows you to implement super security captcha form into web forms.
 
@@ -23,11 +23,26 @@ Captcha plugin allows you to protect your website from spam using math logic whi
 
 = How to change captcha label =
 
-1. Go to the Settings page and change value for the 'Label for CAPTCHA in form' field.
+Go to the Settings page and change value for the 'Label for CAPTCHA in form' field.
 
-=  During saving of settings I got an error: 'Please select one point in the blocks Arithmetic actions and Difficulty for CAPTCHA'. What is this? =
+= During saving of settings I got an error: 'Please select one point in the blocks Arithmetic actions and Difficulty for CAPTCHA'. What is this? =
 
-1. For correct work of Captcha plugin you need to choose at least one item from the 'Arithmetic actions' block and choose 'Difficulty' via Settings page, because math expression should be consisted minimum with 1 mathematical sign, and parts of mathematical expression should be displayed like words or like numbers, or both of them.
+For correct work of Captcha plugin you need to choose at least one item from the 'Arithmetic actions' block and choose 'Difficulty' via Settings page, because math expression should be consisted minimum with 1 mathematical sign, and parts of mathematical expression should be displayed like words or like numbers, or both of them.
+
+= Missing CAPTCHA on comment form? = 
+You may have a theme that has a not properly coded comments.php. 
+
+The version of WP makes a difference...
+
+(WP2 series) Your theme must have a `<?php do_action('comment_form', $post->ID); ?>` tag inside your `/wp-content/themes/[your_theme]/comments.php` file. 
+Most WP2 themes already do. The best place to locate the tag is before the comment textarea, you may want to move it up if it is below the comment textarea.
+
+(WP3 series) Since WP3 there is new function comment_form inside `/wp-includes/comment-template.php`. 
+Your is theme probably not up to current code to call that function from inside comments.php.
+WP3 theme does not need the `do_action('comment_form'`... code line inside `/wp-content/themes/[your_theme]/comments.php`.
+Instead, it uses a new function call inside comments.php: `<?php comment_form(); ?>`
+If you have WP3 and still have the missing captcha, make sure your theme has `<?php comment_form(); ?>`
+inside `/wp-content/themes/[your_theme]/comments.php`. (look inside the Twenty Ten theme's comments.php for proper example)
 
 == Screenshots ==
 
@@ -38,6 +53,9 @@ Captcha plugin allows you to protect your website from spam using math logic whi
 5. Login form with Captcha.
 
 == Changelog ==
+
+= 2.04 =
+*In this version of plugin a bug of CAPTCHa reflection (before and after the comment form) was fixed. Please upgrade Captcha plugin immediately. Thank you. For more details information please see the FAQ
 
 = 2.03 =
 *In this version of plugin a bug of CAPTCHa reflection was fixed in some of the themes for release of WordPress 3.0 and above. Please upgrade Captcha plugin immediately. Thank you
@@ -62,6 +80,9 @@ Captcha plugin allows you to protect your website from spam using math logic whi
 * Mathematical actions choosing functionality and level of difficulty was implemented.
 
 == Upgrade Notice ==
+
+= 2.04 =
+In this version of plugin a bug of CAPTCHa reflection (before and after the comment form) was fixed. Please upgrade Captcha plugin immediately. Thank you. For more details information please see the FAQ
 
 = 2.03 =
 In this version of plugin a bug of CAPTCHa reflection was fixed in some of the themes for release of WordPress 3.0 and above. Please upgrade Captcha plugin immediately. Thank you

@@ -175,9 +175,9 @@ if( 1 == $cptch_options['cptch_login_form'] ) {
 if( 1 == $cptch_options['cptch_comments_form'] ) {
 	global $wp_version;
 	if( version_compare($wp_version,'3','>=') ) { // wp 3.0 +
-		add_action( 'comment_form_after_fields', 'cptch_comment_form');
-		add_action( 'comment_form_logged_in_after', 'cptch_comment_form');
-	}
+		add_action( 'comment_form_after_fields', 'cptch_comment_form_wp3', 1 );
+		add_action( 'comment_form_logged_in_after', 'cptch_comment_form_wp3', 1 );
+	}	
 	// for WP before WP 3.0
 	add_action( 'comment_form', 'cptch_comment_form' );
 	add_filter( 'preprocess_comment', 'cptch_comment_post' );	
@@ -205,7 +205,7 @@ function cptch_plugin_action_links( $links, $file ) {
 	if ( ! $this_plugin ) $this_plugin = plugin_basename(__FILE__);
 
 	if ( $file == $this_plugin ){
-			 $settings_link = '<a href="admin.php?page=captcha.php">' . __('Settings', 'captcha') . '</a>';
+			 $settings_link = '<a href="admin.php?page=captcha.php">' . __( 'Settings', 'captcha' ) . '</a>';
 			 array_unshift( $links, $settings_link );
 		}
 	return $links;
@@ -214,9 +214,9 @@ function cptch_plugin_action_links( $links, $file ) {
 function cptch_register_plugin_links($links, $file) {
 	$base = plugin_basename(__FILE__);
 	if ($file == $base) {
-		$links[] = '<a href="admin.php?page=captcha.php">' . __('Settings','captcha') . '</a>';
-		$links[] = '<a href="http://wordpress.org/extend/plugins/captcha/faq/" target="_blank">' . __('FAQ','captcha') . '</a>';
-		$links[] = '<a href="Mailto:plugin@bestwebsoft.com">' . __('Support','captcha') . '</a>';
+		$links[] = '<a href="admin.php?page=captcha.php">' . __( 'Settings', 'captcha' ) . '</a>';
+		$links[] = '<a href="http://wordpress.org/extend/plugins/captcha/faq/" target="_blank">' . __( 'FAQ', 'captcha' ) . '</a>';
+		$links[] = '<a href="Mailto:plugin@bestwebsoft.com">' . __( 'Support', 'captcha' ) . '</a>';
 	}
 	return $links;
 }
@@ -369,13 +369,13 @@ function cptch_login_post($errors) {
 
 	// If captcha not complete, return error
 	if ( "" ==  $_POST['cptch_number'] ) {	
-		return $errors.'<strong>'. __('ERROR', 'cptch') .'</strong>: '. __('Please complete the CAPTCHA.', 'cptch');
+		return $errors.'<strong>'. __( 'ERROR', 'cptch' ) .'</strong>: '. __( 'Please complete the CAPTCHA.', 'cptch' );
 	}
 
 	if ( 0 == strcasecmp( trim( decode( $_POST['cptch_result'], $str_key ) ), $_POST['cptch_number'] ) ) {
 		// captcha was matched						
 	} else {
-		return $errors.'<strong>'. __('ERROR', 'cptch') .'</strong>: '. __('That CAPTCHA was incorrect.', 'cptch');
+		return $errors.'<strong>'. __( 'ERROR', 'cptch' ) .'</strong>: '. __( 'That CAPTCHA was incorrect.', 'cptch' );
 	}
   return($errors);
 } // end function cptch_login_post
@@ -388,7 +388,7 @@ function cptch_login_check($url) {
 	$str_key = "123";
 	// Add error if captcha is empty
 	if ( isset( $_POST['cptch_number'] ) && "" ==  $_POST['cptch_number'] ) {
-		$_SESSION['cptch_error'] = __('Please complete the CAPTCHA.', 'cptch');
+		$_SESSION['cptch_error'] = __( 'Please complete the CAPTCHA.', 'cptch' );
 		// Redirect to wp-login.php
 		return $_SERVER["REQUEST_URI"];
 	}
@@ -421,7 +421,30 @@ function cptch_comment_form() {
 	echo '</p>';
 
 	return true;
-} // end function cptch_comment_form  2.0
+} // end function cptch_comment_form
+
+// this function adds captcha to the comment form
+function cptch_comment_form_wp3() {
+	global $cptch_options;
+
+	// skip captcha if user is logged in and the settings allow
+	if ( is_user_logged_in() && 1 == $cptch_options['cptch_hide_register'] ) {
+		return true;
+	}
+
+	// captcha html - comment form
+	echo '<p>';
+	if( "" != $cptch_options['cptch_label_form'] )	
+		echo '<label>'. $cptch_options['cptch_label_form'] .'</label>';
+	echo '<br />';
+	cptch_display_captcha();
+	echo '</p>';
+
+	remove_action( 'comment_form', 'cptch_comment_form' );
+
+	return true;
+} // end function cptch_comment_form
+
 
 // this function checks captcha posted with the comment
 function cptch_comment_post($comment) {	
