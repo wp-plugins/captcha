@@ -4,7 +4,7 @@ Plugin Name: Captcha
 Plugin URI:  http://bestwebsoft.com/plugin/
 Description: Plugin Captcha intended to prove that the visitor is a human being and not a spam robot. Plugin asks the visitor to answer a math question.
 Author: BestWebSoft
-Version: 2.03
+Version: 2.05
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -65,6 +65,10 @@ if( ! function_exists( 'bws_plugin_header' ) ) {
 		{
 			background: url("<?php echo get_bloginfo('url');?>/wp-content/plugins/captcha/images/icon_36.png") no-repeat scroll left top transparent;
 		}
+		#toplevel_page_my_new_menu .wp-submenu .wp-first-item
+		{
+			display:none;
+		}
 		</style>
 		<?php
 	}
@@ -92,26 +96,63 @@ if( 0 < count( preg_grep( '/contact-form-plugin\/contact_form.php/', $active_plu
 if( ! function_exists( 'bws_add_menu_render' ) ) {
 	function bws_add_menu_render() {
 		global $title;
+		$active_plugins = get_option('active_plugins');
+		$array_install = array();
+		$array_recomend = array();
+		$count_install = $count_recomend = 0;
+		$array_plugins = array(
+			array( 'captcha\/captcha.php', 'Captcha', 'http://wordpress.org/extend/plugins/captcha/', 'http://bestwebsoft.com/plugin/captcha-plugin/' ), 
+			array( 'contact-form-plugin\/contact_form.php', 'Contact Form', 'http://wordpress.org/extend/plugins/contact-form-plugin/', 'http://bestwebsoft.com/plugin/contact-form/' ), 
+			array( 'facebook-button-plugin\/facebook-button-plugin.php', 'Facebook Like Button Plugin', 'http://wordpress.org/extend/plugins/facebook-button-plugin/', 'http://bestwebsoft.com/plugin/facebook-like-button-plugin/' ), 
+			array( 'twitter-plugin\/twitter.php', 'Twitter Plugin', 'http://wordpress.org/extend/plugins/twitter-plugin/', 'http://bestwebsoft.com/plugin/twitter-plugin/' ), 
+			array( 'portfolio\/portfolio.php', 'Portfolio', 'http://wordpress.org/extend/plugins/portfolio/', 'http://bestwebsoft.com/plugin/portfolio-plugin/' )
+		);
+		foreach($array_plugins as $plugins)
+		{
+			if( 0 < count( preg_grep( "/".$plugins[0]."/", $active_plugins ) ) )
+			{
+				$array_install[$count_install]['title'] = $plugins[1];
+				$array_install[$count_install]['link'] = $plugins[2];
+				$array_install[$count_install]['href'] = $plugins[3];
+				$count_install++;
+			}
+			else
+			{
+				$array_recomend[$count_recomend]['title'] = $plugins[1];
+				$array_recomend[$count_recomend]['link'] = $plugins[2];
+				$array_recomend[$count_recomend]['href'] = $plugins[3];
+				$count_recomend++;
+			}
+		}		
 		?>
 		<div class="wrap">
 			<div class="icon32 icon32-bws" id="icon-options-general"></div>
 			<h2><?php echo $title;?></h2>
-			<p><a href="http://wordpress.org/extend/plugins/captcha/">Captcha</a></p>
-			<p><a href="http://wordpress.org/extend/plugins/contact-form-plugin/">Contact Form</a></p>
-			<p><a href="http://wordpress.org/extend/plugins/facebook-button-plugin/">Facebook Like Button Plugin</a></p>
-			<p><a href="http://wordpress.org/extend/plugins/twitter-plugin/">Twitter Plugin</a></p>
-			<p><a href="http://wordpress.org/extend/plugins/portfolio/">Portfolio</a></p>
-			<span style="color: rgb(136, 136, 136); font-size: 10px;">If you have any questions, please contact us via plugin@bestwebsoft.com or fill in our contact form on our site <a href="http://bestwebsoft.com/contact/">http://bestwebsoft.com/contact/</a></span>
+			<?php if($count_install > 0) { ?>
+			<div>
+				<h3>Installed plugins</h3>
+				<?php foreach($array_install as $install_plugin) { ?>
+				<div style="float:left; width:200px;"><?php echo $install_plugin['title']; ?></div> <p><a href="<?php echo $install_plugin['link']; ?>">Read more</a></p>
+				<?php } ?>
+			</div>
+			<?php } ?>
+			<?php if($count_recomend > 0) { ?>
+			<div>
+				<h3>Recommended plugins</h3>
+				<?php foreach($array_recomend as $recomend_plugin) { ?>
+				<div style="float:left; width:200px;"><?php echo $recomend_plugin['title']; ?></div> <p><a href="<?php echo $recomend_plugin['link']; ?>">Read more</a> <a href="<?php echo $recomend_plugin['href']; ?>">Download</a></p>
+				<?php } ?>
+				<span style="color: rgb(136, 136, 136); font-size: 10px;">If you have any questions, please contact us via plugin@bestwebsoft.com or fill in our contact form on our site <a href="http://bestwebsoft.com/contact/">http://bestwebsoft.com/contact/</a></span>
+			</div>
+			<?php } ?>
 		</div>
 		<?php
 	}
 }
 
 function add_cptch_admin_menu() {
-	add_menu_page(__('BWS Plugins'), __('BWS Plugins'), 'edit_themes', 'my_new_menu', 'bws_add_menu_render', ' ', 90); 
-	add_submenu_page('my_new_menu', 'Captcha Options', 'Captcha', 'edit_themes', "captcha.php", 'cptch_settings_page');
-
-	//add_options_page( "Captcha Options", "Captcha", 'manage_options',  __FILE__, 'cptch_settings_page' );
+	add_menu_page(__('BWS Plugins'), __('BWS Plugins'), 'manage_options', 'my_new_menu', 'bws_add_menu_render', WP_CONTENT_URL."/plugins/twitter-plugin/images/px.png", 100); 
+	add_submenu_page('my_new_menu', 'Captcha Options', 'Captcha', 'manage_options', "captcha.php", 'cptch_settings_page');
 
 	//call register settings function
 	add_action( 'admin_init', 'register_cptch_settings' );
@@ -494,7 +535,7 @@ function cptch_register_form() {
 	global $cptch_options;
 
 	// the captcha html - register form
-	echo '<p>';
+	echo '<p style="text-align:left;">';
 	if( "" != $cptch_options['cptch_label_form'] )	
 		echo '<label>'.$cptch_options['cptch_label_form'].'</label><br />';
 	echo '<br />';
@@ -617,7 +658,7 @@ function cptch_display_captcha()
 	$str_math_expretion = "";
 	// First part of mathematical expression
 	if( 0 == $rand_input )
-		$str_math_expretion .= "<input type=\"text\" name=\"cptch_number\" value=\"\" maxlength=\"1\" size=\"1\" style=\"width:20px;margin-bottom:0;\" />";
+		$str_math_expretion .= "<input type=\"text\" name=\"cptch_number\" value=\"\" maxlength=\"1\" size=\"1\" style=\"width:20px;margin-bottom:0;display:inline;\" />";
 	else if ( 0 == $rand_number_string || 0 == $cptch_options["cptch_difficulty_number"] )
 		$str_math_expretion .= $number_string[$array_math_expretion[0]];
 	else
@@ -628,7 +669,7 @@ function cptch_display_captcha()
 	
 	// Second part of mathematical expression
 	if( 1 == $rand_input )
-		$str_math_expretion .= " <input type=\"text\" name=\"cptch_number\" value=\"\" maxlength=\"1\" size=\"1\" style=\"width:20px;margin-bottom:0;\" />";
+		$str_math_expretion .= " <input type=\"text\" name=\"cptch_number\" value=\"\" maxlength=\"1\" size=\"1\" style=\"width:20px;margin-bottom:0;display:inline;\" />";
 	else if ( 1 == $rand_number_string || 0 == $cptch_options["cptch_difficulty_number"] )
 		$str_math_expretion .= " ".$number_string[$array_math_expretion[1]];
 	else
@@ -639,7 +680,7 @@ function cptch_display_captcha()
 	
 	// Add result of mathematical expression
 	if( 2 == $rand_input ) {
-		$str_math_expretion .= " <input type=\"text\" name=\"cptch_number\" value=\"\" maxlength=\"2\" size=\"1\" style=\"width:20px;margin-bottom:0;\" />";
+		$str_math_expretion .= " <input type=\"text\" name=\"cptch_number\" value=\"\" maxlength=\"2\" size=\"1\" style=\"width:20px;margin-bottom:0;display:inline;\" />";
 	} else if ( 2 == $rand_number_string || 0 == $cptch_options["cptch_difficulty_number"] ) {
 		if( $array_math_expretion[2] < 10 )
 			$str_math_expretion .= " ".$number_string[$array_math_expretion[2]];
@@ -709,7 +750,7 @@ function cptch_custom_form($error_message) {
 	$content = "";
 	
 	// captcha html - login form
-	$content .= '<p>';
+	$content .= '<p style="text-align:left;">';
 	if( "" != $cptch_options['cptch_label_form'] )	
 		$content .= '<label>'. $cptch_options['cptch_label_form'] .'</label><br />';
 	else
@@ -818,7 +859,7 @@ function cptch_display_captcha_custom()
 	$str_math_expretion = "";
 	// First part of mathematical expression
 	if( 0 == $rand_input )
-		$str_math_expretion .= "<input type=\"text\" name=\"cptch_number\" value=\"\" maxlength=\"1\" size=\"1\" style=\"width:20px;margin-bottom:0;\" />";
+		$str_math_expretion .= "<input type=\"text\" name=\"cptch_number\" value=\"\" maxlength=\"1\" size=\"1\" style=\"width:20px;margin-bottom:0;display:inline;\" />";
 	else if ( 0 == $rand_number_string || 0 == $cptch_options["cptch_difficulty_number"] )
 		$str_math_expretion .= $number_string[$array_math_expretion[0]];
 	else
@@ -829,7 +870,7 @@ function cptch_display_captcha_custom()
 	
 	// Second part of mathematical expression
 	if( 1 == $rand_input )
-		$str_math_expretion .= " <input type=\"text\" name=\"cptch_number\" value=\"\" maxlength=\"1\" size=\"1\" style=\"width:20px;margin-bottom:0;\" />";
+		$str_math_expretion .= " <input type=\"text\" name=\"cptch_number\" value=\"\" maxlength=\"1\" size=\"1\" style=\"width:20px;margin-bottom:0;display:inline;\" />";
 	else if ( 1 == $rand_number_string || 0 == $cptch_options["cptch_difficulty_number"] )
 		$str_math_expretion .= " ".$number_string[$array_math_expretion[1]];
 	else
@@ -840,7 +881,7 @@ function cptch_display_captcha_custom()
 	
 	// Add result of mathematical expression
 	if( 2 == $rand_input ) {
-		$str_math_expretion .= " <input type=\"text\" name=\"cptch_number\" value=\"\" maxlength=\"2\" size=\"1\" style=\"width:20px;margin-bottom:0;\" />";
+		$str_math_expretion .= " <input type=\"text\" name=\"cptch_number\" value=\"\" maxlength=\"2\" size=\"1\" style=\"width:20px;margin-bottom:0;display:inline;\" />";
 	} else if ( 2 == $rand_number_string || 0 == $cptch_options["cptch_difficulty_number"] ) {
 		if( $array_math_expretion[2] < 10 )
 			$str_math_expretion .= " ".$number_string[$array_math_expretion[2]];
