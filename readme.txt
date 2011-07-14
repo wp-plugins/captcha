@@ -84,6 +84,9 @@ inside `/wp-content/themes/[your_theme]/comments.php`. (look inside the Twenty T
 
 == Upgrade Notice ==
 
+= 2.05 =
+BWS Plugins sections was fixed and right now it is consisted with 2 parts: installed and recommended plugins. Icons displaying is fixed. Misalignment of math transaction is fixed.
+
 = 2.04 =
 In this version of plugin a bug of CAPTCHa reflection (before and after the comment form) was fixed. Please upgrade Captcha plugin immediately. Thank you. For more details information please see the FAQ
 
