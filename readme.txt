@@ -34,14 +34,14 @@ You may have a theme that has a not properly coded comments.php.
 
 The version of WP makes a difference...
 
-(WP2 series) Your theme must have a `<?php do_action('comment_form', $post->ID); ?>` tag inside your `/wp-content/themes/[your_theme]/comments.php` file. 
+(WP2 series) Your theme must have a `&lt;?php do_action('comment_form', $post->ID); ?&gt;` tag inside your `/wp-content/themes/[your_theme]/comments.php` file. 
 Most WP2 themes already do. The best place to locate the tag is before the comment textarea, you may want to move it up if it is below the comment textarea.
 
 (WP3 series) Since WP3 there is new function comment_form inside `/wp-includes/comment-template.php`. 
 Your is theme probably not up to current code to call that function from inside comments.php.
 WP3 theme does not need the `do_action('comment_form'`... code line inside `/wp-content/themes/[your_theme]/comments.php`.
-Instead, it uses a new function call inside comments.php: `<?php comment_form(); ?>`
-If you have WP3 and still have the missing captcha, make sure your theme has `<?php comment_form(); ?>`
+Instead, it uses a new function call inside comments.php: `&lt;?php comment_form(); ?&gt;`
+If you have WP3 and still have the missing captcha, make sure your theme has `&lt;?php comment_form(); ?&gt;`
 inside `/wp-content/themes/[your_theme]/comments.php`. (look inside the Twenty Ten theme's comments.php for proper example)
 
 == Screenshots ==
