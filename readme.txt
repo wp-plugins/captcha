@@ -1,6 +1,5 @@
 ﻿=== Captcha ===
 Contributors: bestwebsoft
-Contributors: bestwebsoft
 Donate link: http://bestwebsoft.com/
 Tags: captcha, math captcha, text captcha, spam, antispam, login, registration, comment, lost password, capcha, catcha, captha
 Requires at least: 2.9
