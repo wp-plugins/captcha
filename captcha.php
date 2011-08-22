@@ -4,7 +4,7 @@ Plugin Name: Captcha
 Plugin URI:  http://bestwebsoft.com/plugin/
 Description: Plugin Captcha intended to prove that the visitor is a human being and not a spam robot. Plugin asks the visitor to answer a math question.
 Author: BestWebSoft
-Version: 2.05
+Version: 2.06
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -53,11 +53,11 @@ if( ! function_exists( 'bws_plugin_header' ) ) {
 		global $post_type;
 		?>
 		<style>
-		#adminmenu #toplevel_page_my_new_menu div.wp-menu-image
+		#adminmenu #toplevel_page_bws_plugins div.wp-menu-image
 		{
 			background: url("<?php echo get_bloginfo('url');?>/wp-content/plugins/captcha/images/icon_16.png") no-repeat scroll center center transparent;
 		}
-		#adminmenu #toplevel_page_my_new_menu:hover div.wp-menu-image, #adminmenu #toplevel_page_my_new_menu.wp-has-current-submenu div.wp-menu-image
+		#adminmenu #toplevel_page_bws_plugins:hover div.wp-menu-image, #adminmenu #toplevel_page_bws_plugins.wp-has-current-submenu div.wp-menu-image
 		{
 			background: url("<?php echo get_bloginfo('url');?>/wp-content/plugins/captcha/images/icon_16_c.png") no-repeat scroll center center transparent;
 		}	
@@ -65,7 +65,7 @@ if( ! function_exists( 'bws_plugin_header' ) ) {
 		{
 			background: url("<?php echo get_bloginfo('url');?>/wp-content/plugins/captcha/images/icon_36.png") no-repeat scroll left top transparent;
 		}
-		#toplevel_page_my_new_menu .wp-submenu .wp-first-item
+		#toplevel_page_bws_plugins .wp-submenu .wp-first-item
 		{
 			display:none;
 		}
@@ -97,19 +97,29 @@ if( ! function_exists( 'bws_add_menu_render' ) ) {
 	function bws_add_menu_render() {
 		global $title;
 		$active_plugins = get_option('active_plugins');
+		$all_plugins = get_plugins();
+
+		$array_activate = array();
 		$array_install = array();
 		$array_recomend = array();
-		$count_install = $count_recomend = 0;
+		$count_activate = $count_install = $count_recomend = 0;
 		$array_plugins = array(
-			array( 'captcha\/captcha.php', 'Captcha', 'http://wordpress.org/extend/plugins/captcha/', 'http://bestwebsoft.com/plugin/captcha-plugin/' ), 
-			array( 'contact-form-plugin\/contact_form.php', 'Contact Form', 'http://wordpress.org/extend/plugins/contact-form-plugin/', 'http://bestwebsoft.com/plugin/contact-form/' ), 
-			array( 'facebook-button-plugin\/facebook-button-plugin.php', 'Facebook Like Button Plugin', 'http://wordpress.org/extend/plugins/facebook-button-plugin/', 'http://bestwebsoft.com/plugin/facebook-like-button-plugin/' ), 
-			array( 'twitter-plugin\/twitter.php', 'Twitter Plugin', 'http://wordpress.org/extend/plugins/twitter-plugin/', 'http://bestwebsoft.com/plugin/twitter-plugin/' ), 
-			array( 'portfolio\/portfolio.php', 'Portfolio', 'http://wordpress.org/extend/plugins/portfolio/', 'http://bestwebsoft.com/plugin/portfolio-plugin/' )
+			array( 'captcha\/captcha.php', 'Captcha', 'http://wordpress.org/extend/plugins/captcha/', 'http://bestwebsoft.com/plugin/captcha-plugin/', '/wp-admin/update.php?action=install-plugin&plugin=captcha&_wpnonce=e66502ec9a' ), 
+			array( 'contact-form-plugin\/contact_form.php', 'Contact Form', 'http://wordpress.org/extend/plugins/contact-form-plugin/', 'http://bestwebsoft.com/plugin/contact-form/', '/wp-admin/update.php?action=install-plugin&plugin=contact-form-plugin&_wpnonce=47757d936f' ), 
+			array( 'facebook-button-plugin\/facebook-button-plugin.php', 'Facebook Like Button Plugin', 'http://wordpress.org/extend/plugins/facebook-button-plugin/', 'http://bestwebsoft.com/plugin/facebook-like-button-plugin/', '/wp-admin/update.php?action=install-plugin&plugin=facebook-button-plugin&_wpnonce=6eb654de19' ), 
+			array( 'twitter-plugin\/twitter.php', 'Twitter Plugin', 'http://wordpress.org/extend/plugins/twitter-plugin/', 'http://bestwebsoft.com/plugin/twitter-plugin/', '/wp-admin/update.php?action=install-plugin&plugin=twitter-plugin&_wpnonce=1612c998a5' ), 
+			array( 'portfolio\/portfolio.php', 'Portfolio', 'http://wordpress.org/extend/plugins/portfolio/', 'http://bestwebsoft.com/plugin/portfolio-plugin/', '/wp-admin/update.php?action=install-plugin&plugin=portfolio&_wpnonce=488af7391d' )
 		);
 		foreach($array_plugins as $plugins)
 		{
 			if( 0 < count( preg_grep( "/".$plugins[0]."/", $active_plugins ) ) )
+			{
+				$array_activate[$count_activate]['title'] = $plugins[1];
+				$array_activate[$count_activate]['link'] = $plugins[2];
+				$array_activate[$count_activate]['href'] = $plugins[3];
+				$count_activate++;
+			}
+			else if( array_key_exists(str_replace("\\", "", $plugins[0]), $all_plugins) )
 			{
 				$array_install[$count_install]['title'] = $plugins[1];
 				$array_install[$count_install]['link'] = $plugins[2];
@@ -121,13 +131,22 @@ if( ! function_exists( 'bws_add_menu_render' ) ) {
 				$array_recomend[$count_recomend]['title'] = $plugins[1];
 				$array_recomend[$count_recomend]['link'] = $plugins[2];
 				$array_recomend[$count_recomend]['href'] = $plugins[3];
+				$array_recomend[$count_recomend]['slug'] = $plugins[4];
 				$count_recomend++;
 			}
-		}		
+		}
 		?>
 		<div class="wrap">
 			<div class="icon32 icon32-bws" id="icon-options-general"></div>
 			<h2><?php echo $title;?></h2>
+			<?php if($count_activate > 0) { ?>
+			<div>
+				<h3>Activated plugins</h3>
+				<?php foreach($array_activate as $activate_plugin) { ?>
+				<div style="float:left; width:200px;"><?php echo $activate_plugin['title']; ?></div> <p><a href="<?php echo $activate_plugin['link']; ?>">Read more</a></p>
+				<?php } ?>
+			</div>
+			<?php } ?>
 			<?php if($count_install > 0) { ?>
 			<div>
 				<h3>Installed plugins</h3>
@@ -140,7 +159,7 @@ if( ! function_exists( 'bws_add_menu_render' ) ) {
 			<div>
 				<h3>Recommended plugins</h3>
 				<?php foreach($array_recomend as $recomend_plugin) { ?>
-				<div style="float:left; width:200px;"><?php echo $recomend_plugin['title']; ?></div> <p><a href="<?php echo $recomend_plugin['link']; ?>">Read more</a> <a href="<?php echo $recomend_plugin['href']; ?>">Download</a></p>
+				<div style="float:left; width:200px;"><?php echo $recomend_plugin['title']; ?></div> <p><a href="<?php echo $recomend_plugin['link']; ?>">Read more</a> <a href="<?php echo $recomend_plugin['href']; ?>">Download</a> <a class="install-now" href="<?php echo get_bloginfo("url") . $recomend_plugin['slug']; ?>" title="<?php esc_attr( sprintf( __( 'Install %s' ), $recomend_plugin['title'] ) ) ?>"><?php echo __( 'Install Now' ) ?></a></p>
 				<?php } ?>
 				<span style="color: rgb(136, 136, 136); font-size: 10px;">If you have any questions, please contact us via plugin@bestwebsoft.com or fill in our contact form on our site <a href="http://bestwebsoft.com/contact/">http://bestwebsoft.com/contact/</a></span>
 			</div>
@@ -151,8 +170,8 @@ if( ! function_exists( 'bws_add_menu_render' ) ) {
 }
 
 function add_cptch_admin_menu() {
-	add_menu_page(__('BWS Plugins'), __('BWS Plugins'), 'manage_options', 'my_new_menu', 'bws_add_menu_render', WP_CONTENT_URL."/plugins/captcha/images/px.png", 100); 
-	add_submenu_page('my_new_menu', 'Captcha Options', 'Captcha', 'manage_options', "captcha.php", 'cptch_settings_page');
+	add_menu_page(__('BWS Plugins'), __('BWS Plugins'), 'manage_options', 'bws_plugins', 'bws_add_menu_render', WP_CONTENT_URL."/plugins/captcha/images/px.png", 101); 
+	add_submenu_page('bws_plugins', 'Captcha Options', 'Captcha', 'manage_options', "captcha.php", 'cptch_settings_page');
 
 	//call register settings function
 	add_action( 'admin_init', 'register_cptch_settings' );
@@ -897,4 +916,5 @@ function cptch_display_captcha_custom()
 	$content .= $str_math_expretion; 
 	return $content;
 }
+
 ?>

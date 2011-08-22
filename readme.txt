@@ -4,7 +4,7 @@ Donate link: http://bestwebsoft.com/
 Tags: captcha, math captcha, text captcha, spam, antispam, login, registration, comment, lost password, capcha, catcha, captha
 Requires at least: 2.9
 Tested up to: 3.2
-Stable tag: 2011.2.05
+Stable tag: 2011.2.06
 
 This plugin allows you to implement super security captcha form into web forms.
 
@@ -53,6 +53,9 @@ inside `/wp-content/themes/[your_theme]/comments.php`. (look inside the Twenty T
 
 == Changelog ==
 
+= 2.06 =
+*BWS Plugins sections was fixed and right now it is consisted with 3 parts: activated, installed and recommended plugins. The bug of position in the admin menu is fixed. 
+
 = 2.05 =
 *BWS Plugins sections was fixed and right now it is consisted with 2 parts: installed and recommended plugins. Icons displaying is fixed. Misalignment of math transaction is fixed.
 
@@ -82,6 +85,9 @@ inside `/wp-content/themes/[your_theme]/comments.php`. (look inside the Twenty T
 * Mathematical actions choosing functionality and level of difficulty was implemented.
 
 == Upgrade Notice ==
+
+= 2.06 =
+BWS Plugins sections was fixed and right now it is consisted with 3 parts: activated, installed and recommended plugins.  The bug of position in the admin menu is fixed.
 
 = 2.05 =
 BWS Plugins sections was fixed and right now it is consisted with 2 parts: installed and recommended plugins. Icons displaying is fixed. Misalignment of math transaction is fixed.
