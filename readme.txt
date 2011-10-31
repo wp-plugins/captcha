@@ -4,7 +4,7 @@ Donate link: http://bestwebsoft.com/
 Tags: captcha, math captcha, text captcha, spam, antispam, login, registration, comment, lost password, capcha, catcha, captha
 Requires at least: 2.9
 Tested up to: 3.2
-Stable tag: 2011.2.06
+Stable tag: 2011.2.07
 
 This plugin allows you to implement super security captcha form into web forms.
 
@@ -53,29 +53,32 @@ inside `/wp-content/themes/[your_theme]/comments.php`. (look inside the Twenty T
 
 == Changelog ==
 
+= 2.07 =
+* Added language files for plugin.
+
 = 2.06 =
-*BWS Plugins sections was fixed and right now it is consisted with 3 parts: activated, installed and recommended plugins. The bug of position in the admin menu is fixed. 
+* BWS Plugins sections was fixed and right now it is consisted with 3 parts: activated, installed and recommended plugins. The bug of position in the admin menu is fixed. 
 
 = 2.05 =
-*BWS Plugins sections was fixed and right now it is consisted with 2 parts: installed and recommended plugins. Icons displaying is fixed. Misalignment of math transaction is fixed.
+* BWS Plugins sections was fixed and right now it is consisted with 2 parts: installed and recommended plugins. Icons displaying is fixed. Misalignment of math transaction is fixed.
 
 = 2.04 =
-*In this version of plugin a bug of CAPTCHa reflection (before and after the comment form) was fixed. Please upgrade Captcha plugin immediately. Thank you. For more details information please see the FAQ
+* In this version of plugin a bug of CAPTCHa reflection (before and after the comment form) was fixed. Please upgrade Captcha plugin immediately. Thank you. For more details information please see the FAQ
 
 = 2.03 =
-*In this version of plugin a bug of CAPTCHa reflection was fixed in some of the themes for release of WordPress 3.0 and above. Please upgrade Captcha plugin immediately. Thank you
+* In this version of plugin a bug of CAPTCHa reflection was fixed in some of the themes for release of WordPress 3.0 and above. Please upgrade Captcha plugin immediately. Thank you
 
 = 2.02 =
-*The bug of the captcha setting page link is fixed in this version. Please upgrade the Captcha plugin immediately. Thank you
+* The bug of the captcha setting page link is fixed in this version. Please upgrade the Captcha plugin immediately. Thank you
 
 = 2.01 =
-*Usability at the settings page of plugin was improved.
+* Usability at the settings page of plugin was improved.
 
 = 1.04 =
-*The bug of the captcha output is fixed in this version. Please upgrade the Captcha plugin immediately. Thank you.
+* The bug of the captcha output is fixed in this version. Please upgrade the Captcha plugin immediately. Thank you.
 
 = 1.03 =
-*Ability to add BestWebSoft Contact Form plugin into a Captcha plugin from wp-admin via Settings panel.
+* Ability to add BestWebSoft Contact Form plugin into a Captcha plugin from wp-admin via Settings panel.
 
 = 1.02 =
 * Added "Settings", "FAQ", "Support" links to the plugin action page.
@@ -85,6 +88,9 @@ inside `/wp-content/themes/[your_theme]/comments.php`. (look inside the Twenty T
 * Mathematical actions choosing functionality and level of difficulty was implemented.
 
 == Upgrade Notice ==
+
+= 2.07 =
+Added language files for plugin.
 
 = 2.06 =
 BWS Plugins sections was fixed and right now it is consisted with 3 parts: activated, installed and recommended plugins.  The bug of position in the admin menu is fixed.

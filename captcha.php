@@ -4,7 +4,7 @@ Plugin Name: Captcha
 Plugin URI:  http://bestwebsoft.com/plugin/
 Description: Plugin Captcha intended to prove that the visitor is a human being and not a spam robot. Plugin asks the visitor to answer a math question.
 Author: BestWebSoft
-Version: 2.06
+Version: 2.07
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -74,64 +74,46 @@ if( ! function_exists( 'bws_plugin_header' ) ) {
 	}
 }
 
-add_action('admin_head', 'bws_plugin_header');
-add_action( 'admin_menu', 'add_cptch_admin_menu' );
-
-$active_plugins = get_option('active_plugins');
-if( 0 < count( preg_grep( '/contact-form-plugin\/contact_form.php/', $active_plugins ) ) )
-{
-	$cptch_options = get_option( 'cptch_options' );
-	if( $cptch_options['cptch_contact_form'] == 1)
-	{
-		add_filter('cntctfrm_display_captcha', 'cptch_custom_form');
-		add_filter('cntctfrm_check_form', 'cptch_check_custom_form');
-	}
-	if( $cptch_options['cptch_contact_form'] == 0 )
-	{
-		remove_filter('cntctfrm_display_captcha', 'cptch_custom_form');
-		remove_filter('cntctfrm_check_form', 'cptch_check_custom_form');
-	}
-}
-
 if( ! function_exists( 'bws_add_menu_render' ) ) {
 	function bws_add_menu_render() {
 		global $title;
 		$active_plugins = get_option('active_plugins');
-		$all_plugins = get_plugins();
+		$all_plugins		= get_plugins();
 
 		$array_activate = array();
-		$array_install = array();
+		$array_install	= array();
 		$array_recomend = array();
 		$count_activate = $count_install = $count_recomend = 0;
-		$array_plugins = array(
+		$array_plugins	= array(
 			array( 'captcha\/captcha.php', 'Captcha', 'http://wordpress.org/extend/plugins/captcha/', 'http://bestwebsoft.com/plugin/captcha-plugin/', '/wp-admin/update.php?action=install-plugin&plugin=captcha&_wpnonce=e66502ec9a' ), 
 			array( 'contact-form-plugin\/contact_form.php', 'Contact Form', 'http://wordpress.org/extend/plugins/contact-form-plugin/', 'http://bestwebsoft.com/plugin/contact-form/', '/wp-admin/update.php?action=install-plugin&plugin=contact-form-plugin&_wpnonce=47757d936f' ), 
 			array( 'facebook-button-plugin\/facebook-button-plugin.php', 'Facebook Like Button Plugin', 'http://wordpress.org/extend/plugins/facebook-button-plugin/', 'http://bestwebsoft.com/plugin/facebook-like-button-plugin/', '/wp-admin/update.php?action=install-plugin&plugin=facebook-button-plugin&_wpnonce=6eb654de19' ), 
 			array( 'twitter-plugin\/twitter.php', 'Twitter Plugin', 'http://wordpress.org/extend/plugins/twitter-plugin/', 'http://bestwebsoft.com/plugin/twitter-plugin/', '/wp-admin/update.php?action=install-plugin&plugin=twitter-plugin&_wpnonce=1612c998a5' ), 
-			array( 'portfolio\/portfolio.php', 'Portfolio', 'http://wordpress.org/extend/plugins/portfolio/', 'http://bestwebsoft.com/plugin/portfolio-plugin/', '/wp-admin/update.php?action=install-plugin&plugin=portfolio&_wpnonce=488af7391d' )
+			array( 'portfolio\/portfolio.php', 'Portfolio', 'http://wordpress.org/extend/plugins/portfolio/', 'http://bestwebsoft.com/plugin/portfolio-plugin/', '/wp-admin/update.php?action=install-plugin&plugin=portfolio&_wpnonce=488af7391d' ),
+			array( 'gallery-plugin\/gallery-plugin.php', 'Gallery', 'http://wordpress.org/extend/plugins/gallery-plugin/', 'http://bestwebsoft.com/plugin/gallery-plugin/', '/wp-admin/update.php?action=install-plugin&plugin=gallery-plugin&_wpnonce=f82ce8c1ad' )
 		);
 		foreach($array_plugins as $plugins)
 		{
 			if( 0 < count( preg_grep( "/".$plugins[0]."/", $active_plugins ) ) )
 			{
 				$array_activate[$count_activate]['title'] = $plugins[1];
-				$array_activate[$count_activate]['link'] = $plugins[2];
-				$array_activate[$count_activate]['href'] = $plugins[3];
+				$array_activate[$count_activate]['link']	= $plugins[2];
+				$array_activate[$count_activate]['href']	= $plugins[3];
 				$count_activate++;
 			}
 			else if( array_key_exists(str_replace("\\", "", $plugins[0]), $all_plugins) )
 			{
 				$array_install[$count_install]['title'] = $plugins[1];
-				$array_install[$count_install]['link'] = $plugins[2];
-				$array_install[$count_install]['href'] = $plugins[3];
+				$array_install[$count_install]['link']	= $plugins[2];
+				$array_install[$count_install]['href']	= $plugins[3];
 				$count_install++;
 			}
 			else
 			{
 				$array_recomend[$count_recomend]['title'] = $plugins[1];
-				$array_recomend[$count_recomend]['link'] = $plugins[2];
-				$array_recomend[$count_recomend]['href'] = $plugins[3];
-				$array_recomend[$count_recomend]['slug'] = $plugins[4];
+				$array_recomend[$count_recomend]['link']	= $plugins[2];
+				$array_recomend[$count_recomend]['href']	= $plugins[3];
+				$array_recomend[$count_recomend]['slug']	= $plugins[4];
 				$count_recomend++;
 			}
 		}
@@ -139,29 +121,29 @@ if( ! function_exists( 'bws_add_menu_render' ) ) {
 		<div class="wrap">
 			<div class="icon32 icon32-bws" id="icon-options-general"></div>
 			<h2><?php echo $title;?></h2>
-			<?php if($count_activate > 0) { ?>
+			<?php if( 0 < $count_activate ) { ?>
 			<div>
-				<h3>Activated plugins</h3>
-				<?php foreach($array_activate as $activate_plugin) { ?>
+				<h3><?php _e( 'Activated plugins', 'captcha' ); ?></h3>
+				<?php foreach( $array_activate as $activate_plugin ) { ?>
 				<div style="float:left; width:200px;"><?php echo $activate_plugin['title']; ?></div> <p><a href="<?php echo $activate_plugin['link']; ?>">Read more</a></p>
 				<?php } ?>
 			</div>
 			<?php } ?>
-			<?php if($count_install > 0) { ?>
+			<?php if( 0 < $count_install ) { ?>
 			<div>
-				<h3>Installed plugins</h3>
+				<h3><?php _e( 'Installed plugins', 'captcha' ); ?></h3>
 				<?php foreach($array_install as $install_plugin) { ?>
 				<div style="float:left; width:200px;"><?php echo $install_plugin['title']; ?></div> <p><a href="<?php echo $install_plugin['link']; ?>">Read more</a></p>
 				<?php } ?>
 			</div>
 			<?php } ?>
-			<?php if($count_recomend > 0) { ?>
+			<?php if( 0 < $count_recomend ) { ?>
 			<div>
-				<h3>Recommended plugins</h3>
-				<?php foreach($array_recomend as $recomend_plugin) { ?>
-				<div style="float:left; width:200px;"><?php echo $recomend_plugin['title']; ?></div> <p><a href="<?php echo $recomend_plugin['link']; ?>">Read more</a> <a href="<?php echo $recomend_plugin['href']; ?>">Download</a> <a class="install-now" href="<?php echo get_bloginfo("url") . $recomend_plugin['slug']; ?>" title="<?php esc_attr( sprintf( __( 'Install %s' ), $recomend_plugin['title'] ) ) ?>"><?php echo __( 'Install Now' ) ?></a></p>
+				<h3><?php _e( 'Recommended plugins', 'captcha' ); ?></h3>
+				<?php foreach( $array_recomend as $recomend_plugin ) { ?>
+				<div style="float:left; width:200px;"><?php echo $recomend_plugin['title']; ?></div> <p><a href="<?php echo $recomend_plugin['link']; ?>">Read more</a> <a href="<?php echo $recomend_plugin['href']; ?>">Download</a> <a class="install-now" href="<?php echo get_bloginfo( "url" ) . $recomend_plugin['slug']; ?>" title="<?php esc_attr( sprintf( __( 'Install %s' ), $recomend_plugin['title'] ) ) ?>"><?php echo __( 'Install Now' ) ?></a></p>
 				<?php } ?>
-				<span style="color: rgb(136, 136, 136); font-size: 10px;">If you have any questions, please contact us via plugin@bestwebsoft.com or fill in our contact form on our site <a href="http://bestwebsoft.com/contact/">http://bestwebsoft.com/contact/</a></span>
+				<span style="color: rgb(136, 136, 136); font-size: 10px;"><?php _e( 'If you have any questions, please contact us via plugin@bestwebsoft.com or fill in our contact form on our site', 'captcha' ); ?> <a href="http://bestwebsoft.com/contact/">http://bestwebsoft.com/contact/</a></span>
 			</div>
 			<?php } ?>
 		</div>
@@ -170,8 +152,8 @@ if( ! function_exists( 'bws_add_menu_render' ) ) {
 }
 
 function add_cptch_admin_menu() {
-	add_menu_page(__('BWS Plugins'), __('BWS Plugins'), 'manage_options', 'bws_plugins', 'bws_add_menu_render', WP_CONTENT_URL."/plugins/captcha/images/px.png", 101); 
-	add_submenu_page('bws_plugins', 'Captcha Options', 'Captcha', 'manage_options', "captcha.php", 'cptch_settings_page');
+	add_menu_page( __( 'BWS Plugins', 'captcha' ), __( 'BWS Plugins', 'captcha' ), 'manage_options', 'bws_plugins', 'bws_add_menu_render', WP_CONTENT_URL."/plugins/captcha/images/px.png", 101); 
+	add_submenu_page('bws_plugins', __( 'Captcha Options', 'captcha' ), __( 'Captcha', 'captcha' ), 'manage_options', "captcha.php", 'cptch_settings_page');
 
 	//call register settings function
 	add_action( 'admin_init', 'register_cptch_settings' );
@@ -183,17 +165,17 @@ function register_cptch_settings() {
 	global $cptch_options;
 
 	$cptch_option_defaults = array(
-		'cptch_login_form' => '1',
-		'cptch_register_form' => '1',
-		'cptch_lost_password_form' => '1',
-		'cptch_comments_form' => '1',
-		'cptch_hide_register' => '1',
-		'cptch_math_action_plus' => '1',
-		'cptch_math_action_minus'  => '1',
-		'cptch_math_action_increase' => '1',
-		'cptch_label_form' => '',
-		'cptch_difficulty_number' => '1',
-		'cptch_difficulty_word' => '1',
+		'cptch_login_form'						=> '1',
+		'cptch_register_form'					=> '1',
+		'cptch_lost_password_form'		=> '1',
+		'cptch_comments_form'					=> '1',
+		'cptch_hide_register'					=> '1',
+		'cptch_math_action_plus'			=> '1',
+		'cptch_math_action_minus'			=> '1',
+		'cptch_math_action_increase'	=> '1',
+		'cptch_label_form'						=> '',
+		'cptch_difficulty_number'			=> '1',
+		'cptch_difficulty_word'				=> '1',
   );
 
   // install the option defaults
@@ -306,12 +288,10 @@ function cptch_settings_page() {
 				else
 					$cptch_request_options[$key] = "";
 			}
-			if( isset( $_REQUEST['cptch_contact_form'] ) )
-			{
+			if( isset( $_REQUEST['cptch_contact_form'] ) ) {
 				$cptch_request_options['cptch_contact_form'] = $_REQUEST['cptch_contact_form'];
 			}
-			else
-			{
+			else {
 				$cptch_request_options['cptch_contact_form'] = 0;
 			}
 		}
@@ -340,46 +320,50 @@ function cptch_settings_page() {
 	}
 	</style>
 	<div class="icon32 icon32-bws" id="icon-options-general"></div>
-	<h2>Captcha Options</h2>
+	<h2><?php _e('Captcha Options', 'captcha' ); ?></h2>
 	<div class="updated fade" <?php if( ! isset( $_REQUEST['cptch_form_submit'] ) || $error != "" ) echo "style=\"display:none\""; ?>><p><strong><?php echo $message; ?></strong></p></div>
 	<div class="error" <?php if( "" == $error ) echo "style=\"display:none\""; ?>><p><strong><?php echo $error; ?></strong></p></div>
 	<form method="post" action="admin.php?page=captcha.php">
 		<table class="form-table">
 			<tr valign="top">
-				<th scope="row">Enable CAPTCHA on the: </th>
+				<th scope="row"><?php _e('Enable CAPTCHA on the:', 'captcha' ); ?> </th>
 				<td>
 			<?php foreach( $cptch_admin_fields_enable as $fields ) { ?>
-					<input type="checkbox" name="<?php echo $fields[0]; ?>" value="<?php echo $fields[0]; ?>" <?php if( 1 == $cptch_options[$fields[0]] ) echo "checked=\"checked\""; ?> /><label for="<?php echo $fields[0]; ?>"><?php echo $fields[1]; ?></label><br />
+					<input type="checkbox" name="<?php echo $fields[0]; ?>" value="<?php echo $fields[0]; ?>" <?php if( 1 == $cptch_options[$fields[0]] ) echo "checked=\"checked\""; ?> /><label for="<?php echo $fields[0]; ?>"><?php echo __( $fields[1], 'captcha' ); ?></label><br />
 			<?php } 
 			$active_plugins = get_option('active_plugins');
-			if(0 < count( preg_grep( '/contact-form-plugin\/contact_form.php/', $active_plugins ) ) )
-			{ ?>
-					<input type="checkbox" name="cptch_contact_form" value="1" <?php if( 1 == $cptch_options['cptch_contact_form'] ) echo "checked=\"checked\""; ?> /><label for="cptch_contact_form">Contact form</label> <span style="color: #888888;font-size: 10px;">(power by bestwebsoft.com)</span><br />
+			$all_plugins = get_plugins();
+			if( array_key_exists('contact-form-plugin/contact_form.php', $all_plugins) ) {
+				if(0 < count( preg_grep( '/contact-form-plugin\/contact_form.php/', $active_plugins ) ) ) { ?>
+					<input type="checkbox" name="cptch_contact_form" value="1" <?php if( 1 == $cptch_options['cptch_contact_form'] ) echo "checked=\"checked\""; ?> /><label for="cptch_contact_form"><?php _e( 'Contact form', 'captcha' ); ?></label> <span style="color: #888888;font-size: 10px;"><?php _e( '(power by bestwebsoft.com)', 'captcha' ); ?></span><br />
 			<?php } 
-			else
-			{ ?>
-					<input disabled='disabled' type="checkbox" name="cptch_contact_form" value="1" <?php if( 1 == $cptch_options['cptch_contact_form'] ) echo "checked=\"checked\""; ?> /><label for="cptch_contact_form">Contact form</label> <span style="color: #888888;font-size: 10px;">(power by bestwebsoft.com) <a href="">download contact form</a></span><br /><br />
+				else { ?>
+					<input disabled='disabled' type="checkbox" name="cptch_contact_form" value="1" <?php if( 1 == $cptch_options['cptch_contact_form'] ) echo "checked=\"checked\""; ?> /><label for="cptch_contact_form"><?php _e('Contact form', 'captcha' ); ?></label> <span style="color: #888888;font-size: 10px;"><?php _e( '(power by bestwebsoft.com)', 'captcha' ); ?> <a href="<?php echo bloginfo("url"); ?>/wp-admin/plugins.php"><?php _e( 'Activate contact form', 'captcha' ); ?></a></span><br />
+				<?php }
+			}
+			else { ?>
+					<input disabled='disabled' type="checkbox" name="cptch_contact_form" value="1" <?php if( 1 == $cptch_options['cptch_contact_form'] ) echo "checked=\"checked\""; ?> /><label for="cptch_contact_form"><?php _e('Contact form', 'captcha' ); ?></label> <span style="color: #888888;font-size: 10px;"><?php _e( '(power by bestwebsoft.com)', 'captcha' ); ?> <a href="http://bestwebsoft.com/plugin/contact-form/"><?php _e( 'Download contact form', 'captcha' ); ?></a></span><br />
 			<?php }?>
-					<span style="color: #888888;font-size: 10px;">If you would like to customize this plugin for a custom form, please contact us via <a href="Mailto:plugin@bestwebsoft.com">plugin@bestwebsoft.com</a> or fill in our contact form on our site <a href="http://bestwebsoft.com/contact/" target="_blank">http://bestwebsoft.com/contact/</a></span>
+					<span style="color: #888888;font-size: 10px;"><?php _e( 'If you would like to customize this plugin for a custom form, please contact us via <a href="Mailto:plugin@bestwebsoft.com">plugin@bestwebsoft.com</a> or fill in our contact form on our site', 'captcha' ); ?> <a href="http://bestwebsoft.com/contact/" target="_blank">http://bestwebsoft.com/contact/</a></span>
 				</td>
 			</tr>
 			<tr valign="top">
-				<th scope="row">Label for CAPTCHA in form</th>
+				<th scope="row"><?php _e( 'Label for CAPTCHA in form', 'captcha' ); ?></th>
 				<td><input type="text" name="cptch_label_form" value="<?php echo $cptch_options['cptch_label_form']; ?>" <?php if( 1 == $cptch_options['cptch_label_form'] ) echo "checked=\"checked\""; ?> /></td>
 			</tr>
 			<tr valign="top">
-				<th scope="row">Arithmetic actions for CAPTCHA</th>
+				<th scope="row"><?php _e( 'Arithmetic actions for CAPTCHA', 'captcha' ); ?></th>
 				<td>
-			<?php foreach($cptch_admin_fields_actions as $actions) { ?>
-					<div style="float:left; width:100px;"><input type="checkbox" name="<?php echo $actions[0]; ?>" value="<?php echo $cptch_options[$actions[0]]; ?>" <?php if( 1 == $cptch_options[$actions[0]] ) echo "checked=\"checked\""; ?> /><label for="<?php echo $actions[0]; ?>"><?php echo $actions[1]; ?></label></div><img src="<?php echo plugins_url( 'images/'.$actions[0].'.jpg' , __FILE__ );?>" alt="" title="" width="" height="" /><br />
+			<?php foreach( $cptch_admin_fields_actions as $actions ) { ?>
+					<div style="float:left; width:100px;"><input type="checkbox" name="<?php echo $actions[0]; ?>" value="<?php echo $cptch_options[$actions[0]]; ?>" <?php if( 1 == $cptch_options[$actions[0]] ) echo "checked=\"checked\""; ?> /><label for="<?php echo $actions[0]; ?>"><?php echo __( $actions[1], 'captcha' ); ?></label></div><img src="<?php echo plugins_url( 'images/'.$actions[0].'.jpg' , __FILE__ );?>" alt="" title="" width="" height="" /><br />
 			<?php } ?>
 				</td>
 			</tr>
 			<tr valign="top">
-				<th scope="row">Difficulty for CAPTCHA</th>
+				<th scope="row"><?php _e( 'Difficulty for CAPTCHA', 'captcha' ); ?></th>
 				<td>
-			<?php foreach($cptch_admin_fields_difficulty as $diff) { ?>
-					<div style="float:left; width:100px;"><input type="checkbox" name="<?php echo $diff[0]; ?>" value="<?php echo $cptch_options[$diff[0]]; ?>" <?php if( 1 == $cptch_options[$diff[0]] ) echo "checked=\"checked\""; ?> /><label for="<?php echo $diff[0]; ?>"><?php echo $diff[1]; ?></label></div><img src="<?php echo plugins_url( 'images/'.$diff[0].'.jpg' , __FILE__ );?>" alt="" title="" width="" height="" /><br />
+			<?php foreach( $cptch_admin_fields_difficulty as $diff ) { ?>
+					<div style="float:left; width:100px;"><input type="checkbox" name="<?php echo $diff[0]; ?>" value="<?php echo $cptch_options[$diff[0]]; ?>" <?php if( 1 == $cptch_options[$diff[0]] ) echo "checked=\"checked\""; ?> /><label for="<?php echo $diff[0]; ?>"><?php echo __( $diff[1], 'captcha' ); ?></label></div><img src="<?php echo plugins_url( 'images/'.$diff[0].'.jpg' , __FILE__ );?>" alt="" title="" width="" height="" /><br />
 			<?php } ?>
 				</td>
 			</tr>
@@ -401,8 +385,7 @@ function cptch_login_form() {
 	echo '<p>';
 	if( "" != $cptch_options['cptch_label_form'] )	
 		echo '<label>'. $cptch_options['cptch_label_form'] .'</label><br />';
-	if( isset( $_SESSION['cptch_error'] ) )
-	{
+	if( isset( $_SESSION['cptch_error'] ) ) {
 		echo "<br /><span style='color:red'>". $_SESSION['cptch_error'] ."</span><br />";
 		unset( $_SESSION['cptch_error'] );
 	}
@@ -429,13 +412,13 @@ function cptch_login_post($errors) {
 
 	// If captcha not complete, return error
 	if ( "" ==  $_POST['cptch_number'] ) {	
-		return $errors.'<strong>'. __( 'ERROR', 'cptch' ) .'</strong>: '. __( 'Please complete the CAPTCHA.', 'cptch' );
+		return $errors.'<strong>'. __( 'ERROR', 'captcha' ) .'</strong>: '. __( 'Please complete the CAPTCHA.', 'captcha' );
 	}
 
 	if ( 0 == strcasecmp( trim( decode( $_POST['cptch_result'], $str_key ) ), $_POST['cptch_number'] ) ) {
 		// captcha was matched						
 	} else {
-		return $errors.'<strong>'. __( 'ERROR', 'cptch' ) .'</strong>: '. __( 'That CAPTCHA was incorrect.', 'cptch' );
+		return $errors.'<strong>'. __( 'ERROR', 'captcha' ) .'</strong>: '. __( 'That CAPTCHA was incorrect.', 'captcha' );
 	}
   return($errors);
 } // end function cptch_login_post
@@ -448,7 +431,7 @@ function cptch_login_check($url) {
 	$str_key = "123";
 	// Add error if captcha is empty
 	if ( isset( $_POST['cptch_number'] ) && "" ==  $_POST['cptch_number'] ) {
-		$_SESSION['cptch_error'] = __( 'Please complete the CAPTCHA.', 'cptch' );
+		$_SESSION['cptch_error'] = __( 'Please complete the CAPTCHA.', 'captcha' );
 		// Redirect to wp-login.php
 		return $_SERVER["REQUEST_URI"];
 	}
@@ -457,7 +440,7 @@ function cptch_login_check($url) {
 		return $url;		// captcha was matched						
 	} else {
 		// Add error if captcha is incorrect
-		$_SESSION['cptch_error'] = __('That CAPTCHA was incorrect.', 'cptch');
+		$_SESSION['cptch_error'] = __('That CAPTCHA was incorrect.', 'captcha');
 		// Redirect to wp-login.php
 		return $_SERVER["REQUEST_URI"];
 	}
@@ -539,13 +522,13 @@ function cptch_comment_post($comment) {
 	
 	// If captcha is empty
 	if ( "" ==  $_POST['cptch_number'] )
-		wp_die( __('Please complete the CAPTCHA.', 'cptch' ) );
+		wp_die( __('Please complete the CAPTCHA.', 'captcha' ) );
 
 	if ( 0 == strcasecmp( trim( decode( $_POST['cptch_result'], $str_key ) ), $_POST['cptch_number'] ) ) {
 		// captcha was matched
 		return($comment);
 	} else {
-		wp_die( __('Error: You entered in the wrong CAPTCHA phrase. Press your browser\'s back button and try again.', 'cptch'));
+		wp_die( __('Error: You entered in the wrong CAPTCHA phrase. Press your browser\'s back button and try again.', 'captcha'));
 	}
 } // end function cptch_comment_post
 
@@ -572,14 +555,14 @@ function cptch_register_post($login,$email,$errors) {
 
 	// If captcha is blank - add error
 	if ( "" ==  $_POST['cptch_number'] ) {
-		$errors->add('captcha_blank', '<strong>'.__('ERROR', 'cptch').'</strong>: '.__('Please complete the CAPTCHA.', 'cptch'));
+		$errors->add('captcha_blank', '<strong>'.__('ERROR', 'captcha').'</strong>: '.__('Please complete the CAPTCHA.', 'captcha'));
 		return $errors;
 	}
 
 	if ( 0 == strcasecmp( trim( decode( $_POST['cptch_result'], $str_key ) ), $_POST['cptch_number'] ) ) {
 					// captcha was matched						
 	} else {
-		$errors->add('captcha_wrong', '<strong>'.__('ERROR', 'cptch').'</strong>: '.__('That CAPTCHA was incorrect.', 'cptch'));
+		$errors->add('captcha_wrong', '<strong>'.__('ERROR', 'captcha').'</strong>: '.__('That CAPTCHA was incorrect.', 'captcha'));
 	}
   return($errors);
 } // end function cptch_register_post
@@ -595,14 +578,14 @@ function cptch_lostpassword_post() {
 
 	// If captcha doesn't entered
   if ( "" ==  $_POST['cptch_number'] ) {
-		wp_die( __('Please complete the CAPTCHA.', 'cptch' ) );
+		wp_die( __( 'Please complete the CAPTCHA.', 'captcha' ) );
 	}
 	
 	// Check entered captcha
 	if ( 0 == strcasecmp( trim( decode( $_POST['cptch_result'], $str_key ) ), $_POST['cptch_number'] ) ) {
 		return;
 	} else {
-		wp_die( __('Error: You entered in the wrong CAPTCHA phrase. Press your browser\'s back button and try again.', 'cptch'));
+		wp_die( __( 'Error: You entered in the wrong CAPTCHA phrase. Press your browser\'s back button and try again.', 'captcha' ) );
 	}
 } // function cptch_lostpassword_post
 
@@ -616,11 +599,11 @@ function cptch_display_captcha()
 	$str_key = "123";
 	
 	// In letters presentation of numbers 0-9
-	$number_string = array('null', 'one','two','three','four','five','six','seven','eight','nine');
+	$number_string = array( 'null','one','two','three','four','five','six','seven','eight','nine', 'captcha' );
 	// In letters presentation of numbers 11 -19
-	$number_two_string = array(1=>'eleven','twelve','thirteen','fourteen','fifteen','sixteen','seventeen','eighteen','nineteen');
+	$number_two_string = array(1=>'eleven','twelve','thirteen','fourteen','fifteen','sixteen','seventeen','eighteen','nineteen' );
 	// In letters presentation of numbers 10, 20, 30, 40, 50, 60, 70, 80, 90
-	$number_three_string = array(1=>'ten','twenty','thirty','forty','fifty','sixty','seventy','eighty','ninety');
+	$number_three_string = array( 1=>'ten','twenty','thirty','forty','fifty','sixty','seventy','eighty','ninety' );
 	// The array of math actions
 	$math_actions = array();
 
@@ -679,7 +662,7 @@ function cptch_display_captcha()
 	if( 0 == $rand_input )
 		$str_math_expretion .= "<input type=\"text\" name=\"cptch_number\" value=\"\" maxlength=\"1\" size=\"1\" style=\"width:20px;margin-bottom:0;display:inline;\" />";
 	else if ( 0 == $rand_number_string || 0 == $cptch_options["cptch_difficulty_number"] )
-		$str_math_expretion .= $number_string[$array_math_expretion[0]];
+		$str_math_expretion .= __( $number_string[$array_math_expretion[0]], 'captcha' );
 	else
 		$str_math_expretion .= $array_math_expretion[0];
 	
@@ -690,7 +673,7 @@ function cptch_display_captcha()
 	if( 1 == $rand_input )
 		$str_math_expretion .= " <input type=\"text\" name=\"cptch_number\" value=\"\" maxlength=\"1\" size=\"1\" style=\"width:20px;margin-bottom:0;display:inline;\" />";
 	else if ( 1 == $rand_number_string || 0 == $cptch_options["cptch_difficulty_number"] )
-		$str_math_expretion .= " ".$number_string[$array_math_expretion[1]];
+		$str_math_expretion .= " ".__( $number_string[$array_math_expretion[1]], 'captcha' );
 	else
 		$str_math_expretion .= " ".$array_math_expretion[1];
 	
@@ -702,11 +685,11 @@ function cptch_display_captcha()
 		$str_math_expretion .= " <input type=\"text\" name=\"cptch_number\" value=\"\" maxlength=\"2\" size=\"1\" style=\"width:20px;margin-bottom:0;display:inline;\" />";
 	} else if ( 2 == $rand_number_string || 0 == $cptch_options["cptch_difficulty_number"] ) {
 		if( $array_math_expretion[2] < 10 )
-			$str_math_expretion .= " ".$number_string[$array_math_expretion[2]];
+			$str_math_expretion .= " ".__( $number_string[$array_math_expretion[2]], 'captcha' );
 		else if( $array_math_expretion[2] < 20 && $array_math_expretion[2] > 10 )
-			$str_math_expretion .= " ".$number_two_string[ $array_math_expretion[2] % 10 ];
+			$str_math_expretion .= " ".__( $number_two_string[ $array_math_expretion[2] % 10 ], 'captcha' );
 		else
-			$str_math_expretion .= " ".$number_three_string[ $array_math_expretion[2] / 10 ]." ".( 0 != $array_math_expretion[2] % 10 ? $number_string[ $array_math_expretion[2] % 10 ] : '');
+			$str_math_expretion .= " ".__( $number_three_string[ $array_math_expretion[2] / 10 ], 'captcha' )." ".( 0 != $array_math_expretion[2] % 10 ? __( $number_string[ $array_math_expretion[2] % 10 ], 'captcha' ) : '');
 	} else {
 		$str_math_expretion .= $array_math_expretion[2];
 	}
@@ -721,7 +704,7 @@ function cptch_display_captcha()
 function encode( $String, $Password )
 {
 	// Check if key for encoding is empty
-	if ( ! $Password ) die ( "The password of encipherement is not set" );
+	if ( ! $Password ) die ( __( "The password of encryption is not set", 'captcha' ) );
 
 	$Salt		= 'BGuxLWQtKweKEMV4';
 	$String = substr( pack( "H*", sha1( $String ) ), 0, 1 ).$String;
@@ -740,7 +723,7 @@ function encode( $String, $Password )
 function decode( $String, $Key )
 {
 	// Check if key for encoding is empty
-	if ( ! $Key ) die ( "The password of decoding is not set" );
+	if ( ! $Key ) die ( __( "The password of decoding is not set", 'captcha' ) );
 
 	$Salt		=	'BGuxLWQtKweKEMV4';
 	$StrLen = strlen( $String );
@@ -817,11 +800,12 @@ function cptch_display_captcha_custom()
 	$content = "";
 	
 	// In letters presentation of numbers 0-9
-	$number_string = array('null', 'one','two','three','four','five','six','seven','eight','nine');
+	// In letters presentation of numbers 0-9
+	$number_string = array( 'null','one','two','three','four','five','six','seven','eight','nine', 'captcha' );
 	// In letters presentation of numbers 11 -19
-	$number_two_string = array(1=>'eleven','twelve','thirteen','fourteen','fifteen','sixteen','seventeen','eighteen','nineteen');
+	$number_two_string = array(1=>'eleven','twelve','thirteen','fourteen','fifteen','sixteen','seventeen','eighteen','nineteen' );
 	// In letters presentation of numbers 10, 20, 30, 40, 50, 60, 70, 80, 90
-	$number_three_string = array(1=>'ten','twenty','thirty','forty','fifty','sixty','seventy','eighty','ninety');
+	$number_three_string = array( 1=>'ten','twenty','thirty','forty','fifty','sixty','seventy','eighty','ninety' );
 	// The array of math actions
 	$math_actions = array();
 
@@ -880,7 +864,7 @@ function cptch_display_captcha_custom()
 	if( 0 == $rand_input )
 		$str_math_expretion .= "<input type=\"text\" name=\"cptch_number\" value=\"\" maxlength=\"1\" size=\"1\" style=\"width:20px;margin-bottom:0;display:inline;\" />";
 	else if ( 0 == $rand_number_string || 0 == $cptch_options["cptch_difficulty_number"] )
-		$str_math_expretion .= $number_string[$array_math_expretion[0]];
+		$str_math_expretion .= __( $number_string[$array_math_expretion[0]], 'captcha' );
 	else
 		$str_math_expretion .= $array_math_expretion[0];
 	
@@ -891,7 +875,7 @@ function cptch_display_captcha_custom()
 	if( 1 == $rand_input )
 		$str_math_expretion .= " <input type=\"text\" name=\"cptch_number\" value=\"\" maxlength=\"1\" size=\"1\" style=\"width:20px;margin-bottom:0;display:inline;\" />";
 	else if ( 1 == $rand_number_string || 0 == $cptch_options["cptch_difficulty_number"] )
-		$str_math_expretion .= " ".$number_string[$array_math_expretion[1]];
+		$str_math_expretion .= " ".__( $number_string[$array_math_expretion[1]], 'captcha' );
 	else
 		$str_math_expretion .= " ".$array_math_expretion[1];
 	
@@ -903,11 +887,11 @@ function cptch_display_captcha_custom()
 		$str_math_expretion .= " <input type=\"text\" name=\"cptch_number\" value=\"\" maxlength=\"2\" size=\"1\" style=\"width:20px;margin-bottom:0;display:inline;\" />";
 	} else if ( 2 == $rand_number_string || 0 == $cptch_options["cptch_difficulty_number"] ) {
 		if( $array_math_expretion[2] < 10 )
-			$str_math_expretion .= " ".$number_string[$array_math_expretion[2]];
+			$str_math_expretion .= " ".__( $number_string[$array_math_expretion[2]], 'captcha' );
 		else if( $array_math_expretion[2] < 20 && $array_math_expretion[2] > 10 )
-			$str_math_expretion .= " ".$number_two_string[ $array_math_expretion[2] % 10 ];
+			$str_math_expretion .= " ".__( $number_two_string[ $array_math_expretion[2] % 10 ], 'captcha' );
 		else
-			$str_math_expretion .= " ".$number_three_string[ $array_math_expretion[2] / 10 ]." ".( 0 != $array_math_expretion[2] % 10 ? $number_string[ $array_math_expretion[2] % 10 ] : '');
+			$str_math_expretion .= " ".__( $number_three_string[ $array_math_expretion[2] / 10 ], 'captcha' )." ".( 0 != $array_math_expretion[2] % 10 ? __( $number_string[ $array_math_expretion[2] % 10 ], 'captcha' ) : '');
 	} else {
 		$str_math_expretion .= $array_math_expretion[2];
 	}
@@ -916,5 +900,67 @@ function cptch_display_captcha_custom()
 	$content .= $str_math_expretion; 
 	return $content;
 }
+
+function cptch_contact_form_options()
+{
+	if( function_exists( 'get_plugins' ) ) {
+		$all_plugins = get_plugins();
+		if( array_key_exists('contact-form-plugin/contact_form.php', $all_plugins) )
+		{
+			$cptch_options = get_option( 'cptch_options' );
+			if( $cptch_options['cptch_contact_form'] == 1) {
+				add_filter('cntctfrm_display_captcha', 'cptch_custom_form');
+				add_filter('cntctfrm_check_form', 'cptch_check_custom_form');
+			}
+			else if( $cptch_options['cptch_contact_form'] == 0 ) {
+				remove_filter('cntctfrm_display_captcha', 'cptch_custom_form');
+				remove_filter('cntctfrm_check_form', 'cptch_check_custom_form');
+			}
+		}
+	} 
+	else {
+		$active_plugins = get_option('active_plugins');
+		if(0 < count( preg_grep( '/contact-form-plugin\/contact_form.php/', $active_plugins ) ) ) { 
+			$cptch_options = get_option( 'cptch_options' );
+			if( $cptch_options['cptch_contact_form'] == 1) {
+				add_filter('cntctfrm_display_captcha', 'cptch_custom_form');
+				add_filter('cntctfrm_check_form', 'cptch_check_custom_form');
+			}
+			else if( $cptch_options['cptch_contact_form'] == 0 ) {
+				remove_filter('cntctfrm_display_captcha', 'cptch_custom_form');
+				remove_filter('cntctfrm_check_form', 'cptch_check_custom_form');
+			}
+		}
+	}
+}
+
+if ( ! function_exists ( 'cptch_plugin_init' ) ) {
+	function cptch_plugin_init() {
+	// Internationalization, first(!)
+	load_plugin_textdomain( 'captcha', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' ); 
+
+	// Other init stuff, be sure to it after load_plugins_textdomain if it involves translated text(!)
+	}
+}
+
+if ( ! function_exists ( 'cptch_plugin_init_frontend' ) ) {
+	function cptch_plugin_init_frontend() {
+	
+	if ( strstr( $_SERVER['PHP_SELF'], 'wp-admin/' ) ) {
+		return;
+	}
+	// Internationalization, first(!)
+	load_plugin_textdomain( 'captcha', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' ); 
+
+	// Other init stuff, be sure to it after load_plugins_textdomain if it involves translated text(!)
+	}
+}
+
+add_action( 'admin_head', 'bws_plugin_header' );
+add_action( 'admin_menu', 'add_cptch_admin_menu' );
+add_action( 'admin_init', 'cptch_contact_form_options' );
+add_action( 'after_setup_theme', 'cptch_contact_form_options' );
+add_action( 'admin_init', 'cptch_plugin_init' );
+add_action( 'init', 'cptch_plugin_init_frontend' );
 
 ?>
