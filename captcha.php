@@ -4,7 +4,7 @@ Plugin Name: Captcha
 Plugin URI:  http://bestwebsoft.com/plugin/
 Description: Plugin Captcha intended to prove that the visitor is a human being and not a spam robot. Plugin asks the visitor to answer a math question.
 Author: BestWebSoft
-Version: 2.09
+Version: 2.10
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -349,7 +349,7 @@ function cptch_settings_page() {
 			</tr>
 			<tr valign="top">
 				<th scope="row"><?php _e( 'Label for CAPTCHA in form', 'captcha' ); ?></th>
-				<td><input type="text" name="cptch_label_form" value="<?php echo $cptch_options['cptch_label_form']; ?>" <?php if( 1 == $cptch_options['cptch_label_form'] ) echo "checked=\"checked\""; ?> /></td>
+				<td><input type="text" name="cptch_label_form" value="<?php echo stripslashes( $cptch_options['cptch_label_form'] ); ?>" <?php if( 1 == $cptch_options['cptch_label_form'] ) echo "checked=\"checked\""; ?> /></td>
 			</tr>
 			<tr valign="top">
 				<th scope="row"><?php _e( 'Arithmetic actions for CAPTCHA', 'captcha' ); ?></th>
@@ -384,7 +384,7 @@ function cptch_login_form() {
 	// captcha html - login form
 	echo '<p>';
 	if( "" != $cptch_options['cptch_label_form'] )	
-		echo '<label>'. $cptch_options['cptch_label_form'] .'</label><br />';
+		echo '<label>'. stripslashes( $cptch_options['cptch_label_form'] ) .'</label><br />';
 	if( isset( $_SESSION['cptch_error'] ) ) {
 		echo "<br /><span style='color:red'>". $_SESSION['cptch_error'] ."</span><br />";
 		unset( $_SESSION['cptch_error'] );
@@ -458,7 +458,7 @@ function cptch_comment_form() {
 	// captcha html - comment form
 	echo '<p>';
 	if( "" != $cptch_options['cptch_label_form'] )	
-		echo '<label>'. $cptch_options['cptch_label_form'] .'</label>';
+		echo '<label>'. stripslashes( $cptch_options['cptch_label_form'] ) .'</label>';
 	echo '<br />';
 	cptch_display_captcha();
 	echo '</p>';
@@ -478,7 +478,7 @@ function cptch_comment_form_wp3() {
 	// captcha html - comment form
 	echo '<p>';
 	if( "" != $cptch_options['cptch_label_form'] )	
-		echo '<label>'. $cptch_options['cptch_label_form'] .'</label>';
+		echo '<label>'. stripslashes( $cptch_options['cptch_label_form'] ) .'</label>';
 	echo '<br />';
 	cptch_display_captcha();
 	echo '</p>';
@@ -539,7 +539,7 @@ function cptch_register_form() {
 	// the captcha html - register form
 	echo '<p style="text-align:left;">';
 	if( "" != $cptch_options['cptch_label_form'] )	
-		echo '<label>'.$cptch_options['cptch_label_form'].'</label><br />';
+		echo '<label>'. stripslashes( $cptch_options['cptch_label_form'] ) .'</label><br />';
 	echo '<br />';
 	cptch_display_captcha();
 	echo '</p>
@@ -754,7 +754,7 @@ function cptch_custom_form($error_message) {
 	// captcha html - login form
 	$content .= '<p style="text-align:left;">';
 	if( "" != $cptch_options['cptch_label_form'] )	
-		$content .= '<label>'. $cptch_options['cptch_label_form'] .'</label><br />';
+		$content .= '<label>'. stripslashes( $cptch_options['cptch_label_form'] ) .'</label><br />';
 	else
 		$content .= '<br />';
 	if( isset( $error_message['error_captcha'] ) )
@@ -811,13 +811,13 @@ function cptch_display_captcha_custom()
 
 	// If value for Plus on the settings page is set
 	if( 1 == $cptch_options['cptch_math_action_plus'] )
-		$math_actions[] = '+';
+		$math_actions[] = '&#43;';
 	// If value for Minus on the settings page is set
 	if( 1 == $cptch_options['cptch_math_action_minus'] )
-		$math_actions[] = '-';
+		$math_actions[] = '&minus;';
 	// If value for Increase on the settings page is set
 	if( 1 == $cptch_options['cptch_math_action_increase'] )
-		$math_actions[] = '*';
+		$math_actions[] = '&times;';
 		
 	// Which field from three will be the input to enter required value
 	$rand_input = rand( 0, 2 );
