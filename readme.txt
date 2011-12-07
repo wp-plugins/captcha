@@ -53,6 +53,9 @@ inside `/wp-content/themes/[your_theme]/comments.php`. (look inside the Twenty T
 
 == Changelog ==
 
+= 2.09 =
+* +, -, * changed to HTML Entity.
+
 = 2.08 =
 * Added Dutch language files for plugin.
 
@@ -91,6 +94,9 @@ inside `/wp-content/themes/[your_theme]/comments.php`. (look inside the Twenty T
 * Mathematical actions choosing functionality and level of difficulty was implemented.
 
 == Upgrade Notice ==
+
+= 2.09 =
++, -, * changed to HTML Entity.
 
 = 2.08 =
 Added Dutch language files for plugin.
