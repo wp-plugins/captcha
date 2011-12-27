@@ -3,14 +3,14 @@ Contributors: bestwebsoft
 Donate link: http://bestwebsoft.com/
 Tags: captcha, math captcha, text captcha, spam, antispam, login, registration, comment, lost password, capcha, catcha, captha
 Requires at least: 2.9
-Tested up to: 3.2
-Stable tag: 2011.2.10
+Tested up to: 3.3
+Stable tag: 2011.2.11
 
 This plugin allows you to implement super security captcha form into web forms.
 
 == Description ==
 
-Captcha plugin allows you to protect your website from spam using math logic which can be used for login, registration, reseting password, comments forms.
+Captcha plugin allows you to protect your website from spam using math logic which can be used for login, registration, reseting password, comments forms. Added Russian, German and Dutch languages.
 
 == Installation ==
 
@@ -52,6 +52,9 @@ inside `/wp-content/themes/[your_theme]/comments.php`. (look inside the Twenty T
 5. Login form with Captcha.
 
 == Changelog ==
+
+= 2.11 =
+* Added German language files for plugin. Added all words in language file. Please upgrade the Captcha plugin immediately. Thank you
 
 = 2.10 =
 * The bug of the captcha label section is fixed in this version. Please upgrade the Captcha plugin immediately. Thank you
@@ -97,6 +100,9 @@ inside `/wp-content/themes/[your_theme]/comments.php`. (look inside the Twenty T
 * Mathematical actions choosing functionality and level of difficulty was implemented.
 
 == Upgrade Notice ==
+
+= 2.11 =
+Added German language files for plugin. Added all words in language file. Please upgrade the Captcha plugin immediately. Thank you
 
 = 2.10 =
 The bug of the captcha label section is fixed in this version. Please upgrade the Captcha plugin immediately. Thank you

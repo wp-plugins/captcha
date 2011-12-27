@@ -4,7 +4,7 @@ Plugin Name: Captcha
 Plugin URI:  http://bestwebsoft.com/plugin/
 Description: Plugin Captcha intended to prove that the visitor is a human being and not a spam robot. Plugin asks the visitor to answer a math question.
 Author: BestWebSoft
-Version: 2.10
+Version: 2.11
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -28,51 +28,25 @@ License: GPLv2 or later
 
 // These fields for the 'Enable CAPTCHA on the' block which is located at the admin setting captcha page
 $cptch_admin_fields_enable = array (
-		array( 'cptch_login_form', 'Login form', 'Login form' ),
-		array( 'cptch_register_form', 'Register form', 'Register form' ),
-		array( 'cptch_lost_password_form', 'Lost password form', 'Lost password form' ),
-		array( 'cptch_comments_form', 'Comments form', 'Comments form' ),
-		array( 'cptch_hide_register', 'Hide CAPTCHA for registered users', 'Hide CAPTCHA for registered users' ),		
+		array( 'cptch_login_form', __( 'Login form', 'captcha' ), __( 'Login form', 'captcha' ) ),
+		array( 'cptch_register_form', __( 'Register form', 'captcha' ), __( 'Register form', 'captcha' ) ),
+		array( 'cptch_lost_password_form', __( 'Lost password form', 'captcha' ), __( 'Lost password form', 'captcha' ) ),
+		array( 'cptch_comments_form', __( 'Comments form', 'captcha' ), __( 'Comments form', 'captcha') ),
+		array( 'cptch_hide_register', __( 'Hide CAPTCHA for registered users', 'captcha' ), __( 'Hide CAPTCHA for registered users', 'captcha' ) ),		
 );
 
 // These fields for the 'Arithmetic actions for CAPTCHA' block which is located at the admin setting captcha page
 $cptch_admin_fields_actions = array (
-		array( 'cptch_math_action_plus', 'Plus (+)', 'Plus' ),
-		array( 'cptch_math_action_minus', 'Minus (-)', 'Minus' ),
-		array( 'cptch_math_action_increase', 'Multiply (*)', 'Increase' ),
+		array( 'cptch_math_action_plus', __( 'Plus (&#43;)', 'captcha' ), __( 'Plus', 'captcha' ) ),
+		array( 'cptch_math_action_minus', __( 'Minus (&minus;)', 'captcha' ), __( 'Minus', 'captcha' ) ),
+		array( 'cptch_math_action_increase', __( 'Multiply (&times;)', 'captcha' ), __( 'Increase', 'captcha' ) ),
 );
 
 // This fields for the 'Difficulty for CAPTCHA' block which is located at the admin setting captcha page
 $cptch_admin_fields_difficulty = array (
-		array( 'cptch_difficulty_number', 'Numbers', 'Numbers' ),
-		array( 'cptch_difficulty_word', 'Words', 'Words' ),
+		array( 'cptch_difficulty_number', __( 'Numbers', 'captcha' ), __( 'Numbers', 'captcha' ) ),
+		array( 'cptch_difficulty_word', __( 'Words', 'captcha' ), __( 'Words', 'captcha' ) ),
 );
-
-if( ! function_exists( 'bws_plugin_header' ) ) {
-	function bws_plugin_header() {
-		global $post_type;
-		?>
-		<style>
-		#adminmenu #toplevel_page_bws_plugins div.wp-menu-image
-		{
-			background: url("<?php echo get_bloginfo('url');?>/wp-content/plugins/captcha/images/icon_16.png") no-repeat scroll center center transparent;
-		}
-		#adminmenu #toplevel_page_bws_plugins:hover div.wp-menu-image, #adminmenu #toplevel_page_bws_plugins.wp-has-current-submenu div.wp-menu-image
-		{
-			background: url("<?php echo get_bloginfo('url');?>/wp-content/plugins/captcha/images/icon_16_c.png") no-repeat scroll center center transparent;
-		}	
-		.wrap #icon-options-general.icon32-bws
-		{
-			background: url("<?php echo get_bloginfo('url');?>/wp-content/plugins/captcha/images/icon_36.png") no-repeat scroll left top transparent;
-		}
-		#toplevel_page_bws_plugins .wp-submenu .wp-first-item
-		{
-			display:none;
-		}
-		</style>
-		<?php
-	}
-}
 
 if( ! function_exists( 'bws_add_menu_render' ) ) {
 	function bws_add_menu_render() {
@@ -90,7 +64,8 @@ if( ! function_exists( 'bws_add_menu_render' ) ) {
 			array( 'facebook-button-plugin\/facebook-button-plugin.php', 'Facebook Like Button Plugin', 'http://wordpress.org/extend/plugins/facebook-button-plugin/', 'http://bestwebsoft.com/plugin/facebook-like-button-plugin/', '/wp-admin/update.php?action=install-plugin&plugin=facebook-button-plugin&_wpnonce=6eb654de19' ), 
 			array( 'twitter-plugin\/twitter.php', 'Twitter Plugin', 'http://wordpress.org/extend/plugins/twitter-plugin/', 'http://bestwebsoft.com/plugin/twitter-plugin/', '/wp-admin/update.php?action=install-plugin&plugin=twitter-plugin&_wpnonce=1612c998a5' ), 
 			array( 'portfolio\/portfolio.php', 'Portfolio', 'http://wordpress.org/extend/plugins/portfolio/', 'http://bestwebsoft.com/plugin/portfolio-plugin/', '/wp-admin/update.php?action=install-plugin&plugin=portfolio&_wpnonce=488af7391d' ),
-			array( 'gallery-plugin\/gallery-plugin.php', 'Gallery', 'http://wordpress.org/extend/plugins/gallery-plugin/', 'http://bestwebsoft.com/plugin/gallery-plugin/', '/wp-admin/update.php?action=install-plugin&plugin=gallery-plugin&_wpnonce=f82ce8c1ad' )
+			array( 'gallery-plugin\/gallery-plugin.php', 'Gallery', 'http://wordpress.org/extend/plugins/gallery-plugin/', 'http://bestwebsoft.com/plugin/gallery-plugin/', '/wp-admin/update.php?action=install-plugin&plugin=gallery-plugin&_wpnonce=f82ce8c1ad' ),
+			array( 'adsense-plugin\/adsense-plugin.php', 'Google AdSense Plugin', 'http://wordpress.org/extend/plugins/adsense-plugin/', 'http://bestwebsoft.com/plugin/google-adsense-plugin/', '/wp-admin/update.php?action=install-plugin&plugin=adsense-plugin&_wpnonce=e6e85756de' )
 		);
 		foreach($array_plugins as $plugins)
 		{
@@ -125,7 +100,7 @@ if( ! function_exists( 'bws_add_menu_render' ) ) {
 			<div>
 				<h3><?php _e( 'Activated plugins', 'captcha' ); ?></h3>
 				<?php foreach( $array_activate as $activate_plugin ) { ?>
-				<div style="float:left; width:200px;"><?php echo $activate_plugin['title']; ?></div> <p><a href="<?php echo $activate_plugin['link']; ?>">Read more</a></p>
+				<div style="float:left; width:200px;"><?php echo $activate_plugin['title']; ?></div> <p><a href="<?php echo $activate_plugin['link']; ?>"><?php echo __( "Read more", 'captcha'); ?></a></p>
 				<?php } ?>
 			</div>
 			<?php } ?>
@@ -133,7 +108,7 @@ if( ! function_exists( 'bws_add_menu_render' ) ) {
 			<div>
 				<h3><?php _e( 'Installed plugins', 'captcha' ); ?></h3>
 				<?php foreach($array_install as $install_plugin) { ?>
-				<div style="float:left; width:200px;"><?php echo $install_plugin['title']; ?></div> <p><a href="<?php echo $install_plugin['link']; ?>">Read more</a></p>
+				<div style="float:left; width:200px;"><?php echo $install_plugin['title']; ?></div> <p><a href="<?php echo $install_plugin['link']; ?>"><?php echo __( "Read more", 'captcha'); ?></a></p>
 				<?php } ?>
 			</div>
 			<?php } ?>
@@ -141,7 +116,7 @@ if( ! function_exists( 'bws_add_menu_render' ) ) {
 			<div>
 				<h3><?php _e( 'Recommended plugins', 'captcha' ); ?></h3>
 				<?php foreach( $array_recomend as $recomend_plugin ) { ?>
-				<div style="float:left; width:200px;"><?php echo $recomend_plugin['title']; ?></div> <p><a href="<?php echo $recomend_plugin['link']; ?>">Read more</a> <a href="<?php echo $recomend_plugin['href']; ?>">Download</a> <a class="install-now" href="<?php echo get_bloginfo( "url" ) . $recomend_plugin['slug']; ?>" title="<?php esc_attr( sprintf( __( 'Install %s' ), $recomend_plugin['title'] ) ) ?>"><?php echo __( 'Install Now' ) ?></a></p>
+				<div style="float:left; width:200px;"><?php echo $recomend_plugin['title']; ?></div> <p><a href="<?php echo $recomend_plugin['link']; ?>"><?php echo __( "Read more", 'captcha'); ?></a> <a href="<?php echo $recomend_plugin['href']; ?>"><?php echo __( "Download", 'captcha'); ?></a> <a class="install-now" href="<?php echo get_bloginfo( "url" ) . $recomend_plugin['slug']; ?>" title="<?php esc_attr( sprintf( __( 'Install %s' ), $recomend_plugin['title'] ) ) ?>"><?php echo __( 'Install Now' ) ?></a></p>
 				<?php } ?>
 				<span style="color: rgb(136, 136, 136); font-size: 10px;"><?php _e( 'If you have any questions, please contact us via plugin@bestwebsoft.com or fill in our contact form on our site', 'captcha' ); ?> <a href="http://bestwebsoft.com/contact/">http://bestwebsoft.com/contact/</a></span>
 			</div>
@@ -152,7 +127,7 @@ if( ! function_exists( 'bws_add_menu_render' ) ) {
 }
 
 function add_cptch_admin_menu() {
-	add_menu_page( __( 'BWS Plugins', 'captcha' ), __( 'BWS Plugins', 'captcha' ), 'manage_options', 'bws_plugins', 'bws_add_menu_render', WP_CONTENT_URL."/plugins/captcha/images/px.png", 101); 
+	add_menu_page( __( 'BWS Plugins', 'captcha' ), __( 'BWS Plugins', 'captcha' ), 'manage_options', 'bws_plugins', 'bws_add_menu_render', WP_CONTENT_URL."/plugins/captcha/images/px.png", 1001); 
 	add_submenu_page('bws_plugins', __( 'Captcha Options', 'captcha' ), __( 'Captcha', 'captcha' ), 'manage_options', "captcha.php", 'cptch_settings_page');
 
 	//call register settings function
@@ -235,12 +210,6 @@ if( 1 == $cptch_options['cptch_lost_password_form'] ) {
 	add_action( 'lostpassword_post', 'cptch_lostpassword_post', 10, 3 );
 }
 
-// adds "Settings" link to the plugin action page
-add_filter( 'plugin_action_links', 'cptch_plugin_action_links',10,2);
-
-//Additional links on the plugin page
-add_filter('plugin_row_meta', 'cptch_register_plugin_links',10,2);
-
 function cptch_plugin_action_links( $links, $file ) {
 		//Static so we don't call plugin_basename on every plugin row.
 	static $this_plugin;
@@ -302,11 +271,11 @@ function cptch_settings_page() {
 		// Check select one point in the blocks Arithmetic actions and Difficulty on settings page
 		if( ( ! isset ( $_REQUEST['cptch_difficulty_number'] ) && ! isset ( $_REQUEST['cptch_difficulty_word'] ) ) || 	
 			( ! isset ( $_REQUEST['cptch_math_action_plus'] ) && ! isset ( $_REQUEST['cptch_math_action_minus'] ) && ! isset ( $_REQUEST['cptch_math_action_increase'] ) ) ) {
-			$error = "Please select one point in the blocks Arithmetic actions and Difficulty for CAPTCHA";
+			$error = __( "Please select one point in the blocks Arithmetic actions and Difficulty for CAPTCHA", 'captcha' );
 		} else {
 			// Update options in the database
 			update_option( 'cptch_options', $cptch_request_options, '', 'yes' );
-			$message = "Options saved.";
+			$message = __( "Options saved.", 'captcha' );
 		}
 	}
 
@@ -355,7 +324,8 @@ function cptch_settings_page() {
 				<th scope="row"><?php _e( 'Arithmetic actions for CAPTCHA', 'captcha' ); ?></th>
 				<td>
 			<?php foreach( $cptch_admin_fields_actions as $actions ) { ?>
-					<div style="float:left; width:100px;"><input type="checkbox" name="<?php echo $actions[0]; ?>" value="<?php echo $cptch_options[$actions[0]]; ?>" <?php if( 1 == $cptch_options[$actions[0]] ) echo "checked=\"checked\""; ?> /><label for="<?php echo $actions[0]; ?>"><?php echo __( $actions[1], 'captcha' ); ?></label></div><img src="<?php echo plugins_url( 'images/'.$actions[0].'.jpg' , __FILE__ );?>" alt="" title="" width="" height="" /><br />
+					<div style="float:left; width:150px;clear: both;"><input type="checkbox" name="<?php echo $actions[0]; ?>" value="<?php echo $cptch_options[$actions[0]]; ?>" <?php if( 1 == $cptch_options[$actions[0]] ) echo "checked=\"checked\""; ?> /><label for="<?php echo $actions[0]; ?>"><?php echo __( $actions[1], 'captcha' ); ?></label></div><?php cptch_display_example($actions[0]); ?>
+					<br />
 			<?php } ?>
 				</td>
 			</tr>
@@ -363,7 +333,7 @@ function cptch_settings_page() {
 				<th scope="row"><?php _e( 'Difficulty for CAPTCHA', 'captcha' ); ?></th>
 				<td>
 			<?php foreach( $cptch_admin_fields_difficulty as $diff ) { ?>
-					<div style="float:left; width:100px;"><input type="checkbox" name="<?php echo $diff[0]; ?>" value="<?php echo $cptch_options[$diff[0]]; ?>" <?php if( 1 == $cptch_options[$diff[0]] ) echo "checked=\"checked\""; ?> /><label for="<?php echo $diff[0]; ?>"><?php echo __( $diff[1], 'captcha' ); ?></label></div><img src="<?php echo plugins_url( 'images/'.$diff[0].'.jpg' , __FILE__ );?>" alt="" title="" width="" height="" /><br />
+					<div style="float:left; width:150px;clear: both;"><input type="checkbox" name="<?php echo $diff[0]; ?>" value="<?php echo $cptch_options[$diff[0]]; ?>" <?php if( 1 == $cptch_options[$diff[0]] ) echo "checked=\"checked\""; ?> /><label for="<?php echo $diff[0]; ?>"><?php echo __( $diff[1], 'captcha' ); ?></label></div><?php cptch_display_example($diff[0]); ?><br />
 			<?php } ?>
 				</td>
 			</tr>
@@ -382,7 +352,7 @@ function cptch_login_form() {
 	global $cptch_options;
 	
 	// captcha html - login form
-	echo '<p>';
+	echo '<p class="cptch_block">';
 	if( "" != $cptch_options['cptch_label_form'] )	
 		echo '<label>'. stripslashes( $cptch_options['cptch_label_form'] ) .'</label><br />';
 	if( isset( $_SESSION['cptch_error'] ) ) {
@@ -456,7 +426,7 @@ function cptch_comment_form() {
 	}
 
 	// captcha html - comment form
-	echo '<p>';
+	echo '<p class="cptch_block">';
 	if( "" != $cptch_options['cptch_label_form'] )	
 		echo '<label>'. stripslashes( $cptch_options['cptch_label_form'] ) .'</label>';
 	echo '<br />';
@@ -476,7 +446,7 @@ function cptch_comment_form_wp3() {
 	}
 
 	// captcha html - comment form
-	echo '<p>';
+	echo '<p class="cptch_block">';
 	if( "" != $cptch_options['cptch_label_form'] )	
 		echo '<label>'. stripslashes( $cptch_options['cptch_label_form'] ) .'</label>';
 	echo '<br />';
@@ -537,7 +507,7 @@ function cptch_register_form() {
 	global $cptch_options;
 
 	// the captcha html - register form
-	echo '<p style="text-align:left;">';
+	echo '<p class="cptch_block" style="text-align:left;">';
 	if( "" != $cptch_options['cptch_label_form'] )	
 		echo '<label>'. stripslashes( $cptch_options['cptch_label_form'] ) .'</label><br />';
 	echo '<br />';
@@ -695,7 +665,7 @@ function cptch_display_captcha()
 	}
 	// Add hidden field with encoding result
 ?>
-	<input type="hidden" name="cptch_result" value="<?php echo $str = encode( $array_math_expretion[$rand_input], $str_key ); ?>" />
+	<input type="hidden" name="cptch_result" value="<?php echo $str = encode( $array_math_expretion[$rand_input], $str_key ); ?>" /><input type="hidden" value="Version: 2.11" />
 	<?php echo $str_math_expretion; ?>
 <?php
 }
@@ -752,7 +722,7 @@ function cptch_custom_form($error_message) {
 	$content = "";
 	
 	// captcha html - login form
-	$content .= '<p style="text-align:left;">';
+	$content .= '<p class="cptch_block" style="text-align:left;">';
 	if( "" != $cptch_options['cptch_label_form'] )	
 		$content .= '<label>'. stripslashes( $cptch_options['cptch_label_form'] ) .'</label><br />';
 	else
@@ -896,7 +866,7 @@ function cptch_display_captcha_custom()
 		$str_math_expretion .= $array_math_expretion[2];
 	}
 	// Add hidden field with encoding result
-	$content .= '<input type="hidden" name="cptch_result" value="'.$str = encode( $array_math_expretion[$rand_input], $str_key ).'" />';
+	$content .= '<input type="hidden" name="cptch_result" value="'.$str = encode( $array_math_expretion[$rand_input], $str_key ).'" /><input type="hidden" value="Version: 2.11" />';
 	$content .= $str_math_expretion; 
 	return $content;
 }
@@ -956,11 +926,48 @@ if ( ! function_exists ( 'cptch_plugin_init_frontend' ) ) {
 	}
 }
 
-add_action( 'admin_head', 'bws_plugin_header' );
+if ( ! function_exists ( 'cptch_admin_head' ) ) {
+	function cptch_admin_head() {
+		wp_register_style( 'cptchStylesheet', WP_PLUGIN_URL . '/captcha/css/style.css' );
+		wp_enqueue_style( 'cptchStylesheet' );
+	}
+}
+
+if ( ! function_exists ( 'cptch_display_example' ) ) {
+	function cptch_display_example($action) {
+		echo "<div class='cptch_example_fields_actions'>";
+		switch($action) {
+			case "cptch_math_action_plus":
+				echo __( 'seven', 'captcha' ) . ' &#43; 1 = <img src="'.plugins_url( 'images/cptch_input.jpg' , __FILE__ ).'" alt="" title="" width="" height="" />';
+				break;
+			case "cptch_math_action_minus":
+				echo __( 'eight', 'captcha' ) . ' &minus; 6 = <img src="'.plugins_url( 'images/cptch_input.jpg' , __FILE__ ).'" alt="" title="" width="" height="" />';
+				break;
+			case "cptch_math_action_increase":
+				echo '<img src="'.plugins_url( 'images/cptch_input.jpg' , __FILE__ ).'" alt="" title="" width="" height="" /> &times; 1 = '. __( 'seven', 'captcha' );
+				break;
+			case "cptch_difficulty_number":
+				echo '5 &minus; <img src="'.plugins_url( 'images/cptch_input.jpg' , __FILE__ ).'" alt="" title="" width="" height="" /> = 1';
+				break;
+			case "cptch_difficulty_word":
+				echo __( 'six', 'captcha' ) . ' &#43; ' . __( 'one', 'captcha' ) . ' = <img src="'.plugins_url( 'images/cptch_input.jpg' , __FILE__ ).'" alt="" title="" width="" height="" />';
+				break;
+		}
+		echo "</div>";
+	}
+}
+
+// adds "Settings" link to the plugin action page
+add_filter( 'plugin_action_links', 'cptch_plugin_action_links',10,2);
+
+//Additional links on the plugin page
+add_filter('plugin_row_meta', 'cptch_register_plugin_links',10,2);
+
+add_action( 'admin_init', 'cptch_admin_head' );
+add_action( 'init', 'cptch_plugin_init_frontend' );
 add_action( 'admin_menu', 'add_cptch_admin_menu' );
 add_action( 'admin_init', 'cptch_contact_form_options' );
-add_action( 'after_setup_theme', 'cptch_contact_form_options' );
 add_action( 'admin_init', 'cptch_plugin_init' );
-add_action( 'init', 'cptch_plugin_init_frontend' );
+add_action( 'after_setup_theme', 'cptch_contact_form_options' );
 
 ?>

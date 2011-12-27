@@ -1,192 +1,195 @@
+# Byrial Ole Jensen <byrial@vip.cybercity.dk>, 2011.
 msgid ""
 msgstr ""
 "Project-Id-Version: captcha\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-10-31 14:53+0200\n"
+"POT-Creation-Date: 2011-12-27 16:47+0200\n"
 "PO-Revision-Date: 2011-12-27 19:17+0200\n"
 "Last-Translator: BWS <zos@bestwebsoft.com>\n"
-"Language-Team: bestwebsoft.com <plugin@bestwebsoft.com>\n"
+"Language-Team: Danish <kde-i18n-doc@kde.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-KeywordsList: __;_e\n"
+"Language: da\n"
+"X-Generator: Lokalize 1.2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-Basepath: ..\n"
-"X-Poedit-Language: French\n"
-"X-Poedit-Country: FRANCE\n"
-"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e\n"
 "X-Poedit-SearchPath-0: .\n"
 
 #: captcha.php:31
 msgid "Login form"
-msgstr ""
+msgstr "Loginformular"
 
 #: captcha.php:32
 msgid "Register form"
-msgstr ""
+msgstr "Registreringsformular"
 
 #: captcha.php:33
 msgid "Lost password form"
-msgstr ""
+msgstr "Formular til mistet adgangskode"
 
 #: captcha.php:34
 msgid "Comments form"
-msgstr ""
+msgstr "Kommentarformular"
 
 #: captcha.php:35
 msgid "Hide CAPTCHA for registered users"
-msgstr ""
+msgstr "Skjul captcha for registrerede brugere"
 
 #: captcha.php:40
 msgid "Plus (&#43;)"
-msgstr ""
+msgstr "Plus (&#43;)"
 
 #: captcha.php:40
+#, fuzzy
 msgid "Plus"
-msgstr ""
+msgstr "Plus (&#43;)"
 
 #: captcha.php:41
 msgid "Minus (&minus;)"
-msgstr ""
+msgstr "Minus (&minus;)"
 
 #: captcha.php:41
+#, fuzzy
 msgid "Minus"
-msgstr ""
+msgstr "Minus (&minus;)"
 
 #: captcha.php:42
 msgid "Multiply (&times;)"
-msgstr ""
+msgstr "Gange (&times;)"
 
 #: captcha.php:42
 msgid "Increase"
-msgstr ""
+msgstr "Erhöhen"
 
 #: captcha.php:47
 msgid "Numbers"
-msgstr ""
+msgstr "Cifre"
 
 #: captcha.php:48
 msgid "Words"
-msgstr ""
+msgstr "Talord"
 
 #: captcha.php:101
 msgid "Activated plugins"
-msgstr ""
+msgstr "Aktiverede plugins"
 
 #: captcha.php:103
 #: captcha.php:111
 #: captcha.php:119
 msgid "Read more"
-msgstr ""
+msgstr "Lesen Sie mehr"
 
 #: captcha.php:109
 msgid "Installed plugins"
-msgstr ""
+msgstr "Installerede plugins"
 
 #: captcha.php:117
 msgid "Recommended plugins"
-msgstr ""
+msgstr "Anbefalede plugins"
 
 #: captcha.php:119
 msgid "Download"
-msgstr ""
+msgstr "Herunterladen"
 
 #: captcha.php:119
 #, php-format
 msgid "Install %s"
-msgstr ""
+msgstr "Installér %s"
 
 #: captcha.php:119
 msgid "Install Now"
-msgstr ""
+msgstr "Installér nu"
 
 #: captcha.php:121
 msgid "If you have any questions, please contact us via plugin@bestwebsoft.com or fill in our contact form on our site"
-msgstr ""
+msgstr "Hvis du har spørgsmål kan du kontakte os på plugin@bestwebsoft.com eller bruge kontaktformularen på vores website"
 
 #: captcha.php:130
 msgid "BWS Plugins"
-msgstr ""
+msgstr "BWS Plugins"
 
 #: captcha.php:131
 #: captcha.php:298
 msgid "Captcha Options"
-msgstr ""
+msgstr "Indstillinger for Captcha"
 
 #: captcha.php:131
 msgid "Captcha"
-msgstr ""
+msgstr "Captcha"
 
 #: captcha.php:225
 #: captcha.php:234
 msgid "Settings"
-msgstr ""
+msgstr "Indstillinger"
 
 #: captcha.php:235
 msgid "FAQ"
-msgstr ""
+msgstr "Ofte Stillede Spørgsmål"
 
 #: captcha.php:236
 msgid "Support"
-msgstr ""
+msgstr "Brugerhjælp"
 
 #: captcha.php:280
 msgid "Please select one point in the blocks Arithmetic actions and Difficulty for CAPTCHA"
-msgstr ""
+msgstr "Vælg venligst mindst én af mulighederne for både regneopgavetyper og sværhedsgrad."
 
 #: captcha.php:284
 msgid "Options saved."
-msgstr ""
+msgstr "Indstillingerne er gemt."
 
 #: captcha.php:304
 msgid "Enable CAPTCHA on the:"
-msgstr ""
+msgstr "Anvend captcha for:"
 
 #: captcha.php:313
 #: captcha.php:316
 #: captcha.php:320
 msgid "Contact form"
-msgstr ""
+msgstr "Kontaktformular"
 
 #: captcha.php:313
 #: captcha.php:316
 #: captcha.php:320
 msgid "(power by bestwebsoft.com)"
-msgstr ""
+msgstr "(lavet af bestwebsoft.com)"
 
 #: captcha.php:316
 msgid "Activate contact form"
-msgstr ""
+msgstr "Aktivér kontaktformular"
 
 #: captcha.php:320
 msgid "Download contact form"
-msgstr ""
+msgstr "Hent kontaktformular"
 
 #: captcha.php:322
 msgid "If you would like to customize this plugin for a custom form, please contact us via <a href=\"Mailto:plugin@bestwebsoft.com\">plugin@bestwebsoft.com</a> or fill in our contact form on our site"
-msgstr ""
+msgstr "Hvis du kunne tænke dig at tilpasse dette plugin til en speciallavet formular, kan du kontakte os på <a href=\"Mailto:plugin@bestwebsoft.com\">plugin@bestwebsoft.com</a> eller bruge kontaktformularen på vores website"
 
 #: captcha.php:326
 msgid "Label for CAPTCHA in form"
-msgstr ""
+msgstr "Tekst for captcha i formular"
 
 #: captcha.php:330
 msgid "Arithmetic actions for CAPTCHA"
-msgstr ""
+msgstr "Regneopgavetyper i captcha"
 
 #: captcha.php:338
 msgid "Difficulty for CAPTCHA"
-msgstr ""
+msgstr "Sværhedsgrad for captcha"
 
 #: captcha.php:348
 msgid "Save Changes"
-msgstr ""
+msgstr "Gem ændringer"
 
 #: captcha.php:390
 #: captcha.php:396
 #: captcha.php:533
 #: captcha.php:540
 msgid "ERROR"
-msgstr ""
+msgstr "FEJL"
 
 #: captcha.php:390
 #: captcha.php:409
@@ -194,18 +197,18 @@ msgstr ""
 #: captcha.php:533
 #: captcha.php:556
 msgid "Please complete the CAPTCHA."
-msgstr ""
+msgstr "Udfyld venligst regnestykket."
 
 #: captcha.php:396
 #: captcha.php:418
 #: captcha.php:540
 msgid "That CAPTCHA was incorrect."
-msgstr ""
+msgstr "Regnestykket er forkert."
 
 #: captcha.php:506
 #: captcha.php:563
 msgid "Error: You entered in the wrong CAPTCHA phrase. Press your browser's back button and try again."
-msgstr ""
+msgstr "Fejl: Du har angivet et forkert svar på regnestykket. Gå venligst tilbage og prøv igen."
 
 #: captcha.php:640
 #: captcha.php:651
@@ -216,7 +219,7 @@ msgstr ""
 #: captcha.php:865
 #: captcha.php:869
 msgid "null"
-msgstr ""
+msgstr "nul"
 
 #: captcha.php:640
 #: captcha.php:651
@@ -228,7 +231,7 @@ msgstr ""
 #: captcha.php:869
 #: captcha.php:953
 msgid "one"
-msgstr ""
+msgstr "en"
 
 #: captcha.php:640
 #: captcha.php:651
@@ -239,7 +242,7 @@ msgstr ""
 #: captcha.php:865
 #: captcha.php:869
 msgid "two"
-msgstr ""
+msgstr "to"
 
 #: captcha.php:640
 #: captcha.php:651
@@ -250,7 +253,7 @@ msgstr ""
 #: captcha.php:865
 #: captcha.php:869
 msgid "three"
-msgstr ""
+msgstr "tre"
 
 #: captcha.php:640
 #: captcha.php:651
@@ -261,7 +264,7 @@ msgstr ""
 #: captcha.php:865
 #: captcha.php:869
 msgid "four"
-msgstr ""
+msgstr "fire"
 
 #: captcha.php:640
 #: captcha.php:651
@@ -272,7 +275,7 @@ msgstr ""
 #: captcha.php:865
 #: captcha.php:869
 msgid "five"
-msgstr ""
+msgstr "fem"
 
 #: captcha.php:640
 #: captcha.php:651
@@ -284,7 +287,7 @@ msgstr ""
 #: captcha.php:869
 #: captcha.php:953
 msgid "six"
-msgstr ""
+msgstr "seks"
 
 #: captcha.php:640
 #: captcha.php:651
@@ -297,7 +300,7 @@ msgstr ""
 #: captcha.php:941
 #: captcha.php:947
 msgid "seven"
-msgstr ""
+msgstr "syv"
 
 #: captcha.php:640
 #: captcha.php:651
@@ -309,7 +312,7 @@ msgstr ""
 #: captcha.php:869
 #: captcha.php:944
 msgid "eight"
-msgstr ""
+msgstr "otte"
 
 #: captcha.php:640
 #: captcha.php:651
@@ -320,103 +323,103 @@ msgstr ""
 #: captcha.php:865
 #: captcha.php:869
 msgid "nine"
-msgstr ""
+msgstr "ni"
 
 #: captcha.php:665
-#: captcha.php:867
+#: captcha.php:869
 msgid "eleven"
-msgstr ""
+msgstr "elve"
 
 #: captcha.php:665
-#: captcha.php:867
+#: captcha.php:869
 msgid "twelve"
-msgstr ""
+msgstr "tolv"
 
 #: captcha.php:665
-#: captcha.php:867
+#: captcha.php:869
 msgid "thirteen"
-msgstr ""
+msgstr "tretten"
 
 #: captcha.php:665
-#: captcha.php:867
+#: captcha.php:869
 msgid "fourteen"
-msgstr ""
+msgstr "fjorten"
 
 #: captcha.php:665
-#: captcha.php:867
+#: captcha.php:869
 msgid "fifteen"
-msgstr ""
+msgstr "femten"
 
 #: captcha.php:665
-#: captcha.php:867
+#: captcha.php:869
 msgid "sixteen"
-msgstr ""
+msgstr "seksten"
 
 #: captcha.php:665
-#: captcha.php:867
+#: captcha.php:869
 msgid "seventeen"
-msgstr ""
+msgstr "sytten"
 
 #: captcha.php:665
-#: captcha.php:867
+#: captcha.php:869
 msgid "eighteen"
-msgstr ""
+msgstr "atten"
 
 #: captcha.php:665
-#: captcha.php:867
+#: captcha.php:869
 msgid "nineteen"
-msgstr ""
+msgstr "nitten"
 
 #: captcha.php:667
 #: captcha.php:869
 msgid "ten"
-msgstr ""
+msgstr "ti"
 
 #: captcha.php:667
 #: captcha.php:869
 msgid "twenty"
-msgstr ""
+msgstr "tyve"
 
 #: captcha.php:667
 #: captcha.php:869
 msgid "thirty"
-msgstr ""
+msgstr "tredive"
 
 #: captcha.php:667
 #: captcha.php:869
 msgid "forty"
-msgstr ""
+msgstr "fyrre"
 
 #: captcha.php:667
 #: captcha.php:869
 msgid "fifty"
-msgstr ""
+msgstr "halvtreds"
 
 #: captcha.php:667
 #: captcha.php:869
 msgid "sixty"
-msgstr ""
+msgstr "tres"
 
 #: captcha.php:667
 #: captcha.php:869
 msgid "seventy"
-msgstr ""
+msgstr "halvfjerds"
 
 #: captcha.php:667
 #: captcha.php:869
 msgid "eighty"
-msgstr ""
+msgstr "firs"
 
 #: captcha.php:667
 #: captcha.php:869
 msgid "ninety"
-msgstr ""
+msgstr "halvfems"
 
 #: captcha.php:682
 msgid "The password of encryption is not set"
-msgstr ""
+msgstr "Kodeordet for kryptering er ikke angivet"
 
 #: captcha.php:701
 msgid "The password of decoding is not set"
-msgstr ""
+msgstr "Kodeordet for dekodning er ikke angivet"
 
