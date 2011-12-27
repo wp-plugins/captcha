@@ -913,12 +913,9 @@ if ( ! function_exists ( 'cptch_plugin_init' ) ) {
 	}
 }
 
-if ( ! function_exists ( 'cptch_plugin_init_frontend' ) ) {
-	function cptch_plugin_init_frontend() {
+if ( ! function_exists ( 'cptch_plugin_init' ) ) {
+	function cptch_plugin_init() {
 	
-	if ( strstr( $_SERVER['PHP_SELF'], 'wp-admin/' ) ) {
-		return;
-	}
 	// Internationalization, first(!)
 	load_plugin_textdomain( 'captcha', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' ); 
 
@@ -964,7 +961,7 @@ add_filter( 'plugin_action_links', 'cptch_plugin_action_links',10,2);
 add_filter('plugin_row_meta', 'cptch_register_plugin_links',10,2);
 
 add_action( 'admin_init', 'cptch_admin_head' );
-add_action( 'init', 'cptch_plugin_init_frontend' );
+add_action( 'init', 'cptch_plugin_init' );
 add_action( 'admin_menu', 'add_cptch_admin_menu' );
 add_action( 'admin_init', 'cptch_contact_form_options' );
 add_action( 'admin_init', 'cptch_plugin_init' );
