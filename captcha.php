@@ -4,7 +4,7 @@ Plugin Name: Captcha
 Plugin URI:  http://bestwebsoft.com/plugin/
 Description: Plugin Captcha intended to prove that the visitor is a human being and not a spam robot. Plugin asks the visitor to answer a math question.
 Author: BestWebSoft
-Version: 2.11
+Version: 2.12
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -59,13 +59,13 @@ if( ! function_exists( 'bws_add_menu_render' ) ) {
 		$array_recomend = array();
 		$count_activate = $count_install = $count_recomend = 0;
 		$array_plugins	= array(
-			array( 'captcha\/captcha.php', 'Captcha', 'http://wordpress.org/extend/plugins/captcha/', 'http://bestwebsoft.com/plugin/captcha-plugin/', '/wp-admin/update.php?action=install-plugin&plugin=captcha&_wpnonce=e66502ec9a' ), 
-			array( 'contact-form-plugin\/contact_form.php', 'Contact Form', 'http://wordpress.org/extend/plugins/contact-form-plugin/', 'http://bestwebsoft.com/plugin/contact-form/', '/wp-admin/update.php?action=install-plugin&plugin=contact-form-plugin&_wpnonce=47757d936f' ), 
-			array( 'facebook-button-plugin\/facebook-button-plugin.php', 'Facebook Like Button Plugin', 'http://wordpress.org/extend/plugins/facebook-button-plugin/', 'http://bestwebsoft.com/plugin/facebook-like-button-plugin/', '/wp-admin/update.php?action=install-plugin&plugin=facebook-button-plugin&_wpnonce=6eb654de19' ), 
-			array( 'twitter-plugin\/twitter.php', 'Twitter Plugin', 'http://wordpress.org/extend/plugins/twitter-plugin/', 'http://bestwebsoft.com/plugin/twitter-plugin/', '/wp-admin/update.php?action=install-plugin&plugin=twitter-plugin&_wpnonce=1612c998a5' ), 
-			array( 'portfolio\/portfolio.php', 'Portfolio', 'http://wordpress.org/extend/plugins/portfolio/', 'http://bestwebsoft.com/plugin/portfolio-plugin/', '/wp-admin/update.php?action=install-plugin&plugin=portfolio&_wpnonce=488af7391d' ),
-			array( 'gallery-plugin\/gallery-plugin.php', 'Gallery', 'http://wordpress.org/extend/plugins/gallery-plugin/', 'http://bestwebsoft.com/plugin/gallery-plugin/', '/wp-admin/update.php?action=install-plugin&plugin=gallery-plugin&_wpnonce=f82ce8c1ad' ),
-			array( 'adsense-plugin\/adsense-plugin.php', 'Google AdSense Plugin', 'http://wordpress.org/extend/plugins/adsense-plugin/', 'http://bestwebsoft.com/plugin/google-adsense-plugin/', '/wp-admin/update.php?action=install-plugin&plugin=adsense-plugin&_wpnonce=e6e85756de' )
+			array( 'captcha\/captcha.php', 'Captcha', 'http://wordpress.org/extend/plugins/captcha/', 'http://bestwebsoft.com/plugin/captcha-plugin/', '/wp-admin/plugin-install.php?tab=search&type=term&s=Captcha+bestwebsoft&plugin-search-input=Search+Plugins', 'admin.php?page=captcha.php' ), 
+			array( 'contact-form-plugin\/contact_form.php', 'Contact Form', 'http://wordpress.org/extend/plugins/contact-form-plugin/', 'http://bestwebsoft.com/plugin/contact-form/', '/wp-admin/plugin-install.php?tab=search&type=term&s=Contact+Form+bestwebsoft&plugin-search-input=Search+Plugins', 'admin.php?page=contact_form.php' ), 
+			array( 'facebook-button-plugin\/facebook-button-plugin.php', 'Facebook Like Button Plugin', 'http://wordpress.org/extend/plugins/facebook-button-plugin/', 'http://bestwebsoft.com/plugin/facebook-like-button-plugin/', '/wp-admin/plugin-install.php?tab=search&type=term&s=Facebook+Like+Button+Plugin+bestwebsoft&plugin-search-input=Search+Plugins', 'admin.php?page=facebook-button-plugin.php' ), 
+			array( 'twitter-plugin\/twitter.php', 'Twitter Plugin', 'http://wordpress.org/extend/plugins/twitter-plugin/', 'http://bestwebsoft.com/plugin/twitter-plugin/', '/wp-admin/plugin-install.php?tab=search&type=term&s=Twitter+Plugin+bestwebsoft&plugin-search-input=Search+Plugins', 'admin.php?page=twitter.php' ), 
+			array( 'portfolio\/portfolio.php', 'Portfolio', 'http://wordpress.org/extend/plugins/portfolio/', 'http://bestwebsoft.com/plugin/portfolio-plugin/', '/wp-admin/plugin-install.php?tab=search&type=term&s=Portfolio+bestwebsoft&plugin-search-input=Search+Plugins', '' ),
+			array( 'gallery-plugin\/gallery-plugin.php', 'Gallery', 'http://wordpress.org/extend/plugins/gallery-plugin/', 'http://bestwebsoft.com/plugin/gallery-plugin/', '/wp-admin/plugin-install.php?tab=search&type=term&s=Gallery+Plugin+bestwebsoft&plugin-search-input=Search+Plugins', '' ),
+			array( 'adsense-plugin\/adsense-plugin.php', 'Google AdSense Plugin', 'http://wordpress.org/extend/plugins/adsense-plugin/', 'http://bestwebsoft.com/plugin/google-adsense-plugin/', '/wp-admin/plugin-install.php?tab=search&type=term&s=Adsense+Plugin+bestwebsoft&plugin-search-input=Search+Plugins', 'admin.php?page=adsense-plugin.php' )
 		);
 		foreach($array_plugins as $plugins)
 		{
@@ -74,6 +74,7 @@ if( ! function_exists( 'bws_add_menu_render' ) ) {
 				$array_activate[$count_activate]['title'] = $plugins[1];
 				$array_activate[$count_activate]['link']	= $plugins[2];
 				$array_activate[$count_activate]['href']	= $plugins[3];
+				$array_activate[$count_activate]['url']	= $plugins[5];
 				$count_activate++;
 			}
 			else if( array_key_exists(str_replace("\\", "", $plugins[0]), $all_plugins) )
@@ -100,7 +101,7 @@ if( ! function_exists( 'bws_add_menu_render' ) ) {
 			<div>
 				<h3><?php _e( 'Activated plugins', 'captcha' ); ?></h3>
 				<?php foreach( $array_activate as $activate_plugin ) { ?>
-				<div style="float:left; width:200px;"><?php echo $activate_plugin['title']; ?></div> <p><a href="<?php echo $activate_plugin['link']; ?>"><?php echo __( "Read more", 'captcha'); ?></a></p>
+				<div style="float:left; width:200px;"><?php echo $activate_plugin['title']; ?></div> <p><a href="<?php echo $activate_plugin['link']; ?>" target="_blank"><?php echo __( "Read more", 'captcha'); ?></a> <a href="<?php echo $activate_plugin['url']; ?>"><?php echo __( "Settings", 'captcha'); ?></a></p>
 				<?php } ?>
 			</div>
 			<?php } ?>
@@ -108,7 +109,7 @@ if( ! function_exists( 'bws_add_menu_render' ) ) {
 			<div>
 				<h3><?php _e( 'Installed plugins', 'captcha' ); ?></h3>
 				<?php foreach($array_install as $install_plugin) { ?>
-				<div style="float:left; width:200px;"><?php echo $install_plugin['title']; ?></div> <p><a href="<?php echo $install_plugin['link']; ?>"><?php echo __( "Read more", 'captcha'); ?></a></p>
+				<div style="float:left; width:200px;"><?php echo $install_plugin['title']; ?></div> <p><a href="<?php echo $install_plugin['link']; ?>" target="_blank"><?php echo __( "Read more", 'captcha'); ?></a></p>
 				<?php } ?>
 			</div>
 			<?php } ?>
@@ -116,7 +117,7 @@ if( ! function_exists( 'bws_add_menu_render' ) ) {
 			<div>
 				<h3><?php _e( 'Recommended plugins', 'captcha' ); ?></h3>
 				<?php foreach( $array_recomend as $recomend_plugin ) { ?>
-				<div style="float:left; width:200px;"><?php echo $recomend_plugin['title']; ?></div> <p><a href="<?php echo $recomend_plugin['link']; ?>"><?php echo __( "Read more", 'captcha'); ?></a> <a href="<?php echo $recomend_plugin['href']; ?>"><?php echo __( "Download", 'captcha'); ?></a> <a class="install-now" href="<?php echo get_bloginfo( "url" ) . $recomend_plugin['slug']; ?>" title="<?php esc_attr( sprintf( __( 'Install %s' ), $recomend_plugin['title'] ) ) ?>"><?php echo __( 'Install Now' ) ?></a></p>
+				<div style="float:left; width:200px;"><?php echo $recomend_plugin['title']; ?></div> <p><a href="<?php echo $recomend_plugin['link']; ?>" target="_blank"><?php echo __( "Read more", 'captcha'); ?></a> <a href="<?php echo $recomend_plugin['href']; ?>" target="_blank"><?php echo __( "Download", 'captcha'); ?></a> <a class="install-now" href="<?php echo get_bloginfo( "url" ) . $recomend_plugin['slug']; ?>" title="<?php esc_attr( sprintf( __( 'Install %s' ), $recomend_plugin['title'] ) ) ?>" target="_blank"><?php echo __( 'Install now from wordpress.org', 'captcha' ) ?></a></p>
 				<?php } ?>
 				<span style="color: rgb(136, 136, 136); font-size: 10px;"><?php _e( 'If you have any questions, please contact us via plugin@bestwebsoft.com or fill in our contact form on our site', 'captcha' ); ?> <a href="http://bestwebsoft.com/contact/">http://bestwebsoft.com/contact/</a></span>
 			</div>
@@ -569,11 +570,39 @@ function cptch_display_captcha()
 	$str_key = "123";
 	
 	// In letters presentation of numbers 0-9
-	$number_string = array( 'null','one','two','three','four','five','six','seven','eight','nine', 'captcha' );
+	$number_string = array(); 
+	$number_string[0] = __( 'null', 'captcha' );
+	$number_string[1] = __( 'one', 'captcha' );
+	$number_string[2] = __( 'two', 'captcha' );
+	$number_string[3] = __( 'three', 'captcha' );
+	$number_string[4] = __( 'four', 'captcha' );
+	$number_string[5] = __( 'five', 'captcha' );
+	$number_string[6] = __( 'six', 'captcha' );
+	$number_string[7] = __( 'seven', 'captcha' );
+	$number_string[8] = __( 'eight', 'captcha' );
+	$number_string[9] = __( 'nine', 'captcha' ); 
 	// In letters presentation of numbers 11 -19
-	$number_two_string = array(1=>'eleven','twelve','thirteen','fourteen','fifteen','sixteen','seventeen','eighteen','nineteen' );
+	$number_two_string = array();
+	$number_two_string[1] = __( 'eleven', 'captcha' );
+	$number_two_string[2] = __( 'twelve', 'captcha' );
+	$number_two_string[3] = __( 'thirteen', 'captcha' );
+	$number_two_string[4] = __( 'fourteen', 'captcha' );
+	$number_two_string[5] = __( 'fifteen', 'captcha' );
+	$number_two_string[6] = __( 'sixteen', 'captcha' );
+	$number_two_string[7] = __( 'seventeen', 'captcha' );
+	$number_two_string[8] = __( 'eighteen', 'captcha' );
+	$number_two_string[9] = __( 'nineteen', 'captcha' );
 	// In letters presentation of numbers 10, 20, 30, 40, 50, 60, 70, 80, 90
-	$number_three_string = array( 1=>'ten','twenty','thirty','forty','fifty','sixty','seventy','eighty','ninety' );
+	$number_three_string = array();
+	$number_three_string[1] = __( 'ten', 'captcha' );
+	$number_three_string[1] = __( 'twenty', 'captcha' );
+	$number_three_string[1] = __( 'thirty', 'captcha' );
+	$number_three_string[1] = __( 'forty', 'captcha' );
+	$number_three_string[1] = __( 'fifty', 'captcha' );
+	$number_three_string[1] = __( 'sixty', 'captcha' );
+	$number_three_string[1] = __( 'seventy', 'captcha' );
+	$number_three_string[1] = __( 'eighty', 'captcha' );
+	$number_three_string[1] = __( 'ninety', 'captcha' );
 	// The array of math actions
 	$math_actions = array();
 
@@ -632,7 +661,7 @@ function cptch_display_captcha()
 	if( 0 == $rand_input )
 		$str_math_expretion .= "<input type=\"text\" name=\"cptch_number\" value=\"\" maxlength=\"1\" size=\"1\" style=\"width:20px;margin-bottom:0;display:inline;\" />";
 	else if ( 0 == $rand_number_string || 0 == $cptch_options["cptch_difficulty_number"] )
-		$str_math_expretion .= __( $number_string[$array_math_expretion[0]], 'captcha' );
+		$str_math_expretion .= $number_string[$array_math_expretion[0]];
 	else
 		$str_math_expretion .= $array_math_expretion[0];
 	
@@ -643,7 +672,7 @@ function cptch_display_captcha()
 	if( 1 == $rand_input )
 		$str_math_expretion .= " <input type=\"text\" name=\"cptch_number\" value=\"\" maxlength=\"1\" size=\"1\" style=\"width:20px;margin-bottom:0;display:inline;\" />";
 	else if ( 1 == $rand_number_string || 0 == $cptch_options["cptch_difficulty_number"] )
-		$str_math_expretion .= " ".__( $number_string[$array_math_expretion[1]], 'captcha' );
+		$str_math_expretion .= " ".$number_string[$array_math_expretion[1]];
 	else
 		$str_math_expretion .= " ".$array_math_expretion[1];
 	
@@ -655,17 +684,22 @@ function cptch_display_captcha()
 		$str_math_expretion .= " <input type=\"text\" name=\"cptch_number\" value=\"\" maxlength=\"2\" size=\"1\" style=\"width:20px;margin-bottom:0;display:inline;\" />";
 	} else if ( 2 == $rand_number_string || 0 == $cptch_options["cptch_difficulty_number"] ) {
 		if( $array_math_expretion[2] < 10 )
-			$str_math_expretion .= " ".__( $number_string[$array_math_expretion[2]], 'captcha' );
+			$str_math_expretion .= " ".$number_string[$array_math_expretion[2]];
 		else if( $array_math_expretion[2] < 20 && $array_math_expretion[2] > 10 )
-			$str_math_expretion .= " ".__( $number_two_string[ $array_math_expretion[2] % 10 ], 'captcha' );
-		else
-			$str_math_expretion .= " ".__( $number_three_string[ $array_math_expretion[2] / 10 ], 'captcha' )." ".( 0 != $array_math_expretion[2] % 10 ? __( $number_string[ $array_math_expretion[2] % 10 ], 'captcha' ) : '');
+			$str_math_expretion .= " ".$number_two_string[ $array_math_expretion[2] % 10 ];
+		else {
+			if ( get_bloginfo( 'language', 'Display' ) == "nl-NL" ) {
+				$str_math_expretion .= " ".( 0 != $array_math_expretion[2] % 10 ? $number_string[ $array_math_expretion[2] % 10 ]. __( "and", 'captcha' ) : '').$number_three_string[ $array_math_expretion[2] / 10 ];
+			} else {
+				$str_math_expretion .= " ".$number_three_string[ $array_math_expretion[2] / 10 ]." ".( 0 != $array_math_expretion[2] % 10 ? $number_string[ $array_math_expretion[2] % 10 ] : '');
+			}
+		}
 	} else {
 		$str_math_expretion .= $array_math_expretion[2];
 	}
 	// Add hidden field with encoding result
 ?>
-	<input type="hidden" name="cptch_result" value="<?php echo $str = encode( $array_math_expretion[$rand_input], $str_key ); ?>" /><input type="hidden" value="Version: 2.11" />
+	<input type="hidden" name="cptch_result" value="<?php echo $str = encode( $array_math_expretion[$rand_input], $str_key ); ?>" /><input type="hidden" value="Version: 2.12" />
 	<?php echo $str_math_expretion; ?>
 <?php
 }
@@ -770,12 +804,39 @@ function cptch_display_captcha_custom()
 	$content = "";
 	
 	// In letters presentation of numbers 0-9
-	// In letters presentation of numbers 0-9
-	$number_string = array( 'null','one','two','three','four','five','six','seven','eight','nine', 'captcha' );
+	$number_string = array(); 
+	$number_string[0] = __( 'null', 'captcha' );
+	$number_string[1] = __( 'one', 'captcha' );
+	$number_string[2] = __( 'two', 'captcha' );
+	$number_string[3] = __( 'three', 'captcha' );
+	$number_string[4] = __( 'four', 'captcha' );
+	$number_string[5] = __( 'five', 'captcha' );
+	$number_string[6] = __( 'six', 'captcha' );
+	$number_string[7] = __( 'seven', 'captcha' );
+	$number_string[8] = __( 'eight', 'captcha' );
+	$number_string[9] = __( 'nine', 'captcha' ); 
 	// In letters presentation of numbers 11 -19
-	$number_two_string = array(1=>'eleven','twelve','thirteen','fourteen','fifteen','sixteen','seventeen','eighteen','nineteen' );
+	$number_two_string = array();
+	$number_two_string[1] = __( 'eleven', 'captcha' );
+	$number_two_string[2] = __( 'twelve', 'captcha' );
+	$number_two_string[3] = __( 'thirteen', 'captcha' );
+	$number_two_string[4] = __( 'fourteen', 'captcha' );
+	$number_two_string[5] = __( 'fifteen', 'captcha' );
+	$number_two_string[6] = __( 'sixteen', 'captcha' );
+	$number_two_string[7] = __( 'seventeen', 'captcha' );
+	$number_two_string[8] = __( 'eighteen', 'captcha' );
+	$number_two_string[9] = __( 'nineteen', 'captcha' );
 	// In letters presentation of numbers 10, 20, 30, 40, 50, 60, 70, 80, 90
-	$number_three_string = array( 1=>'ten','twenty','thirty','forty','fifty','sixty','seventy','eighty','ninety' );
+	$number_three_string = array();
+	$number_three_string[1] = __( 'ten', 'captcha' );
+	$number_three_string[1] = __( 'twenty', 'captcha' );
+	$number_three_string[1] = __( 'thirty', 'captcha' );
+	$number_three_string[1] = __( 'forty', 'captcha' );
+	$number_three_string[1] = __( 'fifty', 'captcha' );
+	$number_three_string[1] = __( 'sixty', 'captcha' );
+	$number_three_string[1] = __( 'seventy', 'captcha' );
+	$number_three_string[1] = __( 'eighty', 'captcha' );
+	$number_three_string[1] = __( 'ninety', 'captcha' );
 	// The array of math actions
 	$math_actions = array();
 
@@ -834,7 +895,7 @@ function cptch_display_captcha_custom()
 	if( 0 == $rand_input )
 		$str_math_expretion .= "<input type=\"text\" name=\"cptch_number\" value=\"\" maxlength=\"1\" size=\"1\" style=\"width:20px;margin-bottom:0;display:inline;\" />";
 	else if ( 0 == $rand_number_string || 0 == $cptch_options["cptch_difficulty_number"] )
-		$str_math_expretion .= __( $number_string[$array_math_expretion[0]], 'captcha' );
+		$str_math_expretion .= $number_string[$array_math_expretion[0]];
 	else
 		$str_math_expretion .= $array_math_expretion[0];
 	
@@ -845,7 +906,7 @@ function cptch_display_captcha_custom()
 	if( 1 == $rand_input )
 		$str_math_expretion .= " <input type=\"text\" name=\"cptch_number\" value=\"\" maxlength=\"1\" size=\"1\" style=\"width:20px;margin-bottom:0;display:inline;\" />";
 	else if ( 1 == $rand_number_string || 0 == $cptch_options["cptch_difficulty_number"] )
-		$str_math_expretion .= " ".__( $number_string[$array_math_expretion[1]], 'captcha' );
+		$str_math_expretion .= " ". $number_string[$array_math_expretion[1]];
 	else
 		$str_math_expretion .= " ".$array_math_expretion[1];
 	
@@ -857,16 +918,21 @@ function cptch_display_captcha_custom()
 		$str_math_expretion .= " <input type=\"text\" name=\"cptch_number\" value=\"\" maxlength=\"2\" size=\"1\" style=\"width:20px;margin-bottom:0;display:inline;\" />";
 	} else if ( 2 == $rand_number_string || 0 == $cptch_options["cptch_difficulty_number"] ) {
 		if( $array_math_expretion[2] < 10 )
-			$str_math_expretion .= " ".__( $number_string[$array_math_expretion[2]], 'captcha' );
+			$str_math_expretion .= " ". $number_string[$array_math_expretion[2]];
 		else if( $array_math_expretion[2] < 20 && $array_math_expretion[2] > 10 )
-			$str_math_expretion .= " ".__( $number_two_string[ $array_math_expretion[2] % 10 ], 'captcha' );
-		else
-			$str_math_expretion .= " ".__( $number_three_string[ $array_math_expretion[2] / 10 ], 'captcha' )." ".( 0 != $array_math_expretion[2] % 10 ? __( $number_string[ $array_math_expretion[2] % 10 ], 'captcha' ) : '');
+			$str_math_expretion .= " ". $number_two_string[ $array_math_expretion[2] % 10 ];
+		else {
+			if ( get_bloginfo( 'language','Display' ) == "nl-NL" ) {
+				$str_math_expretion .= " ".( 0 != $array_math_expretion[2] % 10 ? $number_string[ $array_math_expretion[2] % 10 ] . __( "and", 'captcha' ) : '' ) . $number_three_string[ $array_math_expretion[2] / 10 ];
+			} else {
+				$str_math_expretion .= " " . $number_three_string[ $array_math_expretion[2] / 10 ]." ".( 0 != $array_math_expretion[2] % 10 ? $number_string[ $array_math_expretion[2] % 10 ] : '');
+			}
+		}
 	} else {
 		$str_math_expretion .= $array_math_expretion[2];
 	}
 	// Add hidden field with encoding result
-	$content .= '<input type="hidden" name="cptch_result" value="'.$str = encode( $array_math_expretion[$rand_input], $str_key ).'" /><input type="hidden" value="Version: 2.11" />';
+	$content .= '<input type="hidden" name="cptch_result" value="'.$str = encode( $array_math_expretion[$rand_input], $str_key ).'" /><input type="hidden" value="Version: 2.12" />';
 	$content .= $str_math_expretion; 
 	return $content;
 }
