@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: captcha\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-12-29 19:22+0200\n"
-"PO-Revision-Date: 2011-12-29 19:24+0200\n"
+"POT-Creation-Date: 2011-12-30 10:05+0200\n"
+"PO-Revision-Date: 2011-12-30 10:12+0200\n"
 "Last-Translator: BWS <zos@bestwebsoft.com>\n"
 "Language-Team: bestwebsoft.com <plugin@bestwebsoft.com>\n"
 "MIME-Version: 1.0\n"
@@ -78,7 +78,7 @@ msgstr "Активированные плагины"
 #: captcha.php:112
 #: captcha.php:120
 msgid "Read more"
-msgstr "Читать далее"
+msgstr "Подробнее..."
 
 #: captcha.php:104
 #: captcha.php:220
@@ -105,15 +105,11 @@ msgstr "Установлено %s"
 
 #: captcha.php:120
 msgid "Install now from wordpress.org"
-msgstr "Установить сейчас с wordpress.org"
+msgstr "Установить с wordpress.org"
 
 #: captcha.php:122
 msgid "If you have any questions, please contact us via plugin@bestwebsoft.com or fill in our contact form on our site"
 msgstr "Если у вас есть какие-то впросы, обращайтесь на plugin@bestwebsoft.com или заполните контактную форму на нашем сайте"
-
-#: captcha.php:131
-msgid "BWS Plugins"
-msgstr "Плагины BWS"
 
 #: captcha.php:132
 #: captcha.php:293
@@ -367,6 +363,9 @@ msgstr "Пароль для шифрования не установлен"
 #: captcha.php:730
 msgid "The password of decoding is not set"
 msgstr "Пароль для дешифровки не установлен"
+
+#~ msgid "BWS Plugins"
+#~ msgstr "Плагины BWS"
 
 #~ msgid "Install Now"
 #~ msgstr "Установить сейчас"

@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: captcha\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-12-29 19:21+0200\n"
-"PO-Revision-Date: 2011-12-29 19:21+0200\n"
+"POT-Creation-Date: 2011-12-30 10:05+0200\n"
+"PO-Revision-Date: 2011-12-30 10:05+0200\n"
 "Last-Translator: BWS <zos@bestwebsoft.com>\n"
 "Language-Team: bestwebsoft.com <plugin@bestwebsoft.com>\n"
 "MIME-Version: 1.0\n"
@@ -110,10 +110,6 @@ msgstr "Installeer nu vanaf wordpress.org"
 #: captcha.php:122
 msgid "If you have any questions, please contact us via plugin@bestwebsoft.com or fill in our contact form on our site"
 msgstr "Voor vragen kun je mailen met plugin@bestwebsoft.com of het contactformulier op onze website invullen"
-
-#: captcha.php:131
-msgid "BWS Plugins"
-msgstr "BWS Plugins"
 
 #: captcha.php:132
 #: captcha.php:293
@@ -367,6 +363,9 @@ msgstr "Er is geen wachtwoord voor encryptie ingesteld"
 #: captcha.php:730
 msgid "The password of decoding is not set"
 msgstr "Er is geen decoderings wachtwoord ingesteld"
+
+#~ msgid "BWS Plugins"
+#~ msgstr "BWS Plugins"
 
 #~ msgid "Install Now"
 #~ msgstr "Nu installeren"
