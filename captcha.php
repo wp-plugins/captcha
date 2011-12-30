@@ -128,7 +128,7 @@ if( ! function_exists( 'bws_add_menu_render' ) ) {
 }
 
 function add_cptch_admin_menu() {
-	add_menu_page( __( 'BWS Plugins', 'captcha' ), __( 'BWS Plugins', 'captcha' ), 'manage_options', 'bws_plugins', 'bws_add_menu_render', WP_CONTENT_URL."/plugins/captcha/images/px.png", 1001); 
+	add_menu_page( 'BWS Plugins', 'BWS Plugins', 'manage_options', 'bws_plugins', 'bws_add_menu_render', WP_CONTENT_URL."/plugins/captcha/images/px.png", 1001); 
 	add_submenu_page('bws_plugins', __( 'Captcha Options', 'captcha' ), __( 'Captcha', 'captcha' ), 'manage_options', "captcha.php", 'cptch_settings_page');
 
 	//call register settings function
