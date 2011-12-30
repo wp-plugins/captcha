@@ -23,7 +23,7 @@ Captcha plugin allows you to protect your website from spam using math logic whi
 
 = Translate =
 
-* Dutch (nl_NL) (thanks Cheers Bart)
+* Dutch (nl_NL) (thanks Bart Duineveld)
 * Danish (da_DK) (thanks Byrial Ole Jensen)
 * Russian (ru_RU)
 
