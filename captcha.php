@@ -4,7 +4,7 @@ Plugin Name: Captcha
 Plugin URI:  http://bestwebsoft.com/plugin/
 Description: Plugin Captcha intended to prove that the visitor is a human being and not a spam robot. Plugin asks the visitor to answer a math question.
 Author: BestWebSoft
-Version: 2.12
+Version: 2.13
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -595,14 +595,14 @@ function cptch_display_captcha()
 	// In letters presentation of numbers 10, 20, 30, 40, 50, 60, 70, 80, 90
 	$number_three_string = array();
 	$number_three_string[1] = __( 'ten', 'captcha' );
-	$number_three_string[1] = __( 'twenty', 'captcha' );
-	$number_three_string[1] = __( 'thirty', 'captcha' );
-	$number_three_string[1] = __( 'forty', 'captcha' );
-	$number_three_string[1] = __( 'fifty', 'captcha' );
-	$number_three_string[1] = __( 'sixty', 'captcha' );
-	$number_three_string[1] = __( 'seventy', 'captcha' );
-	$number_three_string[1] = __( 'eighty', 'captcha' );
-	$number_three_string[1] = __( 'ninety', 'captcha' );
+	$number_three_string[2] = __( 'twenty', 'captcha' );
+	$number_three_string[3] = __( 'thirty', 'captcha' );
+	$number_three_string[4] = __( 'forty', 'captcha' );
+	$number_three_string[5] = __( 'fifty', 'captcha' );
+	$number_three_string[6] = __( 'sixty', 'captcha' );
+	$number_three_string[7] = __( 'seventy', 'captcha' );
+	$number_three_string[8] = __( 'eighty', 'captcha' );
+	$number_three_string[9] = __( 'ninety', 'captcha' );
 	// The array of math actions
 	$math_actions = array();
 
@@ -637,11 +637,11 @@ function cptch_display_captcha()
 	// Add second part of mathematical expression
 	$array_math_expretion[1] = rand( 1, 9 );
 	// Calculation of the mathematical expression result
-	switch( $rand_math_action ) {
-		case "0":
+	switch( $math_actions[$rand_math_action] ) {
+		case "&#43;":
 			$array_math_expretion[2] = $array_math_expretion[0] + $array_math_expretion[1];
 			break;
-		case "1":
+		case "&minus;":
 			// Result must not be equal to the negative number
 			if($array_math_expretion[0] < $array_math_expretion[1]) {
 				$number										= $array_math_expretion[0];
@@ -650,7 +650,7 @@ function cptch_display_captcha()
 			}
 			$array_math_expretion[2] = $array_math_expretion[0] - $array_math_expretion[1];
 			break;
-		case "2":
+		case "&times;":
 			$array_math_expretion[2] = $array_math_expretion[0] * $array_math_expretion[1];
 			break;
 	}
@@ -829,14 +829,14 @@ function cptch_display_captcha_custom()
 	// In letters presentation of numbers 10, 20, 30, 40, 50, 60, 70, 80, 90
 	$number_three_string = array();
 	$number_three_string[1] = __( 'ten', 'captcha' );
-	$number_three_string[1] = __( 'twenty', 'captcha' );
-	$number_three_string[1] = __( 'thirty', 'captcha' );
-	$number_three_string[1] = __( 'forty', 'captcha' );
-	$number_three_string[1] = __( 'fifty', 'captcha' );
-	$number_three_string[1] = __( 'sixty', 'captcha' );
-	$number_three_string[1] = __( 'seventy', 'captcha' );
-	$number_three_string[1] = __( 'eighty', 'captcha' );
-	$number_three_string[1] = __( 'ninety', 'captcha' );
+	$number_three_string[2] = __( 'twenty', 'captcha' );
+	$number_three_string[3] = __( 'thirty', 'captcha' );
+	$number_three_string[4] = __( 'forty', 'captcha' );
+	$number_three_string[5] = __( 'fifty', 'captcha' );
+	$number_three_string[6] = __( 'sixty', 'captcha' );
+	$number_three_string[7] = __( 'seventy', 'captcha' );
+	$number_three_string[8] = __( 'eighty', 'captcha' );
+	$number_three_string[9] = __( 'ninety', 'captcha' );
 	// The array of math actions
 	$math_actions = array();
 
@@ -871,11 +871,11 @@ function cptch_display_captcha_custom()
 	// Add second part of mathematical expression
 	$array_math_expretion[1] = rand( 1, 9 );
 	// Calculation of the mathematical expression result
-	switch( $rand_math_action ) {
-		case "0":
+	switch( $math_actions[$rand_math_action] ) {
+		case "&#43;":
 			$array_math_expretion[2] = $array_math_expretion[0] + $array_math_expretion[1];
 			break;
-		case "1":
+		case "&minus;":
 			// Result must not be equal to the negative number
 			if($array_math_expretion[0] < $array_math_expretion[1]) {
 				$number										= $array_math_expretion[0];
@@ -884,7 +884,7 @@ function cptch_display_captcha_custom()
 			}
 			$array_math_expretion[2] = $array_math_expretion[0] - $array_math_expretion[1];
 			break;
-		case "2":
+		case "&times;":
 			$array_math_expretion[2] = $array_math_expretion[0] * $array_math_expretion[1];
 			break;
 	}
