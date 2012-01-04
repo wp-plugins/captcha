@@ -23,9 +23,9 @@ Captcha plugin allows you to protect your website from spam using math logic whi
 
 = Translate =
 
-* German (de_DE) (thanks Thomas Hartung)
+* Danish (dk_DK) (thanks Byrial Ole Jensed)
 * Dutch (nl_NL) (thanks <a href="mailto:byrial@vip.cybercity.dk">Bart Duineveld</a>)
-* Danish (da_DK) (thanks Byrial Ole Jensen)
+* German (de_DE) (thanks Thomas Hartung)
 * Russian (ru_RU)
 
 If you create your own language pack or update the existing one, you can send <a href="http://codex.wordpress.org/Translating_WordPress" target="_blank">the text of PO and MO files</a> for <a href="http://bestwebsoft.com/" target="_blank">BWS</a> and we'll add it to the plugin. You can download the latest version of the program for work with PO and MO files  <a href="http://www.poedit.net/download.php" target="_blank">Poedit</a>.
@@ -62,7 +62,7 @@ Instead, it uses a new function call inside comments.php: `<?php comment_form();
 If you have WP3 and still have the missing captcha, make sure your theme has `<?php comment_form(); ?>`
 inside `/wp-content/themes/[your_theme]/comments.php`. (look inside the Twenty Ten theme's comments.php for proper example)
 
-= How to use the other language files with the Contact Form Plugin? = 
+= How to use the other language files with the CAPTCHA? = 
 
 Here is an example for German language files.
 1. In order to use another language for WordPress it is necessary to set the WP version on the required language and in the configurational wp file - `wp-config.php` in the line `define('WPLANG', '');` write `define('WPLANG', 'de_DE');`. If everything is done properly the admin panel will be in German.
@@ -70,6 +70,26 @@ Here is an example for German language files.
 3. If there are no these files it will be necessary to copy other files from this folder (for example, for Russian or Italian language) and rename them (you should write `de_DE` instead of `ru_RU` in the both files).
 4. The files are edited with the help of the program Poedit - http://www.poedit.net/download.php - please load this program, install it, open the file with the help of this program (the required language file) and for each line in English you should write the translation in German.
 5. If everything is done properly all lines will be in German in the admin panel and on frontend.
+
+= I would like to add Captcha to custom form on my website. How can I do this? =
+
+1. Install the plugin Captcha, activate it.
+2. Open file with the form (where is necessary to implement captcha).
+3. Find the place where it is necessary to insert code to display captcha.
+4. Insert lines to display captcha
+
+`if( function_exists( 'cptch_display_captcha_custom' ) ) { echo "<input type='hidden' name='cntctfrm_contact_action' value='true' />"; echo cptch_display_captcha_custom() } ;`
+
+If the form is html it will necessary to insert the line with tags php
+
+`&lt;?php if( function_exists( 'cptch_display_captcha_custom' ) ) { echo "<input type='hidden' name='cntctfrm_contact_action' value='true' />"; echo cptch_display_captcha_custom(); } ?>`
+
+5. It is necessary to add the lines in the function of check of the entered data (where it is checked what the user enters and if everything is correct the mail will be sent) 
+
+`if( function_exists( 'cptch_check_custom_form' ) && cptch_check_custom_form() !== true ) echo "Please complete the CAPTCHA."`
+or
+`&lt;?php if( function_exists( 'cptch_check_custom_form' ) && cptch_check_custom_form() !== true ) echo "Please complete the CAPTCHA." ?>`
+It is possible instead of `echo "Please complete the CAPTCHA."` enter this line in variable and  display this variable in required place. If there is variable (which is answered for the displaying of the errors) in the function of check so this phrase can be added to this variable. If the function returned true so you have entered captcha properly. In other cases the function will return false.
 
 == Screenshots ==
 
