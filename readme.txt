@@ -62,6 +62,15 @@ Instead, it uses a new function call inside comments.php: `<?php comment_form();
 If you have WP3 and still have the missing captcha, make sure your theme has `<?php comment_form(); ?>`
 inside `/wp-content/themes/[your_theme]/comments.php`. (look inside the Twenty Ten theme's comments.php for proper example)
 
+= How to use the other language files with the Contact Form Plugin? = 
+
+Here is an example for German language files.
+1. In order to use another language for WordPress it is necessary to set the WP version on the required language and in the configurational wp file - `wp-config.php` in the line `define('WPLANG', '');` write `define('WPLANG', 'de_DE');`. If everything is done properly the admin panel will be in German.
+2. Make sure that there are files `de_DE.po` and `de_DE.mo` in the plugin (the folder languages in the root of the plugin).
+3. If there are no these files it will be necessary to copy other files from this folder (for example, for Russian or Italian language) and rename them (you should write `de_DE` instead of `ru_RU` in the both files).
+4. The files are edited with the help of the program Poedit - http://www.poedit.net/download.php - please load this program, install it, open the file with the help of this program (the required language file) and for each line in English you should write the translation in German.
+5. If everything is done properly all lines will be in German in the admin panel and on frontend.
+
 == Screenshots ==
 
 1. Captcha Settings page.
