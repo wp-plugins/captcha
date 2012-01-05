@@ -4,7 +4,7 @@ Donate link: http://bestwebsoft.com/
 Tags: captcha, math captcha, text captcha, spam, antispam, login, registration, comment, lost password, capcha, catcha, captha
 Requires at least: 2.9
 Tested up to: 3.3
-Stable tag: 2.14
+Stable tag: 2.15
 
 This plugin allows you to implement super security captcha form into web forms.
 
@@ -23,8 +23,10 @@ Captcha plugin allows you to protect your website from spam using math logic whi
 
 = Translate =
 
+* Brazilian Portuguese (pt_BR) (thanks Breno Jacinto)
 * Danish (dk_DK) (thanks Byrial Ole Jensed)
 * Dutch (nl_NL) (thanks <a href="mailto:byrial@vip.cybercity.dk">Bart Duineveld</a>)
+* French (fr_FR) (thanks Martel Benjamin)
 * German (de_DE) (thanks Thomas Hartung)
 * Russian (ru_RU)
 
@@ -87,13 +89,13 @@ Here is an example for German language files.
 
 If the form is html it will necessary to insert the line with tags php
 
-`&lt;?php if( function_exists( 'cptch_display_captcha_custom' ) ) { echo "<input type='hidden' name='cntctfrm_contact_action' value='true' />"; echo cptch_display_captcha_custom(); } ?>`
+`<?php if( function_exists( 'cptch_display_captcha_custom' ) ) { echo "<input type='hidden' name='cntctfrm_contact_action' value='true' />"; echo cptch_display_captcha_custom(); } ?>`
 
 5. It is necessary to add the lines in the function of check of the entered data (where it is checked what the user enters and if everything is correct the mail will be sent) 
 
 `if( function_exists( 'cptch_check_custom_form' ) && cptch_check_custom_form() !== true ) echo "Please complete the CAPTCHA."`
 or
-`&lt;?php if( function_exists( 'cptch_check_custom_form' ) && cptch_check_custom_form() !== true ) echo "Please complete the CAPTCHA." ?>`
+`<?php if( function_exists( 'cptch_check_custom_form' ) && cptch_check_custom_form() !== true ) echo "Please complete the CAPTCHA." ?>`
 It is possible instead of `echo "Please complete the CAPTCHA."` enter this line in variable and  display this variable in required place. If there is variable (which is answered for the displaying of the errors) in the function of check so this phrase can be added to this variable. If the function returned true so you have entered captcha properly. In other cases the function will return false.
 
 == Screenshots ==
@@ -105,6 +107,9 @@ It is possible instead of `echo "Please complete the CAPTCHA."` enter this line 
 5. Login form with Captcha.
 
 == Changelog ==
+
+= V2.15 - 05.01.2012 =
+* NEW : Added Brazilian Portuguese and French language files for plugin.
 
 = V2.14 - 04.01.2012 =
 * NEW : Added German language files for plugin.
@@ -167,6 +172,9 @@ It is possible instead of `echo "Please complete the CAPTCHA."` enter this line 
 * Mathematical actions choosing functionality and level of difficulty was implemented.
 
 == Upgrade Notice ==
+
+= V2.15 =
+Added Brazilian Portuguese and French language files for plugin.
 
 = V2.14 =
 Added German language files for plugin.
