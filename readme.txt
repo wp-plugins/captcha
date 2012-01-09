@@ -23,7 +23,7 @@ Captcha plugin allows you to protect your website from spam using math logic whi
 
 = Translate =
 
-* Brazilian Portuguese (pt_BR) (thanks Breno Jacinto)
+* Brazilian Portuguese (pt_BR) (thanks <a href="mailto:brenojac@gmail.com">Breno Jacinto, www.iconis.org.br)
 * Danish (dk_DK) (thanks Byrial Ole Jensed)
 * Dutch (nl_NL) (thanks <a href="mailto:byrial@vip.cybercity.dk">Bart Duineveld</a>)
 * French (fr_FR) (thanks Martel Benjamin)
