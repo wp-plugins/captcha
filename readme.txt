@@ -4,7 +4,7 @@ Donate link: http://bestwebsoft.com/
 Tags: captcha, math captcha, text captcha, spam, antispam, login, registration, comment, lost password, capcha, catcha, captha
 Requires at least: 2.9
 Tested up to: 3.3
-Stable tag: 2.15
+Stable tag: 2.16
 
 This plugin allows you to implement super security captcha form into web forms.
 
@@ -28,6 +28,7 @@ Captcha plugin allows you to protect your website from spam using math logic whi
 * Dutch (nl_NL) (thanks <a href="mailto:byrial@vip.cybercity.dk">Bart Duineveld</a>)
 * French (fr_FR) (thanks Martel Benjamin)
 * German (de_DE) (thanks Thomas Hartung)
+* Polish (pl_PL) (thanks Krzysztof Opuchlik)
 * Russian (ru_RU)
 
 If you create your own language pack or update the existing one, you can send <a href="http://codex.wordpress.org/Translating_WordPress" target="_blank">the text of PO and MO files</a> for <a href="http://bestwebsoft.com/" target="_blank">BWS</a> and we'll add it to the plugin. You can download the latest version of the program for work with PO and MO files  <a href="http://www.poedit.net/download.php" target="_blank">Poedit</a>.
@@ -108,6 +109,9 @@ It is possible instead of `echo "Please complete the CAPTCHA."` enter this line 
 
 == Changelog ==
 
+= V2.16 - 11.01.2012 =
+* NEW : Added Polish language files for plugin.
+
 = V2.15 - 05.01.2012 =
 * NEW : Added Brazilian Portuguese and French language files for plugin.
 
@@ -172,6 +176,9 @@ It is possible instead of `echo "Please complete the CAPTCHA."` enter this line 
 * Mathematical actions choosing functionality and level of difficulty was implemented.
 
 == Upgrade Notice ==
+
+= V2.16=
+Added Polish language files for plugin.
 
 = V2.15 =
 Added Brazilian Portuguese and French language files for plugin.
