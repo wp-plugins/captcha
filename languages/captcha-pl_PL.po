@@ -102,11 +102,11 @@ msgstr "Download"
 #: captcha.php:120
 #, php-format
 msgid "Install %s"
-msgstr "Install %s"
+msgstr "Instaluj %s"
 
 #: captcha.php:120
 msgid "Install now from wordpress.org"
-msgstr "Install now from wordpress.org"
+msgstr "Zainstaluj teraz z wordpress.org"
 
 #: captcha.php:122
 msgid "If you have any questions, please contact us via plugin@bestwebsoft.com or fill in our contact form on our site"
@@ -131,7 +131,7 @@ msgstr "Support"
 
 #: captcha.php:275
 msgid "Please select one point in the blocks Arithmetic actions and Difficulty for CAPTCHA"
-msgstr "Please select one point in the blocks Arithmetic actions and Difficulty for CAPTCHA"
+msgstr "Wybierz co najmniej jedno z działań arytmetycznych i poziom trudności dla CAPTCHA"
 
 #: captcha.php:279
 msgid "Options saved."
@@ -163,7 +163,7 @@ msgstr "Download contact form"
 
 #: captcha.php:317
 msgid "If you would like to customize this plugin for a custom form, please contact us via <a href=\"Mailto:plugin@bestwebsoft.com\">plugin@bestwebsoft.com</a> or fill in our contact form on our site"
-msgstr "If you would like to customize this plugin for a custom form, please contact us via <a href=\"Mailto:plugin@bestwebsoft.com\">plugin@bestwebsoft.com</a> or fill in our contact form on our site"
+msgstr "Jeśli chciałbyś dostosować ten plugin do niestandardowego formularza, skontaktuj się z nami mailowo:  <a href=\"Mailto:plugin@bestwebsoft.com\">plugin@bestwebsoft.com</a> lub wypełnij formularz na naszej stronie"
 
 #: captcha.php:321
 msgid "Label for CAPTCHA in form"
