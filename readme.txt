@@ -4,7 +4,7 @@ Donate link: http://bestwebsoft.com/
 Tags: captcha, math captcha, text captcha, spam, antispam, login, registration, comment, lost password, capcha, catcha, captha
 Requires at least: 2.9
 Tested up to: 3.3
-Stable tag: 2.18
+Stable tag: 2.19
 
 This plugin allows you to implement super security captcha form into web forms.
 
@@ -112,6 +112,9 @@ It is possible instead of `echo "Please complete the CAPTCHA."` enter this line 
 
 == Changelog ==
 
+= V2.19 - 18.01.2012 =
+* Bugfix : The sintax errors was fixed.
+
 = V2.18 - 18.01.2012 =
 * NEW : Added Farsi/Persian, Italian language files for plugin.
 * Bugfix : The session errors and 'undefined index' error was fixed.
@@ -186,6 +189,9 @@ It is possible instead of `echo "Please complete the CAPTCHA."` enter this line 
 * Mathematical actions choosing functionality and level of difficulty was implemented.
 
 == Upgrade Notice ==
+
+= V2.19 =
+The sintax errors was fixed. Please upgrade the Captcha plugin immediately. Thank you
 
 = V2.18 =
 Added Farsi/Persian, Italian language files for plugin. The session errors and 'undefined index' error was fixed.
