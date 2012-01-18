@@ -4,7 +4,7 @@ Plugin Name: Captcha
 Plugin URI:  http://bestwebsoft.com/plugin/
 Description: Plugin Captcha intended to prove that the visitor is a human being and not a spam robot. Plugin asks the visitor to answer a math question.
 Author: BestWebSoft
-Version: 2.17
+Version: 2.18
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -349,7 +349,8 @@ function cptch_settings_page() {
 
 // this function adds captcha to the login form
 function cptch_login_form() {
-	session_start();
+	if( session_id() == "" )
+		session_start();
 	global $cptch_options;
 	
 	// captcha html - login form
@@ -378,15 +379,15 @@ function cptch_login_post($errors) {
 	if( isset( $_SESSION['cptch_error'] ) )
 		unset( $_SESSION['cptch_error'] );
 
-	if( $_REQUEST['action'] == 'register' )
+	if( isset( $_REQUEST['action'] ) && 'register' == $_REQUEST['action'] )
 		return($errors);
 
 	// If captcha not complete, return error
-	if ( "" ==  $_POST['cptch_number'] ) {	
+	if ( isset( $_REQUEST['cptch_number'] ) && "" ==  $_REQUEST['cptch_number'] ) {	
 		return $errors.'<strong>'. __( 'ERROR', 'captcha' ) .'</strong>: '. __( 'Please complete the CAPTCHA.', 'captcha' );
 	}
 
-	if ( 0 == strcasecmp( trim( decode( $_POST['cptch_result'], $str_key ) ), $_POST['cptch_number'] ) ) {
+	if ( isset( $_REQUEST['cptch_result'] ) && isset( $_REQUEST['cptch_number'] ) && 0 == strcasecmp( trim( decode( $_REQUEST['cptch_result'], $str_key ) ), $_REQUEST['cptch_number'] ) ) {
 		// captcha was matched						
 	} else {
 		return $errors.'<strong>'. __( 'ERROR', 'captcha' ) .'</strong>: '. __( 'That CAPTCHA was incorrect.', 'captcha' );
@@ -397,17 +398,18 @@ function cptch_login_post($errors) {
 // this function checks the captcha posted with a login when login errors are absent
 function cptch_login_check($url) {
 	global $str_key;
-	session_start();
+	if( session_id() == "" )
+		session_start();
 
 	$str_key = "123";
 	// Add error if captcha is empty
-	if ( isset( $_POST['cptch_number'] ) && "" ==  $_POST['cptch_number'] ) {
+	if ( isset( $_REQUEST['cptch_number'] ) && "" ==  $_REQUEST['cptch_number'] ) {
 		$_SESSION['cptch_error'] = __( 'Please complete the CAPTCHA.', 'captcha' );
 		// Redirect to wp-login.php
 		return $_SERVER["REQUEST_URI"];
 	}
 
-	if ( 0 == strcasecmp( trim( decode( $_POST['cptch_result'], $str_key ) ), $_POST['cptch_number'] ) ) {
+	if ( isset( $_REQUEST['cptch_result'] ) && isset( $_REQUEST['cptch_number'] ) && 0 == strcasecmp( trim( decode( $_REQUEST['cptch_result'], $str_key ) ), $_REQUEST['cptch_number'] ) ) {
 		return $url;		// captcha was matched						
 	} else {
 		// Add error if captcha is incorrect
@@ -473,13 +475,13 @@ function cptch_comment_post($comment) {
 	// added for compatibility with WP Wall plugin
 	// this does NOT add CAPTCHA to WP Wall plugin,
 	// it just prevents the "Error: You did not enter a Captcha phrase." when submitting a WP Wall comment
-	if ( function_exists( 'WPWall_Widget' ) && isset( $_POST['wpwall_comment'] ) ) {
+	if ( function_exists( 'WPWall_Widget' ) && isset( $_REQUEST['wpwall_comment'] ) ) {
 			// skip capthca
 			return $comment;
 	}
 
 	// skip captcha for comment replies from the admin menu
-	if ( isset( $_POST['action'] ) && $_POST['action'] == 'replyto-comment' &&
+	if ( isset( $_REQUEST['action'] ) && $_REQUEST['action'] == 'replyto-comment' &&
 	( check_ajax_referer( 'replyto-comment', '_ajax_nonce', false ) || check_ajax_referer( 'replyto-comment', '_ajax_nonce-replyto-comment', false ) ) ) {
 				// skip capthca
 				return $comment;
@@ -492,10 +494,10 @@ function cptch_comment_post($comment) {
 	}
 	
 	// If captcha is empty
-	if ( "" ==  $_POST['cptch_number'] )
+	if ( isset( $_REQUEST['cptch_number' ) && "" ==  $_REQUEST['cptch_number'] )
 		wp_die( __('Please complete the CAPTCHA.', 'captcha' ) );
 
-	if ( 0 == strcasecmp( trim( decode( $_POST['cptch_result'], $str_key ) ), $_POST['cptch_number'] ) ) {
+	if ( isset( $_REQUEST['cptch_result' ) && isset( $_REQUEST['cptch_number' ) && 0 == strcasecmp( trim( decode( $_REQUEST['cptch_result'], $str_key ) ), $_REQUEST['cptch_number'] ) ) {
 		// captcha was matched
 		return($comment);
 	} else {
@@ -525,12 +527,12 @@ function cptch_register_post($login,$email,$errors) {
 	$str_key = "123";
 
 	// If captcha is blank - add error
-	if ( "" ==  $_POST['cptch_number'] ) {
+	if ( isset( $_REQUEST['cptch_number'] ) && "" ==  $_REQUEST['cptch_number'] ) {
 		$errors->add('captcha_blank', '<strong>'.__('ERROR', 'captcha').'</strong>: '.__('Please complete the CAPTCHA.', 'captcha'));
 		return $errors;
 	}
 
-	if ( 0 == strcasecmp( trim( decode( $_POST['cptch_result'], $str_key ) ), $_POST['cptch_number'] ) ) {
+	if ( isset( $_REQUEST['cptch_result'] ) && isset( $_REQUEST['cptch_number'] ) && 0 == strcasecmp( trim( decode( $_REQUEST['cptch_result'], $str_key ) ), $_REQUEST['cptch_number'] ) ) {
 					// captcha was matched						
 	} else {
 		$errors->add('captcha_wrong', '<strong>'.__('ERROR', 'captcha').'</strong>: '.__('That CAPTCHA was incorrect.', 'captcha'));
@@ -544,16 +546,16 @@ function cptch_lostpassword_post() {
 	$str_key = "123";
 
 	// If field 'user login' is empty - return
-	if( "" == $_POST['user_login'] )
+	if( isset( $_REQUEST['user_login'] ) && "" == $_REQUEST['user_login'] )
 		return;
 
 	// If captcha doesn't entered
-  if ( "" ==  $_POST['cptch_number'] ) {
+  if ( isset( $_REQUEST['cptch_number'] ) && "" ==  $_REQUEST['cptch_number'] ) {
 		wp_die( __( 'Please complete the CAPTCHA.', 'captcha' ) );
 	}
 	
 	// Check entered captcha
-	if ( 0 == strcasecmp( trim( decode( $_POST['cptch_result'], $str_key ) ), $_POST['cptch_number'] ) ) {
+	if ( isset( $_REQUEST['cptch_result'] ) && isset( $_REQUEST['cptch_number'] ) && 0 == strcasecmp( trim( decode( $_REQUEST['cptch_result'], $str_key ) ), $_REQUEST['cptch_number'] ) ) {
 		return;
 	} else {
 		wp_die( __( 'Error: You entered in the wrong CAPTCHA phrase. Press your browser\'s back button and try again.', 'captcha' ) );
@@ -775,15 +777,15 @@ function cptch_check_custom_form()
 {
 	global $str_key;
 	$str_key = "123";
-	if(isset( $_REQUEST['cntctfrm_contact_action'] ))
+	if( isset( $_REQUEST['cntctfrm_contact_action'] ) )
 	{
 		// If captcha doesn't entered
-		if ( "" ==  $_REQUEST['cptch_number'] ) {
+		if ( isset( $_REQUEST['cptch_number'] ) && "" ==  $_REQUEST['cptch_number'] ) {
 			return false;
 		}
 		
 		// Check entered captcha
-		if ( 0 == strcasecmp( trim( decode( $_REQUEST['cptch_result'], $str_key ) ), $_REQUEST['cptch_number'] ) ) {
+		if ( isset( $_REQUEST['cptch_result'] ) && isset( $_REQUEST['cptch_number'] ) && 0 == strcasecmp( trim( decode( $_REQUEST['cptch_result'], $str_key ) ), $_REQUEST['cptch_number'] ) ) {
 			return true;
 		} else {
 			return false;

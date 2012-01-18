@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: captcha\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-01-11 10:50+0200\n"
-"PO-Revision-Date: 2012-01-11 10:50+0200\n"
+"POT-Creation-Date: 2012-01-18 11:42+0200\n"
+"PO-Revision-Date: 2012-01-18 11:42+0200\n"
 "Last-Translator: BWS <zos@bestwebsoft.com>\n"
 "Language-Team: bestwebsoft.com <plugin@bestwebsoft.com>\n"
 "MIME-Version: 1.0\n"
@@ -181,187 +181,187 @@ msgstr "Poziom trudności"
 msgid "Save Changes"
 msgstr "Zapisz zmiany"
 
-#: captcha.php:386
-#: captcha.php:392
-#: captcha.php:529
-#: captcha.php:536
+#: captcha.php:387
+#: captcha.php:393
+#: captcha.php:531
+#: captcha.php:538
 msgid "ERROR"
 msgstr "BŁĄD"
 
-#: captcha.php:386
-#: captcha.php:405
-#: captcha.php:496
-#: captcha.php:529
-#: captcha.php:552
+#: captcha.php:387
+#: captcha.php:407
+#: captcha.php:498
+#: captcha.php:531
+#: captcha.php:554
 msgid "Please complete the CAPTCHA."
 msgstr "Proszę uzupełnić działanie CAPTHA"
 
-#: captcha.php:392
-#: captcha.php:414
-#: captcha.php:536
+#: captcha.php:393
+#: captcha.php:416
+#: captcha.php:538
 msgid "That CAPTCHA was incorrect."
 msgstr "Nieprawidłowo"
 
-#: captcha.php:502
-#: captcha.php:559
+#: captcha.php:504
+#: captcha.php:561
 msgid "Error: You entered in the wrong CAPTCHA phrase. Press your browser's back button and try again."
 msgstr "BŁĄD: Wpisałeś nieprawidłowy wynik działania. Naciśnij wstecz w przeglądarce i spróbuj ponownie."
 
-#: captcha.php:574
-#: captcha.php:808
+#: captcha.php:576
+#: captcha.php:810
 msgid "null"
 msgstr "zero"
 
-#: captcha.php:575
-#: captcha.php:809
-#: captcha.php:1016
+#: captcha.php:577
+#: captcha.php:811
+#: captcha.php:1018
 msgid "one"
 msgstr "jeden"
 
-#: captcha.php:576
-#: captcha.php:810
+#: captcha.php:578
+#: captcha.php:812
 msgid "two"
 msgstr "dwa"
 
-#: captcha.php:577
-#: captcha.php:811
+#: captcha.php:579
+#: captcha.php:813
 msgid "three"
 msgstr "trzy"
 
-#: captcha.php:578
-#: captcha.php:812
+#: captcha.php:580
+#: captcha.php:814
 msgid "four"
 msgstr "cztery"
 
-#: captcha.php:579
-#: captcha.php:813
+#: captcha.php:581
+#: captcha.php:815
 msgid "five"
 msgstr "pięć"
 
-#: captcha.php:580
-#: captcha.php:814
-#: captcha.php:1016
+#: captcha.php:582
+#: captcha.php:816
+#: captcha.php:1018
 msgid "six"
 msgstr "sześć"
 
-#: captcha.php:581
-#: captcha.php:815
-#: captcha.php:1004
-#: captcha.php:1010
+#: captcha.php:583
+#: captcha.php:817
+#: captcha.php:1006
+#: captcha.php:1012
 msgid "seven"
 msgstr "siedem"
 
-#: captcha.php:582
-#: captcha.php:816
-#: captcha.php:1007
+#: captcha.php:584
+#: captcha.php:818
+#: captcha.php:1009
 msgid "eight"
 msgstr "osiem"
 
-#: captcha.php:583
-#: captcha.php:817
+#: captcha.php:585
+#: captcha.php:819
 msgid "nine"
 msgstr "dziewięć"
 
-#: captcha.php:586
-#: captcha.php:820
+#: captcha.php:588
+#: captcha.php:822
 msgid "eleven"
 msgstr "jedenaście"
 
-#: captcha.php:587
-#: captcha.php:821
+#: captcha.php:589
+#: captcha.php:823
 msgid "twelve"
 msgstr "dwanaście"
 
-#: captcha.php:588
-#: captcha.php:822
+#: captcha.php:590
+#: captcha.php:824
 msgid "thirteen"
 msgstr "trzynaście"
 
-#: captcha.php:589
-#: captcha.php:823
+#: captcha.php:591
+#: captcha.php:825
 msgid "fourteen"
 msgstr "czternaście"
 
-#: captcha.php:590
-#: captcha.php:824
+#: captcha.php:592
+#: captcha.php:826
 msgid "fifteen"
 msgstr "piętnaście"
 
-#: captcha.php:591
-#: captcha.php:825
+#: captcha.php:593
+#: captcha.php:827
 msgid "sixteen"
 msgstr "szesnaście"
 
-#: captcha.php:592
-#: captcha.php:826
+#: captcha.php:594
+#: captcha.php:828
 msgid "seventeen"
 msgstr "siedemnaście"
 
-#: captcha.php:593
-#: captcha.php:827
+#: captcha.php:595
+#: captcha.php:829
 msgid "eighteen"
 msgstr "osiemnaście"
 
-#: captcha.php:594
-#: captcha.php:828
+#: captcha.php:596
+#: captcha.php:830
 msgid "nineteen"
 msgstr "dziewiętnaście"
 
-#: captcha.php:597
-#: captcha.php:831
+#: captcha.php:599
+#: captcha.php:833
 msgid "ten"
 msgstr "dziesięć"
 
-#: captcha.php:598
-#: captcha.php:832
+#: captcha.php:600
+#: captcha.php:834
 msgid "twenty"
 msgstr "dwadzieścia"
 
-#: captcha.php:599
-#: captcha.php:833
+#: captcha.php:601
+#: captcha.php:835
 msgid "thirty"
 msgstr "trzydzieści"
 
-#: captcha.php:600
-#: captcha.php:834
+#: captcha.php:602
+#: captcha.php:836
 msgid "forty"
 msgstr "czterdzieści"
 
-#: captcha.php:601
-#: captcha.php:835
+#: captcha.php:603
+#: captcha.php:837
 msgid "fifty"
 msgstr "pięćdziesiąt"
 
-#: captcha.php:602
-#: captcha.php:836
+#: captcha.php:604
+#: captcha.php:838
 msgid "sixty"
 msgstr "sześćdziesiąt"
 
-#: captcha.php:603
-#: captcha.php:837
+#: captcha.php:605
+#: captcha.php:839
 msgid "seventy"
 msgstr "siedemdziesiąt"
 
-#: captcha.php:604
-#: captcha.php:838
+#: captcha.php:606
+#: captcha.php:840
 msgid "eighty"
 msgstr "osiemdziesiąt"
 
-#: captcha.php:605
-#: captcha.php:839
+#: captcha.php:607
+#: captcha.php:841
 msgid "ninety"
 msgstr "dziewięćdziesiąt"
 
-#: captcha.php:692
-#: captcha.php:926
+#: captcha.php:694
+#: captcha.php:928
 msgid "and"
 msgstr "i"
 
-#: captcha.php:711
+#: captcha.php:713
 msgid "The password of encryption is not set"
 msgstr "The password of encryption is not set"
 
-#: captcha.php:730
+#: captcha.php:732
 msgid "The password of decoding is not set"
 msgstr "The password of decoding is not set"
 

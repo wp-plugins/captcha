@@ -4,7 +4,7 @@ Donate link: http://bestwebsoft.com/
 Tags: captcha, math captcha, text captcha, spam, antispam, login, registration, comment, lost password, capcha, catcha, captha
 Requires at least: 2.9
 Tested up to: 3.3
-Stable tag: 2.17
+Stable tag: 2.18
 
 This plugin allows you to implement super security captcha form into web forms.
 
@@ -23,11 +23,13 @@ Captcha plugin allows you to protect your website from spam using math logic whi
 
 = Translate =
 
-* Brazilian Portuguese (pt_BR) (thanks <a href="mailto:brenojac@gmail.com">Breno Jacinto, www.iconis.org.br)
+* Brazilian Portuguese (pt_BR) (thanks <a href="mailto:brenojac@gmail.com">Breno Jacinto</a>, www.iconis.org.br)
 * Danish (dk_DK) (thanks Byrial Ole Jensed)
 * Dutch (nl_NL) (thanks <a href="mailto:byrial@vip.cybercity.dk">Bart Duineveld</a>)
+* Farsi/Persian (fa_IR) (thanks <a href="mailto:mpspace@clickon.ir">Meysam Parvizi</a>, mpspace.zio.ir)
 * French (fr_FR) (thanks Martel Benjamin)
 * German (de_DE) (thanks Thomas Hartung)
+* Italian (it_IT) (thanks Gianluca Di Carlo)
 * Polish (pl_PL) (thanks Krzysztof Opuchlik)
 * Russian (ru_RU)
 * Spain (es_ES) (thanks Iván García Cubero)
@@ -110,6 +112,10 @@ It is possible instead of `echo "Please complete the CAPTCHA."` enter this line 
 
 == Changelog ==
 
+= V2.18 - 18.01.2012 =
+* NEW : Added Farsi/Persian, Italian language files for plugin.
+* Bugfix : The session errors and 'undefined index' error was fixed.
+
 = V2.17 - 12.01.2012 =
 * NEW : Added Spain language files for plugin.
 
@@ -180,6 +186,9 @@ It is possible instead of `echo "Please complete the CAPTCHA."` enter this line 
 * Mathematical actions choosing functionality and level of difficulty was implemented.
 
 == Upgrade Notice ==
+
+= V2.18 =
+Added Farsi/Persian, Italian language files for plugin. The session errors and 'undefined index' error was fixed.
 
 = V2.17 =
 Added Spain language files for plugin.
