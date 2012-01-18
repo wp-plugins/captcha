@@ -494,10 +494,10 @@ function cptch_comment_post($comment) {
 	}
 	
 	// If captcha is empty
-	if ( isset( $_REQUEST['cptch_number' ) && "" ==  $_REQUEST['cptch_number'] )
+	if ( isset( $_REQUEST['cptch_number'] ) && "" ==  $_REQUEST['cptch_number'] )
 		wp_die( __('Please complete the CAPTCHA.', 'captcha' ) );
 
-	if ( isset( $_REQUEST['cptch_result' ) && isset( $_REQUEST['cptch_number' ) && 0 == strcasecmp( trim( decode( $_REQUEST['cptch_result'], $str_key ) ), $_REQUEST['cptch_number'] ) ) {
+	if ( isset( $_REQUEST['cptch_result'] ) && isset( $_REQUEST['cptch_number'] ) && 0 == strcasecmp( trim( decode( $_REQUEST['cptch_result'], $str_key ) ), $_REQUEST['cptch_number'] ) ) {
 		// captcha was matched
 		return($comment);
 	} else {
