@@ -374,7 +374,6 @@ function cptch_login_form() {
 function cptch_login_post($errors) {
 	global $str_key;
 	$str_key = "123";
-
 	// Delete errors, if they set
 	if( isset( $_SESSION['cptch_error'] ) )
 		unset( $_SESSION['cptch_error'] );
@@ -408,14 +407,18 @@ function cptch_login_check($url) {
 		// Redirect to wp-login.php
 		return $_SERVER["REQUEST_URI"];
 	}
-
-	if ( isset( $_REQUEST['cptch_result'] ) && isset( $_REQUEST['cptch_number'] ) && 0 == strcasecmp( trim( decode( $_REQUEST['cptch_result'], $str_key ) ), $_REQUEST['cptch_number'] ) ) {
+	if ( isset( $_REQUEST['cptch_result'] ) && isset( $_REQUEST['cptch_number'] ) ) {
+		if ( 0 == strcasecmp( trim( decode( $_REQUEST['cptch_result'], $str_key ) ), $_REQUEST['cptch_number'] ) ) {
+			return $url;		// captcha was matched						
+		} else {
+			// Add error if captcha is incorrect
+			$_SESSION['cptch_error'] = __('That CAPTCHA was incorrect.', 'captcha');
+			// Redirect to wp-login.php
+			return $_SERVER["REQUEST_URI"];
+		}
+	}
+	else {
 		return $url;		// captcha was matched						
-	} else {
-		// Add error if captcha is incorrect
-		$_SESSION['cptch_error'] = __('That CAPTCHA was incorrect.', 'captcha');
-		// Redirect to wp-login.php
-		return $_SERVER["REQUEST_URI"];
 	}
 } // end function cptch_login_post
 
