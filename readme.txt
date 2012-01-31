@@ -4,7 +4,7 @@ Donate link: http://bestwebsoft.com/
 Tags: captcha, math captcha, text captcha, spam, antispam, login, registration, comment, lost password, capcha, catcha, captha
 Requires at least: 2.9
 Tested up to: 3.3
-Stable tag: 2.19
+Stable tag: 2.20
 
 This plugin allows you to implement super security captcha form into web forms.
 
@@ -33,6 +33,7 @@ Captcha plugin allows you to protect your website from spam using math logic whi
 * Polish (pl_PL) (thanks Krzysztof Opuchlik)
 * Russian (ru_RU)
 * Spain (es_ES) (thanks Iván García Cubero)
+* Ukrainian (uk_UA) (thanks Oleg Bondarenko)
 
 If you create your own language pack or update the existing one, you can send <a href="http://codex.wordpress.org/Translating_WordPress" target="_blank">the text of PO and MO files</a> for <a href="http://bestwebsoft.com/" target="_blank">BWS</a> and we'll add it to the plugin. You can download the latest version of the program for work with PO and MO files  <a href="http://www.poedit.net/download.php" target="_blank">Poedit</a>.
 
@@ -112,6 +113,9 @@ It is possible instead of `echo "Please complete the CAPTCHA."` enter this line 
 
 == Changelog ==
 
+= V2.20 - 31.01.2012 =
+* NEW : Added Ukrainian language file for plugin.
+
 = V2.19 - 18.01.2012 =
 * Bugfix : The sintax errors was fixed.
 
@@ -120,16 +124,16 @@ It is possible instead of `echo "Please complete the CAPTCHA."` enter this line 
 * Bugfix : The session errors and 'undefined index' error was fixed.
 
 = V2.17 - 12.01.2012 =
-* NEW : Added Spain language files for plugin.
+* NEW : Added Spain language file for plugin.
 
 = V2.16 - 11.01.2012 =
-* NEW : Added Polish language files for plugin.
+* NEW : Added Polish language file for plugin.
 
 = V2.15 - 05.01.2012 =
 * NEW : Added Brazilian Portuguese and French language files for plugin.
 
 = V2.14 - 04.01.2012 =
-* NEW : Added German language files for plugin.
+* NEW : Added German language file for plugin.
 
 = V2.13 - 03.01.2012 =
 * Bugfix : The impossible math bug was fixed.
@@ -189,6 +193,9 @@ It is possible instead of `echo "Please complete the CAPTCHA."` enter this line 
 * Mathematical actions choosing functionality and level of difficulty was implemented.
 
 == Upgrade Notice ==
+
+= V2.20 =
+Added Ukrainian language file for plugin.
 
 = V2.19 =
 The sintax errors was fixed. Please upgrade the Captcha plugin immediately. Thank you
