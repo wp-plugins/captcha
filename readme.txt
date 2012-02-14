@@ -4,7 +4,7 @@ Donate link: http://bestwebsoft.com/
 Tags: captcha, math captcha, text captcha, spam, antispam, login, registration, comment, lost password, capcha, catcha, captha
 Requires at least: 2.9
 Tested up to: 3.3
-Stable tag: 2.21
+Stable tag: 2.22
 
 This plugin allows you to implement super security captcha form into web forms.
 
@@ -25,7 +25,7 @@ Captcha plugin allows you to protect your website from spam using math logic whi
 
 * Brazilian Portuguese (pt_BR) (thanks <a href="mailto:brenojac@gmail.com">Breno Jacinto</a>, www.iconis.org.br)
 * Czech (cs_CZ) (thanks Tomas Vesely)
-* Danish (dk_DK) (thanks Byrial Ole Jensed)
+* Danish (da_DK) (thanks Byrial Ole Jensed)
 * Dutch (nl_NL) (thanks <a href="mailto:byrial@vip.cybercity.dk">Bart Duineveld</a>)
 * Farsi/Persian (fa_IR) (thanks <a href="mailto:mpspace@clickon.ir">Meysam Parvizi</a>, mpspace.zio.ir)
 * French (fr_FR) (thanks Martel Benjamin)
@@ -114,6 +114,9 @@ It is possible instead of `echo "Please complete the CAPTCHA."` enter this line 
 
 == Changelog ==
 
+= V2.22 - 14.02.2012 =
+* Bugfix: Edit Danish language files for plugin.
+
 = V2.21 - 07.02.2012 =
 * NEW : Added Czech language file for plugin.
 
@@ -197,6 +200,9 @@ It is possible instead of `echo "Please complete the CAPTCHA."` enter this line 
 * Mathematical actions choosing functionality and level of difficulty was implemented.
 
 == Upgrade Notice ==
+
+= V2.22 =
+Edit Danish language files for plugin.
 
 = V2.21 =
 Added Czech language file for plugin.
