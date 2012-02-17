@@ -4,7 +4,7 @@ Plugin Name: Captcha
 Plugin URI:  http://bestwebsoft.com/plugin/
 Description: Plugin Captcha intended to prove that the visitor is a human being and not a spam robot. Plugin asks the visitor to answer a math question.
 Author: BestWebSoft
-Version: 2.22
+Version: 2.23
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -704,7 +704,7 @@ function cptch_display_captcha()
 	}
 	// Add hidden field with encoding result
 ?>
-	<input type="hidden" name="cptch_result" value="<?php echo $str = encode( $array_math_expretion[$rand_input], $str_key ); ?>" /><input type="hidden" value="Version: 2.12" />
+	<input type="hidden" name="cptch_result" value="<?php echo $str = encode( $array_math_expretion[$rand_input], $str_key ); ?>" /><input type="hidden" value="Version: 2.23" />
 	<?php echo $str_math_expretion; ?>
 <?php
 }
@@ -937,7 +937,7 @@ function cptch_display_captcha_custom()
 		$str_math_expretion .= $array_math_expretion[2];
 	}
 	// Add hidden field with encoding result
-	$content .= '<input type="hidden" name="cptch_result" value="'.$str = encode( $array_math_expretion[$rand_input], $str_key ).'" /><input type="hidden" value="Version: 2.12" />';
+	$content .= '<input type="hidden" name="cptch_result" value="'.$str = encode( $array_math_expretion[$rand_input], $str_key ).'" /><input type="hidden" value="Version: 2.23" />';
 	$content .= $str_math_expretion; 
 	return $content;
 }
@@ -1026,10 +1026,10 @@ if ( ! function_exists ( 'cptch_display_example' ) ) {
 }
 
 // adds "Settings" link to the plugin action page
-add_filter( 'plugin_action_links', 'cptch_plugin_action_links',10,2);
+add_filter( 'plugin_action_links', 'cptch_plugin_action_links', 10, 2 );
 
 //Additional links on the plugin page
-add_filter('plugin_row_meta', 'cptch_register_plugin_links',10,2);
+add_filter( 'plugin_row_meta', 'cptch_register_plugin_links', 10, 2 );
 
 add_action( 'admin_init', 'cptch_admin_head' );
 add_action( 'init', 'cptch_plugin_init' );
