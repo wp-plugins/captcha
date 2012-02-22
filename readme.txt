@@ -27,7 +27,7 @@ Captcha plugin allows you to protect your website from spam using math logic whi
 * Czech (cs_CZ) (thanks Tomas Vesely)
 * Danish (da_DK) (thanks Byrial Ole Jensed)
 * Dutch (nl_NL) (thanks <a href="mailto:byrial@vip.cybercity.dk">Bart Duineveld</a>)
-* Farsi/Persian (fa_IR) (thanks <a href="mailto:mpspace@clickon.ir">Meysam Parvizi</a>, mpspace.zio.ir)
+* Farsi/Persian (fa_IR) (thanks <a href="mailto:info@mpspace.zio.ir">Meysam Parvizi</a>, mpspace.zio.ir)
 * French (fr_FR) (thanks Martel Benjamin)
 * German (de_DE) (thanks Thomas Hartung)
 * Italian (it_IT) (thanks Gianluca Di Carlo)
