@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: captcha\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-01-18 16:24+0200\n"
-"PO-Revision-Date: 2012-01-18 16:24+0200\n"
+"POT-Creation-Date: 2012-02-24 15:20+0200\n"
+"PO-Revision-Date: 2012-02-24 15:20+0200\n"
 "Last-Translator: BWS <zos@bestwebsoft.com>\n"
 "Language-Team: Thomas Hartung <thartung@adipositas-mm.de>\n"
 "MIME-Version: 1.0\n"
@@ -214,7 +214,7 @@ msgstr "null"
 
 #: captcha.php:580
 #: captcha.php:814
-#: captcha.php:1021
+#: captcha.php:1011
 msgid "one"
 msgstr "eins"
 
@@ -240,20 +240,20 @@ msgstr "fünf"
 
 #: captcha.php:585
 #: captcha.php:819
-#: captcha.php:1021
+#: captcha.php:1011
 msgid "six"
 msgstr "sechs"
 
 #: captcha.php:586
 #: captcha.php:820
-#: captcha.php:1009
-#: captcha.php:1015
+#: captcha.php:999
+#: captcha.php:1005
 msgid "seven"
 msgstr "sieben"
 
 #: captcha.php:587
 #: captcha.php:821
-#: captcha.php:1012
+#: captcha.php:1002
 msgid "eight"
 msgstr "acht"
 

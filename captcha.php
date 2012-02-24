@@ -4,7 +4,7 @@ Plugin Name: Captcha
 Plugin URI:  http://bestwebsoft.com/plugin/
 Description: Plugin Captcha intended to prove that the visitor is a human being and not a spam robot. Plugin asks the visitor to answer a math question.
 Author: BestWebSoft
-Version: 2.23
+Version: 2.24
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -65,6 +65,7 @@ if( ! function_exists( 'bws_add_menu_render' ) ) {
 			array( 'twitter-plugin\/twitter.php', 'Twitter Plugin', 'http://wordpress.org/extend/plugins/twitter-plugin/', 'http://bestwebsoft.com/plugin/twitter-plugin/', '/wp-admin/plugin-install.php?tab=search&type=term&s=Twitter+Plugin+bestwebsoft&plugin-search-input=Search+Plugins', 'admin.php?page=twitter.php' ), 
 			array( 'portfolio\/portfolio.php', 'Portfolio', 'http://wordpress.org/extend/plugins/portfolio/', 'http://bestwebsoft.com/plugin/portfolio-plugin/', '/wp-admin/plugin-install.php?tab=search&type=term&s=Portfolio+bestwebsoft&plugin-search-input=Search+Plugins', '' ),
 			array( 'gallery-plugin\/gallery-plugin.php', 'Gallery', 'http://wordpress.org/extend/plugins/gallery-plugin/', 'http://bestwebsoft.com/plugin/gallery-plugin/', '/wp-admin/plugin-install.php?tab=search&type=term&s=Gallery+Plugin+bestwebsoft&plugin-search-input=Search+Plugins', '' ),
+			array( 'adsense-plugin\/adsense-plugin.php', 'Google AdSense Plugin', 'http://wordpress.org/extend/plugins/adsense-plugin/', 'http://bestwebsoft.com/plugin/google-adsense-plugin/', '/wp-admin/plugin-install.php?tab=search&type=term&s=Adsense+Plugin+bestwebsoft&plugin-search-input=Search+Plugins', 'admin.php?page=adsense-plugin.php' ),
 			array( 'adsense-plugin\/adsense-plugin.php', 'Google AdSense Plugin', 'http://wordpress.org/extend/plugins/adsense-plugin/', 'http://bestwebsoft.com/plugin/google-adsense-plugin/', '/wp-admin/plugin-install.php?tab=search&type=term&s=Adsense+Plugin+bestwebsoft&plugin-search-input=Search+Plugins', 'admin.php?page=adsense-plugin.php' )
 		);
 		foreach($array_plugins as $plugins)
@@ -984,19 +985,9 @@ if ( ! function_exists ( 'cptch_plugin_init' ) ) {
 	}
 }
 
-if ( ! function_exists ( 'cptch_plugin_init' ) ) {
-	function cptch_plugin_init() {
-	
-	// Internationalization, first(!)
-	load_plugin_textdomain( 'captcha', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' ); 
-
-	// Other init stuff, be sure to it after load_plugins_textdomain if it involves translated text(!)
-	}
-}
-
 if ( ! function_exists ( 'cptch_admin_head' ) ) {
 	function cptch_admin_head() {
-		wp_register_style( 'cptchStylesheet', WP_PLUGIN_URL . '/captcha/css/style.css' );
+		wp_register_style( 'cptchStylesheet', plugins_url( 'css/style.css', __FILE__ ) );
 		wp_enqueue_style( 'cptchStylesheet' );
 	}
 }
@@ -1031,11 +1022,11 @@ add_filter( 'plugin_action_links', 'cptch_plugin_action_links', 10, 2 );
 //Additional links on the plugin page
 add_filter( 'plugin_row_meta', 'cptch_register_plugin_links', 10, 2 );
 
-add_action( 'admin_init', 'cptch_admin_head' );
 add_action( 'init', 'cptch_plugin_init' );
-add_action( 'admin_menu', 'add_cptch_admin_menu' );
-add_action( 'admin_init', 'cptch_contact_form_options' );
 add_action( 'admin_init', 'cptch_plugin_init' );
+add_action( 'admin_init', 'cptch_contact_form_options' );
+add_action( 'admin_init', 'cptch_admin_head' );
+add_action( 'admin_menu', 'add_cptch_admin_menu' );
 add_action( 'after_setup_theme', 'cptch_contact_form_options' );
 
 ?>

@@ -1,10 +1,10 @@
 ﻿=== Captcha ===
 Contributors: bestwebsoft
-Donate link: http://bestwebsoft.com/
+Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=1&product_id=13
 Tags: captcha, math captcha, text captcha, spam, antispam, login, registration, comment, lost password, capcha, catcha, captha
 Requires at least: 2.9
 Tested up to: 3.3
-Stable tag: 2.23
+Stable tag: 2.24
 
 This plugin allows you to implement super security captcha form into web forms.
 
@@ -115,6 +115,9 @@ It is possible instead of `echo "Please complete the CAPTCHA."` enter this line 
 
 == Changelog ==
 
+= V2.24 - 24.02.2012 =
+* Change : Code to include styles and scripts in a plug for the correct SSL verification.
+
 = V2.23 - 17.02.2012 =
 * NEW : Added Norwegian language file for plugin.
 
@@ -204,6 +207,9 @@ It is possible instead of `echo "Please complete the CAPTCHA."` enter this line 
 * Mathematical actions choosing functionality and level of difficulty was implemented.
 
 == Upgrade Notice ==
+
+= V2.24 =
+Changed code to include styles and scripts in a plug for the correct SSL verification
 
 = V2.23 =
 Added Norwegian language file for plugin.

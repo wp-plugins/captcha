@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: captcha\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-01-31 18:16+0200\n"
-"PO-Revision-Date: 2012-01-31 18:17+0200\n"
+"POT-Creation-Date: 2012-02-24 15:19+0200\n"
+"PO-Revision-Date: 2012-02-24 15:19+0200\n"
 "Last-Translator: BWS <zos@bestwebsoft.com>\n"
 "Language-Team: bestwebsoft.com <plugin@bestwebsoft.com>\n"
 "MIME-Version: 1.0\n"
@@ -211,7 +211,7 @@ msgstr "нуль"
 
 #: captcha.php:580
 #: captcha.php:814
-#: captcha.php:1021
+#: captcha.php:1011
 msgid "one"
 msgstr "один"
 
@@ -237,20 +237,20 @@ msgstr "п'ять"
 
 #: captcha.php:585
 #: captcha.php:819
-#: captcha.php:1021
+#: captcha.php:1011
 msgid "six"
 msgstr "шість"
 
 #: captcha.php:586
 #: captcha.php:820
-#: captcha.php:1009
-#: captcha.php:1015
+#: captcha.php:999
+#: captcha.php:1005
 msgid "seven"
 msgstr "сім"
 
 #: captcha.php:587
 #: captcha.php:821
-#: captcha.php:1012
+#: captcha.php:1002
 msgid "eight"
 msgstr "вісім"
 
