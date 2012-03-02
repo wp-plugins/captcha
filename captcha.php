@@ -4,7 +4,7 @@ Plugin Name: Captcha
 Plugin URI:  http://bestwebsoft.com/plugin/
 Description: Plugin Captcha intended to prove that the visitor is a human being and not a spam robot. Plugin asks the visitor to answer a math question.
 Author: BestWebSoft
-Version: 2.24
+Version: 2.25
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -68,25 +68,21 @@ if( ! function_exists( 'bws_add_menu_render' ) ) {
 			array( 'adsense-plugin\/adsense-plugin.php', 'Google AdSense Plugin', 'http://wordpress.org/extend/plugins/adsense-plugin/', 'http://bestwebsoft.com/plugin/google-adsense-plugin/', '/wp-admin/plugin-install.php?tab=search&type=term&s=Adsense+Plugin+bestwebsoft&plugin-search-input=Search+Plugins', 'admin.php?page=adsense-plugin.php' ),
 			array( 'custom-search-plugin\/custom-search-plugin.php', 'Custom Search Plugin', 'http://wordpress.org/extend/plugins/custom-search-plugin/', 'http://bestwebsoft.com/plugin/custom-search-plugin/', '/wp-admin/plugin-install.php?tab=search&type=term&s=Custom+Search+plugin+bestwebsoft&plugin-search-input=Search+Plugins', 'admin.php?page=custom_search.php' )
 		);
-		foreach($array_plugins as $plugins)
-		{
-			if( 0 < count( preg_grep( "/".$plugins[0]."/", $active_plugins ) ) )
-			{
+		foreach($array_plugins as $plugins) {
+			if( 0 < count( preg_grep( "/".$plugins[0]."/", $active_plugins ) ) ) {
 				$array_activate[$count_activate]['title'] = $plugins[1];
 				$array_activate[$count_activate]['link']	= $plugins[2];
 				$array_activate[$count_activate]['href']	= $plugins[3];
 				$array_activate[$count_activate]['url']	= $plugins[5];
 				$count_activate++;
 			}
-			else if( array_key_exists(str_replace("\\", "", $plugins[0]), $all_plugins) )
-			{
+			else if( array_key_exists(str_replace("\\", "", $plugins[0]), $all_plugins) ) {
 				$array_install[$count_install]['title'] = $plugins[1];
 				$array_install[$count_install]['link']	= $plugins[2];
 				$array_install[$count_install]['href']	= $plugins[3];
 				$count_install++;
 			}
-			else
-			{
+			else {
 				$array_recomend[$count_recomend]['title'] = $plugins[1];
 				$array_recomend[$count_recomend]['link']	= $plugins[2];
 				$array_recomend[$count_recomend]['href']	= $plugins[3];
