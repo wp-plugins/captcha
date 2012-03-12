@@ -1,3 +1,4 @@
+# Byrial Ole Jensen <byrial@vip.cybercity.dk>, 2011.
 msgid ""
 msgstr ""
 "Project-Id-Version: captcha\n"
@@ -5,185 +6,187 @@ msgstr ""
 "POT-Creation-Date: 2012-03-12 19:23+0200\n"
 "PO-Revision-Date: 2012-03-12 19:23+0200\n"
 "Last-Translator: BWS <zos@bestwebsoft.com>\n"
-"Language-Team: bestwebsoft.com <plugin@bestwebsoft.com>\n"
+"Language-Team: Thomas Hartung <thartung@adipositas-mm.de>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-KeywordsList: __;_e\n"
+"Language: da\n"
+"X-Generator: Lokalize 1.2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-Basepath: ..\n"
-"X-Poedit-Language: Russian\n"
-"X-Poedit-Country: RUSSIAN FEDERATION\n"
-"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Language: Spanish\n"
+"X-Poedit-Country: SPAIN\n"
 "X-Poedit-SearchPath-0: .\n"
 
 #: captcha.php:31
 msgid "Login form"
-msgstr "Форма логина"
+msgstr "Giriş Formu"
 
 #: captcha.php:32
 msgid "Register form"
-msgstr "Форма регистрации"
+msgstr "Kayıt Formu"
 
 #: captcha.php:33
 msgid "Lost password form"
-msgstr "Форма восстановления пароля"
+msgstr "Kayıp Parola Formu"
 
 #: captcha.php:34
 msgid "Comments form"
-msgstr "Форма комментариев"
+msgstr "Yorum Formu"
 
 #: captcha.php:35
 msgid "Hide CAPTCHA for registered users"
-msgstr "Не отображать для зарегистрированных пользователей"
+msgstr "Kayıtlı kullanıcılar için CAPTCHA'yı gizle"
 
 #: captcha.php:40
 msgid "Plus (&#43;)"
-msgstr "Плюс (&#43;)"
+msgstr "Artı (&#43;)"
 
 #: captcha.php:40
 msgid "Plus"
-msgstr "Плюс (&#43;)"
+msgstr "Artı"
 
 #: captcha.php:41
 msgid "Minus (&minus;)"
-msgstr "Минус (&minus;)"
+msgstr "Eksi (&minus;)"
 
 #: captcha.php:41
 msgid "Minus"
-msgstr "Минус (&minus;)"
+msgstr "Eksi"
 
 #: captcha.php:42
 msgid "Multiply (&times;)"
-msgstr "Умножение (&times;)"
+msgstr "Çarpı (&times;)"
 
 #: captcha.php:42
 msgid "Increase"
-msgstr "Умножить"
+msgstr "Arttır"
 
 #: captcha.php:47
 msgid "Numbers"
-msgstr "Цифры"
+msgstr "Sayılar"
 
 #: captcha.php:48
 msgid "Words"
-msgstr "Слова"
+msgstr "Kelimeler"
 
 #: captcha.php:100
 msgid "Activated plugins"
-msgstr "Активированные плагины"
+msgstr "Etkinleştirilmiş eklentiler"
 
 #: captcha.php:102
 #: captcha.php:110
 #: captcha.php:118
 msgid "Read more"
-msgstr "Подробнее..."
+msgstr "Daha fazlası"
 
 #: captcha.php:102
 #: captcha.php:218
 #: captcha.php:227
 msgid "Settings"
-msgstr "Настройки"
+msgstr "Ayarlar"
 
 #: captcha.php:108
 msgid "Installed plugins"
-msgstr "Установленные плагины"
+msgstr "Yüklü eklentiler"
 
 #: captcha.php:116
 msgid "Recommended plugins"
-msgstr "Рекомендованные к установке плагины"
+msgstr "Önerilen eklentiler"
 
 #: captcha.php:118
 msgid "Download"
-msgstr "Скачать"
+msgstr "İndir"
 
 #: captcha.php:118
 #, php-format
 msgid "Install %s"
-msgstr "Установлено %s"
+msgstr "%s'yi yükle"
 
 #: captcha.php:118
 msgid "Install now from wordpress.org"
-msgstr "Установить с wordpress.org"
+msgstr "Şimdi wordpress.org üzerinden yükle"
 
 #: captcha.php:120
 msgid "If you have any questions, please contact us via plugin@bestwebsoft.com or fill in our contact form on our site"
-msgstr "Если у вас есть какие-то впросы, обращайтесь на plugin@bestwebsoft.com или заполните контактную форму на нашем сайте"
+msgstr "Herhangi bir sorunuz varsa, plugin@bestwebsoft.com 'a e-posta atarak ya da sitemizdeki iletişim formu aracılığıyla bizimle iletişime geçebilirsiniz (ingilizce)"
 
 #: captcha.php:130
 #: captcha.php:291
 msgid "Captcha Options"
-msgstr "Настройки КАПЧИ"
+msgstr "Captcha Ayarları"
 
 #: captcha.php:130
 msgid "Captcha"
-msgstr "КАПЧА"
+msgstr "Captcha"
 
 #: captcha.php:228
 msgid "FAQ"
-msgstr "FAQ"
+msgstr "SSS"
 
 #: captcha.php:229
 msgid "Support"
-msgstr "Поддержка"
+msgstr "Destek"
 
 #: captcha.php:273
 msgid "Please select one point in the blocks Arithmetic actions and Difficulty for CAPTCHA"
-msgstr "Пожалуйста, выберите 1 пункт из блока Арифметические дейтсвия и Сложность для КАПЧИ"
+msgstr "Lütfen, Aritmetik Hareketler ve CAPTCHA İçin Zorluk bloklarından bir nokta seçin."
 
 #: captcha.php:277
 msgid "Options saved."
-msgstr "Опции сохранены"
+msgstr "Ayarlar kaydedildi."
 
 #: captcha.php:297
 msgid "Enable CAPTCHA on the:"
-msgstr "Отображать КАПЧУ для:"
+msgstr "CAPTCHA'yı şunlarda aktifleştir:"
 
 #: captcha.php:306
 #: captcha.php:309
 #: captcha.php:313
 msgid "Contact form"
-msgstr "Контактная форма"
+msgstr "İletişim Formu"
 
 #: captcha.php:306
 #: captcha.php:309
 #: captcha.php:313
 msgid "(power by bestwebsoft.com)"
-msgstr "(разработано компанией bestwebsoft.com)"
+msgstr "(bestwebsoft.com tarafından)"
 
 #: captcha.php:309
 msgid "Activate contact form"
-msgstr "Активировать контакную форму"
+msgstr "İletişim formunu etkinleştir"
 
 #: captcha.php:313
 msgid "Download contact form"
-msgstr "Скачать контактную форму"
+msgstr "İletişim formunu indir"
 
 #: captcha.php:315
 msgid "If you would like to customize this plugin for a custom form, please contact us via <a href=\"Mailto:plugin@bestwebsoft.com\">plugin@bestwebsoft.com</a> or fill in our contact form on our site"
-msgstr "Если вы хотите кастомизировать плагин для кастомной формы, обращайтесь <a href=\"Mailto:plugin@bestwebsoft.com\">plugin@bestwebsoft.com</a> или заполните контактную форму на нашем сайте"
+msgstr "Eğer eklentiyi, özelleştirilmiş bir form için kişiselleştirmek isterseniz, <a href=\"Mailto:plugin@bestwebsoft.com\">plugin@bestwebsoft.com</a> aracılığıyla ya da sitemizdeki iletişim formu aracılığıyla bizimle iletişime geçebilirsiniz."
 
 #: captcha.php:319
 msgid "Label for CAPTCHA in form"
-msgstr "Заголовок для КАПЧИ в форме"
+msgstr "Formdaki CAPTCHA Etiketi"
 
 #: captcha.php:323
 msgid "Arithmetic actions for CAPTCHA"
-msgstr "Арифметические действия для КАПЧИ"
+msgstr "CAPTCHA için Aritmetik Hareketler"
 
 #: captcha.php:332
 msgid "Difficulty for CAPTCHA"
-msgstr "Уровень сложности КАПЧИ"
+msgstr "CAPTCHA Zorluğu"
 
 #: captcha.php:342
 msgid "Save Changes"
-msgstr "Сохранить изменения"
+msgstr "Değişiklikleri Kaydet"
 
 #: captcha.php:384
 #: captcha.php:390
 #: captcha.php:532
 #: captcha.php:539
 msgid "ERROR"
-msgstr "Ошибка"
+msgstr "HATA"
 
 #: captcha.php:384
 #: captcha.php:404
@@ -191,179 +194,179 @@ msgstr "Ошибка"
 #: captcha.php:532
 #: captcha.php:555
 msgid "Please complete the CAPTCHA."
-msgstr "Пожалуйста, заполните КАПЧУ"
+msgstr "Lütfen CAPTCHA doğrulama sistemini tamamlayın."
 
 #: captcha.php:390
 #: captcha.php:413
 #: captcha.php:539
 msgid "That CAPTCHA was incorrect."
-msgstr "КАПЧА введена некорректно"
+msgstr "Girdiğiniz CAPTCHA kodu yanlış."
 
 #: captcha.php:505
 #: captcha.php:562
 msgid "Error: You entered in the wrong CAPTCHA phrase. Press your browser's back button and try again."
-msgstr "Ошибка: Вы ввели КАПЧУ неправильно. Надмите НАЗАД в браузере и попробуйте еще раз"
+msgstr "HATA: Yanlış CAPTCHA cevabı girdiniz. Tarayıcınızın GERİ butonuna basın ve tekrar deneyin."
 
 #: captcha.php:577
 #: captcha.php:811
 msgid "null"
-msgstr "ноль"
+msgstr "sıfır"
 
 #: captcha.php:578
 #: captcha.php:812
 #: captcha.php:1002
 msgid "one"
-msgstr "один"
+msgstr "bir"
 
 #: captcha.php:579
 #: captcha.php:813
 msgid "two"
-msgstr "два"
+msgstr "iki"
 
 #: captcha.php:580
 #: captcha.php:814
 msgid "three"
-msgstr "три"
+msgstr "üç"
 
 #: captcha.php:581
 #: captcha.php:815
 msgid "four"
-msgstr "четыре"
+msgstr "dört"
 
 #: captcha.php:582
 #: captcha.php:816
 msgid "five"
-msgstr "пять"
+msgstr "beş"
 
 #: captcha.php:583
 #: captcha.php:817
 #: captcha.php:1002
 msgid "six"
-msgstr "шесть"
+msgstr "altı"
 
 #: captcha.php:584
 #: captcha.php:818
 #: captcha.php:990
 #: captcha.php:996
 msgid "seven"
-msgstr "семь"
+msgstr "yedi"
 
 #: captcha.php:585
 #: captcha.php:819
 #: captcha.php:993
 msgid "eight"
-msgstr "восемь"
+msgstr "sekiz"
 
 #: captcha.php:586
 #: captcha.php:820
 msgid "nine"
-msgstr "девять"
+msgstr "dokuz"
 
 #: captcha.php:589
 #: captcha.php:823
 msgid "eleven"
-msgstr "одиннадцать"
+msgstr "onbir"
 
 #: captcha.php:590
 #: captcha.php:824
 msgid "twelve"
-msgstr "двенадать"
+msgstr "oniki"
 
 #: captcha.php:591
 #: captcha.php:825
 msgid "thirteen"
-msgstr "тринадцать"
+msgstr "onüç"
 
 #: captcha.php:592
 #: captcha.php:826
 msgid "fourteen"
-msgstr "четырнадать"
+msgstr "ondört"
 
 #: captcha.php:593
 #: captcha.php:827
 msgid "fifteen"
-msgstr "пятнадцать"
+msgstr "onbeş"
 
 #: captcha.php:594
 #: captcha.php:828
 msgid "sixteen"
-msgstr "шестнадцать"
+msgstr "onaltı"
 
 #: captcha.php:595
 #: captcha.php:829
 msgid "seventeen"
-msgstr "семнадцать"
+msgstr "onyedi"
 
 #: captcha.php:596
 #: captcha.php:830
 msgid "eighteen"
-msgstr "восемнадцать"
+msgstr "onsekiz"
 
 #: captcha.php:597
 #: captcha.php:831
 msgid "nineteen"
-msgstr "девятнадцать"
+msgstr "ondokuz"
 
 #: captcha.php:600
 #: captcha.php:834
 msgid "ten"
-msgstr "десять"
+msgstr "on"
 
 #: captcha.php:601
 #: captcha.php:835
 msgid "twenty"
-msgstr "двадцать"
+msgstr "yirmi"
 
 #: captcha.php:602
 #: captcha.php:836
 msgid "thirty"
-msgstr "тридцать"
+msgstr "otuz"
 
 #: captcha.php:603
 #: captcha.php:837
 msgid "forty"
-msgstr "сорок"
+msgstr "kırk"
 
 #: captcha.php:604
 #: captcha.php:838
 msgid "fifty"
-msgstr "пятдесят"
+msgstr "elli"
 
 #: captcha.php:605
 #: captcha.php:839
 msgid "sixty"
-msgstr "шестдесят"
+msgstr "altmış"
 
 #: captcha.php:606
 #: captcha.php:840
 msgid "seventy"
-msgstr "семдесят"
+msgstr "yetmiş"
 
 #: captcha.php:607
 #: captcha.php:841
 msgid "eighty"
-msgstr "восемдесят"
+msgstr "seksen"
 
 #: captcha.php:608
 #: captcha.php:842
 msgid "ninety"
-msgstr "девяносто"
+msgstr "doksan"
 
 #: captcha.php:695
 #: captcha.php:929
 msgid "and"
-msgstr "и"
+msgstr "ve"
 
 #: captcha.php:714
 msgid "The password of encryption is not set"
-msgstr "Пароль для шифрования не установлен"
+msgstr "Şifreleme (encode) için parola ayarlanmadı"
 
 #: captcha.php:733
 msgid "The password of decoding is not set"
-msgstr "Пароль для дешифровки не установлен"
+msgstr "Şifre çözme (decode) için parola ayarlanmadı"
 
 #~ msgid "BWS Plugins"
-#~ msgstr "Плагины BWS"
+#~ msgstr "BWS Plugins"
 
 #~ msgid "Install Now"
-#~ msgstr "Установить сейчас"
+#~ msgstr "Installér nu"

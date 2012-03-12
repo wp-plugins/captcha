@@ -4,7 +4,7 @@ Plugin Name: Captcha
 Plugin URI:  http://bestwebsoft.com/plugin/
 Description: Plugin Captcha intended to prove that the visitor is a human being and not a spam robot. Plugin asks the visitor to answer a math question.
 Author: BestWebSoft
-Version: 2.25
+Version: 2.26
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -66,7 +66,8 @@ if( ! function_exists( 'bws_add_menu_render' ) ) {
 			array( 'portfolio\/portfolio.php', 'Portfolio', 'http://wordpress.org/extend/plugins/portfolio/', 'http://bestwebsoft.com/plugin/portfolio-plugin/', '/wp-admin/plugin-install.php?tab=search&type=term&s=Portfolio+bestwebsoft&plugin-search-input=Search+Plugins', '' ),
 			array( 'gallery-plugin\/gallery-plugin.php', 'Gallery', 'http://wordpress.org/extend/plugins/gallery-plugin/', 'http://bestwebsoft.com/plugin/gallery-plugin/', '/wp-admin/plugin-install.php?tab=search&type=term&s=Gallery+Plugin+bestwebsoft&plugin-search-input=Search+Plugins', '' ),
 			array( 'adsense-plugin\/adsense-plugin.php', 'Google AdSense Plugin', 'http://wordpress.org/extend/plugins/adsense-plugin/', 'http://bestwebsoft.com/plugin/google-adsense-plugin/', '/wp-admin/plugin-install.php?tab=search&type=term&s=Adsense+Plugin+bestwebsoft&plugin-search-input=Search+Plugins', 'admin.php?page=adsense-plugin.php' ),
-			array( 'custom-search-plugin\/custom-search-plugin.php', 'Custom Search Plugin', 'http://wordpress.org/extend/plugins/custom-search-plugin/', 'http://bestwebsoft.com/plugin/custom-search-plugin/', '/wp-admin/plugin-install.php?tab=search&type=term&s=Custom+Search+plugin+bestwebsoft&plugin-search-input=Search+Plugins', 'admin.php?page=custom_search.php' )
+			array( 'custom-search-plugin\/custom-search-plugin.php', 'Custom Search Plugin', 'http://wordpress.org/extend/plugins/custom-search-plugin/', 'http://bestwebsoft.com/plugin/custom-search-plugin/', '/wp-admin/plugin-install.php?tab=search&type=term&s=Custom+Search+plugin+bestwebsoft&plugin-search-input=Search+Plugins', 'admin.php?page=custom_search.php' ),
+			array( 'quotes_and_tips\/quotes-and-tips.php', 'Quotes and Tips', 'http://wordpress.org/extend/plugins/quotes-and-tips/', 'http://bestwebsoft.com/plugin/quotes-and-tips/', '/wp-admin/plugin-install.php?tab=search&type=term&s=Quotes+and+Tips+bestwebsoft&plugin-search-input=Search+Plugins', 'admin.php?page=quotes-and-tips.php' )
 		);
 		foreach($array_plugins as $plugins) {
 			if( 0 < count( preg_grep( "/".$plugins[0]."/", $active_plugins ) ) ) {
@@ -701,7 +702,7 @@ function cptch_display_captcha()
 	}
 	// Add hidden field with encoding result
 ?>
-	<input type="hidden" name="cptch_result" value="<?php echo $str = encode( $array_math_expretion[$rand_input], $str_key ); ?>" /><input type="hidden" value="Version: 2.23" />
+	<input type="hidden" name="cptch_result" value="<?php echo $str = encode( $array_math_expretion[$rand_input], $str_key ); ?>" /><input type="hidden" value="Version: 2.26" />
 	<?php echo $str_math_expretion; ?>
 <?php
 }
@@ -934,7 +935,7 @@ function cptch_display_captcha_custom()
 		$str_math_expretion .= $array_math_expretion[2];
 	}
 	// Add hidden field with encoding result
-	$content .= '<input type="hidden" name="cptch_result" value="'.$str = encode( $array_math_expretion[$rand_input], $str_key ).'" /><input type="hidden" value="Version: 2.23" />';
+	$content .= '<input type="hidden" name="cptch_result" value="'.$str = encode( $array_math_expretion[$rand_input], $str_key ).'" /><input type="hidden" value="Version: 2.26" />';
 	$content .= $str_math_expretion; 
 	return $content;
 }
@@ -981,13 +982,6 @@ if ( ! function_exists ( 'cptch_plugin_init' ) ) {
 	}
 }
 
-if ( ! function_exists ( 'cptch_admin_head' ) ) {
-	function cptch_admin_head() {
-		wp_register_style( 'cptchStylesheet', plugins_url( 'css/style.css', __FILE__ ) );
-		wp_enqueue_style( 'cptchStylesheet' );
-	}
-}
-
 if ( ! function_exists ( 'cptch_display_example' ) ) {
 	function cptch_display_example($action) {
 		echo "<div class='cptch_example_fields_actions'>";
@@ -1012,6 +1006,13 @@ if ( ! function_exists ( 'cptch_display_example' ) ) {
 	}
 }
 
+if ( ! function_exists ( 'cptch_admin_head' ) ) {
+	function cptch_admin_head() {
+		wp_register_style( 'cptchStylesheet', plugins_url( 'css/style.css', __FILE__ ) );
+		wp_enqueue_style( 'cptchStylesheet' );
+	}
+}
+
 // adds "Settings" link to the plugin action page
 add_filter( 'plugin_action_links', 'cptch_plugin_action_links', 10, 2 );
 
@@ -1021,8 +1022,8 @@ add_filter( 'plugin_row_meta', 'cptch_register_plugin_links', 10, 2 );
 add_action( 'init', 'cptch_plugin_init' );
 add_action( 'admin_init', 'cptch_plugin_init' );
 add_action( 'admin_init', 'cptch_contact_form_options' );
-add_action( 'admin_init', 'cptch_admin_head' );
 add_action( 'admin_menu', 'add_cptch_admin_menu' );
 add_action( 'after_setup_theme', 'cptch_contact_form_options' );
-
+add_action( 'admin_enqueue_scripts', 'cptch_admin_head' );
+add_action( 'wp_enqueue_scripts', 'cptch_admin_head' );
 ?>
