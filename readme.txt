@@ -17,7 +17,7 @@ Captcha plugin allows you to protect your website from spam using math logic whi
 
 = Features =
 
-* Display: it is possible to use letters and numbers in the captcha or just one of these two things - either letters or numbers.
+* Display: It is possible to use letters and numbers in the captcha or just one of these two things - either letters or numbers.
 * Actions: The basic mathematical operations are used - add, subtract, multiply.
 * Label: There is a possibility to add a label when displaying captcha on the form.
 
@@ -36,10 +36,14 @@ Captcha plugin allows you to protect your website from spam using math logic whi
 * Polish (pl_PL) (thanks to Krzysztof Opuchlik)
 * Russian (ru_RU)
 * Spain (es_ES) (thanks to Iván García Cubero)
-* Turkish (tr_TR) (thanks to Can Atasever)
+* Turkish (tr_TR) (thanks to Can Atasever, <a href="http://www.candanblog.com">candanblog.com</a>)
 * Ukrainian (uk_UA) (thanks to Oleg Bondarenko)
 
 If you create your own language pack or update an existing one, you can send <a href="http://codex.wordpress.org/Translating_WordPress" target="_blank">the text of PO and MO files</a> for <a href="http://bestwebsoft.com/" target="_blank">BWS</a> and we'll add it to the plugin. You can download the latest version of the program for work with PO and MO files  <a href="http://www.poedit.net/download.php" target="_blank">Poedit</a>.
+
+= Technical support =
+
+Dear users, if you have any questions or propositions regarding our plugins (current options, new options, current issues) please feel free to contact us. Please note that we accept requests in English only. All messages on another languages wouldn't be accepted. 
 
 == Installation ==
 
