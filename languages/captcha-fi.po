@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: captcha\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-03-12 19:23+0200\n"
-"PO-Revision-Date: 2012-03-12 19:23+0200\n"
+"POT-Creation-Date: 2012-04-20 16:15+0200\n"
+"PO-Revision-Date: 2012-04-20 16:19+0200\n"
 "Last-Translator: BWS <zos@bestwebsoft.com>\n"
 "Language-Team: bestwebsoft.com <plugin@bestwebsoft.com>\n"
 "MIME-Version: 1.0\n"
@@ -206,7 +206,7 @@ msgstr "Virhe: Syöttämäsi CAPTCHA-laskutoimitus oli väärin. Palaa takaisin 
 
 #: captcha.php:577
 #: captcha.php:811
-msgid "null"
+msgid "zero"
 msgstr "nolla"
 
 #: captcha.php:578
@@ -361,6 +361,9 @@ msgstr "Salananan enkryptaus ei ole asetettu käyttöön"
 #: captcha.php:733
 msgid "The password of decoding is not set"
 msgstr "Salasanan dekoodaus ei ole asetettu käyttöön"
+
+#~ msgid "null"
+#~ msgstr "nolla"
 
 #~ msgid "BWS Plugins"
 #~ msgstr "BWS Plugins"

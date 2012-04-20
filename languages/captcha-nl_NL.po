@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: captcha\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-03-12 19:23+0200\n"
-"PO-Revision-Date: 2012-03-12 19:23+0200\n"
+"POT-Creation-Date: 2012-04-20 16:14+0200\n"
+"PO-Revision-Date: 2012-04-20 16:19+0200\n"
 "Last-Translator: BWS <zos@bestwebsoft.com>\n"
 "Language-Team: bestwebsoft.com <plugin@bestwebsoft.com>\n"
 "MIME-Version: 1.0\n"
@@ -206,7 +206,7 @@ msgstr "Fout: Je gaf het verkeerde antwoord, gebruik de vorige pagina knop van j
 
 #: captcha.php:577
 #: captcha.php:811
-msgid "null"
+msgid "zero"
 msgstr "nul"
 
 #: captcha.php:578
@@ -361,6 +361,9 @@ msgstr "Er is geen wachtwoord voor encryptie ingesteld"
 #: captcha.php:733
 msgid "The password of decoding is not set"
 msgstr "Er is geen decoderings wachtwoord ingesteld"
+
+#~ msgid "null"
+#~ msgstr "nul"
 
 #~ msgid "BWS Plugins"
 #~ msgstr "BWS Plugins"

@@ -4,7 +4,7 @@ Plugin Name: Captcha
 Plugin URI:  http://bestwebsoft.com/plugin/
 Description: Plugin Captcha intended to prove that the visitor is a human being and not a spam robot. Plugin asks the visitor to answer a math question.
 Author: BestWebSoft
-Version: 2.26
+Version: 2.27
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -574,7 +574,7 @@ function cptch_display_captcha()
 	
 	// In letters presentation of numbers 0-9
 	$number_string = array(); 
-	$number_string[0] = __( 'null', 'captcha' );
+	$number_string[0] = __( 'zero', 'captcha' );
 	$number_string[1] = __( 'one', 'captcha' );
 	$number_string[2] = __( 'two', 'captcha' );
 	$number_string[3] = __( 'three', 'captcha' );
@@ -808,7 +808,7 @@ function cptch_display_captcha_custom()
 	
 	// In letters presentation of numbers 0-9
 	$number_string = array(); 
-	$number_string[0] = __( 'null', 'captcha' );
+	$number_string[0] = __( 'zero', 'captcha' );
 	$number_string[1] = __( 'one', 'captcha' );
 	$number_string[2] = __( 'two', 'captcha' );
 	$number_string[3] = __( 'three', 'captcha' );

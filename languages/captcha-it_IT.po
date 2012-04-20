@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: captcha\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-03-12 19:23+0200\n"
-"PO-Revision-Date: 2012-03-12 19:23+0200\n"
+"POT-Creation-Date: 2012-04-20 16:15+0200\n"
+"PO-Revision-Date: 2012-04-20 16:19+0200\n"
 "Last-Translator: BWS <zos@bestwebsoft.com>\n"
 "Language-Team: bestwebsoft.com <plugin@bestwebsoft.com>\n"
 "MIME-Version: 1.0\n"
@@ -206,7 +206,7 @@ msgstr "Errore: hai inserito una risposta errata nel codice di controllo. Fai cl
 
 #: captcha.php:577
 #: captcha.php:811
-msgid "null"
+msgid "zero"
 msgstr "null"
 
 #: captcha.php:578
@@ -362,3 +362,5 @@ msgstr "La password per la cifratura non è impostata"
 msgid "The password of decoding is not set"
 msgstr "La password per la decodifica della cifratura non è impostata"
 
+#~ msgid "null"
+#~ msgstr "null"

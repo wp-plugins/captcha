@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: captcha\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-03-12 19:23+0200\n"
-"PO-Revision-Date: 2012-03-12 19:23+0200\n"
+"POT-Creation-Date: 2012-04-20 16:15+0200\n"
+"PO-Revision-Date: 2012-04-20 16:19+0200\n"
 "Last-Translator: BWS <zos@bestwebsoft.com>\n"
 "Language-Team: globus2008 <globus@email.cz>\n"
 "MIME-Version: 1.0\n"
@@ -206,7 +206,7 @@ msgstr "Chyba. Byl vložen špatný text do CAPTCHA. Stiskněte ve Vašem prohl�
 
 #: captcha.php:577
 #: captcha.php:811
-msgid "null"
+msgid "zero"
 msgstr "nula"
 
 #: captcha.php:578
@@ -361,6 +361,9 @@ msgstr "Heslo pro kódování není nastaveno"
 #: captcha.php:733
 msgid "The password of decoding is not set"
 msgstr "The password of decoding is not set"
+
+#~ msgid "null"
+#~ msgstr "nula"
 
 #~ msgid "BWS Plugins"
 #~ msgstr "Плагины BWS"

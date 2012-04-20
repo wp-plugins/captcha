@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: captcha\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-03-12 19:23+0200\n"
-"PO-Revision-Date: 2012-03-12 19:23+0200\n"
+"POT-Creation-Date: 2012-04-20 16:15+0200\n"
+"PO-Revision-Date: 2012-04-20 16:19+0200\n"
 "Last-Translator: BWS <zos@bestwebsoft.com>\n"
 "Language-Team: bestwebsoft.com <plugin@bestwebsoft.com>\n"
 "MIME-Version: 1.0\n"
@@ -206,7 +206,7 @@ msgstr "خطا: پاسخ وارد شده توسط شما در معادله ی ا
 
 #: captcha.php:577
 #: captcha.php:811
-msgid "null"
+msgid "zero"
 msgstr "هیچ"
 
 #: captcha.php:578
@@ -361,6 +361,9 @@ msgstr "رمز عبوری برای رمزگذاری تعیین نشده است"
 #: captcha.php:733
 msgid "The password of decoding is not set"
 msgstr "رمز عبوری برای رمزگشایی تعیین نشده است"
+
+#~ msgid "null"
+#~ msgstr "هیچ"
 
 #~ msgid "BWS Plugins"
 #~ msgstr "افزونه های BWS"

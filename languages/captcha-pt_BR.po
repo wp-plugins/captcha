@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: captcha\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-03-12 19:23+0200\n"
-"PO-Revision-Date: 2012-03-12 19:23+0200\n"
+"POT-Creation-Date: 2012-04-20 16:14+0200\n"
+"PO-Revision-Date: 2012-04-20 16:19+0200\n"
 "Last-Translator: BWS <zos@bestwebsoft.com>\n"
 "Language-Team: bestwebsoft.com <plugin@bestwebsoft.com>\n"
 "MIME-Version: 1.0\n"
@@ -206,7 +206,7 @@ msgstr "ERRO: Você diigitou a resposta da charada errada. Pressione o botão VO
 
 #: captcha.php:577
 #: captcha.php:811
-msgid "null"
+msgid "zero"
 msgstr "nulo"
 
 #: captcha.php:578
@@ -362,3 +362,5 @@ msgstr "A senha de criptografia não está configurada"
 msgid "The password of decoding is not set"
 msgstr "A senha para decodificação não está configurada"
 
+#~ msgid "null"
+#~ msgstr "nulo"
