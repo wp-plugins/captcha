@@ -3,8 +3,8 @@ Contributors: bestwebsoft
 Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=10&product_id=13
 Tags: captcha, math captcha, text captcha, spam, antispam, login, registration, comment, lost password, capcha, catcha, captha
 Requires at least: 2.9
-Tested up to: 3.3.1
-Stable tag: 2.27
+Tested up to: 3.3.2
+Stable tag: 2.28
 
 This plugin allows you to implement super security captcha form into web forms.
 
@@ -27,10 +27,12 @@ Captcha plugin allows you to protect your website from spam using math logic whi
 * Czech (cs_CZ) (thanks to Tomas Vesely)
 * Danish (da_DK) (thanks to Byrial Ole Jensed)
 * Dutch (nl_NL) (thanks to <a href="mailto:byrial@vip.cybercity.dk">Bart Duineveld</a>)
+* Greek (el) (thanks to Aris, <a href="http://paraxeno.net">paraxeno.net</a>)
 * Farsi/Persian (fa_IR) (thanks to <a href="mailto:info[at]mpspace[dot]zio[dot]ir">Meysam Parvizi</a>, <a href="http://mpspace.zio.ir">mpspace.zio.ir</a>)
 * Finnish (fi) (thanks to Mikko Sederholm)
 * French (fr_FR) (thanks to Martel Benjamin)
 * German (de_DE) (thanks to Thomas Hartung)
+* Hindi (hi_IN) (thanks to <a href="mailto:ash.pr@outshinesolutions.com">Outshine Solutions</a>)
 * Italian (it_IT) (thanks to Gianluca Di Carlo)
 * Norwegian (nb_NO)	(thanks to Tore Hjartland)
 * Polish (pl_PL) (thanks to Krzysztof Opuchlik)
@@ -44,7 +46,9 @@ If you create your own language pack or update an existing one, you can send <a 
 
 = Technical support =
 
-Dear users, if you have any questions or propositions regarding our plugins (current options, new options, current issues) please feel free to contact us. Please note that we accept requests in English only. All messages on another languages wouldn't be accepted. 
+Dear users, our plugins are available for free download. If you have any questions or propositions regarding functionality of our plugins (current options, new options, current issues) please feel free to contact us. Please note that we accept requests in English language only. All messages on another languages wouldn't be accepted. 
+
+Also, emails which are reporting about plugin's bugs are accepted for investigation and fixing. Your request must contain URL of the website, issues description and WordPress admin panel access. Plugin customization based on your Wordpress theme is a paid service (standard price is $10, but it could be higer and depends on the complexity of requested changes). We will analize existing issue and make necessary changes after 100% pre-payment.All these paid changes and modifications could be included to the next version of plugin and will be shared for all users like an integral part of the plugin. Free fixing services will be provided for user who send translation on their native language (this should be a new translation of a certain plugin, and you can check available translations on the official plugin page).
 
 == Installation ==
 
@@ -121,6 +125,9 @@ It is possible to enter this line in variable and display this variable in requi
 5. Login form with Captcha.
 
 == Changelog ==
+
+= V2.28 - 11.06.2012 =
+* NEW : Greek and Hindi language files are added to the plugin.
 
 = V2.27 - 20.03.2012 =
 * NEW : Swedish language file is added to the plugin.
@@ -223,6 +230,9 @@ It is possible to enter this line in variable and display this variable in requi
 * Select functionality of mathematical actions and level of their difficulty are implemented.
 
 == Upgrade Notice ==
+
+= V2.28 =
+Greek and Hindi language files are added to the plugin.
 
 = V2.27 =
 Swedish language file is added to the plugin.
