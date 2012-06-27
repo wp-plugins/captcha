@@ -2,10 +2,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: captcha\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-20 16:14+0200\n"
-"PO-Revision-Date: 2012-04-20 16:20+0200\n"
-"Last-Translator: BWS <zos@bestwebsoft.com>\n"
+"POT-Creation-Date: 2012-06-27 18:18+0300\n"
+"PO-Revision-Date: 2012-06-27 18:18+0300\n"
+"Last-Translator: zos <zos@bestwebsoft.com>\n"
 "Language-Team: Christer Rönningborg <plugin@bestwebsoft.com>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -79,8 +80,8 @@ msgid "Read more"
 msgstr "Läs mer"
 
 #: captcha.php:102
-#: captcha.php:218
-#: captcha.php:227
+#: captcha.php:221
+#: captcha.php:230
 msgid "Settings"
 msgstr "Inställningar"
 
@@ -110,7 +111,7 @@ msgid "If you have any questions, please contact us via plugin@bestwebsoft.com o
 msgstr "Om du har frågor, vänligen kontakta oss via plugin@bestwebsoft.com eller fyll i kontaktformuläret på vår hemsida"
 
 #: captcha.php:130
-#: captcha.php:291
+#: captcha.php:294
 msgid "Captcha Options"
 msgstr "Captcha inställningar"
 
@@ -118,255 +119,258 @@ msgstr "Captcha inställningar"
 msgid "Captcha"
 msgstr "Captcha"
 
-#: captcha.php:228
+#: captcha.php:231
 msgid "FAQ"
 msgstr "FAQ"
 
-#: captcha.php:229
+#: captcha.php:232
 msgid "Support"
 msgstr "Support"
 
-#: captcha.php:273
+#: captcha.php:276
 msgid "Please select one point in the blocks Arithmetic actions and Difficulty for CAPTCHA"
 msgstr "Vänligen markera ett val i avdelningarna Aritmetiska metoder och Svårighetsgrad för CAPTCHA"
 
-#: captcha.php:277
+#: captcha.php:280
 msgid "Options saved."
 msgstr "Inställningar sparade."
 
-#: captcha.php:297
+#: captcha.php:300
 msgid "Enable CAPTCHA on the:"
 msgstr "Aktivera CAPTCHA på:"
 
-#: captcha.php:306
 #: captcha.php:309
-#: captcha.php:313
+#: captcha.php:312
+#: captcha.php:316
 msgid "Contact form"
 msgstr "Kontaktformulär"
 
-#: captcha.php:306
 #: captcha.php:309
-#: captcha.php:313
+#: captcha.php:312
+#: captcha.php:316
 msgid "(power by bestwebsoft.com)"
 msgstr "(tillhandahålls av bestwebsoft.com)"
 
-#: captcha.php:309
+#: captcha.php:312
 msgid "Activate contact form"
 msgstr "Aktivera kontaktformulär"
 
-#: captcha.php:313
+#: captcha.php:316
 msgid "Download contact form"
 msgstr "Hämta kontaktformulär"
 
-#: captcha.php:315
+#: captcha.php:318
 msgid "If you would like to customize this plugin for a custom form, please contact us via <a href=\"Mailto:plugin@bestwebsoft.com\">plugin@bestwebsoft.com</a> or fill in our contact form on our site"
 msgstr "Om du vill anpassa detta tillägg för ett skräddarsytt formulär, vänligen kontakta oss på <a href=\"Mailto:plubin@bestwebsoft.com\">plugin@bestwebsoft.com</a> eller fyll i kontaktformuläret på vår hemsida."
 
-#: captcha.php:319
+#: captcha.php:322
 msgid "Label for CAPTCHA in form"
 msgstr "Etikett för CAPTCHA i formulär"
 
-#: captcha.php:323
+#: captcha.php:326
 msgid "Arithmetic actions for CAPTCHA"
 msgstr "Aritmetiska metoder för CAPTCHA"
 
-#: captcha.php:332
+#: captcha.php:335
 msgid "Difficulty for CAPTCHA"
 msgstr "Svårighetsgrad för CAPTCHA"
 
-#: captcha.php:342
+#: captcha.php:345
 msgid "Save Changes"
 msgstr "Spara ändringar"
 
-#: captcha.php:384
-#: captcha.php:390
-#: captcha.php:532
-#: captcha.php:539
+#: captcha.php:388
+#: captcha.php:394
+#: captcha.php:543
+#: captcha.php:550
+#: captcha.php:560
+#: captcha.php:567
 msgid "ERROR"
 msgstr "FEL"
 
-#: captcha.php:384
-#: captcha.php:404
-#: captcha.php:499
-#: captcha.php:532
-#: captcha.php:555
+#: captcha.php:388
+#: captcha.php:411
+#: captcha.php:510
+#: captcha.php:543
+#: captcha.php:560
+#: captcha.php:583
 msgid "Please complete the CAPTCHA."
 msgstr "Vänligen fyll i CAPTCHA."
 
-#: captcha.php:390
-#: captcha.php:413
-#: captcha.php:539
+#: captcha.php:394
+#: captcha.php:422
+#: captcha.php:550
+#: captcha.php:567
 msgid "That CAPTCHA was incorrect."
 msgstr "Angiven CAPTCHA var felaktig."
 
-#: captcha.php:505
-#: captcha.php:562
+#: captcha.php:516
+#: captcha.php:590
 msgid "Error: You entered in the wrong CAPTCHA phrase. Press your browser's back button and try again."
 msgstr "Fel: Du angav inte korrekt svar i fältet för CAPTCHA. Klicka på tillbaka-knappen i din webbläsare och försök igen."
 
-#: captcha.php:577
-#: captcha.php:811
+#: captcha.php:605
+#: captcha.php:839
 msgid "zero"
 msgstr "noll"
 
-#: captcha.php:578
-#: captcha.php:812
-#: captcha.php:1002
+#: captcha.php:606
+#: captcha.php:840
+#: captcha.php:1030
 msgid "one"
 msgstr "ett"
 
-#: captcha.php:579
-#: captcha.php:813
+#: captcha.php:607
+#: captcha.php:841
 msgid "two"
 msgstr "två"
 
-#: captcha.php:580
-#: captcha.php:814
+#: captcha.php:608
+#: captcha.php:842
 msgid "three"
 msgstr "tre"
 
-#: captcha.php:581
-#: captcha.php:815
+#: captcha.php:609
+#: captcha.php:843
 msgid "four"
 msgstr "fyra"
 
-#: captcha.php:582
-#: captcha.php:816
+#: captcha.php:610
+#: captcha.php:844
 msgid "five"
 msgstr "fem"
 
-#: captcha.php:583
-#: captcha.php:817
-#: captcha.php:1002
+#: captcha.php:611
+#: captcha.php:845
+#: captcha.php:1030
 msgid "six"
 msgstr "sex"
 
-#: captcha.php:584
-#: captcha.php:818
-#: captcha.php:990
-#: captcha.php:996
+#: captcha.php:612
+#: captcha.php:846
+#: captcha.php:1018
+#: captcha.php:1024
 msgid "seven"
 msgstr "sju"
 
-#: captcha.php:585
-#: captcha.php:819
-#: captcha.php:993
+#: captcha.php:613
+#: captcha.php:847
+#: captcha.php:1021
 msgid "eight"
 msgstr "åtta"
 
-#: captcha.php:586
-#: captcha.php:820
+#: captcha.php:614
+#: captcha.php:848
 msgid "nine"
 msgstr "nio"
 
-#: captcha.php:589
-#: captcha.php:823
+#: captcha.php:617
+#: captcha.php:851
 msgid "eleven"
 msgstr "elva"
 
-#: captcha.php:590
-#: captcha.php:824
+#: captcha.php:618
+#: captcha.php:852
 msgid "twelve"
 msgstr "tolv"
 
-#: captcha.php:591
-#: captcha.php:825
+#: captcha.php:619
+#: captcha.php:853
 msgid "thirteen"
 msgstr "tretton"
 
-#: captcha.php:592
-#: captcha.php:826
+#: captcha.php:620
+#: captcha.php:854
 msgid "fourteen"
 msgstr "fjorton"
 
-#: captcha.php:593
-#: captcha.php:827
+#: captcha.php:621
+#: captcha.php:855
 msgid "fifteen"
 msgstr "femton"
 
-#: captcha.php:594
-#: captcha.php:828
+#: captcha.php:622
+#: captcha.php:856
 msgid "sixteen"
 msgstr "sexton"
 
-#: captcha.php:595
-#: captcha.php:829
+#: captcha.php:623
+#: captcha.php:857
 msgid "seventeen"
 msgstr "sjutton"
 
-#: captcha.php:596
-#: captcha.php:830
+#: captcha.php:624
+#: captcha.php:858
 msgid "eighteen"
 msgstr "arton"
 
-#: captcha.php:597
-#: captcha.php:831
+#: captcha.php:625
+#: captcha.php:859
 msgid "nineteen"
 msgstr "nitton"
 
-#: captcha.php:600
-#: captcha.php:834
+#: captcha.php:628
+#: captcha.php:862
 msgid "ten"
 msgstr "tio"
 
-#: captcha.php:601
-#: captcha.php:835
+#: captcha.php:629
+#: captcha.php:863
 msgid "twenty"
 msgstr "tjugo"
 
-#: captcha.php:602
-#: captcha.php:836
+#: captcha.php:630
+#: captcha.php:864
 msgid "thirty"
 msgstr "trettio"
 
-#: captcha.php:603
-#: captcha.php:837
+#: captcha.php:631
+#: captcha.php:865
 msgid "forty"
 msgstr "fyrtio"
 
-#: captcha.php:604
-#: captcha.php:838
+#: captcha.php:632
+#: captcha.php:866
 msgid "fifty"
 msgstr "femtio"
 
-#: captcha.php:605
-#: captcha.php:839
+#: captcha.php:633
+#: captcha.php:867
 msgid "sixty"
 msgstr "sextio"
 
-#: captcha.php:606
-#: captcha.php:840
+#: captcha.php:634
+#: captcha.php:868
 msgid "seventy"
 msgstr "sjuttio"
 
-#: captcha.php:607
-#: captcha.php:841
+#: captcha.php:635
+#: captcha.php:869
 msgid "eighty"
 msgstr "åttio"
 
-#: captcha.php:608
-#: captcha.php:842
+#: captcha.php:636
+#: captcha.php:870
 msgid "ninety"
 msgstr "nittio"
 
-#: captcha.php:695
-#: captcha.php:929
+#: captcha.php:723
+#: captcha.php:957
 msgid "and"
 msgstr "och"
 
-#: captcha.php:714
+#: captcha.php:742
 msgid "The password of encryption is not set"
 msgstr "Lösenordet för krytering har inte angetts"
 
-#: captcha.php:733
+#: captcha.php:761
 msgid "The password of decoding is not set"
 msgstr "Lösenordet för avkodning har inte angetts"
 
 #~ msgid "null"
 #~ msgstr "noll"
-
 #~ msgid "BWS Plugins"
 #~ msgstr "Плагины BWS"
-
 #~ msgid "Install Now"
 #~ msgstr "Установить сейчас"
+

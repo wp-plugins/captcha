@@ -5,179 +5,179 @@ msgstr ""
 "POT-Creation-Date: 2012-06-27 18:18+0300\n"
 "PO-Revision-Date: 2012-06-27 18:18+0300\n"
 "Last-Translator: zos <zos@bestwebsoft.com>\n"
-"Language-Team: bestwebsoft.com <plugin@bestwebsoft.com>\n"
+"Language-Team: Sagive SEO <info@sagive.co.il>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-KeywordsList: __;_e\n"
 "X-Poedit-Basepath: ..\n"
-"X-Poedit-Language: Italian\n"
-"X-Poedit-Country: ITALY\n"
+"X-Poedit-Language: Hebrew\n"
+"X-Poedit-Country: ISRAEL\n"
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Poedit-SearchPath-0: .\n"
 
 #: captcha.php:31
 msgid "Login form"
-msgstr "Modulo di accesso"
+msgstr "טופס התחברות"
 
 #: captcha.php:32
 msgid "Register form"
-msgstr "Modulo di registrazione"
+msgstr "טופס רישום לאתר"
 
 #: captcha.php:33
 msgid "Lost password form"
-msgstr "Modulo recupero password"
+msgstr "טופס שחזור סיסמה"
 
 #: captcha.php:34
 msgid "Comments form"
-msgstr "Modulo dei commenti"
+msgstr "טופס תגובות"
 
 #: captcha.php:35
 msgid "Hide CAPTCHA for registered users"
-msgstr "Nascondi CAPTCHA per gli utenti registrati"
+msgstr "החבא את הקאפצה ממשתמשים רשומים"
 
 #: captcha.php:40
 msgid "Plus (&#43;)"
-msgstr "Addizione (&#43;)"
+msgstr "חיבור (&#43;)"
 
 #: captcha.php:40
 msgid "Plus"
-msgstr "Più"
+msgstr "חיבור"
 
 #: captcha.php:41
 msgid "Minus (&minus;)"
-msgstr "Sottrazione (&minus;)"
+msgstr "חיסור (&minus;)"
 
 #: captcha.php:41
 msgid "Minus"
-msgstr "Meno"
+msgstr "חיסור (&minus;)"
 
 #: captcha.php:42
 msgid "Multiply (&times;)"
-msgstr "Moltiplicazione (&times;)"
+msgstr "הכפלה (&times;)"
 
 #: captcha.php:42
 msgid "Increase"
-msgstr "Incrementa"
+msgstr "הגדלה"
 
 #: captcha.php:47
 msgid "Numbers"
-msgstr "Numeri"
+msgstr "מספרים"
 
 #: captcha.php:48
 msgid "Words"
-msgstr "Parole"
+msgstr "מילים"
 
 #: captcha.php:100
 msgid "Activated plugins"
-msgstr "Plugin attivato"
+msgstr "תוספים פעילים"
 
 #: captcha.php:102
 #: captcha.php:110
 #: captcha.php:118
 msgid "Read more"
-msgstr "Maggiori informazioni"
+msgstr "לקרוא עוד"
 
 #: captcha.php:102
 #: captcha.php:221
 #: captcha.php:230
 msgid "Settings"
-msgstr "Impostazioni"
+msgstr "הגדרות"
 
 #: captcha.php:108
 msgid "Installed plugins"
-msgstr "Plugin instalati"
+msgstr "תוספים מותקנים"
 
 #: captcha.php:116
 msgid "Recommended plugins"
-msgstr "Plugin consigliati"
+msgstr "תוספים מומלצים"
 
 #: captcha.php:118
 msgid "Download"
-msgstr "Download"
+msgstr "הורדה"
 
 #: captcha.php:118
 #, php-format
 msgid "Install %s"
-msgstr "Installa %s"
+msgstr "התקנת %s"
 
 #: captcha.php:118
 msgid "Install now from wordpress.org"
-msgstr "Installa adesso da wordpress.org"
+msgstr "התקינו עכשיו מאתר wordpress.org"
 
 #: captcha.php:120
 msgid "If you have any questions, please contact us via plugin@bestwebsoft.com or fill in our contact form on our site"
-msgstr "Se hai domande, per favore contattaci a <a href=\"Mailto:plugin@bestwebsoft.com\">plugin@bestwebsoft.com</a> oppure utilizza il modulo di contatto sul nostro sito."
+msgstr "אם יש לכם שאלות אתם מוזמנים לכתוב לנו לכתובת  plugin@bestwebsoft.com או למלא את טופס יצירת קשר באתר שלנו"
 
 #: captcha.php:130
 #: captcha.php:294
 msgid "Captcha Options"
-msgstr "Impostazioni Captcha"
+msgstr "אפשרויות קאפצה"
 
 #: captcha.php:130
 msgid "Captcha"
-msgstr "Captcha"
+msgstr "קאפצה"
 
 #: captcha.php:231
 msgid "FAQ"
-msgstr "FAQ"
+msgstr "שאלות נפוצות"
 
 #: captcha.php:232
 msgid "Support"
-msgstr "Supporto"
+msgstr "תמיכה"
 
 #: captcha.php:276
 msgid "Please select one point in the blocks Arithmetic actions and Difficulty for CAPTCHA"
-msgstr "Per favole seleziona una opzione nel blocco Aritmetica e Difficolatà per il CAPTCHA"
+msgstr "אנא בחרו את אחת האפשרויות מתוך רשימת הפעולות המתמטיות וגם את רמת הקושי של הקאפצה"
 
 #: captcha.php:280
 msgid "Options saved."
-msgstr "Impostazioni salvate."
+msgstr "ההגדרות נשמרו"
 
 #: captcha.php:300
 msgid "Enable CAPTCHA on the:"
-msgstr "Abilita il CAPTCHA per:"
+msgstr "אפשר קאפצה ב:"
 
 #: captcha.php:309
 #: captcha.php:312
 #: captcha.php:316
 msgid "Contact form"
-msgstr "Modulo di contatti"
+msgstr "טופס יצירת קשר"
 
 #: captcha.php:309
 #: captcha.php:312
 #: captcha.php:316
 msgid "(power by bestwebsoft.com)"
-msgstr "(creato da bestwebsoft.com)"
+msgstr "(נבנה על ידי bestwebsoft.com)"
 
 #: captcha.php:312
 msgid "Activate contact form"
-msgstr "Attiva il modulo di contatto"
+msgstr "הפעלת טופס יצירת קשר"
 
 #: captcha.php:316
 msgid "Download contact form"
-msgstr "Scarica il plugin per il modulo di contatto"
+msgstr "הורדת טופס יצירת קשר"
 
 #: captcha.php:318
 msgid "If you would like to customize this plugin for a custom form, please contact us via <a href=\"Mailto:plugin@bestwebsoft.com\">plugin@bestwebsoft.com</a> or fill in our contact form on our site"
-msgstr "Se desideri personalizzare il plugin per il modulo di contatto, puoi contattarci all'indirizzo <a href=\"Mailto:plugin@bestwebsoft.com\">plugin@bestwebsoft.com</a>  oppure utilizza il modulo di contatto sul nostro sito."
+msgstr "אם תרצו להתאים תוסף זה לטופס מותאם אישית אתם מוזמנים לכתוב לנו באימייל <a href=\"Mailto:plugin@bestwebsoft.com\">plugin@bestwebsoft.com</a> או בטופס יצירת קשר באתר שלנו"
 
 #: captcha.php:322
 msgid "Label for CAPTCHA in form"
-msgstr "Il titolo del CAPTCHA nel modulo"
+msgstr "כותרת הקאפצה בטופס"
 
 #: captcha.php:326
 msgid "Arithmetic actions for CAPTCHA"
-msgstr "Operazioni aritmetiche per il  CAPTCHA"
+msgstr "פעולות מתמטיות עבור הקאפצה"
 
 #: captcha.php:335
 msgid "Difficulty for CAPTCHA"
-msgstr "Livello di difficoltà per il  CAPTCHA"
+msgstr "רמת הקושי של הקאפצה"
 
 #: captcha.php:345
 msgid "Save Changes"
-msgstr "Salva le modifiche"
+msgstr "שמור שינויים"
 
 #: captcha.php:388
 #: captcha.php:394
@@ -186,7 +186,7 @@ msgstr "Salva le modifiche"
 #: captcha.php:560
 #: captcha.php:567
 msgid "ERROR"
-msgstr "ERRORE"
+msgstr "שגיאה"
 
 #: captcha.php:388
 #: captcha.php:411
@@ -195,178 +195,182 @@ msgstr "ERRORE"
 #: captcha.php:560
 #: captcha.php:583
 msgid "Please complete the CAPTCHA."
-msgstr "Per favore completa il test di controllo."
+msgstr "אנא השלימו את הקאפצה"
 
 #: captcha.php:394
 #: captcha.php:422
 #: captcha.php:550
 #: captcha.php:567
 msgid "That CAPTCHA was incorrect."
-msgstr "Il codice di controllo non è corretto."
+msgstr "הקאפצה שגויה."
 
 #: captcha.php:516
 #: captcha.php:590
 msgid "Error: You entered in the wrong CAPTCHA phrase. Press your browser's back button and try again."
-msgstr "Errore: hai inserito una risposta errata nel codice di controllo. Fai click sul pulsante \"indietro\" del tuo browser e prova di nuovo."
+msgstr "שגיאה: הקאפצה שהכנסתם שגויה. אנא לחצו על כפתור אחורה בדפדפן שלך ונסו שנית"
 
 #: captcha.php:605
 #: captcha.php:839
 msgid "zero"
-msgstr "null"
+msgstr "אפס"
 
 #: captcha.php:606
 #: captcha.php:840
 #: captcha.php:1030
 msgid "one"
-msgstr "uno"
+msgstr "אחד"
 
 #: captcha.php:607
 #: captcha.php:841
 msgid "two"
-msgstr "due"
+msgstr "שתיים"
 
 #: captcha.php:608
 #: captcha.php:842
 msgid "three"
-msgstr "tre"
+msgstr "שלוש"
 
 #: captcha.php:609
 #: captcha.php:843
 msgid "four"
-msgstr "quattro"
+msgstr "ארבע"
 
 #: captcha.php:610
 #: captcha.php:844
 msgid "five"
-msgstr "cinque"
+msgstr "חמש"
 
 #: captcha.php:611
 #: captcha.php:845
 #: captcha.php:1030
 msgid "six"
-msgstr "sei"
+msgstr "שש"
 
 #: captcha.php:612
 #: captcha.php:846
 #: captcha.php:1018
 #: captcha.php:1024
 msgid "seven"
-msgstr "sette"
+msgstr "שבע"
 
 #: captcha.php:613
 #: captcha.php:847
 #: captcha.php:1021
 msgid "eight"
-msgstr "otto"
+msgstr "שמונה"
 
 #: captcha.php:614
 #: captcha.php:848
 msgid "nine"
-msgstr "nove"
+msgstr "תשע"
 
 #: captcha.php:617
 #: captcha.php:851
 msgid "eleven"
-msgstr "undici"
+msgstr "אחת עשרה"
 
 #: captcha.php:618
 #: captcha.php:852
 msgid "twelve"
-msgstr "dodice"
+msgstr "שתיים עשרה"
 
 #: captcha.php:619
 #: captcha.php:853
 msgid "thirteen"
-msgstr "tredici"
+msgstr "שלוש עשרה"
 
 #: captcha.php:620
 #: captcha.php:854
 msgid "fourteen"
-msgstr "quattordici"
+msgstr "ארבע עשרה"
 
 #: captcha.php:621
 #: captcha.php:855
 msgid "fifteen"
-msgstr "quindici"
+msgstr "חמש עשרה"
 
 #: captcha.php:622
 #: captcha.php:856
 msgid "sixteen"
-msgstr "sedici"
+msgstr "שש עשרה"
 
 #: captcha.php:623
 #: captcha.php:857
 msgid "seventeen"
-msgstr "diciassette"
+msgstr "שבע עשרה"
 
 #: captcha.php:624
 #: captcha.php:858
 msgid "eighteen"
-msgstr "diciotto"
+msgstr "שמונה עשרה"
 
 #: captcha.php:625
 #: captcha.php:859
 msgid "nineteen"
-msgstr "diciannove"
+msgstr "תשע עשרה"
 
 #: captcha.php:628
 #: captcha.php:862
 msgid "ten"
-msgstr "dieci"
+msgstr "עשר"
 
 #: captcha.php:629
 #: captcha.php:863
 msgid "twenty"
-msgstr "venti"
+msgstr "עשרים"
 
 #: captcha.php:630
 #: captcha.php:864
 msgid "thirty"
-msgstr "trenta"
+msgstr "שלושים"
 
 #: captcha.php:631
 #: captcha.php:865
 msgid "forty"
-msgstr "quaranta"
+msgstr "ארבעים"
 
 #: captcha.php:632
 #: captcha.php:866
 msgid "fifty"
-msgstr "cinquanta"
+msgstr "חמישים"
 
 #: captcha.php:633
 #: captcha.php:867
 msgid "sixty"
-msgstr "sessanta"
+msgstr "שישים"
 
 #: captcha.php:634
 #: captcha.php:868
 msgid "seventy"
-msgstr "settanta"
+msgstr "שבעים"
 
 #: captcha.php:635
 #: captcha.php:869
 msgid "eighty"
-msgstr "ottanta"
+msgstr "שמונים"
 
 #: captcha.php:636
 #: captcha.php:870
 msgid "ninety"
-msgstr "novanta"
+msgstr "תשעים"
 
 #: captcha.php:723
 #: captcha.php:957
 msgid "and"
-msgstr "e"
+msgstr "ו"
 
 #: captcha.php:742
 msgid "The password of encryption is not set"
-msgstr "La password per la cifratura non è impostata"
+msgstr "סיסמת הקידוד איננה מוגדרת"
 
 #: captcha.php:761
 msgid "The password of decoding is not set"
-msgstr "La password per la decodifica della cifratura non è impostata"
+msgstr "סיסמת פענוח הקידוד איננה מוגדרת"
 
 #~ msgid "null"
-#~ msgstr "null"
+#~ msgstr "нуль"
+#~ msgid "BWS Plugins"
+#~ msgstr "Плагины BWS"
+#~ msgid "Install Now"
+#~ msgstr "Установить сейчас"
 

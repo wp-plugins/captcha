@@ -3,8 +3,8 @@ Contributors: bestwebsoft
 Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=10&product_id=13
 Tags: captcha, math captcha, text captcha, spam, antispam, login, registration, comment, lost password, capcha, catcha, captha
 Requires at least: 2.9
-Tested up to: 3.3.2
-Stable tag: 2.28
+Tested up to: 3.4
+Stable tag: 2.29
 
 This plugin allows you to implement super security captcha form into web forms.
 
@@ -32,6 +32,7 @@ Captcha plugin allows you to protect your website from spam using math logic whi
 * Finnish (fi) (thanks to Mikko Sederholm)
 * French (fr_FR) (thanks to Martel Benjamin)
 * German (de_DE) (thanks to Thomas Hartung)
+* Hebrew (he_IL) (thanks to Sagive SEO)
 * Hindi (hi_IN) (thanks to <a href="mailto:ash.pr@outshinesolutions.com">Outshine Solutions</a>)
 * Italian (it_IT) (thanks to Gianluca Di Carlo)
 * Norwegian (nb_NO)	(thanks to Tore Hjartland)
@@ -125,6 +126,10 @@ It is possible to enter this line in variable and display this variable in requi
 5. Login form with Captcha.
 
 == Changelog ==
+
+= V2.29 - 27.06.2012 =
+* NEW : Hebrew language file is added to the plugin.
+* Update : We updated all functionality for wordpress 3.4.
 
 = V2.28 - 11.06.2012 =
 * NEW : Greek and Hindi language files are added to the plugin.
@@ -230,6 +235,9 @@ It is possible to enter this line in variable and display this variable in requi
 * Select functionality of mathematical actions and level of their difficulty are implemented.
 
 == Upgrade Notice ==
+
+= V2.29 =
+Hebrew language file is added to the plugin. We updated all functionality for wordpress 3.4.
 
 = V2.28 =
 Greek and Hindi language files are added to the plugin.
