@@ -4,7 +4,7 @@ Plugin Name: Captcha
 Plugin URI:  http://bestwebsoft.com/plugin/
 Description: Plugin Captcha intended to prove that the visitor is a human being and not a spam robot. Plugin asks the visitor to answer a math question.
 Author: BestWebSoft
-Version: 2.29
+Version: 2.30
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -404,10 +404,9 @@ function cptch_login_check($url) {
 
 	$str_key = "123";
 	// Add error if captcha is empty
-	
-	if( isset( $_SESSION["cptch_login"] ) && $_SESSION["cptch_login"] === true )
+ if( isset( $_SESSION["cptch_login"] ) && $_SESSION["cptch_login"] === true )
 		return $url;		// captcha was matched						
-	if ( ( !isset( $_REQUEST['cptch_number'] ) || "" ==  $_REQUEST['cptch_number'] ) && ! isset( $_SESSION["cptch_login"] ) ) {
+	if ( ( !isset( $_REQUEST['cptch_number'] ) || "" ==  $_REQUEST['cptch_number'] ) && ! isset( $_SESSION["cptch_login"] ) && isset( $_REQUEST['loggedout'] )) {
 		$_SESSION['cptch_error'] = __( 'Please complete the CAPTCHA.', 'captcha' );
 		// Redirect to wp-login.php
 		wp_clear_auth_cookie();

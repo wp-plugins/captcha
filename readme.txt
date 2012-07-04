@@ -3,8 +3,8 @@ Contributors: bestwebsoft
 Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=10&product_id=13
 Tags: captcha, math captcha, text captcha, spam, antispam, login, registration, comment, lost password, capcha, catcha, captha
 Requires at least: 2.9
-Tested up to: 3.4
-Stable tag: 2.29
+Tested up to: 3.4.1
+Stable tag: 2.30
 
 This plugin allows you to implement super security captcha form into web forms.
 
@@ -127,6 +127,9 @@ It is possible to enter this line in variable and display this variable in requi
 
 == Changelog ==
 
+= V2.30 - 04.07.2012 =
+* Bugfix: The bug related to the forced double login in the admin panel was fixed.
+
 = V2.29 - 27.06.2012 =
 * NEW : Hebrew language file is added to the plugin.
 * Update : We updated all functionality for wordpress 3.4.
@@ -235,6 +238,9 @@ It is possible to enter this line in variable and display this variable in requi
 * Select functionality of mathematical actions and level of their difficulty are implemented.
 
 == Upgrade Notice ==
+
+= V2.30 =
+The bug related to the forced double login in the admin panel was fixed. We updated all functionality for wordpress 3.4.1.
 
 = V2.29 =
 Hebrew language file is added to the plugin. We updated all functionality for wordpress 3.4.
