@@ -4,7 +4,7 @@ Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=10
 Tags: captcha, math captcha, text captcha, spam, antispam, login, registration, comment, lost password, capcha, catcha, captha
 Requires at least: 2.9
 Tested up to: 3.4.1
-Stable tag: 2.30
+Stable tag: 2.31
 
 This plugin allows you to implement super security captcha form into web forms.
 
@@ -42,6 +42,7 @@ Captcha plugin allows you to protect your website from spam using math logic whi
 * Swedish (sv_SE) (thanks to Christer Rönningborg)
 * Turkish (tr_TR) (thanks to Can Atasever, <a href="http://www.candanblog.com">candanblog.com</a>)
 * Ukrainian (uk_UA) (thanks to Oleg Bondarenko)
+* Vietnamese (vi_VN) (thanks to NDT Solutions)
 
 If you create your own language pack or update an existing one, you can send <a href="http://codex.wordpress.org/Translating_WordPress" target="_blank">the text of PO and MO files</a> for <a href="http://bestwebsoft.com/" target="_blank">BWS</a> and we'll add it to the plugin. You can download the latest version of the program for work with PO and MO files  <a href="http://www.poedit.net/download.php" target="_blank">Poedit</a>.
 
@@ -126,6 +127,11 @@ It is possible to enter this line in variable and display this variable in requi
 5. Login form with Captcha.
 
 == Changelog ==
+
+= V2.31 - 10.07.2012 =
+* NEW : Vietnamese language file is added to the plugin.
+* Update : We updated Hebrew language file.
+* Update : We updated all functionality for wordpress 3.4.1.
 
 = V2.30 - 04.07.2012 =
 * Bugfix: The bug related to the forced double login in the admin panel was fixed.
@@ -238,6 +244,9 @@ It is possible to enter this line in variable and display this variable in requi
 * Select functionality of mathematical actions and level of their difficulty are implemented.
 
 == Upgrade Notice ==
+
+= V2.31 =
+Vietnamese language file is added to the plugin. We updated Hebrew language file. We updated all functionality for wordpress 3.4.1.
 
 = V2.30 =
 The bug related to the forced double login in the admin panel was fixed. We updated all functionality for wordpress 3.4.1.

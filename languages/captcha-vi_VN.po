@@ -1,225 +1,184 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Captcha v2.30\n"
+"Project-Id-Version: captcha\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-07-10 09:55+0300\n"
-"PO-Revision-Date: 2012-07-10 09:55+0300\n"
+"POT-Creation-Date: 2012-07-10 09:56+0300\n"
+"PO-Revision-Date: 2012-07-10 09:57+0300\n"
 "Last-Translator: zos <zos@bestwebsoft.com>\n"
-"Language-Team: Sagive SEO <info@sagive.co.il>\n"
+"Language-Team: NDT Solutions <admin@ndtan.net>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Poedit-Language: Hebrew\n"
-"X-Poedit-Country: ISRAEL\n"
-"X-Poedit-SourceCharset: utf-8\n"
-"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
+"X-Poedit-KeywordsList: __;_e\n"
 "X-Poedit-Basepath: ..\n"
-"X-Textdomain-Support: yes\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-Language: Vietnamese\n"
+"X-Poedit-Country: VIET NAM\n"
 "X-Poedit-SearchPath-0: .\n"
 
-# @ captcha
 #: captcha.php:31
 msgid "Login form"
-msgstr "טופס התחברות"
+msgstr "Khung đăng nhập"
 
-# @ captcha
 #: captcha.php:32
 msgid "Register form"
-msgstr "טופס רישום לאתר"
+msgstr "Khung đăng ký"
 
-# @ captcha
 #: captcha.php:33
 msgid "Lost password form"
-msgstr "טופס שחזור סיסמה"
+msgstr "Khung quên mật khẩu"
 
-# @ captcha
 #: captcha.php:34
 msgid "Comments form"
-msgstr "טופס תגובות"
+msgstr "Khung comment"
 
-# @ captcha
 #: captcha.php:35
 msgid "Hide CAPTCHA for registered users"
-msgstr "הסתר את קוד האימות ממשתמשים רשומים"
+msgstr "Ẩn CAPTCHA đối với thành viên đã đăng ký"
 
-# @ captcha
 #: captcha.php:40
 msgid "Plus (&#43;)"
-msgstr "חיבור (&#43;)"
+msgstr "Cộng (&#43;)"
 
-# @ captcha
 #: captcha.php:40
 msgid "Plus"
-msgstr "חיבור"
+msgstr "Cộng"
 
-# @ captcha
 #: captcha.php:41
 msgid "Minus (&minus;)"
-msgstr "חיסור (&minus;)"
+msgstr "Trừ (&minus;)"
 
-# @ captcha
 #: captcha.php:41
 msgid "Minus"
-msgstr "חיסור (&minus;)"
+msgstr "Trừ"
 
-# @ captcha
 #: captcha.php:42
 msgid "Multiply (&times;)"
-msgstr "הכפלה (&times;)"
+msgstr "Nhân (&times;)"
 
-# @ captcha
 #: captcha.php:42
 msgid "Increase"
-msgstr "הגדלה"
+msgstr "Tăng thêm"
 
-# @ captcha
 #: captcha.php:47
 msgid "Numbers"
-msgstr "מספרים"
+msgstr "Số"
 
-# @ captcha
 #: captcha.php:48
 msgid "Words"
-msgstr "מילים"
+msgstr "Từ"
 
-# @ captcha
 #: captcha.php:100
 msgid "Activated plugins"
-msgstr "תוספים פעילים"
+msgstr "Kích hoạt các plugin"
 
-# @ captcha
 #: captcha.php:102
 #: captcha.php:110
 #: captcha.php:118
 msgid "Read more"
-msgstr "לקרוא עוד"
+msgstr "Xem thêm"
 
-# @ captcha
 #: captcha.php:102
 #: captcha.php:221
 #: captcha.php:230
 msgid "Settings"
-msgstr "הגדרות"
+msgstr "Cấu hình"
 
-# @ captcha
 #: captcha.php:108
 msgid "Installed plugins"
-msgstr "תוספים מותקנים"
+msgstr "Các plugin đã cài"
 
-# @ captcha
 #: captcha.php:116
 msgid "Recommended plugins"
-msgstr "תוספים מומלצים"
+msgstr "Các plugin được khuyến cáo"
 
-# @ captcha
 #: captcha.php:118
 msgid "Download"
-msgstr "הורדה"
+msgstr "Tải về"
 
-# @ default
 #: captcha.php:118
 #, php-format
 msgid "Install %s"
-msgstr "התקנת %s"
+msgstr "Cài đặt %s"
 
-# @ captcha
 #: captcha.php:118
 msgid "Install now from wordpress.org"
-msgstr "התקינו עכשיו מאתר wordpress.org"
+msgstr "Cài đặt ngay từ wordpress.org"
 
-# @ captcha
 #: captcha.php:120
 msgid "If you have any questions, please contact us via plugin@bestwebsoft.com or fill in our contact form on our site"
-msgstr "אם יש לכם שאלות אתם מוזמנים לכתוב לנו לכתובת  plugin@bestwebsoft.com או למלא את טופס יצירת קשר באתר שלנו"
+msgstr "Nếu bạn có bất kỳ câu hỏi nào, xin vui lòng liên hệ với chúng tôi qua plugin@bestwebsoft.com hoặc điền vào mẫu liên hệ của chúng tôi trên trang web của chúng tôi"
 
-# @ captcha
 #: captcha.php:130
 #: captcha.php:294
 msgid "Captcha Options"
-msgstr "אפשרויות קוד אימות"
+msgstr "Tùy chọn CAPTCHA"
 
-# @ captcha
 #: captcha.php:130
 msgid "Captcha"
-msgstr "קוד אימות"
+msgstr "Captcha"
 
-# @ captcha
 #: captcha.php:231
 msgid "FAQ"
-msgstr "שאלות נפוצות"
+msgstr "Câu hỏi thường gặp (FAQ)"
 
-# @ captcha
 #: captcha.php:232
 msgid "Support"
-msgstr "תמיכה"
+msgstr "Hỗ trợ"
 
-# @ captcha
 #: captcha.php:276
 msgid "Please select one point in the blocks Arithmetic actions and Difficulty for CAPTCHA"
-msgstr "אנא בחרו את אחת האפשרויות מתוך רשימת הפעולות המתמטיות וגם את רמת הקושי של קוד האימות"
+msgstr "Hãy chọn một thời điểm trong các hành động số học khối và khó cho CAPTCHA"
 
-# @ captcha
 #: captcha.php:280
 msgid "Options saved."
-msgstr "ההגדרות נשמרו"
+msgstr "Tùy chọn đã được lưu"
 
-# @ captcha
 #: captcha.php:300
 msgid "Enable CAPTCHA on the:"
-msgstr "אפשר קוד אימות ב:"
+msgstr "Kích hoạt tính năng CAPTCHA trên:"
 
-# @ captcha
 #: captcha.php:309
 #: captcha.php:312
 #: captcha.php:316
 msgid "Contact form"
-msgstr "טופס יצירת קשר"
+msgstr "Khung liên hệ"
 
-# @ captcha
 #: captcha.php:309
 #: captcha.php:312
 #: captcha.php:316
 msgid "(power by bestwebsoft.com)"
-msgstr "(מופעל על ידי bestwebsoft.com)"
+msgstr "(Xây dựng bởi  bestwebsoft.com & dịch bởi ndtan.net)"
 
-# @ captcha
 #: captcha.php:312
 msgid "Activate contact form"
-msgstr "הפעלת טופס יצירת קשר"
+msgstr "Kích hoạt Contact Form"
 
-# @ captcha
 #: captcha.php:316
 msgid "Download contact form"
-msgstr "הורדת טופס יצירת קשר"
+msgstr "Tải contact form về"
 
-# @ captcha
 #: captcha.php:318
 msgid "If you would like to customize this plugin for a custom form, please contact us via <a href=\"Mailto:plugin@bestwebsoft.com\">plugin@bestwebsoft.com</a> or fill in our contact form on our site"
-msgstr "אם תרצו להתאים תוסף זה לטופס מותאם אישית אתם מוזמנים ליצור עמנו קשר במייל <a href=\"Mailto:plugin@bestwebsoft.com\">plugin@bestwebsoft.com</a> או בטופס יצירת הקשר באתר שלנו"
+msgstr "Nếu bạn muốn tùy chỉnh plugin này cho một hình thức tùy chỉnh, xin vui lòng liên hệ với chúng tôi qua <a href=\"Mailto:plugin@bestwebsoft.com\"> plugin@bestwebsoft.com</a> hoặc điền vào mẫu liên hệ của chúng tôi trên trang web của chúng tôi."
 
-# @ captcha
 #: captcha.php:322
 msgid "Label for CAPTCHA in form"
-msgstr "כותרת קוד האימות בטופס"
+msgstr "Nhãn cho CAPTCHA trong form"
 
-# @ captcha
 #: captcha.php:326
 msgid "Arithmetic actions for CAPTCHA"
-msgstr "פעולות מתמטיות עבור קוד האימות"
+msgstr "Hành động số học cho CAPTCHA"
 
-# @ captcha
 #: captcha.php:335
 msgid "Difficulty for CAPTCHA"
-msgstr "רמת הקושי של קוד האימות"
+msgstr "Độ khó cho CAPTCHA"
 
-# @ default
 #: captcha.php:345
 msgid "Save Changes"
-msgstr "שמור שינויים"
+msgstr "Lưu thay đổi"
 
-# @ captcha
 #: captcha.php:388
 #: captcha.php:394
 #: captcha.php:542
@@ -227,9 +186,8 @@ msgstr "שמור שינויים"
 #: captcha.php:559
 #: captcha.php:566
 msgid "ERROR"
-msgstr "שגיאה"
+msgstr "XẢY RA LỖI"
 
-# @ captcha
 #: captcha.php:388
 #: captcha.php:410
 #: captcha.php:509
@@ -237,208 +195,182 @@ msgstr "שגיאה"
 #: captcha.php:559
 #: captcha.php:582
 msgid "Please complete the CAPTCHA."
-msgstr "אנא השלימו את קוד האימות"
+msgstr "Vui lòng nhập mã xác nhận!"
 
-# @ captcha
 #: captcha.php:394
 #: captcha.php:421
 #: captcha.php:549
 #: captcha.php:566
 msgid "That CAPTCHA was incorrect."
-msgstr "קוד האימות היה שגוי."
+msgstr "Mã xác nhận không chính xác!"
 
-# @ captcha
 #: captcha.php:515
 #: captcha.php:589
 msgid "Error: You entered in the wrong CAPTCHA phrase. Press your browser's back button and try again."
-msgstr "שגיאה: הזנתם קוד אימות  שגוי. נא ללחוץ על כפתור אחורה בדפדפן ולנסות שוב."
+msgstr "Lỗi: Bạn nhập vào cụm từ của mã xác nhận sai. Bấm nút quay lại trình duyệt của bạn và thử lại."
 
-# @ captcha
 #: captcha.php:604
 #: captcha.php:838
 msgid "zero"
-msgstr "אפס"
+msgstr "không"
 
-# @ captcha
 #: captcha.php:605
 #: captcha.php:839
 #: captcha.php:1029
 msgid "one"
-msgstr "אחד"
+msgstr "một"
 
-# @ captcha
 #: captcha.php:606
 #: captcha.php:840
 msgid "two"
-msgstr "שתיים"
+msgstr "hai"
 
-# @ captcha
 #: captcha.php:607
 #: captcha.php:841
 msgid "three"
-msgstr "שלוש"
+msgstr "ba"
 
-# @ captcha
 #: captcha.php:608
 #: captcha.php:842
 msgid "four"
-msgstr "ארבע"
+msgstr "bốn"
 
-# @ captcha
 #: captcha.php:609
 #: captcha.php:843
 msgid "five"
-msgstr "חמש"
+msgstr "năm"
 
-# @ captcha
 #: captcha.php:610
 #: captcha.php:844
 #: captcha.php:1029
 msgid "six"
-msgstr "שש"
+msgstr "sáu"
 
-# @ captcha
 #: captcha.php:611
 #: captcha.php:845
 #: captcha.php:1017
 #: captcha.php:1023
 msgid "seven"
-msgstr "שבע"
+msgstr "bảy"
 
-# @ captcha
 #: captcha.php:612
 #: captcha.php:846
 #: captcha.php:1020
 msgid "eight"
-msgstr "שמונה"
+msgstr "tám"
 
-# @ captcha
 #: captcha.php:613
 #: captcha.php:847
 msgid "nine"
-msgstr "תשע"
+msgstr "chín"
 
-# @ captcha
 #: captcha.php:616
 #: captcha.php:850
 msgid "eleven"
-msgstr "אחת עשרה"
+msgstr "mười một"
 
-# @ captcha
 #: captcha.php:617
 #: captcha.php:851
 msgid "twelve"
-msgstr "שתיים עשרה"
+msgstr "mười hai"
 
-# @ captcha
 #: captcha.php:618
 #: captcha.php:852
 msgid "thirteen"
-msgstr "שלוש עשרה"
+msgstr "mười ba"
 
-# @ captcha
 #: captcha.php:619
 #: captcha.php:853
 msgid "fourteen"
-msgstr "ארבע עשרה"
+msgstr "mười bốn"
 
-# @ captcha
 #: captcha.php:620
 #: captcha.php:854
 msgid "fifteen"
-msgstr "חמש עשרה"
+msgstr "mười lăm"
 
-# @ captcha
 #: captcha.php:621
 #: captcha.php:855
 msgid "sixteen"
-msgstr "שש עשרה"
+msgstr "mười sáu"
 
-# @ captcha
 #: captcha.php:622
 #: captcha.php:856
 msgid "seventeen"
-msgstr "שבע עשרה"
+msgstr "mười bảy"
 
-# @ captcha
 #: captcha.php:623
 #: captcha.php:857
 msgid "eighteen"
-msgstr "שמונה עשרה"
+msgstr "mười tám"
 
-# @ captcha
 #: captcha.php:624
 #: captcha.php:858
 msgid "nineteen"
-msgstr "תשע עשרה"
+msgstr "mười chín"
 
-# @ captcha
 #: captcha.php:627
 #: captcha.php:861
 msgid "ten"
-msgstr "עשר"
+msgstr "mười"
 
-# @ captcha
 #: captcha.php:628
 #: captcha.php:862
 msgid "twenty"
-msgstr "עשרים"
+msgstr "hai mươi"
 
-# @ captcha
 #: captcha.php:629
 #: captcha.php:863
 msgid "thirty"
-msgstr "שלושים"
+msgstr "ba mươi"
 
-# @ captcha
 #: captcha.php:630
 #: captcha.php:864
 msgid "forty"
-msgstr "ארבעים"
+msgstr "bốn mươi"
 
-# @ captcha
 #: captcha.php:631
 #: captcha.php:865
 msgid "fifty"
-msgstr "חמישים"
+msgstr "năm mươi"
 
-# @ captcha
 #: captcha.php:632
 #: captcha.php:866
 msgid "sixty"
-msgstr "שישים"
+msgstr "sáu mươi"
 
-# @ captcha
 #: captcha.php:633
 #: captcha.php:867
 msgid "seventy"
-msgstr "שבעים"
+msgstr "bảy mươi"
 
-# @ captcha
 #: captcha.php:634
 #: captcha.php:868
 msgid "eighty"
-msgstr "שמונים"
+msgstr "tám mươi"
 
-# @ captcha
 #: captcha.php:635
 #: captcha.php:869
 msgid "ninety"
-msgstr "תשעים"
+msgstr "chín mươi"
 
-# @ captcha
 #: captcha.php:722
 #: captcha.php:956
 msgid "and"
-msgstr "ו"
+msgstr "và"
 
-# @ captcha
 #: captcha.php:741
 msgid "The password of encryption is not set"
-msgstr "סיסמת הקידוד איננה מוגדרת"
+msgstr "Mật khẩu mã hóa không được thiết lập"
 
-# @ captcha
 #: captcha.php:760
 msgid "The password of decoding is not set"
-msgstr "סיסמת פענוח הקידוד איננה מוגדרת"
+msgstr "Mật khẩu giải mã không được thiết lập"
+
+#~ msgid "null"
+#~ msgstr "rỗng"
+#~ msgid "BWS Plugins"
+#~ msgstr "BWS Plugins"
+#~ msgid "Install Now"
+#~ msgstr "Cài đặt ngay"
 
