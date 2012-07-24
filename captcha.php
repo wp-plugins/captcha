@@ -4,7 +4,7 @@ Plugin Name: Captcha
 Plugin URI:  http://bestwebsoft.com/plugin/
 Description: Plugin Captcha intended to prove that the visitor is a human being and not a spam robot. Plugin asks the visitor to answer a math question.
 Author: BestWebSoft
-Version: 2.31
+Version: 2.32
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -244,27 +244,29 @@ function cptch_settings_page() {
 	$error = "";
 	
 	// Save data for settings page
-	if( isset( $_REQUEST['cptch_form_submit'] ) ) {
+	if( isset( $_REQUEST['cptch_form_submit'] ) && check_admin_referer( plugin_basename(__FILE__), 'cptch_nonce_name' ) ) {
 		$cptch_request_options = array();
-
-		foreach( $cptch_options as $key => $val ) {
-			if( isset( $_REQUEST[$key] ) ) {
-				if( $key != 'cptch_label_form' )
-					$cptch_request_options[$key] = 1;
-				else
-					$cptch_request_options[$key] = $_REQUEST[$key];
-			} else {
-				if( $key != 'cptch_label_form' )
-					$cptch_request_options[$key] = 0;
-				else
-					$cptch_request_options[$key] = "";
-			}
-			if( isset( $_REQUEST['cptch_contact_form'] ) ) {
-				$cptch_request_options['cptch_contact_form'] = $_REQUEST['cptch_contact_form'];
-			}
-			else {
-				$cptch_request_options['cptch_contact_form'] = 0;
-			}
+		
+		if( isset( $_REQUEST[$key] ) ) {
+				foreach( $cptch_options as $key => $val ) {
+					if( isset( $_REQUEST[$key] ) ) {
+						if( $key != 'cptch_label_form' )
+							$cptch_request_options[$key] = 1;
+						else
+							$cptch_request_options[$key] = $_REQUEST[$key];
+					} else {
+						if( $key != 'cptch_label_form' )
+							$cptch_request_options[$key] = 0;
+						else
+							$cptch_request_options[$key] = "";
+					}
+					if( isset( $_REQUEST['cptch_contact_form'] ) ) {
+						$cptch_request_options['cptch_contact_form'] = $_REQUEST['cptch_contact_form'];
+					}
+					else {
+						$cptch_request_options['cptch_contact_form'] = 0;
+					}
+				}
 		}
 
 		// array merge incase this version has added new options
@@ -344,6 +346,7 @@ function cptch_settings_page() {
 		<p class="submit">
 			<input type="submit" class="button-primary" value="<?php _e('Save Changes') ?>" />
 		</p>
+		<?php wp_nonce_field( plugin_basename(__FILE__), 'cptch_nonce_name' ); ?>
 	</form>
 </div>
 <?php } 

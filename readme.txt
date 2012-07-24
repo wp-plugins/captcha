@@ -4,7 +4,7 @@ Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=10
 Tags: captcha, math captcha, text captcha, spam, antispam, login, registration, comment, lost password, capcha, catcha, captha
 Requires at least: 2.9
 Tested up to: 3.4.1
-Stable tag: 2.31
+Stable tag: 2.32
 
 This plugin allows you to implement super security captcha form into web forms.
 
@@ -23,7 +23,8 @@ Captcha plugin allows you to protect your website from spam using math logic whi
 
 = Translation =
 
-* Brazilian Portuguese (pt_BR) (thanks <a href="mailto:brenojac@gmail.com">Breno Jacinto</a>, www.iconis.org.br)
+* Arabic (ar_AR) (thanks to Albayan Design Hani Aladoli)
+* Brazilian Portuguese (pt_BR) (thanks to <a href="mailto:brenojac@gmail.com">Breno Jacinto</a>, www.iconis.org.br)
 * Czech (cs_CZ) (thanks to Tomas Vesely)
 * Danish (da_DK) (thanks to Byrial Ole Jensed)
 * Dutch (nl_NL) (thanks to <a href="mailto:byrial@vip.cybercity.dk">Bart Duineveld</a>)
@@ -33,9 +34,11 @@ Captcha plugin allows you to protect your website from spam using math logic whi
 * French (fr_FR) (thanks to Martel Benjamin)
 * German (de_DE) (thanks to Thomas Hartung)
 * Hebrew (he_IL) (thanks to Sagive SEO)
-* Hindi (hi_IN) (thanks to <a href="mailto:ash.pr@outshinesolutions.com">Outshine Solutions</a>)
+* Hindi (hi_IN) (thanks to <a href="mailto:ash.pr@outshinesolutions.com">Outshine Solutions</a>, <a href="http://outshinesolutions.com">outshinesolutions.com</a> )
+* Hungarian (hu_HU) (thanks to Bőm Tamás)
+* Japanese (ja) (thanks to Foken)
 * Italian (it_IT) (thanks to Gianluca Di Carlo)
-* Norwegian (nb_NO)	(thanks to Tore Hjartland)
+* Norwegian (nb_NO) (thanks to Tore Hjartland)
 * Polish (pl_PL) (thanks to Krzysztof Opuchlik)
 * Russian (ru_RU)
 * Spain (es_ES) (thanks to Iván García Cubero)
@@ -127,6 +130,10 @@ It is possible to enter this line in variable and display this variable in requi
 5. Login form with Captcha.
 
 == Changelog ==
+
+= V2.32 - 24.07.2012 =
+* NEW : Arabic, Hungarian, Japanese language files are added to the plugin.
+* Bugfix : Cross Site Request Forgery bug was fixed. 
 
 = V2.31 - 10.07.2012 =
 * NEW : Vietnamese language file is added to the plugin.
@@ -244,6 +251,9 @@ It is possible to enter this line in variable and display this variable in requi
 * Select functionality of mathematical actions and level of their difficulty are implemented.
 
 == Upgrade Notice ==
+
+= V2.32 =
+Arabic, Hungarian, Japanese language files are added to the plugin. Cross Site Request Forgery bug was fixed. 
 
 = V2.31 =
 Vietnamese language file is added to the plugin. We updated Hebrew language file. We updated all functionality for wordpress 3.4.1.
