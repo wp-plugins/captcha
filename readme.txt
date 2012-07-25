@@ -4,7 +4,7 @@ Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=10
 Tags: captcha, math captcha, text captcha, spam, antispam, login, registration, comment, lost password, capcha, catcha, captha
 Requires at least: 2.9
 Tested up to: 3.4.1
-Stable tag: 2.32
+Stable tag: 2.33
 
 This plugin allows you to implement super security captcha form into web forms.
 
