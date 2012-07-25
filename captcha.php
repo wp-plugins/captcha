@@ -4,7 +4,7 @@ Plugin Name: Captcha
 Plugin URI:  http://bestwebsoft.com/plugin/
 Description: Plugin Captcha intended to prove that the visitor is a human being and not a spam robot. Plugin asks the visitor to answer a math question.
 Author: BestWebSoft
-Version: 2.32
+Version: 2.33
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -183,6 +183,7 @@ if ( 1 == $wpmu )
    $cptch_options = get_option( 'cptch_options' );// get the options from the database
 
 // Add captcha into login form
+
 if( 1 == $cptch_options['cptch_login_form'] ) {
 	add_action( 'login_form', 'cptch_login_form' );
 	add_filter( 'login_errors', 'cptch_login_post' );
@@ -247,26 +248,24 @@ function cptch_settings_page() {
 	if( isset( $_REQUEST['cptch_form_submit'] ) && check_admin_referer( plugin_basename(__FILE__), 'cptch_nonce_name' ) ) {
 		$cptch_request_options = array();
 		
-		if( isset( $_REQUEST[$key] ) ) {
-				foreach( $cptch_options as $key => $val ) {
-					if( isset( $_REQUEST[$key] ) ) {
-						if( $key != 'cptch_label_form' )
-							$cptch_request_options[$key] = 1;
-						else
-							$cptch_request_options[$key] = $_REQUEST[$key];
-					} else {
-						if( $key != 'cptch_label_form' )
-							$cptch_request_options[$key] = 0;
-						else
-							$cptch_request_options[$key] = "";
-					}
-					if( isset( $_REQUEST['cptch_contact_form'] ) ) {
-						$cptch_request_options['cptch_contact_form'] = $_REQUEST['cptch_contact_form'];
-					}
-					else {
-						$cptch_request_options['cptch_contact_form'] = 0;
-					}
-				}
+		foreach( $cptch_options as $key => $val ) {
+			if( isset( $_REQUEST[$key] ) ) {
+				if( $key != 'cptch_label_form' )
+					$cptch_request_options[$key] = 1;
+				else
+					$cptch_request_options[$key] = $_REQUEST[$key];
+			} else {
+				if( $key != 'cptch_label_form' )
+					$cptch_request_options[$key] = 0;
+				else
+					$cptch_request_options[$key] = "";
+			}
+			if( isset( $_REQUEST['cptch_contact_form'] ) ) {
+				$cptch_request_options['cptch_contact_form'] = $_REQUEST['cptch_contact_form'];
+			}
+			else {
+				$cptch_request_options['cptch_contact_form'] = 0;
+			}
 		}
 
 		// array merge incase this version has added new options

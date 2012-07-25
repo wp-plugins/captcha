@@ -131,6 +131,9 @@ It is possible to enter this line in variable and display this variable in requi
 
 == Changelog ==
 
+= V2.33 - 25.07.2012 =
+* Bugfix : Change settings bug was fixed. 
+
 = V2.32 - 24.07.2012 =
 * NEW : Arabic, Hungarian, Japanese language files are added to the plugin.
 * Bugfix : Cross Site Request Forgery bug was fixed. 
@@ -251,6 +254,9 @@ It is possible to enter this line in variable and display this variable in requi
 * Select functionality of mathematical actions and level of their difficulty are implemented.
 
 == Upgrade Notice ==
+
+= V2.33 =
+Change settings bug was fixed. 
 
 = V2.32 =
 Arabic, Hungarian, Japanese language files are added to the plugin. Cross Site Request Forgery bug was fixed. 
