@@ -1,163 +1,161 @@
-# Byrial Ole Jensen <byrial@vip.cybercity.dk>, 2011.
 msgid ""
 msgstr ""
 "Project-Id-Version: captcha\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-12-21 12:30+0200\n"
-"PO-Revision-Date: 2012-12-21 12:31+0200\n"
-"Last-Translator: zos <zos@bestwebsoft.com>\n"
-"Language-Team: Thomas Hartung <thartung@adipositas-mm.de>\n"
-"Language: da\n"
+"PO-Revision-Date: 2012-12-21 12:30+0200\n"
+"Last-Translator: Cipi Bad <cipibad@gmail.com>\n"
+"Language-Team: Ciprian <cipibad@gmail.com>\n"
+"Language: ro_RO\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.4\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Generator: Poedit 1.5.4\n"
 "X-Poedit-SearchPath-0: .\n"
 
 #: captcha.php:31
 msgid "Login form"
-msgstr "Giriş Formu"
+msgstr "Formular autentificare"
 
 #: captcha.php:32
 msgid "Register form"
-msgstr "Kayıt Formu"
+msgstr "Formular inregistrare"
 
 #: captcha.php:33
 msgid "Lost password form"
-msgstr "Kayıp Parola Formu"
+msgstr "Formular parola pierduta"
 
 #: captcha.php:34
 msgid "Comments form"
-msgstr "Yorum Formu"
+msgstr "Formular comentarii"
 
 #: captcha.php:35
 msgid "Hide CAPTCHA for registered users"
-msgstr "Kayıtlı kullanıcılar için CAPTCHA'yı gizle"
+msgstr "Ascunde CAPTCHA pentru utilizatorii inregistrati"
 
 #: captcha.php:40
 msgid "Plus (&#43;)"
-msgstr "Artı (&#43;)"
+msgstr "Plus (&#43;)"
 
 #: captcha.php:40
 msgid "Plus"
-msgstr "Artı"
+msgstr "Plus"
 
 #: captcha.php:41
 msgid "Minus (&minus;)"
-msgstr "Eksi (&minus;)"
+msgstr "Minus (&minus;)"
 
 #: captcha.php:41
 msgid "Minus"
-msgstr "Eksi"
+msgstr "Minus"
 
 #: captcha.php:42
 msgid "Multiply (&times;)"
-msgstr "Çarpı (&times;)"
+msgstr "Inmultit (&times;)"
 
 #: captcha.php:42
 msgid "Increase"
-msgstr "Arttır"
+msgstr "Creste"
 
 #: captcha.php:47
 msgid "Numbers"
-msgstr "Sayılar"
+msgstr "Numere"
 
 #: captcha.php:48
 msgid "Words"
-msgstr "Kelimeler"
+msgstr "Cuvinte"
 
 #: captcha.php:100
 msgid "Activated plugins"
-msgstr "Etkinleştirilmiş eklentiler"
+msgstr "Modul activat"
 
 #: captcha.php:102 captcha.php:110 captcha.php:118
 msgid "Read more"
-msgstr "Daha fazlası"
+msgstr "Citeste mai mult"
 
 #: captcha.php:102 captcha.php:223 captcha.php:232
 msgid "Settings"
-msgstr "Ayarlar"
+msgstr "Setari"
 
 #: captcha.php:108
 msgid "Installed plugins"
-msgstr "Yüklü eklentiler"
+msgstr "Modul instalat"
 
 #: captcha.php:116
 msgid "Recommended plugins"
-msgstr "Önerilen eklentiler"
+msgstr "Module recomandate"
 
 #: captcha.php:118
 msgid "Download"
-msgstr "İndir"
+msgstr "Descarca"
 
 #: captcha.php:118
 #, php-format
 msgid "Install %s"
-msgstr "%s'yi yükle"
+msgstr "Instaleaza %s"
 
 #: captcha.php:118
 msgid "Install now from wordpress.org"
-msgstr "Şimdi wordpress.org üzerinden yükle"
+msgstr "Instaleaza acum de pe wordpress.org"
 
 #: captcha.php:120
 msgid ""
 "If you have any questions, please contact us via plugin@bestwebsoft.com or "
 "fill in our contact form on our site"
 msgstr ""
-"Herhangi bir sorunuz varsa, plugin@bestwebsoft.com 'a e-posta atarak ya da "
-"sitemizdeki iletişim formu aracılığıyla bizimle iletişime geçebilirsiniz "
-"(ingilizce)"
+"Daca aveti intrebari va rugam sa ne contactati la adresa plugin@bestwebsoft."
+"com sau sa completati formularul de contact de pe site-ul nostru"
 
 #: captcha.php:130 captcha.php:296
 msgid "Captcha Options"
-msgstr "Captcha Ayarları"
+msgstr "Optiuni CAPTCHA"
 
 #: captcha.php:130
 msgid "Captcha"
-msgstr "Captcha"
+msgstr "CAPTCHA"
 
 #: captcha.php:233
 msgid "FAQ"
-msgstr "SSS"
+msgstr "Intrebari frecvente (FAQ)"
 
 #: captcha.php:234
 msgid "Support"
-msgstr "Destek"
+msgstr "Suport"
 
 #: captcha.php:278
 msgid ""
 "Please select one point in the blocks Arithmetic actions and Difficulty for "
 "CAPTCHA"
 msgstr ""
-"Lütfen, Aritmetik Hareketler ve CAPTCHA İçin Zorluk bloklarından bir nokta "
-"seçin."
+"Va rugam selectati un punct in blocul actiunilor aritmetice si dificultatea "
+"pentru CAPTCHA"
 
 #: captcha.php:282
 msgid "Options saved."
-msgstr "Ayarlar kaydedildi."
+msgstr "Optiuni salvate."
 
 #: captcha.php:302
 msgid "Enable CAPTCHA on the:"
-msgstr "CAPTCHA'yı şunlarda aktifleştir:"
+msgstr "Activeaza CAPTCHA la:"
 
 #: captcha.php:311 captcha.php:314 captcha.php:318
 msgid "Contact form"
-msgstr "İletişim Formu"
+msgstr "Formular de contact"
 
 #: captcha.php:311 captcha.php:314 captcha.php:318
 msgid "(power by bestwebsoft.com)"
-msgstr "(bestwebsoft.com tarafından)"
+msgstr "(propulsat de bestwebsoft.com)"
 
 #: captcha.php:314
 msgid "Activate contact form"
-msgstr "İletişim formunu etkinleştir"
+msgstr "Activeaza formularul de contact"
 
 #: captcha.php:318
 msgid "Download contact form"
-msgstr "İletişim formunu indir"
+msgstr "Descarca formularul de contact"
 
 #: captcha.php:320
 msgid ""
@@ -165,178 +163,178 @@ msgid ""
 "us via <a href=\"Mailto:plugin@bestwebsoft.com\">plugin@bestwebsoft.com</a> "
 "or fill in our contact form on our site"
 msgstr ""
-"Eğer eklentiyi, özelleştirilmiş bir form için kişiselleştirmek isterseniz, "
-"<a href=\"Mailto:plugin@bestwebsoft.com\">plugin@bestwebsoft.com</a> "
-"aracılığıyla ya da sitemizdeki iletişim formu aracılığıyla bizimle iletişime "
-"geçebilirsiniz."
+"Daca doriti sa personalizati acest modul pentru un formular personalizat, va "
+"rugam sa ne contactati la adresa <a href=\"Mailto:plugin@bestwebsoft.com"
+"\">plugin@bestwebsoft.com</a> sau sa completati formularul de contact de pe "
+"site-ul nostru "
 
 #: captcha.php:324
 msgid "Label for CAPTCHA in form"
-msgstr "Formdaki CAPTCHA Etiketi"
+msgstr "Eticheta pentru CAPTCHA in formular"
 
 #: captcha.php:328
 msgid "Arithmetic actions for CAPTCHA"
-msgstr "CAPTCHA için Aritmetik Hareketler"
+msgstr "Operatii aritmetice pentru CAPTCHA"
 
 #: captcha.php:337
 msgid "Difficulty for CAPTCHA"
-msgstr "CAPTCHA Zorluğu"
+msgstr "Dificultate pentru CAPTCHA"
 
 #: captcha.php:347
 msgid "Save Changes"
-msgstr "Değişiklikleri Kaydet"
+msgstr "Salveaza schimbarile"
 
 #: captcha.php:391 captcha.php:397 captcha.php:545 captcha.php:552
 #: captcha.php:562 captcha.php:569
 msgid "ERROR"
-msgstr "HATA"
+msgstr "EROARE"
 
 #: captcha.php:391 captcha.php:413 captcha.php:512 captcha.php:545
 #: captcha.php:562 captcha.php:585
 msgid "Please complete the CAPTCHA."
-msgstr "Lütfen CAPTCHA doğrulama sistemini tamamlayın."
+msgstr "Va rugam sa completati CAPTCHA."
 
 #: captcha.php:397 captcha.php:424 captcha.php:552 captcha.php:569
 msgid "That CAPTCHA was incorrect."
-msgstr "Girdiğiniz CAPTCHA kodu yanlış."
+msgstr "CAPTCHA nu a fost correct"
 
 #: captcha.php:518 captcha.php:592
 msgid ""
 "Error: You entered in the wrong CAPTCHA phrase. Press your browser's back "
 "button and try again."
 msgstr ""
-"HATA: Yanlış CAPTCHA cevabı girdiniz. Tarayıcınızın GERİ butonuna basın ve "
-"tekrar deneyin."
+"Eroare: Ati introdus CAPTCHA gresit. Apasati butonul \"Inapoi\" al "
+"browserului si incercati din nou."
 
 #: captcha.php:607 captcha.php:841
 msgid "zero"
-msgstr "sıfır"
+msgstr "zero"
 
 #: captcha.php:608 captcha.php:842 captcha.php:1032
 msgid "one"
-msgstr "bir"
+msgstr "unu"
 
 #: captcha.php:609 captcha.php:843
 msgid "two"
-msgstr "iki"
+msgstr "doi"
 
 #: captcha.php:610 captcha.php:844
 msgid "three"
-msgstr "üç"
+msgstr "trei"
 
 #: captcha.php:611 captcha.php:845
 msgid "four"
-msgstr "dört"
+msgstr "patru"
 
 #: captcha.php:612 captcha.php:846
 msgid "five"
-msgstr "beş"
+msgstr "cinci"
 
 #: captcha.php:613 captcha.php:847 captcha.php:1032
 msgid "six"
-msgstr "altı"
+msgstr "sase"
 
 #: captcha.php:614 captcha.php:848 captcha.php:1020 captcha.php:1026
 msgid "seven"
-msgstr "yedi"
+msgstr "sapte"
 
 #: captcha.php:615 captcha.php:849 captcha.php:1023
 msgid "eight"
-msgstr "sekiz"
+msgstr "opt"
 
 #: captcha.php:616 captcha.php:850
 msgid "nine"
-msgstr "dokuz"
+msgstr "noua"
 
 #: captcha.php:619 captcha.php:853
 msgid "eleven"
-msgstr "onbir"
+msgstr "unsprezece"
 
 #: captcha.php:620 captcha.php:854
 msgid "twelve"
-msgstr "oniki"
+msgstr "doisprezece"
 
 #: captcha.php:621 captcha.php:855
 msgid "thirteen"
-msgstr "onüç"
+msgstr "treisprezece"
 
 #: captcha.php:622 captcha.php:856
 msgid "fourteen"
-msgstr "ondört"
+msgstr "paisprezece"
 
 #: captcha.php:623 captcha.php:857
 msgid "fifteen"
-msgstr "onbeş"
+msgstr "cincisprezece"
 
 #: captcha.php:624 captcha.php:858
 msgid "sixteen"
-msgstr "onaltı"
+msgstr "saisprezece"
 
 #: captcha.php:625 captcha.php:859
 msgid "seventeen"
-msgstr "onyedi"
+msgstr "saptesprezece"
 
 #: captcha.php:626 captcha.php:860
 msgid "eighteen"
-msgstr "onsekiz"
+msgstr "optsprezece"
 
 #: captcha.php:627 captcha.php:861
 msgid "nineteen"
-msgstr "ondokuz"
+msgstr "nouasprezece"
 
 #: captcha.php:630 captcha.php:864
 msgid "ten"
-msgstr "on"
+msgstr "zece"
 
 #: captcha.php:631 captcha.php:865
 msgid "twenty"
-msgstr "yirmi"
+msgstr "douazeci"
 
 #: captcha.php:632 captcha.php:866
 msgid "thirty"
-msgstr "otuz"
+msgstr "treizeci"
 
 #: captcha.php:633 captcha.php:867
 msgid "forty"
-msgstr "kırk"
+msgstr "patruzeci"
 
 #: captcha.php:634 captcha.php:868
 msgid "fifty"
-msgstr "elli"
+msgstr "cincizeci"
 
 #: captcha.php:635 captcha.php:869
 msgid "sixty"
-msgstr "altmış"
+msgstr "saizeci"
 
 #: captcha.php:636 captcha.php:870
 msgid "seventy"
-msgstr "yetmiş"
+msgstr "saptezeci"
 
 #: captcha.php:637 captcha.php:871
 msgid "eighty"
-msgstr "seksen"
+msgstr "optzeci"
 
 #: captcha.php:638 captcha.php:872
 msgid "ninety"
-msgstr "doksan"
+msgstr "nouazeci"
 
 #: captcha.php:725 captcha.php:959
 msgid "and"
-msgstr "ve"
+msgstr "si"
 
 #: captcha.php:744
 msgid "The password of encryption is not set"
-msgstr "Şifreleme (encode) için parola ayarlanmadı"
+msgstr "Parola pentru criptare nu e setata"
 
 #: captcha.php:763
 msgid "The password of decoding is not set"
-msgstr "Şifre çözme (decode) için parola ayarlanmadı"
+msgstr "Parola pentru decodare nu e setata"
 
 #~ msgid "null"
-#~ msgstr "sıfır"
+#~ msgstr "нуль"
 
 #~ msgid "BWS Plugins"
-#~ msgstr "BWS Plugins"
+#~ msgstr "Плагины BWS"
 
 #~ msgid "Install Now"
-#~ msgstr "Installér nu"
+#~ msgstr "Установить сейчас"

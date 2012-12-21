@@ -3,8 +3,8 @@ Contributors: bestwebsoft
 Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=10&product_id=13
 Tags: captcha, math captcha, text captcha, spam, antispam, login, registration, comment, lost password, capcha, catcha, captha
 Requires at least: 2.9
-Tested up to: 3.4.2
-Stable tag: 2.34
+Tested up to: 3.5
+Stable tag: 2.4
 
 This plugin allows you to implement super security captcha form into web forms.
 
@@ -41,7 +41,10 @@ Captcha plugin allows you to protect your website from spam using math logic whi
 * Italian (it_IT) (thanks to Gianluca Di Carlo)
 * Norwegian (nb_NO) (thanks to Tore Hjartland)
 * Polish (pl_PL) (thanks to Krzysztof Opuchlik)
+* Romanian (ro_RO) (thanks to Ciprian)
 * Russian (ru_RU)
+* Serbian (sr_RS) (thanks to Radovan Georgijevic)
+* Slovak (sk_SK) (thanks to Branco Radenovich)
 * Spain (es_ES) (thanks to Iván García Cubero)
 * Swedish (sv_SE) (thanks to Christer Rönningborg)
 * Turkish (tr_TR) (thanks to Can Atasever, <a href="http://www.candanblog.com">candanblog.com</a>)
@@ -131,6 +134,11 @@ It is possible to enter this line in variable and display this variable in requi
 5. Login form with Captcha.
 
 == Changelog ==
+
+= V2.4 - 21.12.2012 =
+* NEW : Romanian and Serbian and Slovak language files are added to the plugin.
+* Update : We updated the coding logic of Captcha.
+* Update : We updated all functionality for wordpress 3.5.
 
 = V2.34 - 08.10.2012 =
 * NEW : Chinese and Greek language files are added to the plugin.
@@ -258,6 +266,9 @@ It is possible to enter this line in variable and display this variable in requi
 * Select functionality of mathematical actions and level of their difficulty are implemented.
 
 == Upgrade Notice ==
+
+= V2.4 =
+Romanian and Serbian and Slovak language files are added to the plugin. We updated the coding logic of Captcha. We updated all functionality for wordpress 3.5.
 
 = V2.34 =
 Chinese and Greek language files are added to the plugin.

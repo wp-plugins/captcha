@@ -3,20 +3,18 @@ msgid ""
 msgstr ""
 "Project-Id-Version: captcha\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-07-24 18:55+0300\n"
-"PO-Revision-Date: 2012-07-24 18:55+0300\n"
+"POT-Creation-Date: 2012-12-21 12:30+0200\n"
+"PO-Revision-Date: 2012-12-21 12:30+0200\n"
 "Last-Translator: zos <zos@bestwebsoft.com>\n"
 "Language-Team: Bőm Tamás <tamas.bem@gmail.com>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.2\n"
+"X-Generator: Poedit 1.5.4\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e\n"
-"X-Poedit-Language: Hungarian\n"
-"X-Poedit-Country: HUNGARY\n"
 "X-Poedit-SearchPath-0: .\n"
 
 #: captcha.php:31
@@ -75,15 +73,11 @@ msgstr "Szavak"
 msgid "Activated plugins"
 msgstr "Aktivált plugin"
 
-#: captcha.php:102
-#: captcha.php:110
-#: captcha.php:118
+#: captcha.php:102 captcha.php:110 captcha.php:118
 msgid "Read more"
 msgstr "Bővebben"
 
-#: captcha.php:102
-#: captcha.php:221
-#: captcha.php:230
+#: captcha.php:102 captcha.php:223 captcha.php:232
 msgid "Settings"
 msgstr "Beállítások"
 
@@ -109,11 +103,14 @@ msgid "Install now from wordpress.org"
 msgstr "Telepítse most wordpress.org"
 
 #: captcha.php:120
-msgid "If you have any questions, please contact us via plugin@bestwebsoft.com or fill in our contact form on our site"
-msgstr "Ha bármilyen kérdése van, kérjük írjon nekünk (plugin@bestwebsoft.com) vagy  töltse ki az űrlapot a weboldalunkon "
+msgid ""
+"If you have any questions, please contact us via plugin@bestwebsoft.com or "
+"fill in our contact form on our site"
+msgstr ""
+"Ha bármilyen kérdése van, kérjük írjon nekünk (plugin@bestwebsoft.com) vagy  "
+"töltse ki az űrlapot a weboldalunkon "
 
-#: captcha.php:130
-#: captcha.php:296
+#: captcha.php:130 captcha.php:296
 msgid "Captcha Options"
 msgstr "Captcha opciók"
 
@@ -121,17 +118,21 @@ msgstr "Captcha opciók"
 msgid "Captcha"
 msgstr "Captcha"
 
-#: captcha.php:231
+#: captcha.php:233
 msgid "FAQ"
 msgstr "GYIK"
 
-#: captcha.php:232
+#: captcha.php:234
 msgid "Support"
 msgstr "Támogatás"
 
 #: captcha.php:278
-msgid "Please select one point in the blocks Arithmetic actions and Difficulty for CAPTCHA"
-msgstr "Kérem válasszon egy pontot  a blokkoknak Aritmetikai intézkedéseknek és nehézségi fokát CAPTCHA-nak"
+msgid ""
+"Please select one point in the blocks Arithmetic actions and Difficulty for "
+"CAPTCHA"
+msgstr ""
+"Kérem válasszon egy pontot  a blokkoknak Aritmetikai intézkedéseknek és "
+"nehézségi fokát CAPTCHA-nak"
 
 #: captcha.php:282
 msgid "Options saved."
@@ -141,15 +142,11 @@ msgstr "Beállítások elmentve."
 msgid "Enable CAPTCHA on the:"
 msgstr "Engedélyezze a CAPTCHA:"
 
-#: captcha.php:311
-#: captcha.php:314
-#: captcha.php:318
+#: captcha.php:311 captcha.php:314 captcha.php:318
 msgid "Contact form"
 msgstr "CONTACT FORM-Plugin"
 
-#: captcha.php:311
-#: captcha.php:314
-#: captcha.php:318
+#: captcha.php:311 captcha.php:314 captcha.php:318
 msgid "(power by bestwebsoft.com)"
 msgstr "(powered by bestwebsoft.com)"
 
@@ -162,8 +159,14 @@ msgid "Download contact form"
 msgstr "Töltse le a kapcsolatfelvételi űrlapot"
 
 #: captcha.php:320
-msgid "If you would like to customize this plugin for a custom form, please contact us via <a href=\"Mailto:plugin@bestwebsoft.com\">plugin@bestwebsoft.com</a> or fill in our contact form on our site"
-msgstr "Ha egy egyéni űrlapot szeretne létrehozni ehhez a pluginhoz, kérjük, lépjen kapcsolatba velünk <a href=\"Mailto:plugin@bestwebsoft.com\"> plugin@bestwebsoft.com </ a>, vagy töltse ki az űrlapot a oldal"
+msgid ""
+"If you would like to customize this plugin for a custom form, please contact "
+"us via <a href=\"Mailto:plugin@bestwebsoft.com\">plugin@bestwebsoft.com</a> "
+"or fill in our contact form on our site"
+msgstr ""
+"Ha egy egyéni űrlapot szeretne létrehozni ehhez a pluginhoz, kérjük, lépjen "
+"kapcsolatba velünk <a href=\"Mailto:plugin@bestwebsoft.com\"> "
+"plugin@bestwebsoft.com </ a>, vagy töltse ki az űrlapot a oldal"
 
 #: captcha.php:324
 msgid "Label for CAPTCHA in form"
@@ -181,183 +184,141 @@ msgstr "CAPTCHA nehézségi foka "
 msgid "Save Changes"
 msgstr "Változások mentése"
 
-#: captcha.php:391
-#: captcha.php:397
-#: captcha.php:545
-#: captcha.php:552
-#: captcha.php:562
-#: captcha.php:569
+#: captcha.php:391 captcha.php:397 captcha.php:545 captcha.php:552
+#: captcha.php:562 captcha.php:569
 msgid "ERROR"
 msgstr "Hiba!!"
 
-#: captcha.php:391
-#: captcha.php:413
-#: captcha.php:512
-#: captcha.php:545
-#: captcha.php:562
-#: captcha.php:585
+#: captcha.php:391 captcha.php:413 captcha.php:512 captcha.php:545
+#: captcha.php:562 captcha.php:585
 msgid "Please complete the CAPTCHA."
 msgstr "Kérjük, töltse ki a CAPTCHA-t"
 
-#: captcha.php:397
-#: captcha.php:424
-#: captcha.php:552
-#: captcha.php:569
+#: captcha.php:397 captcha.php:424 captcha.php:552 captcha.php:569
 msgid "That CAPTCHA was incorrect."
 msgstr "Ez a CAPTCHA helytelen volt."
 
-#: captcha.php:518
-#: captcha.php:592
-msgid "Error: You entered in the wrong CAPTCHA phrase. Press your browser's back button and try again."
-msgstr "Hiba: A megadott CAPTCHA kifejezés rossz. Nyomja meg a böngésző Vissza gombját, és próbálja újra."
+#: captcha.php:518 captcha.php:592
+msgid ""
+"Error: You entered in the wrong CAPTCHA phrase. Press your browser's back "
+"button and try again."
+msgstr ""
+"Hiba: A megadott CAPTCHA kifejezés rossz. Nyomja meg a böngésző Vissza "
+"gombját, és próbálja újra."
 
-#: captcha.php:607
-#: captcha.php:841
+#: captcha.php:607 captcha.php:841
 msgid "zero"
 msgstr "nulla"
 
-#: captcha.php:608
-#: captcha.php:842
-#: captcha.php:1032
+#: captcha.php:608 captcha.php:842 captcha.php:1032
 msgid "one"
 msgstr "egy"
 
-#: captcha.php:609
-#: captcha.php:843
+#: captcha.php:609 captcha.php:843
 msgid "two"
 msgstr "kettő"
 
-#: captcha.php:610
-#: captcha.php:844
+#: captcha.php:610 captcha.php:844
 msgid "three"
 msgstr "három"
 
-#: captcha.php:611
-#: captcha.php:845
+#: captcha.php:611 captcha.php:845
 msgid "four"
 msgstr "négy"
 
-#: captcha.php:612
-#: captcha.php:846
+#: captcha.php:612 captcha.php:846
 msgid "five"
 msgstr "öt"
 
-#: captcha.php:613
-#: captcha.php:847
-#: captcha.php:1032
+#: captcha.php:613 captcha.php:847 captcha.php:1032
 msgid "six"
 msgstr "hat"
 
-#: captcha.php:614
-#: captcha.php:848
-#: captcha.php:1020
-#: captcha.php:1026
+#: captcha.php:614 captcha.php:848 captcha.php:1020 captcha.php:1026
 msgid "seven"
 msgstr "hét"
 
-#: captcha.php:615
-#: captcha.php:849
-#: captcha.php:1023
+#: captcha.php:615 captcha.php:849 captcha.php:1023
 msgid "eight"
 msgstr "nyolc"
 
-#: captcha.php:616
-#: captcha.php:850
+#: captcha.php:616 captcha.php:850
 msgid "nine"
 msgstr "kilenc"
 
-#: captcha.php:619
-#: captcha.php:853
+#: captcha.php:619 captcha.php:853
 msgid "eleven"
 msgstr "tizenegy"
 
-#: captcha.php:620
-#: captcha.php:854
+#: captcha.php:620 captcha.php:854
 msgid "twelve"
 msgstr "tizenkettő"
 
-#: captcha.php:621
-#: captcha.php:855
+#: captcha.php:621 captcha.php:855
 msgid "thirteen"
 msgstr "tizenhárom"
 
-#: captcha.php:622
-#: captcha.php:856
+#: captcha.php:622 captcha.php:856
 msgid "fourteen"
 msgstr "tizrnnégy"
 
-#: captcha.php:623
-#: captcha.php:857
+#: captcha.php:623 captcha.php:857
 msgid "fifteen"
 msgstr "tizenöt"
 
-#: captcha.php:624
-#: captcha.php:858
+#: captcha.php:624 captcha.php:858
 msgid "sixteen"
 msgstr "tizenhat"
 
-#: captcha.php:625
-#: captcha.php:859
+#: captcha.php:625 captcha.php:859
 msgid "seventeen"
 msgstr "tizenhét"
 
-#: captcha.php:626
-#: captcha.php:860
+#: captcha.php:626 captcha.php:860
 msgid "eighteen"
 msgstr "tizennyolc"
 
-#: captcha.php:627
-#: captcha.php:861
+#: captcha.php:627 captcha.php:861
 msgid "nineteen"
 msgstr "tizenkilenc"
 
-#: captcha.php:630
-#: captcha.php:864
+#: captcha.php:630 captcha.php:864
 msgid "ten"
 msgstr "tíz"
 
-#: captcha.php:631
-#: captcha.php:865
+#: captcha.php:631 captcha.php:865
 msgid "twenty"
 msgstr "húsz(on)"
 
-#: captcha.php:632
-#: captcha.php:866
+#: captcha.php:632 captcha.php:866
 msgid "thirty"
 msgstr "harminc"
 
-#: captcha.php:633
-#: captcha.php:867
+#: captcha.php:633 captcha.php:867
 msgid "forty"
 msgstr "negyven"
 
-#: captcha.php:634
-#: captcha.php:868
+#: captcha.php:634 captcha.php:868
 msgid "fifty"
 msgstr "ötven"
 
-#: captcha.php:635
-#: captcha.php:869
+#: captcha.php:635 captcha.php:869
 msgid "sixty"
 msgstr "hatvan"
 
-#: captcha.php:636
-#: captcha.php:870
+#: captcha.php:636 captcha.php:870
 msgid "seventy"
 msgstr "hetven"
 
-#: captcha.php:637
-#: captcha.php:871
+#: captcha.php:637 captcha.php:871
 msgid "eighty"
 msgstr "nyolcvan"
 
-#: captcha.php:638
-#: captcha.php:872
+#: captcha.php:638 captcha.php:872
 msgid "ninety"
 msgstr "kilencven"
 
-#: captcha.php:725
-#: captcha.php:959
+#: captcha.php:725 captcha.php:959
 msgid "and"
 msgstr "és"
 
@@ -371,8 +332,9 @@ msgstr "A jelszó dekódoló nincs beállítva"
 
 #~ msgid "null"
 #~ msgstr "null"
+
 #~ msgid "BWS Plugins"
 #~ msgstr "BWS Plugins"
+
 #~ msgid "Install Now"
 #~ msgstr "Installér nu"
-

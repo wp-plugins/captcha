@@ -4,10 +4,10 @@ msgstr ""
 "Project-Id-Version: captcha\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-12-21 12:30+0200\n"
-"PO-Revision-Date: 2012-12-21 12:31+0200\n"
-"Last-Translator: zos <zos@bestwebsoft.com>\n"
-"Language-Team: Thomas Hartung <thartung@adipositas-mm.de>\n"
-"Language: da\n"
+"PO-Revision-Date: 2012-12-21 12:30+0200\n"
+"Last-Translator: ss <ss>\n"
+"Language-Team: Branco Radenovich <br.radenovich@gmail.com>\n"
+"Language: sk_SK\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,101 +19,100 @@ msgstr ""
 
 #: captcha.php:31
 msgid "Login form"
-msgstr "Giriş Formu"
+msgstr "Prihlasovací formulár"
 
 #: captcha.php:32
 msgid "Register form"
-msgstr "Kayıt Formu"
+msgstr "Registračný formulár"
 
 #: captcha.php:33
 msgid "Lost password form"
-msgstr "Kayıp Parola Formu"
+msgstr "Formulár zabudnuté heslo"
 
 #: captcha.php:34
 msgid "Comments form"
-msgstr "Yorum Formu"
+msgstr "Formulári poznámky"
 
 #: captcha.php:35
 msgid "Hide CAPTCHA for registered users"
-msgstr "Kayıtlı kullanıcılar için CAPTCHA'yı gizle"
+msgstr "Skryť CAPTCHA pre registrovaných užívateľov"
 
 #: captcha.php:40
 msgid "Plus (&#43;)"
-msgstr "Artı (&#43;)"
+msgstr "Plus (&#43;)"
 
 #: captcha.php:40
 msgid "Plus"
-msgstr "Artı"
+msgstr "Plus"
 
 #: captcha.php:41
 msgid "Minus (&minus;)"
-msgstr "Eksi (&minus;)"
+msgstr "Mínus (&minus;)"
 
 #: captcha.php:41
 msgid "Minus"
-msgstr "Eksi"
+msgstr "Mínus"
 
 #: captcha.php:42
 msgid "Multiply (&times;)"
-msgstr "Çarpı (&times;)"
+msgstr "Vynásobte (×)"
 
 #: captcha.php:42
 msgid "Increase"
-msgstr "Arttır"
+msgstr "Zvýšenie"
 
 #: captcha.php:47
 msgid "Numbers"
-msgstr "Sayılar"
+msgstr "Čísla"
 
 #: captcha.php:48
 msgid "Words"
-msgstr "Kelimeler"
+msgstr "Slová"
 
 #: captcha.php:100
 msgid "Activated plugins"
-msgstr "Etkinleştirilmiş eklentiler"
+msgstr "Aktivovaný pluginy"
 
 #: captcha.php:102 captcha.php:110 captcha.php:118
 msgid "Read more"
-msgstr "Daha fazlası"
+msgstr "Prečítajte si viac"
 
 #: captcha.php:102 captcha.php:223 captcha.php:232
 msgid "Settings"
-msgstr "Ayarlar"
+msgstr "Nastavenia"
 
 #: captcha.php:108
 msgid "Installed plugins"
-msgstr "Yüklü eklentiler"
+msgstr "Inštalovaných pluginov"
 
 #: captcha.php:116
 msgid "Recommended plugins"
-msgstr "Önerilen eklentiler"
+msgstr "Odporúčaná pluginy"
 
 #: captcha.php:118
 msgid "Download"
-msgstr "İndir"
+msgstr "Stiahnuť"
 
 #: captcha.php:118
 #, php-format
 msgid "Install %s"
-msgstr "%s'yi yükle"
+msgstr "Inštalácia %s"
 
 #: captcha.php:118
 msgid "Install now from wordpress.org"
-msgstr "Şimdi wordpress.org üzerinden yükle"
+msgstr "Teraz inštalovať z wordpress.org"
 
 #: captcha.php:120
 msgid ""
 "If you have any questions, please contact us via plugin@bestwebsoft.com or "
 "fill in our contact form on our site"
 msgstr ""
-"Herhangi bir sorunuz varsa, plugin@bestwebsoft.com 'a e-posta atarak ya da "
-"sitemizdeki iletişim formu aracılığıyla bizimle iletişime geçebilirsiniz "
-"(ingilizce)"
+"Ak máte akékoľvek otázky, kontaktujte nás prosím prostredníctvom "
+"plugin@bestwebsoft.com alebo vyplňte kontaktný formulár na našich stránkach"
 
 #: captcha.php:130 captcha.php:296
 msgid "Captcha Options"
-msgstr "Captcha Ayarları"
+msgstr "Captcha možnosti"
 
 #: captcha.php:130
 msgid "Captcha"
@@ -121,43 +120,42 @@ msgstr "Captcha"
 
 #: captcha.php:233
 msgid "FAQ"
-msgstr "SSS"
+msgstr "FAQ"
 
 #: captcha.php:234
 msgid "Support"
-msgstr "Destek"
+msgstr "Podpora"
 
 #: captcha.php:278
 msgid ""
 "Please select one point in the blocks Arithmetic actions and Difficulty for "
 "CAPTCHA"
 msgstr ""
-"Lütfen, Aritmetik Hareketler ve CAPTCHA İçin Zorluk bloklarından bir nokta "
-"seçin."
+"Prosím vyberte jeden bod na akciách blokov aritmetických a ťažké pre CAPTCHA"
 
 #: captcha.php:282
 msgid "Options saved."
-msgstr "Ayarlar kaydedildi."
+msgstr "Nastavenia uložené."
 
 #: captcha.php:302
 msgid "Enable CAPTCHA on the:"
-msgstr "CAPTCHA'yı şunlarda aktifleştir:"
+msgstr "Povoliť CAPTCHA na:"
 
 #: captcha.php:311 captcha.php:314 captcha.php:318
 msgid "Contact form"
-msgstr "İletişim Formu"
+msgstr "Kontaktný formulár"
 
 #: captcha.php:311 captcha.php:314 captcha.php:318
 msgid "(power by bestwebsoft.com)"
-msgstr "(bestwebsoft.com tarafından)"
+msgstr "(výkon podľa bestwebsoft.com)"
 
 #: captcha.php:314
 msgid "Activate contact form"
-msgstr "İletişim formunu etkinleştir"
+msgstr "Aktivovať kontaktný formulár"
 
 #: captcha.php:318
 msgid "Download contact form"
-msgstr "İletişim formunu indir"
+msgstr "Stiahnuť kontaktný formulár"
 
 #: captcha.php:320
 msgid ""
@@ -165,178 +163,178 @@ msgid ""
 "us via <a href=\"Mailto:plugin@bestwebsoft.com\">plugin@bestwebsoft.com</a> "
 "or fill in our contact form on our site"
 msgstr ""
-"Eğer eklentiyi, özelleştirilmiş bir form için kişiselleştirmek isterseniz, "
-"<a href=\"Mailto:plugin@bestwebsoft.com\">plugin@bestwebsoft.com</a> "
-"aracılığıyla ya da sitemizdeki iletişim formu aracılığıyla bizimle iletişime "
-"geçebilirsiniz."
+"Ak by ste chceli prispôsobiť tento plugin pre vlastný formulár, prosím "
+"kontaktujte nás prostredníctvom <a href=\"Mailto:plugin@bestwebsoft.com\"> "
+"plugin@bestwebsoft.com </ a> alebo vyplňte náš kontaktný formulár na našich "
+"stránky"
 
 #: captcha.php:324
 msgid "Label for CAPTCHA in form"
-msgstr "Formdaki CAPTCHA Etiketi"
+msgstr "Označenie pre CAPTCHA vo forme"
 
 #: captcha.php:328
 msgid "Arithmetic actions for CAPTCHA"
-msgstr "CAPTCHA için Aritmetik Hareketler"
+msgstr "Aritmetické akcie pre CAPTCHA"
 
 #: captcha.php:337
 msgid "Difficulty for CAPTCHA"
-msgstr "CAPTCHA Zorluğu"
+msgstr "Obtiažnosti pre CAPTCHA"
 
 #: captcha.php:347
 msgid "Save Changes"
-msgstr "Değişiklikleri Kaydet"
+msgstr "Uložiť zmeny"
 
 #: captcha.php:391 captcha.php:397 captcha.php:545 captcha.php:552
 #: captcha.php:562 captcha.php:569
 msgid "ERROR"
-msgstr "HATA"
+msgstr "CHYBA"
 
 #: captcha.php:391 captcha.php:413 captcha.php:512 captcha.php:545
 #: captcha.php:562 captcha.php:585
 msgid "Please complete the CAPTCHA."
-msgstr "Lütfen CAPTCHA doğrulama sistemini tamamlayın."
+msgstr "Prosím, vyplňte CAPTCHA."
 
 #: captcha.php:397 captcha.php:424 captcha.php:552 captcha.php:569
 msgid "That CAPTCHA was incorrect."
-msgstr "Girdiğiniz CAPTCHA kodu yanlış."
+msgstr "Že CAPTCHA bola nesprávna."
 
 #: captcha.php:518 captcha.php:592
 msgid ""
 "Error: You entered in the wrong CAPTCHA phrase. Press your browser's back "
 "button and try again."
 msgstr ""
-"HATA: Yanlış CAPTCHA cevabı girdiniz. Tarayıcınızın GERİ butonuna basın ve "
-"tekrar deneyin."
+"Chyba: Zadali ste v zlom CAPTCHA frázy. Stlačte prehliadača tlačidlo Späť a "
+"skúste to znova."
 
 #: captcha.php:607 captcha.php:841
 msgid "zero"
-msgstr "sıfır"
+msgstr "nula"
 
 #: captcha.php:608 captcha.php:842 captcha.php:1032
 msgid "one"
-msgstr "bir"
+msgstr "jeden"
 
 #: captcha.php:609 captcha.php:843
 msgid "two"
-msgstr "iki"
+msgstr "dve"
 
 #: captcha.php:610 captcha.php:844
 msgid "three"
-msgstr "üç"
+msgstr "tri"
 
 #: captcha.php:611 captcha.php:845
 msgid "four"
-msgstr "dört"
+msgstr "štyri"
 
 #: captcha.php:612 captcha.php:846
 msgid "five"
-msgstr "beş"
+msgstr "päť"
 
 #: captcha.php:613 captcha.php:847 captcha.php:1032
 msgid "six"
-msgstr "altı"
+msgstr "šesť"
 
 #: captcha.php:614 captcha.php:848 captcha.php:1020 captcha.php:1026
 msgid "seven"
-msgstr "yedi"
+msgstr "sedem"
 
 #: captcha.php:615 captcha.php:849 captcha.php:1023
 msgid "eight"
-msgstr "sekiz"
+msgstr "osem"
 
 #: captcha.php:616 captcha.php:850
 msgid "nine"
-msgstr "dokuz"
+msgstr "deväť"
 
 #: captcha.php:619 captcha.php:853
 msgid "eleven"
-msgstr "onbir"
+msgstr "jedenásť"
 
 #: captcha.php:620 captcha.php:854
 msgid "twelve"
-msgstr "oniki"
+msgstr "dvanásť"
 
 #: captcha.php:621 captcha.php:855
 msgid "thirteen"
-msgstr "onüç"
+msgstr "trinásť"
 
 #: captcha.php:622 captcha.php:856
 msgid "fourteen"
-msgstr "ondört"
+msgstr "štrnásť"
 
 #: captcha.php:623 captcha.php:857
 msgid "fifteen"
-msgstr "onbeş"
+msgstr "pätnásť"
 
 #: captcha.php:624 captcha.php:858
 msgid "sixteen"
-msgstr "onaltı"
+msgstr "šestnásť"
 
 #: captcha.php:625 captcha.php:859
 msgid "seventeen"
-msgstr "onyedi"
+msgstr "sedemnásť"
 
 #: captcha.php:626 captcha.php:860
 msgid "eighteen"
-msgstr "onsekiz"
+msgstr "osemnásť"
 
 #: captcha.php:627 captcha.php:861
 msgid "nineteen"
-msgstr "ondokuz"
+msgstr "devätnásť"
 
 #: captcha.php:630 captcha.php:864
 msgid "ten"
-msgstr "on"
+msgstr "desať"
 
 #: captcha.php:631 captcha.php:865
 msgid "twenty"
-msgstr "yirmi"
+msgstr "dvadsať"
 
 #: captcha.php:632 captcha.php:866
 msgid "thirty"
-msgstr "otuz"
+msgstr "tridsať"
 
 #: captcha.php:633 captcha.php:867
 msgid "forty"
-msgstr "kırk"
+msgstr "štyridsať"
 
 #: captcha.php:634 captcha.php:868
 msgid "fifty"
-msgstr "elli"
+msgstr "päťdesiat"
 
 #: captcha.php:635 captcha.php:869
 msgid "sixty"
-msgstr "altmış"
+msgstr "šesťdesiat"
 
 #: captcha.php:636 captcha.php:870
 msgid "seventy"
-msgstr "yetmiş"
+msgstr "sedemdesiat"
 
 #: captcha.php:637 captcha.php:871
 msgid "eighty"
-msgstr "seksen"
+msgstr "osemdesiat"
 
 #: captcha.php:638 captcha.php:872
 msgid "ninety"
-msgstr "doksan"
+msgstr "deväťdesiat"
 
 #: captcha.php:725 captcha.php:959
 msgid "and"
-msgstr "ve"
+msgstr "a"
 
 #: captcha.php:744
 msgid "The password of encryption is not set"
-msgstr "Şifreleme (encode) için parola ayarlanmadı"
+msgstr "Nie je nastavené heslo šifrovania"
 
 #: captcha.php:763
 msgid "The password of decoding is not set"
-msgstr "Şifre çözme (decode) için parola ayarlanmadı"
+msgstr "Nie je nastavené heslo dekódovania"
 
 #~ msgid "null"
-#~ msgstr "sıfır"
+#~ msgstr "null"
 
 #~ msgid "BWS Plugins"
-#~ msgstr "BWS Plugins"
+#~ msgstr "BWS pluginy"
 
 #~ msgid "Install Now"
-#~ msgstr "Installér nu"
+#~ msgstr "Inštalovať teraz"

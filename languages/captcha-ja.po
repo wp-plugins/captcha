@@ -3,20 +3,18 @@ msgid ""
 msgstr ""
 "Project-Id-Version: captcha\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-07-24 18:55+0300\n"
-"PO-Revision-Date: 2012-07-24 18:57+0300\n"
+"POT-Creation-Date: 2012-12-21 12:30+0200\n"
+"PO-Revision-Date: 2012-12-21 12:30+0200\n"
 "Last-Translator: zos <zos@bestwebsoft.com>\n"
 "Language-Team: foken <foken@gmx.com>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.2\n"
+"X-Generator: Poedit 1.5.4\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e\n"
-"X-Poedit-Language: Japanese\n"
-"X-Poedit-Country: JAPAN\n"
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Poedit-SearchPath-0: .\n"
 
@@ -76,15 +74,11 @@ msgstr "語"
 msgid "Activated plugins"
 msgstr "有効なプラグイン"
 
-#: captcha.php:102
-#: captcha.php:110
-#: captcha.php:118
+#: captcha.php:102 captcha.php:110 captcha.php:118
 msgid "Read more"
 msgstr "もっと読む"
 
-#: captcha.php:102
-#: captcha.php:221
-#: captcha.php:230
+#: captcha.php:102 captcha.php:223 captcha.php:232
 msgid "Settings"
 msgstr "設定"
 
@@ -110,11 +104,14 @@ msgid "Install now from wordpress.org"
 msgstr "wordpress.org から直ぐに導入"
 
 #: captcha.php:120
-msgid "If you have any questions, please contact us via plugin@bestwebsoft.com or fill in our contact form on our site"
-msgstr "もそご質問がある場合は、plugin@bestwebsoft.comにご連絡頂くか、我々のサイトのコンタクトフォームからお願いします。"
+msgid ""
+"If you have any questions, please contact us via plugin@bestwebsoft.com or "
+"fill in our contact form on our site"
+msgstr ""
+"もそご質問がある場合は、plugin@bestwebsoft.comにご連絡頂くか、我々のサイトの"
+"コンタクトフォームからお願いします。"
 
-#: captcha.php:130
-#: captcha.php:296
+#: captcha.php:130 captcha.php:296
 msgid "Captcha Options"
 msgstr "Captchaオプション"
 
@@ -122,17 +119,21 @@ msgstr "Captchaオプション"
 msgid "Captcha"
 msgstr "Captcha"
 
-#: captcha.php:231
+#: captcha.php:233
 msgid "FAQ"
 msgstr "FAQ"
 
-#: captcha.php:232
+#: captcha.php:234
 msgid "Support"
 msgstr "サポート"
 
 #: captcha.php:278
-msgid "Please select one point in the blocks Arithmetic actions and Difficulty for CAPTCHA"
-msgstr "計算実行によるブロックから１つを選択し、そして、CAPTCHAの難易度を選択して下さい。"
+msgid ""
+"Please select one point in the blocks Arithmetic actions and Difficulty for "
+"CAPTCHA"
+msgstr ""
+"計算実行によるブロックから１つを選択し、そして、CAPTCHAの難易度を選択して下さ"
+"い。"
 
 #: captcha.php:282
 msgid "Options saved."
@@ -142,15 +143,11 @@ msgstr "オプション保存"
 msgid "Enable CAPTCHA on the:"
 msgstr "CAPTCHAを有効:"
 
-#: captcha.php:311
-#: captcha.php:314
-#: captcha.php:318
+#: captcha.php:311 captcha.php:314 captcha.php:318
 msgid "Contact form"
 msgstr "コンタクトフォーム"
 
-#: captcha.php:311
-#: captcha.php:314
-#: captcha.php:318
+#: captcha.php:311 captcha.php:314 captcha.php:318
 msgid "(power by bestwebsoft.com)"
 msgstr "(powered by bestwebsoft.com)"
 
@@ -163,8 +160,14 @@ msgid "Download contact form"
 msgstr "コンタクトフォームのダウンロード"
 
 #: captcha.php:320
-msgid "If you would like to customize this plugin for a custom form, please contact us via <a href=\"Mailto:plugin@bestwebsoft.com\">plugin@bestwebsoft.com</a> or fill in our contact form on our site"
-msgstr "カスタムフォーム用にこのプラグインを変更する場合は、 <a href=\"Mailto:plugin@bestwebsoft.com\">plugin@bestwebsoft.com</a>にご連絡頂くか、我々のサイトのコンタクフォームよりご連絡下さい。"
+msgid ""
+"If you would like to customize this plugin for a custom form, please contact "
+"us via <a href=\"Mailto:plugin@bestwebsoft.com\">plugin@bestwebsoft.com</a> "
+"or fill in our contact form on our site"
+msgstr ""
+"カスタムフォーム用にこのプラグインを変更する場合は、 <a href=\"Mailto:"
+"plugin@bestwebsoft.com\">plugin@bestwebsoft.com</a>にご連絡頂くか、我々のサイ"
+"トのコンタクフォームよりご連絡下さい。"
 
 #: captcha.php:324
 msgid "Label for CAPTCHA in form"
@@ -182,183 +185,141 @@ msgstr "CAPTCHAの難易度"
 msgid "Save Changes"
 msgstr "変更保存"
 
-#: captcha.php:391
-#: captcha.php:397
-#: captcha.php:545
-#: captcha.php:552
-#: captcha.php:562
-#: captcha.php:569
+#: captcha.php:391 captcha.php:397 captcha.php:545 captcha.php:552
+#: captcha.php:562 captcha.php:569
 msgid "ERROR"
 msgstr "エラー"
 
-#: captcha.php:391
-#: captcha.php:413
-#: captcha.php:512
-#: captcha.php:545
-#: captcha.php:562
-#: captcha.php:585
+#: captcha.php:391 captcha.php:413 captcha.php:512 captcha.php:545
+#: captcha.php:562 captcha.php:585
 msgid "Please complete the CAPTCHA."
 msgstr "CAPTCHAを入力して下さい。"
 
-#: captcha.php:397
-#: captcha.php:424
-#: captcha.php:552
-#: captcha.php:569
+#: captcha.php:397 captcha.php:424 captcha.php:552 captcha.php:569
 msgid "That CAPTCHA was incorrect."
 msgstr "CAPTCHAが正しくありません。"
 
-#: captcha.php:518
-#: captcha.php:592
-msgid "Error: You entered in the wrong CAPTCHA phrase. Press your browser's back button and try again."
-msgstr "エラー: 間違ったCAPTCHAを入力しています。ブラウザーの戻るを押し、再度試して下さい。"
+#: captcha.php:518 captcha.php:592
+msgid ""
+"Error: You entered in the wrong CAPTCHA phrase. Press your browser's back "
+"button and try again."
+msgstr ""
+"エラー: 間違ったCAPTCHAを入力しています。ブラウザーの戻るを押し、再度試して下"
+"さい。"
 
-#: captcha.php:607
-#: captcha.php:841
+#: captcha.php:607 captcha.php:841
 msgid "zero"
 msgstr ""
 
-#: captcha.php:608
-#: captcha.php:842
-#: captcha.php:1032
+#: captcha.php:608 captcha.php:842 captcha.php:1032
 msgid "one"
 msgstr "一"
 
-#: captcha.php:609
-#: captcha.php:843
+#: captcha.php:609 captcha.php:843
 msgid "two"
 msgstr "二"
 
-#: captcha.php:610
-#: captcha.php:844
+#: captcha.php:610 captcha.php:844
 msgid "three"
 msgstr "三"
 
-#: captcha.php:611
-#: captcha.php:845
+#: captcha.php:611 captcha.php:845
 msgid "four"
 msgstr "四"
 
-#: captcha.php:612
-#: captcha.php:846
+#: captcha.php:612 captcha.php:846
 msgid "five"
 msgstr "五"
 
-#: captcha.php:613
-#: captcha.php:847
-#: captcha.php:1032
+#: captcha.php:613 captcha.php:847 captcha.php:1032
 msgid "six"
 msgstr "六"
 
-#: captcha.php:614
-#: captcha.php:848
-#: captcha.php:1020
-#: captcha.php:1026
+#: captcha.php:614 captcha.php:848 captcha.php:1020 captcha.php:1026
 msgid "seven"
 msgstr "七"
 
-#: captcha.php:615
-#: captcha.php:849
-#: captcha.php:1023
+#: captcha.php:615 captcha.php:849 captcha.php:1023
 msgid "eight"
 msgstr "八"
 
-#: captcha.php:616
-#: captcha.php:850
+#: captcha.php:616 captcha.php:850
 msgid "nine"
 msgstr "九"
 
-#: captcha.php:619
-#: captcha.php:853
+#: captcha.php:619 captcha.php:853
 msgid "eleven"
 msgstr "十一"
 
-#: captcha.php:620
-#: captcha.php:854
+#: captcha.php:620 captcha.php:854
 msgid "twelve"
 msgstr "十二"
 
-#: captcha.php:621
-#: captcha.php:855
+#: captcha.php:621 captcha.php:855
 msgid "thirteen"
 msgstr "十三"
 
-#: captcha.php:622
-#: captcha.php:856
+#: captcha.php:622 captcha.php:856
 msgid "fourteen"
 msgstr "十四"
 
-#: captcha.php:623
-#: captcha.php:857
+#: captcha.php:623 captcha.php:857
 msgid "fifteen"
 msgstr "十五"
 
-#: captcha.php:624
-#: captcha.php:858
+#: captcha.php:624 captcha.php:858
 msgid "sixteen"
 msgstr "十六"
 
-#: captcha.php:625
-#: captcha.php:859
+#: captcha.php:625 captcha.php:859
 msgid "seventeen"
 msgstr "十七"
 
-#: captcha.php:626
-#: captcha.php:860
+#: captcha.php:626 captcha.php:860
 msgid "eighteen"
 msgstr "十八"
 
-#: captcha.php:627
-#: captcha.php:861
+#: captcha.php:627 captcha.php:861
 msgid "nineteen"
 msgstr "十九"
 
-#: captcha.php:630
-#: captcha.php:864
+#: captcha.php:630 captcha.php:864
 msgid "ten"
 msgstr "十"
 
-#: captcha.php:631
-#: captcha.php:865
+#: captcha.php:631 captcha.php:865
 msgid "twenty"
 msgstr "二十"
 
-#: captcha.php:632
-#: captcha.php:866
+#: captcha.php:632 captcha.php:866
 msgid "thirty"
 msgstr "三十"
 
-#: captcha.php:633
-#: captcha.php:867
+#: captcha.php:633 captcha.php:867
 msgid "forty"
 msgstr "四十"
 
-#: captcha.php:634
-#: captcha.php:868
+#: captcha.php:634 captcha.php:868
 msgid "fifty"
 msgstr "五十"
 
-#: captcha.php:635
-#: captcha.php:869
+#: captcha.php:635 captcha.php:869
 msgid "sixty"
 msgstr "六十"
 
-#: captcha.php:636
-#: captcha.php:870
+#: captcha.php:636 captcha.php:870
 msgid "seventy"
 msgstr "七十"
 
-#: captcha.php:637
-#: captcha.php:871
+#: captcha.php:637 captcha.php:871
 msgid "eighty"
 msgstr "八十"
 
-#: captcha.php:638
-#: captcha.php:872
+#: captcha.php:638 captcha.php:872
 msgid "ninety"
 msgstr "九十"
 
-#: captcha.php:725
-#: captcha.php:959
+#: captcha.php:725 captcha.php:959
 msgid "and"
 msgstr "と"
 
@@ -372,8 +333,9 @@ msgstr "復号化パスワードが設定されていません。"
 
 #~ msgid "null"
 #~ msgstr "零"
+
 #~ msgid "BWS Plugins"
 #~ msgstr "BWS Plugins"
+
 #~ msgid "Install Now"
 #~ msgstr "Installﾃｩr nu"
-

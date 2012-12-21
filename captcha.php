@@ -4,7 +4,7 @@ Plugin Name: Captcha
 Plugin URI:  http://bestwebsoft.com/plugin/
 Description: Plugin Captcha intended to prove that the visitor is a human being and not a spam robot. Plugin asks the visitor to answer a math question.
 Author: BestWebSoft
-Version: 2.34
+Version: 2.4
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -193,7 +193,8 @@ if( 1 == $cptch_options['cptch_login_form'] ) {
 if( 1 == $cptch_options['cptch_comments_form'] ) {
 	global $wp_version;
 	if( version_compare($wp_version,'3','>=') ) { // wp 3.0 +
-		add_action( 'comment_form_after_fields', 'cptch_comment_form_wp3', 1 );
+		//add_action( 'comment_form_after_fields', 'cptch_comment_form_wp3', 1 );
+		add_filter( 'comment_form_defaults', '' );
 		add_action( 'comment_form_logged_in_after', 'cptch_comment_form_wp3', 1 );
 	}	
 	// for WP before WP 3.0
@@ -353,7 +354,7 @@ function cptch_settings_page() {
 // this function adds captcha to the login form
 function cptch_login_form() {
 	if( session_id() == "" )
-		session_start();
+		@session_start();
 	global $cptch_options;
 	if( isset( $_SESSION["cptch_login"] ) ) 
 		unset( $_SESSION["cptch_login"]);
@@ -377,7 +378,7 @@ function cptch_login_form() {
 // this function checks captcha posted with a login
 function cptch_login_post($errors) {
 	global $str_key;
-	$str_key = "123";
+	$str_key = "bws2012";
 	// Delete errors, if they set
 	if( isset( $_SESSION['cptch_error'] ) )
 		unset( $_SESSION['cptch_error'] );
@@ -402,9 +403,9 @@ function cptch_login_post($errors) {
 function cptch_login_check($url) {
 	global $str_key;
 	if( session_id() == "" )
-		session_start();
+		@session_start();
 
-	$str_key = "123";
+	$str_key = "bws2012";
 	// Add error if captcha is empty
  if( isset( $_SESSION["cptch_login"] ) && $_SESSION["cptch_login"] === true )
 		return $url;		// captcha was matched						
@@ -484,7 +485,7 @@ function cptch_comment_post($comment) {
 	}
     
 	global $str_key;
-	$str_key = "123";
+	$str_key = "bws2012";
 	// added for compatibility with WP Wall plugin
 	// this does NOT add CAPTCHA to WP Wall plugin,
 	// it just prevents the "Error: You did not enter a Captcha phrase." when submitting a WP Wall comment
@@ -537,7 +538,7 @@ function cptch_register_form() {
 // this function checks captcha posted with registration
 function cptch_register_post($login,$email,$errors) {
 	global $str_key;
-	$str_key = "123";
+	$str_key = "bws2012";
 
 	// If captcha is blank - add error
 	if ( isset( $_REQUEST['cptch_number'] ) && "" ==  $_REQUEST['cptch_number'] ) {
@@ -555,7 +556,7 @@ function cptch_register_post($login,$email,$errors) {
 
 function cptch_register_validate($results) {
 	global $str_key;
-	$str_key = "123";
+	$str_key = "bws2012";
 	// If captcha is blank - add error
 	if ( isset( $_REQUEST['cptch_number'] ) && "" ==  $_REQUEST['cptch_number'] ) {
 		$results['errors']->add('captcha_blank', '<strong>'.__('ERROR', 'captcha').'</strong>: '.__('Please complete the CAPTCHA.', 'captcha'));
@@ -573,7 +574,7 @@ function cptch_register_validate($results) {
 // this function checks the captcha posted with lostpassword form
 function cptch_lostpassword_post() {
 	global $str_key;
-	$str_key = "123";
+	$str_key = "bws2012";
 
 	// If field 'user login' is empty - return
 	if( isset( $_REQUEST['user_login'] ) && "" == $_REQUEST['user_login'] )
@@ -599,7 +600,7 @@ function cptch_display_captcha()
 
 	// Key for encoding
 	global $str_key;
-	$str_key = "123";
+	$str_key = "bws2012";
 	
 	// In letters presentation of numbers 0-9
 	$number_string = array(); 
@@ -691,7 +692,7 @@ function cptch_display_captcha()
 	$str_math_expretion = "";
 	// First part of mathematical expression
 	if( 0 == $rand_input )
-		$str_math_expretion .= "<input type=\"text\" name=\"cptch_number\" value=\"\" maxlength=\"2\" size=\"2\" style=\"width:20px;margin-bottom:0;display:inline;font-size: 12px;width: 30px;\" />";
+		$str_math_expretion .= "<input type=\"text\" autocomplete=\"off\" name=\"cptch_number\" value=\"\" maxlength=\"2\" size=\"2\" style=\"width:20px;margin-bottom:0;display:inline;font-size: 12px;width: 30px;\" />";
 	else if ( 0 == $rand_number_string || 0 == $cptch_options["cptch_difficulty_number"] )
 		$str_math_expretion .= $number_string[$array_math_expretion[0]];
 	else
@@ -702,7 +703,7 @@ function cptch_display_captcha()
 	
 	// Second part of mathematical expression
 	if( 1 == $rand_input )
-		$str_math_expretion .= " <input type=\"text\" name=\"cptch_number\" value=\"\" maxlength=\"2\" size=\"2\" style=\"width:20px;margin-bottom:0;display:inline;font-size: 12px;width: 30px;\" />";
+		$str_math_expretion .= " <input type=\"text\" autocomplete=\"off\" name=\"cptch_number\" value=\"\" maxlength=\"2\" size=\"2\" style=\"width:20px;margin-bottom:0;display:inline;font-size: 12px;width: 30px;\" />";
 	else if ( 1 == $rand_number_string || 0 == $cptch_options["cptch_difficulty_number"] )
 		$str_math_expretion .= " ".$number_string[$array_math_expretion[1]];
 	else
@@ -713,7 +714,7 @@ function cptch_display_captcha()
 	
 	// Add result of mathematical expression
 	if( 2 == $rand_input ) {
-		$str_math_expretion .= " <input type=\"text\" name=\"cptch_number\" value=\"\" maxlength=\"2\" size=\"2\" style=\"width:20px;margin-bottom:0;display:inline;font-size: 12px;width: 30px;\" />";
+		$str_math_expretion .= " <input type=\"text\" autocomplete=\"off\" name=\"cptch_number\" value=\"\" maxlength=\"2\" size=\"2\" style=\"width:20px;margin-bottom:0;display:inline;font-size: 12px;width: 30px;\" />";
 	} else if ( 2 == $rand_number_string || 0 == $cptch_options["cptch_difficulty_number"] ) {
 		if( $array_math_expretion[2] < 10 )
 			$str_math_expretion .= " ".$number_string[$array_math_expretion[2]];
@@ -731,7 +732,7 @@ function cptch_display_captcha()
 	}
 	// Add hidden field with encoding result
 ?>
-	<input type="hidden" name="cptch_result" value="<?php echo $str = encode( $array_math_expretion[$rand_input], $str_key ); ?>" /><input type="hidden" value="Version: 2.26" />
+	<input type="hidden" name="cptch_result" value="<?php echo $str = encode( $array_math_expretion[$rand_input], $str_key ); ?>" /><input type="hidden" value="Version: 2.4" />
 	<?php echo $str_math_expretion; ?>
 <?php
 }
@@ -742,7 +743,7 @@ function encode( $String, $Password )
 	// Check if key for encoding is empty
 	if ( ! $Password ) die ( __( "The password of encryption is not set", 'captcha' ) );
 
-	$Salt		= 'BGuxLWQtKweKEMV4';
+	$Salt		= '5tOYgjaWC2VtdEWQ';
 	$String = substr( pack( "H*", sha1( $String ) ), 0, 1 ).$String;
 	$StrLen = strlen( $String );
 	$Seq		= $Password;
@@ -761,7 +762,7 @@ function decode( $String, $Key )
 	// Check if key for encoding is empty
 	if ( ! $Key ) die ( __( "The password of decoding is not set", 'captcha' ) );
 
-	$Salt		=	'BGuxLWQtKweKEMV4';
+	$Salt		=	'5tOYgjaWC2VtdEWQ';
 	$StrLen = strlen( $String );
 	$Seq		= $Key;
 	$Gamma	= '';
@@ -806,7 +807,7 @@ function cptch_custom_form($error_message) {
 function cptch_check_custom_form()
 {
 	global $str_key;
-	$str_key = "123";
+	$str_key = "bws2012";
 	if( isset( $_REQUEST['cntctfrm_contact_action'] ) )
 	{
 		// If captcha doesn't entered
@@ -832,7 +833,7 @@ function cptch_display_captcha_custom()
 
 	// Key for encoding
 	global $str_key;
-	$str_key = "123";
+	$str_key = "bws2012";
 	$content = "";
 	
 	// In letters presentation of numbers 0-9
@@ -925,7 +926,7 @@ function cptch_display_captcha_custom()
 	$str_math_expretion = "";
 	// First part of mathematical expression
 	if( 0 == $rand_input )
-		$str_math_expretion .= "<input type=\"text\" name=\"cptch_number\" value=\"\" maxlength=\"1\" size=\"1\" style=\"width:20px;margin-bottom:0;display:inline;font-size: 12px;width: 30px;\" />";
+		$str_math_expretion .= "<input type=\"text\" autocomplete=\"off\" name=\"cptch_number\" value=\"\" maxlength=\"1\" size=\"1\" style=\"width:20px;margin-bottom:0;display:inline;font-size: 12px;width: 30px;\" />";
 	else if ( 0 == $rand_number_string || 0 == $cptch_options["cptch_difficulty_number"] )
 		$str_math_expretion .= $number_string[$array_math_expretion[0]];
 	else
@@ -936,7 +937,7 @@ function cptch_display_captcha_custom()
 	
 	// Second part of mathematical expression
 	if( 1 == $rand_input )
-		$str_math_expretion .= " <input type=\"text\" name=\"cptch_number\" value=\"\" maxlength=\"1\" size=\"1\" style=\"width:20px;margin-bottom:0;display:inline;font-size: 12px;width: 30px;\" />";
+		$str_math_expretion .= " <input type=\"text\" autocomplete=\"off\" name=\"cptch_number\" value=\"\" maxlength=\"1\" size=\"1\" style=\"width:20px;margin-bottom:0;display:inline;font-size: 12px;width: 30px;\" />";
 	else if ( 1 == $rand_number_string || 0 == $cptch_options["cptch_difficulty_number"] )
 		$str_math_expretion .= " ". $number_string[$array_math_expretion[1]];
 	else
@@ -947,7 +948,7 @@ function cptch_display_captcha_custom()
 	
 	// Add result of mathematical expression
 	if( 2 == $rand_input ) {
-		$str_math_expretion .= " <input type=\"text\" name=\"cptch_number\" value=\"\" maxlength=\"2\" size=\"1\" style=\"width:20px;margin-bottom:0;display:inline;font-size: 12px;width: 30px;\" />";
+		$str_math_expretion .= " <input type=\"text\" autocomplete=\"off\" name=\"cptch_number\" value=\"\" maxlength=\"2\" size=\"1\" style=\"width:20px;margin-bottom:0;display:inline;font-size: 12px;width: 30px;\" />";
 	} else if ( 2 == $rand_number_string || 0 == $cptch_options["cptch_difficulty_number"] ) {
 		if( $array_math_expretion[2] < 10 )
 			$str_math_expretion .= " ". $number_string[$array_math_expretion[2]];
@@ -964,7 +965,7 @@ function cptch_display_captcha_custom()
 		$str_math_expretion .= $array_math_expretion[2];
 	}
 	// Add hidden field with encoding result
-	$content .= '<input type="hidden" name="cptch_result" value="'.$str = encode( $array_math_expretion[$rand_input], $str_key ).'" /><input type="hidden" value="Version: 2.26" />';
+	$content .= '<input type="hidden" name="cptch_result" value="'.$str = encode( $array_math_expretion[$rand_input], $str_key ).'" /><input type="hidden" value="Version: 2.4" />';
 	$content .= $str_math_expretion; 
 	return $content;
 }
