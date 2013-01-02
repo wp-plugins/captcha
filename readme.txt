@@ -4,7 +4,7 @@ Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=10
 Tags: captcha, math captcha, text captcha, spam, antispam, login, registration, comment, lost password, capcha, catcha, captha
 Requires at least: 2.9
 Tested up to: 3.5
-Stable tag: 2.4
+Stable tag: 2.4.1
 
 This plugin allows you to implement super security captcha form into web forms.
 
@@ -134,6 +134,9 @@ It is possible to enter this line in variable and display this variable in requi
 5. Login form with Captcha.
 
 == Changelog ==
+
+= V2.4.1 - 02.01.2012 =
+* Bugfix : call_user_func_array() bug was fixed. 
 
 = V2.4 - 21.12.2012 =
 * NEW : Romanian and Serbian and Slovak language files are added to the plugin.
@@ -266,6 +269,9 @@ It is possible to enter this line in variable and display this variable in requi
 * Select functionality of mathematical actions and level of their difficulty are implemented.
 
 == Upgrade Notice ==
+
+= V2.4.1 =
+call_user_func_array() bug was fixed. 
 
 = V2.4 =
 Romanian and Serbian and Slovak language files are added to the plugin. We updated the coding logic of Captcha. We updated all functionality for wordpress 3.5.

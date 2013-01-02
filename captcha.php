@@ -4,7 +4,7 @@ Plugin Name: Captcha
 Plugin URI:  http://bestwebsoft.com/plugin/
 Description: Plugin Captcha intended to prove that the visitor is a human being and not a spam robot. Plugin asks the visitor to answer a math question.
 Author: BestWebSoft
-Version: 2.4
+Version: 2.4.1
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -193,9 +193,7 @@ if( 1 == $cptch_options['cptch_login_form'] ) {
 if( 1 == $cptch_options['cptch_comments_form'] ) {
 	global $wp_version;
 	if( version_compare($wp_version,'3','>=') ) { // wp 3.0 +
-		//add_action( 'comment_form_after_fields', 'cptch_comment_form_wp3', 1 );
-		add_filter( 'comment_form_defaults', '' );
-		add_action( 'comment_form_logged_in_after', 'cptch_comment_form_wp3', 1 );
+		add_filter( 'comment_form_defaults', 'cptch_comment_form_default_wp3', 1 );
 	}	
 	// for WP before WP 3.0
 	add_action( 'comment_form', 'cptch_comment_form' );
@@ -454,6 +452,23 @@ function cptch_comment_form() {
 } // end function cptch_comment_form
 
 // this function adds captcha to the comment form
+function cptch_comment_form_default_wp3( $args ){
+	global $cptch_options;
+
+	// skip captcha if user is logged in and the settings allow
+	if ( is_user_logged_in() && 1 == $cptch_options['cptch_hide_register'] ) {
+		return true;
+	}
+
+	// captcha html - comment form
+	$args['comment_notes_after'] .= cptch_custom_form();
+
+	remove_action( 'comment_form', 'cptch_comment_form' );
+
+	return $args;
+} // end function cptch_comment_form_default_wp3
+
+// this function adds captcha to the comment form
 function cptch_comment_form_wp3() {
 	global $cptch_options;
 
@@ -473,7 +488,7 @@ function cptch_comment_form_wp3() {
 	remove_action( 'comment_form', 'cptch_comment_form' );
 
 	return true;
-} // end function cptch_comment_form
+} // end function cptch_comment_form_wp3
 
 
 // this function checks captcha posted with the comment

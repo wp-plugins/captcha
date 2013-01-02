@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: captcha\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-12-21 12:30+0200\n"
-"PO-Revision-Date: 2012-12-21 12:30+0200\n"
+"POT-Creation-Date: 2013-01-02 13:36+0200\n"
+"PO-Revision-Date: 2013-01-02 13:36+0200\n"
 "Last-Translator: Cipi Bad <cipibad@gmail.com>\n"
 "Language-Team: Ciprian <cipibad@gmail.com>\n"
 "Language: ro_RO\n"
@@ -76,7 +76,7 @@ msgstr "Modul activat"
 msgid "Read more"
 msgstr "Citeste mai mult"
 
-#: captcha.php:102 captcha.php:223 captcha.php:232
+#: captcha.php:102 captcha.php:221 captcha.php:230
 msgid "Settings"
 msgstr "Setari"
 
@@ -109,7 +109,7 @@ msgstr ""
 "Daca aveti intrebari va rugam sa ne contactati la adresa plugin@bestwebsoft."
 "com sau sa completati formularul de contact de pe site-ul nostru"
 
-#: captcha.php:130 captcha.php:296
+#: captcha.php:130 captcha.php:294
 msgid "Captcha Options"
 msgstr "Optiuni CAPTCHA"
 
@@ -117,15 +117,15 @@ msgstr "Optiuni CAPTCHA"
 msgid "Captcha"
 msgstr "CAPTCHA"
 
-#: captcha.php:233
+#: captcha.php:231
 msgid "FAQ"
 msgstr "Intrebari frecvente (FAQ)"
 
-#: captcha.php:234
+#: captcha.php:232
 msgid "Support"
 msgstr "Suport"
 
-#: captcha.php:278
+#: captcha.php:276
 msgid ""
 "Please select one point in the blocks Arithmetic actions and Difficulty for "
 "CAPTCHA"
@@ -133,31 +133,31 @@ msgstr ""
 "Va rugam selectati un punct in blocul actiunilor aritmetice si dificultatea "
 "pentru CAPTCHA"
 
-#: captcha.php:282
+#: captcha.php:280
 msgid "Options saved."
 msgstr "Optiuni salvate."
 
-#: captcha.php:302
+#: captcha.php:300
 msgid "Enable CAPTCHA on the:"
 msgstr "Activeaza CAPTCHA la:"
 
-#: captcha.php:311 captcha.php:314 captcha.php:318
+#: captcha.php:309 captcha.php:312 captcha.php:316
 msgid "Contact form"
 msgstr "Formular de contact"
 
-#: captcha.php:311 captcha.php:314 captcha.php:318
+#: captcha.php:309 captcha.php:312 captcha.php:316
 msgid "(power by bestwebsoft.com)"
 msgstr "(propulsat de bestwebsoft.com)"
 
-#: captcha.php:314
+#: captcha.php:312
 msgid "Activate contact form"
 msgstr "Activeaza formularul de contact"
 
-#: captcha.php:318
+#: captcha.php:316
 msgid "Download contact form"
 msgstr "Descarca formularul de contact"
 
-#: captcha.php:320
+#: captcha.php:318
 msgid ""
 "If you would like to customize this plugin for a custom form, please contact "
 "us via <a href=\"Mailto:plugin@bestwebsoft.com\">plugin@bestwebsoft.com</a> "
@@ -168,37 +168,37 @@ msgstr ""
 "\">plugin@bestwebsoft.com</a> sau sa completati formularul de contact de pe "
 "site-ul nostru "
 
-#: captcha.php:324
+#: captcha.php:322
 msgid "Label for CAPTCHA in form"
 msgstr "Eticheta pentru CAPTCHA in formular"
 
-#: captcha.php:328
+#: captcha.php:326
 msgid "Arithmetic actions for CAPTCHA"
 msgstr "Operatii aritmetice pentru CAPTCHA"
 
-#: captcha.php:337
+#: captcha.php:335
 msgid "Difficulty for CAPTCHA"
 msgstr "Dificultate pentru CAPTCHA"
 
-#: captcha.php:347
+#: captcha.php:345
 msgid "Save Changes"
 msgstr "Salveaza schimbarile"
 
-#: captcha.php:391 captcha.php:397 captcha.php:545 captcha.php:552
-#: captcha.php:562 captcha.php:569
+#: captcha.php:389 captcha.php:395 captcha.php:560 captcha.php:567
+#: captcha.php:577 captcha.php:584
 msgid "ERROR"
 msgstr "EROARE"
 
-#: captcha.php:391 captcha.php:413 captcha.php:512 captcha.php:545
-#: captcha.php:562 captcha.php:585
+#: captcha.php:389 captcha.php:411 captcha.php:527 captcha.php:560
+#: captcha.php:577 captcha.php:600
 msgid "Please complete the CAPTCHA."
 msgstr "Va rugam sa completati CAPTCHA."
 
-#: captcha.php:397 captcha.php:424 captcha.php:552 captcha.php:569
+#: captcha.php:395 captcha.php:422 captcha.php:567 captcha.php:584
 msgid "That CAPTCHA was incorrect."
 msgstr "CAPTCHA nu a fost correct"
 
-#: captcha.php:518 captcha.php:592
+#: captcha.php:533 captcha.php:607
 msgid ""
 "Error: You entered in the wrong CAPTCHA phrase. Press your browser's back "
 "button and try again."
@@ -206,127 +206,127 @@ msgstr ""
 "Eroare: Ati introdus CAPTCHA gresit. Apasati butonul \"Inapoi\" al "
 "browserului si incercati din nou."
 
-#: captcha.php:607 captcha.php:841
+#: captcha.php:622 captcha.php:856
 msgid "zero"
 msgstr "zero"
 
-#: captcha.php:608 captcha.php:842 captcha.php:1032
+#: captcha.php:623 captcha.php:857 captcha.php:1047
 msgid "one"
 msgstr "unu"
 
-#: captcha.php:609 captcha.php:843
+#: captcha.php:624 captcha.php:858
 msgid "two"
 msgstr "doi"
 
-#: captcha.php:610 captcha.php:844
+#: captcha.php:625 captcha.php:859
 msgid "three"
 msgstr "trei"
 
-#: captcha.php:611 captcha.php:845
+#: captcha.php:626 captcha.php:860
 msgid "four"
 msgstr "patru"
 
-#: captcha.php:612 captcha.php:846
+#: captcha.php:627 captcha.php:861
 msgid "five"
 msgstr "cinci"
 
-#: captcha.php:613 captcha.php:847 captcha.php:1032
+#: captcha.php:628 captcha.php:862 captcha.php:1047
 msgid "six"
 msgstr "sase"
 
-#: captcha.php:614 captcha.php:848 captcha.php:1020 captcha.php:1026
+#: captcha.php:629 captcha.php:863 captcha.php:1035 captcha.php:1041
 msgid "seven"
 msgstr "sapte"
 
-#: captcha.php:615 captcha.php:849 captcha.php:1023
+#: captcha.php:630 captcha.php:864 captcha.php:1038
 msgid "eight"
 msgstr "opt"
 
-#: captcha.php:616 captcha.php:850
+#: captcha.php:631 captcha.php:865
 msgid "nine"
 msgstr "noua"
 
-#: captcha.php:619 captcha.php:853
+#: captcha.php:634 captcha.php:868
 msgid "eleven"
 msgstr "unsprezece"
 
-#: captcha.php:620 captcha.php:854
+#: captcha.php:635 captcha.php:869
 msgid "twelve"
 msgstr "doisprezece"
 
-#: captcha.php:621 captcha.php:855
+#: captcha.php:636 captcha.php:870
 msgid "thirteen"
 msgstr "treisprezece"
 
-#: captcha.php:622 captcha.php:856
+#: captcha.php:637 captcha.php:871
 msgid "fourteen"
 msgstr "paisprezece"
 
-#: captcha.php:623 captcha.php:857
+#: captcha.php:638 captcha.php:872
 msgid "fifteen"
 msgstr "cincisprezece"
 
-#: captcha.php:624 captcha.php:858
+#: captcha.php:639 captcha.php:873
 msgid "sixteen"
 msgstr "saisprezece"
 
-#: captcha.php:625 captcha.php:859
+#: captcha.php:640 captcha.php:874
 msgid "seventeen"
 msgstr "saptesprezece"
 
-#: captcha.php:626 captcha.php:860
+#: captcha.php:641 captcha.php:875
 msgid "eighteen"
 msgstr "optsprezece"
 
-#: captcha.php:627 captcha.php:861
+#: captcha.php:642 captcha.php:876
 msgid "nineteen"
 msgstr "nouasprezece"
 
-#: captcha.php:630 captcha.php:864
+#: captcha.php:645 captcha.php:879
 msgid "ten"
 msgstr "zece"
 
-#: captcha.php:631 captcha.php:865
+#: captcha.php:646 captcha.php:880
 msgid "twenty"
 msgstr "douazeci"
 
-#: captcha.php:632 captcha.php:866
+#: captcha.php:647 captcha.php:881
 msgid "thirty"
 msgstr "treizeci"
 
-#: captcha.php:633 captcha.php:867
+#: captcha.php:648 captcha.php:882
 msgid "forty"
 msgstr "patruzeci"
 
-#: captcha.php:634 captcha.php:868
+#: captcha.php:649 captcha.php:883
 msgid "fifty"
 msgstr "cincizeci"
 
-#: captcha.php:635 captcha.php:869
+#: captcha.php:650 captcha.php:884
 msgid "sixty"
 msgstr "saizeci"
 
-#: captcha.php:636 captcha.php:870
+#: captcha.php:651 captcha.php:885
 msgid "seventy"
 msgstr "saptezeci"
 
-#: captcha.php:637 captcha.php:871
+#: captcha.php:652 captcha.php:886
 msgid "eighty"
 msgstr "optzeci"
 
-#: captcha.php:638 captcha.php:872
+#: captcha.php:653 captcha.php:887
 msgid "ninety"
 msgstr "nouazeci"
 
-#: captcha.php:725 captcha.php:959
+#: captcha.php:740 captcha.php:974
 msgid "and"
 msgstr "si"
 
-#: captcha.php:744
+#: captcha.php:759
 msgid "The password of encryption is not set"
 msgstr "Parola pentru criptare nu e setata"
 
-#: captcha.php:763
+#: captcha.php:778
 msgid "The password of decoding is not set"
 msgstr "Parola pentru decodare nu e setata"
 
