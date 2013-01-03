@@ -457,11 +457,11 @@ function cptch_comment_form_default_wp3( $args ){
 
 	// skip captcha if user is logged in and the settings allow
 	if ( is_user_logged_in() && 1 == $cptch_options['cptch_hide_register'] ) {
-		return true;
+		return $args;
 	}
 
 	// captcha html - comment form
-	$args['comment_notes_after'] .= cptch_custom_form();
+	$args['comment_notes_after'] .= cptch_custom_form( "" );
 
 	remove_action( 'comment_form', 'cptch_comment_form' );
 
