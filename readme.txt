@@ -5,6 +5,8 @@ Tags: captcha, math captcha, text captcha, spam, antispam, login, registration, 
 Requires at least: 2.9
 Tested up to: 3.5
 Stable tag: 2.4.1
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 This plugin allows you to implement super security captcha form into web forms.
 
