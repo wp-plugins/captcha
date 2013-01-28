@@ -4,7 +4,7 @@ Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=10
 Tags: captcha, math captcha, text captcha, spam, antispam, login, registration, comment, lost password, capcha, catcha, captha
 Requires at least: 2.9
 Tested up to: 3.5
-Stable tag: 2.4.1
+Stable tag: 2.4.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -41,6 +41,7 @@ Captcha plugin allows you to protect your website from spam using math logic whi
 * Hungarian (hu_HU) (thanks to Bőm Tamás)
 * Japanese (ja) (thanks to Foken)
 * Italian (it_IT) (thanks to Gianluca Di Carlo)
+* Lithuanian (lt_LT) (thanks to <a href="mailto:arnas.metal@gmail.com">Arnas</a>)
 * Norwegian (nb_NO) (thanks to Tore Hjartland)
 * Polish (pl_PL) (thanks to Krzysztof Opuchlik)
 * Romanian (ro_RO) (thanks to Ciprian)
@@ -137,7 +138,11 @@ It is possible to enter this line in variable and display this variable in requi
 
 == Changelog ==
 
-= V2.4.1 - 02.01.2012 =
+= V2.4.2 - 28.01.2013 =
+* NEW : Lithuanian language file was added to the plugin.
+* Update : We updated all functionality for wordpress 3.5.1.
+
+= V2.4.1 - 02.01.2013 =
 * Bugfix : call_user_func_array() bug was fixed. 
 
 = V2.4 - 21.12.2012 =
@@ -271,6 +276,9 @@ It is possible to enter this line in variable and display this variable in requi
 * Select functionality of mathematical actions and level of their difficulty are implemented.
 
 == Upgrade Notice ==
+
+= V2.4.2 =
+Lithuanian language file was added to the plugin. We updated all functionality for wordpress 3.5.1.
 
 = V2.4.1 =
 call_user_func_array() bug was fixed. 
