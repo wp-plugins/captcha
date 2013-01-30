@@ -3,8 +3,8 @@ Contributors: bestwebsoft
 Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=10&product_id=13
 Tags: captcha, math captcha, text captcha, spam, antispam, login, registration, comment, lost password, capcha, catcha, captha
 Requires at least: 2.9
-Tested up to: 3.5
-Stable tag: 2.4.2
+Tested up to: 3.5.1
+Stable tag: 2.4.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -31,6 +31,7 @@ Captcha plugin allows you to protect your website from spam using math logic whi
 * Czech (cs_CZ) (thanks to Tomas Vesely)
 * Danish (da_DK) (thanks to Byrial Ole Jensed)
 * Dutch (nl_NL) (thanks to <a href="mailto:byrial@vip.cybercity.dk">Bart Duineveld</a>)
+* Estonian (et) (thanks to <a href="mailto:ahto2@moonsoftware.com">Ahto Tanner</a>)
 * Greek (el) (thanks to Aris, <a href="http://paraxeno.net">paraxeno.net</a>)
 * Farsi/Persian (fa_IR) (thanks to <a href="mailto:info[at]mpspace[dot]zio[dot]ir">Meysam Parvizi</a>, <a href="http://mpspace.zio.ir">mpspace.zio.ir</a>)
 * Finnish (fi) (thanks to Mikko Sederholm)
@@ -137,6 +138,9 @@ It is possible to enter this line in variable and display this variable in requi
 5. Login form with Captcha.
 
 == Changelog ==
+
+= V2.4.3 - 30.01.2013 =
+* NEW : Estonian language file was added to the plugin.
 
 = V2.4.2 - 28.01.2013 =
 * NEW : Lithuanian language file was added to the plugin.
@@ -277,6 +281,9 @@ It is possible to enter this line in variable and display this variable in requi
 
 == Upgrade Notice ==
 
+= V2.4.3 =
+Estonian language file was added to the plugin.
+
 = V2.4.2 =
 Lithuanian language file was added to the plugin. We updated all functionality for wordpress 3.5.1.
 
@@ -347,6 +354,7 @@ Polish language files are added to the plugin.
 Brazilian Portuguese and French language files are added to the plugin.
 
 = V2.14 =
+
 German language files are added to the plugin.
 
 = V2.13 =
