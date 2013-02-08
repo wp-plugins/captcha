@@ -4,7 +4,7 @@ Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=10
 Tags: captcha, math captcha, text captcha, spam, antispam, login, registration, comment, lost password, capcha, catcha, captha
 Requires at least: 2.9
 Tested up to: 3.5.1
-Stable tag: 2.4.4
+Stable tag: 3.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -138,6 +138,9 @@ It is possible to enter this line in variable and display this variable in requi
 5. Login form with Captcha.
 
 == Changelog ==
+
+= V3.0 - 08.01.2013 =
+* Bugfix : Display bug was fixed.
 
 = V2.4.4 - 31.01.2013 =
 * Bugfix : Bugs in admin menu were fixed.
@@ -283,6 +286,9 @@ It is possible to enter this line in variable and display this variable in requi
 * Select functionality of mathematical actions and level of their difficulty are implemented.
 
 == Upgrade Notice ==
+
+= V3.0 =
+Display bug was fixed.
 
 = V2.4.4 =
 Bugs in admin menu were fixed.
