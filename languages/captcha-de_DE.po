@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: captcha\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-04-18 13:23+0300\n"
-"PO-Revision-Date: 2013-04-18 13:23+0300\n"
+"POT-Creation-Date: 2013-05-07 09:51+0300\n"
+"PO-Revision-Date: 2013-05-07 09:51+0300\n"
 "Last-Translator: \n"
 "Language-Team: Thomas Hartung <thartung@adipositas-mm.de>\n"
 "MIME-Version: 1.0\n"
@@ -119,9 +119,8 @@ msgid "Install now from wordpress.org"
 msgstr "Installiere jetzt von wordpress.org"
 
 #: captcha.php:122
-#, fuzzy
-msgid "If you have any questions, please contact us via plugin@bestwebsoft.com or fill in the contact form on our website"
-msgstr "Wenn Sie Fragen haben, kontaktieren Sie uns bitte via plugin@bestwebsoft.com oder benutzen Sie das Kontakformular auf unserer Seite"
+msgid "If you have any questions, please contact us via"
+msgstr ""
 
 #: captcha.php:132
 #: captcha.php:296
@@ -178,7 +177,7 @@ msgstr "CONTACT FORM herunterladen"
 
 #: captcha.php:323
 #, fuzzy
-msgid "If you would like to customize this plugin for a custom form, please contact us via <a href=\"Mailto:plugin@bestwebsoft.com\">plugin@bestwebsoft.com</a> or fill in the contact form on our site"
+msgid "If you would like to customize this plugin for a custom form, please contact us via"
 msgstr "Wenn Sie dieses Plugin für ein benutzerdefiniertes Formular anpassen möchten, kontaktieren Sie uns bitte über <a href=\"Mailto:plugin@bestwebsoft.com\">plugin@bestwebsoft.com</a> oder benutzen Sie das Kontaktformular auf unserer Webseite"
 
 #: captcha.php:327
@@ -390,6 +389,13 @@ msgstr "Die Passwort-Entschlüsselung ist nicht gesetzt"
 msgid "Decryption password is not set"
 msgstr "Die Passwort-Entschlüsselung ist nicht gesetzt"
 
+#, fuzzy
+#~ msgid ""
+#~ "If you have any questions, please contact us via plugin@bestwebsoft.com "
+#~ "or fill in the contact form on our website"
+#~ msgstr ""
+#~ "Wenn Sie Fragen haben, kontaktieren Sie uns bitte via plugin@bestwebsoft."
+#~ "com oder benutzen Sie das Kontakformular auf unserer Seite"
 #~ msgid "Increase"
 #~ msgstr "Erhöhen"
 #~ msgid "Difficulty for CAPTCHA"

@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: captcha\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-04-18 13:23+0300\n"
-"PO-Revision-Date: 2013-04-18 13:24+0300\n"
+"POT-Creation-Date: 2013-05-07 09:51+0300\n"
+"PO-Revision-Date: 2013-05-07 09:51+0300\n"
 "Last-Translator: \n"
 "Language-Team: Thomas Hartung <thartung@adipositas-mm.de>\n"
 "MIME-Version: 1.0\n"
@@ -119,9 +119,8 @@ msgid "Install now from wordpress.org"
 msgstr "Instala ahora desde wordpress.org"
 
 #: captcha.php:122
-#, fuzzy
-msgid "If you have any questions, please contact us via plugin@bestwebsoft.com or fill in the contact form on our website"
-msgstr "Si tienes cualquier pregunta, por favor contacta con nosotros a través de plugin@bestwebsoft.com o rellena el formulario de contacto en nuestra web"
+msgid "If you have any questions, please contact us via"
+msgstr ""
 
 #: captcha.php:132
 #: captcha.php:296
@@ -178,7 +177,7 @@ msgstr "Descargar plugin Contact Form"
 
 #: captcha.php:323
 #, fuzzy
-msgid "If you would like to customize this plugin for a custom form, please contact us via <a href=\"Mailto:plugin@bestwebsoft.com\">plugin@bestwebsoft.com</a> or fill in the contact form on our site"
+msgid "If you would like to customize this plugin for a custom form, please contact us via"
 msgstr "Si quieres personalizar el plugin para un formulario personalizado, por favor contacta con nosotros a través de <a href=\"Mailto:plugin@bestwebsoft.com\">plugin@bestwebsoft.com</a> o rellena el formulario de contacto de nuestra web"
 
 #: captcha.php:327
@@ -390,6 +389,13 @@ msgstr "La contraseña de decodificación no está establecida"
 msgid "Decryption password is not set"
 msgstr "La contraseña de decodificación no está establecida"
 
+#, fuzzy
+#~ msgid ""
+#~ "If you have any questions, please contact us via plugin@bestwebsoft.com "
+#~ "or fill in the contact form on our website"
+#~ msgstr ""
+#~ "Si tienes cualquier pregunta, por favor contacta con nosotros a través de "
+#~ "plugin@bestwebsoft.com o rellena el formulario de contacto en nuestra web"
 #~ msgid "Increase"
 #~ msgstr "Incremento"
 #~ msgid "Difficulty for CAPTCHA"

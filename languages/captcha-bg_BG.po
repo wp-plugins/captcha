@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: captcha\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-04-18 13:23+0300\n"
-"PO-Revision-Date: 2013-04-18 13:23+0300\n"
+"POT-Creation-Date: 2013-05-07 09:50+0300\n"
+"PO-Revision-Date: 2013-05-07 09:50+0300\n"
 "Last-Translator: \n"
 "Language-Team: Nick <paharaman@gmail.com>\n"
 "MIME-Version: 1.0\n"
@@ -13,7 +13,7 @@ msgstr ""
 "X-Poedit-KeywordsList: __;_e\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SourceCharset: utf-8\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Poedit 1.5.5\n"
 "X-Poedit-SearchPath-0: .\n"
 
 #: captcha.php:31
@@ -21,7 +21,6 @@ msgid "Login form"
 msgstr "Форма за вход"
 
 #: captcha.php:32
-#, fuzzy
 msgid "Registration form"
 msgstr "Форма за регистрация"
 
@@ -30,7 +29,6 @@ msgid "Register form"
 msgstr "Форма за регистрация"
 
 #: captcha.php:33
-#, fuzzy
 msgid "Reset Password form"
 msgstr "Форма за възстановяване на парола"
 
@@ -63,14 +61,12 @@ msgid "Minus"
 msgstr "Минус (&minus;)"
 
 #: captcha.php:42
-#, fuzzy
 msgid "Multiplication (&times;)"
 msgstr "Умножение (&times;)"
 
 #: captcha.php:42
-#, fuzzy
 msgid "Multiply"
-msgstr "Умножение (&times;)"
+msgstr "Умножение"
 
 #: captcha.php:47
 msgid "Numbers"
@@ -118,13 +114,11 @@ msgid "Install now from wordpress.org"
 msgstr "инсталирай от wordpress.org"
 
 #: captcha.php:122
-#, fuzzy
-msgid "If you have any questions, please contact us via plugin@bestwebsoft.com or fill in the contact form on our website"
-msgstr "Ако имате въпроси свържете се с нас на plugin@bestwebsoft.com или попълнете контактната форма на сайта ни"
+msgid "If you have any questions, please contact us via"
+msgstr "Ако имате въпроси свържете се с нас на"
 
 #: captcha.php:132
 #: captcha.php:296
-#, fuzzy
 msgid "Captcha Settings"
 msgstr "Настройки CAPTCHA"
 
@@ -141,7 +135,6 @@ msgid "Support"
 msgstr "Поддръжка"
 
 #: captcha.php:279
-#, fuzzy
 msgid "Please select one item in the block Arithmetic and Complexity for CAPTCHA"
 msgstr "Моля, изберете точка от блоковете Аритметични действия и Сложност за за CAPTCHA"
 
@@ -150,7 +143,6 @@ msgid "Options saved."
 msgstr "Опции за съхранение"
 
 #: captcha.php:302
-#, fuzzy
 msgid "Enable CAPTCHA for:"
 msgstr "Активирай CAPTCHA за:"
 
@@ -163,7 +155,6 @@ msgstr "Контактна форма"
 #: captcha.php:316
 #: captcha.php:318
 #: captcha.php:321
-#, fuzzy
 msgid "(powered by bestwebsoft.com)"
 msgstr "(разработено от bestwebsoft.com)"
 
@@ -176,12 +167,10 @@ msgid "Download contact form"
 msgstr "Свали контактната форма"
 
 #: captcha.php:323
-#, fuzzy
-msgid "If you would like to customize this plugin for a custom form, please contact us via <a href=\"Mailto:plugin@bestwebsoft.com\">plugin@bestwebsoft.com</a> or fill in the contact form on our site"
-msgstr "Ако искате да надстроите плъгина, обърнете се към <a href=\"Mailto:plugin@bestwebsoft.com\">plugin@bestwebsoft.com</a> или попълнете контактната форма на сайта ни"
+msgid "If you would like to customize this plugin for a custom form, please contact us via"
+msgstr "Ако искате да надстроите плъгина, обърнете се към"
 
 #: captcha.php:327
-#, fuzzy
 msgid "Title for CAPTCHA in the form"
 msgstr "Заглавие на CAPTCHA във формата"
 
@@ -191,7 +180,7 @@ msgstr "Аритметични действия в CAPTCHA"
 
 #: captcha.php:340
 msgid "CAPTCHA complexity level"
-msgstr ""
+msgstr "CAPTCHA ниво на сложност"
 
 #: captcha.php:350
 msgid "Save Changes"
@@ -213,20 +202,19 @@ msgstr "ГРЕШКА"
 #: captcha.php:582
 #: captcha.php:605
 msgid "Please fill the form."
-msgstr ""
+msgstr "Моля, попълнете формата"
 
 #: captcha.php:400
 #: captcha.php:427
 #: captcha.php:572
 #: captcha.php:589
-#, fuzzy
 msgid "Please enter a valid CAPTCHA value."
 msgstr "Моля, попълнете CAPTCHA"
 
 #: captcha.php:538
 #: captcha.php:612
 msgid "Error: You have entered an incorrect CAPTCHA value. Click the BACK button on your browser, and try again."
-msgstr ""
+msgstr "Грешка: въвели сте неправилна CAPTCHA стойност. Кликнете бутон \"Назад\" в браузера си и опитайте отново"
 
 #: captcha.php:627
 #: captcha.php:861
@@ -379,15 +367,20 @@ msgid "and"
 msgstr "и"
 
 #: captcha.php:764
-#, fuzzy
 msgid "Encryption password is not set"
 msgstr "Паролата за декриптиране не е заложена"
 
 #: captcha.php:783
-#, fuzzy
 msgid "Decryption password is not set"
-msgstr "Паролата за декриптиране не е заложена"
+msgstr "Паролата за криптиране не е заложена"
 
+#, fuzzy
+#~ msgid ""
+#~ "If you have any questions, please contact us via plugin@bestwebsoft.com "
+#~ "or fill in the contact form on our website"
+#~ msgstr ""
+#~ "Ако имате въпроси свържете се с нас на plugin@bestwebsoft.com или "
+#~ "попълнете контактната форма на сайта ни"
 #~ msgid "Increase"
 #~ msgstr "Умножи"
 #~ msgid "Difficulty for CAPTCHA"

@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: captcha\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-04-18 13:26+0300\n"
-"PO-Revision-Date: 2013-04-18 13:26+0300\n"
+"POT-Creation-Date: 2013-05-07 09:54+0300\n"
+"PO-Revision-Date: 2013-05-07 09:54+0300\n"
 "Last-Translator: \n"
 "Language-Team: Radovan Georgijevic <radovan.georgijevic@gmail.com>\n"
 "MIME-Version: 1.0\n"
@@ -118,9 +118,8 @@ msgid "Install now from wordpress.org"
 msgstr "Instaliraj sa wordpress.org"
 
 #: captcha.php:122
-#, fuzzy
-msgid "If you have any questions, please contact us via plugin@bestwebsoft.com or fill in the contact form on our website"
-msgstr "Ako imate bilo kakva pitanja, kontaktirajte nas putem mejla plugin@bestwebsoft.com ili popunite kontakt formu na našem sajtu"
+msgid "If you have any questions, please contact us via"
+msgstr ""
 
 #: captcha.php:132
 #: captcha.php:296
@@ -177,7 +176,7 @@ msgstr "Preuzmi kontakt formu"
 
 #: captcha.php:323
 #, fuzzy
-msgid "If you would like to customize this plugin for a custom form, please contact us via <a href=\"Mailto:plugin@bestwebsoft.com\">plugin@bestwebsoft.com</a> or fill in the contact form on our site"
+msgid "If you would like to customize this plugin for a custom form, please contact us via"
 msgstr "Ukoliko želite ovaj dodatak da prilagodite svojim posebnim porebama, kontaktirajte nas putem maila <a href=\"Mailto:plugin@bestwebsoft.com\">plugin@bestwebsoft.com</a> ili popunite kontakt formu na našem sajtu"
 
 #: captcha.php:327
@@ -389,6 +388,13 @@ msgstr "Lozinka za dešifrovanje nije još podešena"
 msgid "Decryption password is not set"
 msgstr "Lozinka za dešifrovanje nije još podešena"
 
+#, fuzzy
+#~ msgid ""
+#~ "If you have any questions, please contact us via plugin@bestwebsoft.com "
+#~ "or fill in the contact form on our website"
+#~ msgstr ""
+#~ "Ako imate bilo kakva pitanja, kontaktirajte nas putem mejla "
+#~ "plugin@bestwebsoft.com ili popunite kontakt formu na našem sajtu"
 #~ msgid "Increase"
 #~ msgstr "Saberi"
 #~ msgid "Difficulty for CAPTCHA"

@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: captcha\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-04-18 13:24+0300\n"
-"PO-Revision-Date: 2013-04-18 13:24+0300\n"
+"POT-Creation-Date: 2013-05-07 09:51+0300\n"
+"PO-Revision-Date: 2013-05-07 09:52+0300\n"
 "Last-Translator: \n"
 "Language-Team: Luc Capronnier <lcapronnier@yahoo.com>\n"
 "MIME-Version: 1.0\n"
@@ -114,8 +114,8 @@ msgid "Install now from wordpress.org"
 msgstr "Installer maintenant depuis wordpress.org"
 
 #: captcha.php:122
-msgid "If you have any questions, please contact us via plugin@bestwebsoft.com or fill in the contact form on our website"
-msgstr "Si vous avez des questions, merci de nous contacter via <a href=\"Mailto:plugin@bestwebsoft.com\">plugin@bestwebsoft.com</a> ou utilisez le formulaire de contact sur notre siteweb."
+msgid "If you have any questions, please contact us via"
+msgstr ""
 
 #: captcha.php:132
 #: captcha.php:296
@@ -167,8 +167,8 @@ msgid "Download contact form"
 msgstr "Télécharger le formulaire de contact"
 
 #: captcha.php:323
-msgid "If you would like to customize this plugin for a custom form, please contact us via <a href=\"Mailto:plugin@bestwebsoft.com\">plugin@bestwebsoft.com</a> or fill in the contact form on our site"
-msgstr "Si vous souhaitez personnaliser le plugin, merci de nous contacter via <a href=\"Mailto:plugin@bestwebsoft.com\">plugin@bestwebsoft.com</a> ou utilisez le formulaire de contact sur notre siteweb."
+msgid "If you would like to customize this plugin for a custom form, please contact us via"
+msgstr "Si vous souhaitez personnaliser le plugin, merci de nous contacter via"
 
 #: captcha.php:327
 msgid "Title for CAPTCHA in the form"
@@ -374,6 +374,13 @@ msgstr "Le mot de passe de décryptage n'est pas défini"
 msgid "Decryption password is not set"
 msgstr "Le mot de passe de décryptage n'est pas défini"
 
+#~ msgid ""
+#~ "If you have any questions, please contact us via plugin@bestwebsoft.com "
+#~ "or fill in the contact form on our website"
+#~ msgstr ""
+#~ "Si vous avez des questions, merci de nous contacter via <a href=\"Mailto:"
+#~ "plugin@bestwebsoft.com\">plugin@bestwebsoft.com</a> ou utilisez le "
+#~ "formulaire de contact sur notre siteweb."
 #~ msgid "Increase"
 #~ msgstr "Augmenter"
 #~ msgid "Difficulty for CAPTCHA"

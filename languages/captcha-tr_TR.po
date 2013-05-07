@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: captcha\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-04-18 13:26+0300\n"
-"PO-Revision-Date: 2013-04-18 13:26+0300\n"
+"POT-Creation-Date: 2013-05-07 09:55+0300\n"
+"PO-Revision-Date: 2013-05-07 09:55+0300\n"
 "Last-Translator: \n"
 "Language-Team: Thomas Hartung <thartung@adipositas-mm.de>\n"
 "MIME-Version: 1.0\n"
@@ -119,9 +119,8 @@ msgid "Install now from wordpress.org"
 msgstr "Şimdi wordpress.org üzerinden yükle"
 
 #: captcha.php:122
-#, fuzzy
-msgid "If you have any questions, please contact us via plugin@bestwebsoft.com or fill in the contact form on our website"
-msgstr "Herhangi bir sorunuz varsa, plugin@bestwebsoft.com 'a e-posta atarak ya da sitemizdeki iletişim formu aracılığıyla bizimle iletişime geçebilirsiniz (ingilizce)"
+msgid "If you have any questions, please contact us via"
+msgstr ""
 
 #: captcha.php:132
 #: captcha.php:296
@@ -178,7 +177,7 @@ msgstr "İletişim formunu indir"
 
 #: captcha.php:323
 #, fuzzy
-msgid "If you would like to customize this plugin for a custom form, please contact us via <a href=\"Mailto:plugin@bestwebsoft.com\">plugin@bestwebsoft.com</a> or fill in the contact form on our site"
+msgid "If you would like to customize this plugin for a custom form, please contact us via"
 msgstr "Eğer eklentiyi, özelleştirilmiş bir form için kişiselleştirmek isterseniz, <a href=\"Mailto:plugin@bestwebsoft.com\">plugin@bestwebsoft.com</a> aracılığıyla ya da sitemizdeki iletişim formu aracılığıyla bizimle iletişime geçebilirsiniz."
 
 #: captcha.php:327
@@ -390,6 +389,14 @@ msgstr "Şifre çözme (decode) için parola ayarlanmadı"
 msgid "Decryption password is not set"
 msgstr "Şifre çözme (decode) için parola ayarlanmadı"
 
+#, fuzzy
+#~ msgid ""
+#~ "If you have any questions, please contact us via plugin@bestwebsoft.com "
+#~ "or fill in the contact form on our website"
+#~ msgstr ""
+#~ "Herhangi bir sorunuz varsa, plugin@bestwebsoft.com 'a e-posta atarak ya "
+#~ "da sitemizdeki iletişim formu aracılığıyla bizimle iletişime "
+#~ "geçebilirsiniz (ingilizce)"
 #~ msgid "Increase"
 #~ msgstr "Arttır"
 #~ msgid "Difficulty for CAPTCHA"

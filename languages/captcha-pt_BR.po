@@ -2,10 +2,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: captcha\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-04-18 13:25+0300\n"
-"PO-Revision-Date: 2013-04-18 13:25+0300\n"
+"POT-Creation-Date: 2013-05-07 09:53+0300\n"
+"PO-Revision-Date: 2013-05-07 09:53+0300\n"
 "Last-Translator: \n"
-"Language-Team: bestwebsoft.com <plugin@bestwebsoft.com>\n"
+"Language-Team: Breno Jacinto <brenojac@gmail.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -21,7 +21,6 @@ msgid "Login form"
 msgstr "Formulário de Login"
 
 #: captcha.php:32
-#, fuzzy
 msgid "Registration form"
 msgstr "Formulário de Registro"
 
@@ -30,7 +29,6 @@ msgid "Register form"
 msgstr "Formulário de Registro"
 
 #: captcha.php:33
-#, fuzzy
 msgid "Reset Password form"
 msgstr "Formulário de Perda de Senha"
 
@@ -63,12 +61,10 @@ msgid "Minus"
 msgstr "Menos"
 
 #: captcha.php:42
-#, fuzzy
 msgid "Multiplication (&times;)"
-msgstr "Multiplicar (&times;)"
+msgstr "Multiplicação (&times;)"
 
 #: captcha.php:42
-#, fuzzy
 msgid "Multiply"
 msgstr "Multiplicar (&times;)"
 
@@ -118,13 +114,11 @@ msgid "Install now from wordpress.org"
 msgstr "Instale agora do site do wordpress (wordpress.org)"
 
 #: captcha.php:122
-#, fuzzy
-msgid "If you have any questions, please contact us via plugin@bestwebsoft.com or fill in the contact form on our website"
-msgstr "Se você tem alguma pergunta, por favor contacte-nos via plugin@bestwebsoft.com ou preencha nosso formulário de contato no site."
+msgid "If you have any questions, please contact us via"
+msgstr ""
 
 #: captcha.php:132
 #: captcha.php:296
-#, fuzzy
 msgid "Captcha Settings"
 msgstr "Opções de Captcha"
 
@@ -141,7 +135,6 @@ msgid "Support"
 msgstr "Suporte"
 
 #: captcha.php:279
-#, fuzzy
 msgid "Please select one item in the block Arithmetic and Complexity for CAPTCHA"
 msgstr "Por favor, selecione um ponto na parte de ações Aritmética de blocos e Dificuldade para o CAPTCHA"
 
@@ -150,7 +143,6 @@ msgid "Options saved."
 msgstr "Opções salvas."
 
 #: captcha.php:302
-#, fuzzy
 msgid "Enable CAPTCHA for:"
 msgstr "Habilitar o CAPTCHA em:"
 
@@ -163,7 +155,6 @@ msgstr "Formulário de Contato"
 #: captcha.php:316
 #: captcha.php:318
 #: captcha.php:321
-#, fuzzy
 msgid "(powered by bestwebsoft.com)"
 msgstr "(powered by bestwebsoft.com)"
 
@@ -176,12 +167,10 @@ msgid "Download contact form"
 msgstr "Baixar formulário de contato"
 
 #: captcha.php:323
-#, fuzzy
-msgid "If you would like to customize this plugin for a custom form, please contact us via <a href=\"Mailto:plugin@bestwebsoft.com\">plugin@bestwebsoft.com</a> or fill in the contact form on our site"
-msgstr "Se você gostaria de customizar este plugin para um formulário em particular, por favor contacte-nos via <a href=\"Mailto:plugin@bestwebsoft.com\">plugin@bestwebsoft.com</a> ou preencha nosso formulário de contato no nosso site."
+msgid "If you would like to customize this plugin for a custom form, please contact us via"
+msgstr "Se você gostaria de customizar este plugin para um formulário em particular, por favor contacte-nos via"
 
 #: captcha.php:327
-#, fuzzy
 msgid "Title for CAPTCHA in the form"
 msgstr "Rótulo para o formulário de CAPTCHA"
 
@@ -213,26 +202,24 @@ msgstr "ERRO"
 #: captcha.php:582
 #: captcha.php:605
 msgid "Please fill the form."
-msgstr ""
+msgstr "Por favor preencha o formulário."
 
 #: captcha.php:400
 #: captcha.php:427
 #: captcha.php:572
 #: captcha.php:589
-#, fuzzy
 msgid "Please enter a valid CAPTCHA value."
 msgstr "Por favor, complete a charada do CAPTCHA"
 
 #: captcha.php:538
 #: captcha.php:612
-#, fuzzy
 msgid "Error: You have entered an incorrect CAPTCHA value. Click the BACK button on your browser, and try again."
 msgstr "ERRO: Você diigitou a resposta da charada errada. Pressione o botão VOLTAR do seu navegador e tente novamente."
 
 #: captcha.php:627
 #: captcha.php:861
 msgid "zero"
-msgstr "nulo"
+msgstr "zero"
 
 #: captcha.php:628
 #: captcha.php:862
@@ -389,6 +376,13 @@ msgstr "A senha para decodificação não está configurada"
 msgid "Decryption password is not set"
 msgstr "A senha para decodificação não está configurada"
 
+#, fuzzy
+#~ msgid ""
+#~ "If you have any questions, please contact us via plugin@bestwebsoft.com "
+#~ "or fill in the contact form on our website"
+#~ msgstr ""
+#~ "Se você tem alguma pergunta, por favor contacte-nos via "
+#~ "plugin@bestwebsoft.com ou preencha nosso formulário de contato no site."
 #~ msgid "Increase"
 #~ msgstr "Aumentar"
 #~ msgid "Difficulty for CAPTCHA"

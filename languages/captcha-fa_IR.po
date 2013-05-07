@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: captcha\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-04-18 13:24+0300\n"
-"PO-Revision-Date: 2013-04-18 13:24+0300\n"
+"POT-Creation-Date: 2013-05-07 09:51+0300\n"
+"PO-Revision-Date: 2013-05-07 09:51+0300\n"
 "Last-Translator: \n"
 "Language-Team: bestwebsoft.com <plugin@bestwebsoft.com>\n"
 "MIME-Version: 1.0\n"
@@ -118,9 +118,8 @@ msgid "Install now from wordpress.org"
 msgstr "همین الان از wordpress.org نصب کن"
 
 #: captcha.php:122
-#, fuzzy
-msgid "If you have any questions, please contact us via plugin@bestwebsoft.com or fill in the contact form on our website"
-msgstr "اگر سوالی دارید، از طریق آدرس ایمیل plugin@bestwebsoft.com با ما تماس بگیرید یا اینکه فرم تماس موجود در سایت ما را پُر کنید"
+msgid "If you have any questions, please contact us via"
+msgstr ""
 
 #: captcha.php:132
 #: captcha.php:296
@@ -177,7 +176,7 @@ msgstr "فرم تماس را دانلود کن"
 
 #: captcha.php:323
 #, fuzzy
-msgid "If you would like to customize this plugin for a custom form, please contact us via <a href=\"Mailto:plugin@bestwebsoft.com\">plugin@bestwebsoft.com</a> or fill in the contact form on our site"
+msgid "If you would like to customize this plugin for a custom form, please contact us via"
 msgstr "اگر می خواهید این افزونه را به عنوان یک فرم اختصاصی سفارشی سازی کنید، لطفاً از طریق <a href=\"Mailto:plugin@bestwebsoft.com\">plugin@bestwebsoft.com</a> با ما تماس بگیرید یا اینکه فرم تماس موجود در سایت ما را پُر کنید"
 
 #: captcha.php:327
@@ -389,6 +388,13 @@ msgstr "رمز عبوری برای رمزگشایی تعیین نشده است"
 msgid "Decryption password is not set"
 msgstr "رمز عبوری برای رمزگشایی تعیین نشده است"
 
+#, fuzzy
+#~ msgid ""
+#~ "If you have any questions, please contact us via plugin@bestwebsoft.com "
+#~ "or fill in the contact form on our website"
+#~ msgstr ""
+#~ "اگر سوالی دارید، از طریق آدرس ایمیل plugin@bestwebsoft.com با ما تماس "
+#~ "بگیرید یا اینکه فرم تماس موجود در سایت ما را پُر کنید"
 #~ msgid "Increase"
 #~ msgstr "افزایش"
 #~ msgid "Difficulty for CAPTCHA"

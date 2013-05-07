@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: captcha\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-04-18 13:26+0300\n"
-"PO-Revision-Date: 2013-04-18 13:26+0300\n"
+"POT-Creation-Date: 2013-05-07 09:55+0300\n"
+"PO-Revision-Date: 2013-05-07 09:55+0300\n"
 "Last-Translator: \n"
 "Language-Team: NDT Solutions <admin@ndtan.net>\n"
 "MIME-Version: 1.0\n"
@@ -118,9 +118,8 @@ msgid "Install now from wordpress.org"
 msgstr "Cài đặt ngay từ wordpress.org"
 
 #: captcha.php:122
-#, fuzzy
-msgid "If you have any questions, please contact us via plugin@bestwebsoft.com or fill in the contact form on our website"
-msgstr "Nếu bạn có bất kỳ câu hỏi nào, xin vui lòng liên hệ với chúng tôi qua plugin@bestwebsoft.com hoặc điền vào mẫu liên hệ của chúng tôi trên trang web của chúng tôi"
+msgid "If you have any questions, please contact us via"
+msgstr ""
 
 #: captcha.php:132
 #: captcha.php:296
@@ -177,7 +176,7 @@ msgstr "Tải contact form về"
 
 #: captcha.php:323
 #, fuzzy
-msgid "If you would like to customize this plugin for a custom form, please contact us via <a href=\"Mailto:plugin@bestwebsoft.com\">plugin@bestwebsoft.com</a> or fill in the contact form on our site"
+msgid "If you would like to customize this plugin for a custom form, please contact us via"
 msgstr "Nếu bạn muốn tùy chỉnh plugin này cho một hình thức tùy chỉnh, xin vui lòng liên hệ với chúng tôi qua <a href=\"Mailto:plugin@bestwebsoft.com\"> plugin@bestwebsoft.com</a> hoặc điền vào mẫu liên hệ của chúng tôi trên trang web của chúng tôi."
 
 #: captcha.php:327
@@ -389,6 +388,14 @@ msgstr "Mật khẩu giải mã không được thiết lập"
 msgid "Decryption password is not set"
 msgstr "Mật khẩu giải mã không được thiết lập"
 
+#, fuzzy
+#~ msgid ""
+#~ "If you have any questions, please contact us via plugin@bestwebsoft.com "
+#~ "or fill in the contact form on our website"
+#~ msgstr ""
+#~ "Nếu bạn có bất kỳ câu hỏi nào, xin vui lòng liên hệ với chúng tôi qua "
+#~ "plugin@bestwebsoft.com hoặc điền vào mẫu liên hệ của chúng tôi trên trang "
+#~ "web của chúng tôi"
 #~ msgid "Increase"
 #~ msgstr "Tăng thêm"
 #~ msgid "Difficulty for CAPTCHA"

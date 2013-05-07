@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: captcha\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-04-18 13:24+0300\n"
-"PO-Revision-Date: 2013-04-18 13:24+0300\n"
+"POT-Creation-Date: 2013-05-07 09:52+0300\n"
+"PO-Revision-Date: 2013-05-07 09:52+0300\n"
 "Last-Translator: \n"
 "Language-Team: Bőm Tamás <tamas.bem@gmail.com>\n"
 "MIME-Version: 1.0\n"
@@ -119,9 +119,8 @@ msgid "Install now from wordpress.org"
 msgstr "Telepítse most wordpress.org"
 
 #: captcha.php:122
-#, fuzzy
-msgid "If you have any questions, please contact us via plugin@bestwebsoft.com or fill in the contact form on our website"
-msgstr "Ha bármilyen kérdése van, kérjük írjon nekünk (plugin@bestwebsoft.com) vagy  töltse ki az űrlapot a weboldalunkon "
+msgid "If you have any questions, please contact us via"
+msgstr ""
 
 #: captcha.php:132
 #: captcha.php:296
@@ -178,7 +177,7 @@ msgstr "Töltse le a kapcsolatfelvételi űrlapot"
 
 #: captcha.php:323
 #, fuzzy
-msgid "If you would like to customize this plugin for a custom form, please contact us via <a href=\"Mailto:plugin@bestwebsoft.com\">plugin@bestwebsoft.com</a> or fill in the contact form on our site"
+msgid "If you would like to customize this plugin for a custom form, please contact us via"
 msgstr "Ha egy egyéni űrlapot szeretne létrehozni ehhez a pluginhoz, kérjük, lépjen kapcsolatba velünk <a href=\"Mailto:plugin@bestwebsoft.com\"> plugin@bestwebsoft.com </ a>, vagy töltse ki az űrlapot a oldal"
 
 #: captcha.php:327
@@ -390,6 +389,13 @@ msgstr "A jelszó dekódoló nincs beállítva"
 msgid "Decryption password is not set"
 msgstr "A jelszó dekódoló nincs beállítva"
 
+#, fuzzy
+#~ msgid ""
+#~ "If you have any questions, please contact us via plugin@bestwebsoft.com "
+#~ "or fill in the contact form on our website"
+#~ msgstr ""
+#~ "Ha bármilyen kérdése van, kérjük írjon nekünk (plugin@bestwebsoft.com) "
+#~ "vagy  töltse ki az űrlapot a weboldalunkon "
 #~ msgid "Increase"
 #~ msgstr "Növelje"
 #~ msgid "Difficulty for CAPTCHA"

@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: captcha\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-04-18 13:27+0300\n"
-"PO-Revision-Date: 2013-04-18 13:27+0300\n"
+"POT-Creation-Date: 2013-05-07 09:55+0300\n"
+"PO-Revision-Date: 2013-05-07 09:55+0300\n"
 "Last-Translator: \n"
 "Language-Team: billyjeans <billyjeans@gmail.com>\n"
 "MIME-Version: 1.0\n"
@@ -119,9 +119,8 @@ msgid "Install now from wordpress.org"
 msgstr "现在从wordpress.org安装"
 
 #: captcha.php:122
-#, fuzzy
-msgid "If you have any questions, please contact us via plugin@bestwebsoft.com or fill in the contact form on our website"
-msgstr "如果有疑问，请通过plugin@bestwebsoft.com联系我们，或者在我们的网站填写联系信息"
+msgid "If you have any questions, please contact us via"
+msgstr ""
 
 #: captcha.php:132
 #: captcha.php:296
@@ -178,7 +177,7 @@ msgstr "下载插件Contact Form"
 
 #: captcha.php:323
 #, fuzzy
-msgid "If you would like to customize this plugin for a custom form, please contact us via <a href=\"Mailto:plugin@bestwebsoft.com\">plugin@bestwebsoft.com</a> or fill in the contact form on our site"
+msgid "If you would like to customize this plugin for a custom form, please contact us via"
 msgstr "如果您喜欢定制Custom Form插件，请联系<a href=\"Mailto:plugin@bestwebsoft.com\">plugin@bestwebsoft.com</a>，或在我们的网站填写联系信息"
 
 #: captcha.php:327
@@ -390,6 +389,13 @@ msgstr "未设置解密的密码"
 msgid "Decryption password is not set"
 msgstr "未设置解密的密码"
 
+#, fuzzy
+#~ msgid ""
+#~ "If you have any questions, please contact us via plugin@bestwebsoft.com "
+#~ "or fill in the contact form on our website"
+#~ msgstr ""
+#~ "如果有疑问，请通过plugin@bestwebsoft.com联系我们，或者在我们的网站填写联系"
+#~ "信息"
 #~ msgid "Increase"
 #~ msgstr "增加"
 #~ msgid "Difficulty for CAPTCHA"

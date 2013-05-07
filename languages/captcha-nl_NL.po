@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: captcha\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-04-18 13:25+0300\n"
-"PO-Revision-Date: 2013-04-18 13:25+0300\n"
+"POT-Creation-Date: 2013-05-07 09:53+0300\n"
+"PO-Revision-Date: 2013-05-07 09:53+0300\n"
 "Last-Translator: \n"
 "Language-Team: bestwebsoft.com <plugin@bestwebsoft.com>\n"
 "MIME-Version: 1.0\n"
@@ -118,9 +118,8 @@ msgid "Install now from wordpress.org"
 msgstr "Installeer nu vanaf wordpress.org"
 
 #: captcha.php:122
-#, fuzzy
-msgid "If you have any questions, please contact us via plugin@bestwebsoft.com or fill in the contact form on our website"
-msgstr "Voor vragen kun je mailen met plugin@bestwebsoft.com of het contactformulier op onze website invullen"
+msgid "If you have any questions, please contact us via"
+msgstr ""
 
 #: captcha.php:132
 #: captcha.php:296
@@ -177,7 +176,7 @@ msgstr "Download het contactformulier"
 
 #: captcha.php:323
 #, fuzzy
-msgid "If you would like to customize this plugin for a custom form, please contact us via <a href=\"Mailto:plugin@bestwebsoft.com\">plugin@bestwebsoft.com</a> or fill in the contact form on our site"
+msgid "If you would like to customize this plugin for a custom form, please contact us via"
 msgstr "Als je deze plugin wilt bewerken voor een speciaal formulier, neem dan contact met ons op via <a href=\"Mailto:plugin@bestwebsoft.com\">plugin@bestwebsoft.com</a> of gebruik het contactformulier op onze website"
 
 #: captcha.php:327
@@ -389,6 +388,13 @@ msgstr "Er is geen decoderings wachtwoord ingesteld"
 msgid "Decryption password is not set"
 msgstr "Er is geen decoderings wachtwoord ingesteld"
 
+#, fuzzy
+#~ msgid ""
+#~ "If you have any questions, please contact us via plugin@bestwebsoft.com "
+#~ "or fill in the contact form on our website"
+#~ msgstr ""
+#~ "Voor vragen kun je mailen met plugin@bestwebsoft.com of het "
+#~ "contactformulier op onze website invullen"
 #~ msgid "Difficulty for CAPTCHA"
 #~ msgstr "Moeilijkheidsgraad"
 #~ msgid "That CAPTCHA was incorrect."

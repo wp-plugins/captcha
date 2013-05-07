@@ -4,12 +4,12 @@ Plugin Name: Captcha
 Plugin URI:  http://bestwebsoft.com/plugin/
 Description: Plugin Captcha intended to prove that the visitor is a human being and not a spam robot. Plugin asks the visitor to answer a math question.
 Author: BestWebSoft
-Version: 3.4
+Version: 3.5
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
 
-/*  © Copyright 2011  BestWebSoft  ( admin@bestwebsoft.com )
+/*  © Copyright 2011  BestWebSoft  ( http://support.bestwebsoft.com )
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License, version 2, as 
@@ -119,7 +119,7 @@ if( ! function_exists( 'bws_add_menu_render' ) ) {
 				<?php foreach( $array_recomend as $recomend_plugin ) { ?>
 				<div style="float:left; width:200px;"><?php echo $recomend_plugin['title']; ?></div> <p><a href="<?php echo $recomend_plugin['link']; ?>" target="_blank"><?php echo __( "Read more", 'captcha'); ?></a> <a href="<?php echo $recomend_plugin['href']; ?>" target="_blank"><?php echo __( "Download", 'captcha'); ?></a> <a class="install-now" href="<?php echo get_bloginfo( "url" ) . $recomend_plugin['slug']; ?>" title="<?php esc_attr( sprintf( __( 'Install %s' ), $recomend_plugin['title'] ) ) ?>" target="_blank"><?php echo __( 'Install now from wordpress.org', 'captcha' ) ?></a></p>
 				<?php } ?>
-				<span style="color: rgb(136, 136, 136); font-size: 10px;"><?php _e( 'If you have any questions, please contact us via plugin@bestwebsoft.com or fill in the contact form on our website', 'captcha' ); ?> <a href="http://bestwebsoft.com/contact/">http://bestwebsoft.com/contact/</a></span>
+				<span style="color: rgb(136, 136, 136); font-size: 10px;"><?php _e( 'If you have any questions, please contact us via', 'captcha' ); ?> <a href="http://support.bestwebsoft.com">http://support.bestwebsoft.com</a></span>
 			</div>
 			<?php } ?>
 		</div>
@@ -137,8 +137,7 @@ function add_cptch_admin_menu() {
 
 // register settings function
 function register_cptch_settings() {
-	global $wpmu;
-	global $cptch_options;
+	global $wpmu, $cptch_options;
 
 	$cptch_option_defaults = array(
 		'cptch_login_form'						=> '1',
@@ -178,6 +177,8 @@ function register_cptch_settings() {
 
 // Add global setting for Captcha
 global $wpmu;
+global $str_key;
+$str_key = "bws18042013";
 
 if ( 1 == $wpmu )
    $cptch_options = get_site_option( 'cptch_options' ); // get the options from the database
@@ -232,7 +233,7 @@ function cptch_register_plugin_links($links, $file) {
 	if ($file == $base) {
 		$links[] = '<a href="admin.php?page=captcha.php">' . __( 'Settings', 'captcha' ) . '</a>';
 		$links[] = '<a href="http://wordpress.org/extend/plugins/captcha/faq/" target="_blank">' . __( 'FAQ', 'captcha' ) . '</a>';
-		$links[] = '<a href="Mailto:plugin@bestwebsoft.com">' . __( 'Support', 'captcha' ) . '</a>';
+		$links[] = '<a href="http://support.bestwebsoft.com">' . __( 'Support', 'captcha' ) . '</a>';
 	}
 	return $links;
 }
@@ -320,7 +321,7 @@ function cptch_settings_page() {
 			} else { ?>
 					<input disabled='disabled' type="checkbox" name="cptch_contact_form" value="1" <?php if( 1 == $cptch_options['cptch_contact_form'] ) echo "checked=\"checked\""; ?> /> <label for="cptch_contact_form"><?php _e('Contact form', 'captcha' ); ?></label> <span style="color: #888888;font-size: 10px;"><?php _e( '(powered by bestwebsoft.com)', 'captcha' ); ?> <a href="http://bestwebsoft.com/plugin/contact-form/"><?php _e( 'Download contact form', 'captcha' ); ?></a></span><br />
 			<?php } ?>
-					<span style="color: #888888;font-size: 10px;"><?php _e( 'If you would like to customize this plugin for a custom form, please contact us via <a href=\"Mailto:plugin@bestwebsoft.com\">plugin@bestwebsoft.com</a> or fill in the contact form on our site', 'captcha' ); ?> <a href="http://bestwebsoft.com/contact/" target="_blank">http://bestwebsoft.com/contact/</a></span>
+					<span style="color: #888888;font-size: 10px;"><?php _e( 'If you would like to customize this plugin for a custom form, please contact us via', 'captcha' ); ?> <a href="http://support.bestwebsoft.com" target="_blank">http://support.bestwebsoft.com</a></span>
 				</td>
 			</tr>
 			<tr valign="top">
@@ -381,7 +382,7 @@ function cptch_login_form() {
 // this function checks captcha posted with a login
 function cptch_login_post($errors) {
 	global $str_key;
-	$str_key = "bws18042013";
+
 	// Delete errors, if they set
 	if( isset( $_SESSION['cptch_error'] ) )
 		unset( $_SESSION['cptch_error'] );
@@ -408,7 +409,6 @@ function cptch_login_check($url) {
 	if( session_id() == "" )
 		@session_start();
 
-	$str_key = "bws18042013";
 	// Add error if captcha is empty
  if( isset( $_SESSION["cptch_login"] ) && $_SESSION["cptch_login"] === true )
 		return $url;		// captcha was matched						
@@ -505,7 +505,7 @@ function cptch_comment_post($comment) {
 	}
     
 	global $str_key;
-	$str_key = "bws18042013";
+
 	// added for compatibility with WP Wall plugin
 	// this does NOT add CAPTCHA to WP Wall plugin,
 	// it just prevents the "Error: You did not enter a Captcha phrase." when submitting a WP Wall comment
@@ -558,7 +558,6 @@ function cptch_register_form() {
 // this function checks captcha posted with registration
 function cptch_register_post($login,$email,$errors) {
 	global $str_key;
-	$str_key = "bws18042013";
 
 	// If captcha is blank - add error
 	if ( isset( $_REQUEST['cptch_number'] ) && "" ==  $_REQUEST['cptch_number'] ) {
@@ -576,7 +575,6 @@ function cptch_register_post($login,$email,$errors) {
 
 function cptch_register_validate($results) {
 	global $str_key;
-	$str_key = "bws18042013";
 	// If captcha is blank - add error
 	if ( isset( $_REQUEST['cptch_number'] ) && "" ==  $_REQUEST['cptch_number'] ) {
 		$results['errors']->add('captcha_blank', '<strong>'.__('ERROR', 'captcha').'</strong>: '.__('Please fill the form.', 'captcha'));
@@ -594,7 +592,6 @@ function cptch_register_validate($results) {
 // this function checks the captcha posted with lostpassword form
 function cptch_lostpassword_post() {
 	global $str_key;
-	$str_key = "bws18042013";
 
 	// If field 'user login' is empty - return
 	if( isset( $_REQUEST['user_login'] ) && "" == $_REQUEST['user_login'] )
@@ -616,11 +613,7 @@ function cptch_lostpassword_post() {
 // Functionality of the captcha logic work
 function cptch_display_captcha()
 {
-	global $cptch_options;
-
-	// Key for encoding
-	global $str_key;
-	$str_key = "bws18042013";
+	global $cptch_options, $str_key;
 	
 	// In letters presentation of numbers 0-9
 	$number_string = array(); 
@@ -824,10 +817,9 @@ function cptch_custom_form($error_message) {
 } //  end function cptch_contact_form
 
 // this function check captcha in the custom form
-function cptch_check_custom_form()
-{
+function cptch_check_custom_form() {
 	global $str_key;
-	$str_key = "bws18042013";
+
 	if( isset( $_REQUEST['cntctfrm_contact_action'] ) )
 	{
 		// If captcha doesn't entered
@@ -847,13 +839,8 @@ function cptch_check_custom_form()
 } //  end function cptch_check_contact_form
 
 // Functionality of the captcha logic work for custom form
-function cptch_display_captcha_custom()
-{
-	global $cptch_options;
-
-	// Key for encoding
-	global $str_key;
-	$str_key = "bws18042013";
+function cptch_display_captcha_custom() {
+	global $cptch_options, $str_key;
 	$content = "";
 	
 	// In letters presentation of numbers 0-9

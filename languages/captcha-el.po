@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: captcha\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-04-18 13:23+0300\n"
-"PO-Revision-Date: 2013-04-18 13:23+0300\n"
+"POT-Creation-Date: 2013-05-07 09:51+0300\n"
+"PO-Revision-Date: 2013-05-07 09:51+0300\n"
 "Last-Translator: \n"
 "Language-Team: Aris <paraxeno.net>\n"
 "MIME-Version: 1.0\n"
@@ -118,9 +118,8 @@ msgid "Install now from wordpress.org"
 msgstr "Εγκατάσταση τώρα από wordpress.org"
 
 #: captcha.php:122
-#, fuzzy
-msgid "If you have any questions, please contact us via plugin@bestwebsoft.com or fill in the contact form on our website"
-msgstr "Αν έχετε οποιεσδήποτε απορίες, παρακαλούμε επικοινωνήστε μαζί μας μέσω:  plugin@bestwebsoft.com ή συμπληρώστε την φόρμα επικοινωνίας μας στην ιστοσελίδα μας."
+msgid "If you have any questions, please contact us via"
+msgstr ""
 
 #: captcha.php:132
 #: captcha.php:296
@@ -177,7 +176,7 @@ msgstr "Κάνετε λήψη της φόρμα επικοινωνίας"
 
 #: captcha.php:323
 #, fuzzy
-msgid "If you would like to customize this plugin for a custom form, please contact us via <a href=\"Mailto:plugin@bestwebsoft.com\">plugin@bestwebsoft.com</a> or fill in the contact form on our site"
+msgid "If you would like to customize this plugin for a custom form, please contact us via"
 msgstr "Αν θα θέλατε να παραμετροποιήσετε αυτό το πρόσθετο για μια προσαρμοσμένη φόρμα, παρακαλούμε επικοινωνήστε μαζί μας μέσω <a href=\"Mailto:plugin@bestwebsoft.com\">plugin@bestwebsoft.com</a> ή συμπληρώστε την φόρμα επικοινωνίας στην ιστοσελίδα μας."
 
 #: captcha.php:327
@@ -389,6 +388,14 @@ msgstr "Ο κωδικός πρόσβασης της αποκωδικοποίησ
 msgid "Decryption password is not set"
 msgstr "Ο κωδικός πρόσβασης της αποκωδικοποίησης δεν έχει οριστεί"
 
+#, fuzzy
+#~ msgid ""
+#~ "If you have any questions, please contact us via plugin@bestwebsoft.com "
+#~ "or fill in the contact form on our website"
+#~ msgstr ""
+#~ "Αν έχετε οποιεσδήποτε απορίες, παρακαλούμε επικοινωνήστε μαζί μας μέσω:  "
+#~ "plugin@bestwebsoft.com ή συμπληρώστε την φόρμα επικοινωνίας μας στην "
+#~ "ιστοσελίδα μας."
 #~ msgid "Increase"
 #~ msgstr "Αύξηση"
 #~ msgid "Difficulty for CAPTCHA"

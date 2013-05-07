@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: captcha\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-04-18 13:25+0300\n"
-"PO-Revision-Date: 2013-04-18 13:25+0300\n"
+"POT-Creation-Date: 2013-05-07 09:52+0300\n"
+"PO-Revision-Date: 2013-05-07 09:52+0300\n"
 "Last-Translator: \n"
 "Language-Team: Arnas <arnas.metal@gmail.com>\n"
 "MIME-Version: 1.0\n"
@@ -119,9 +119,8 @@ msgid "Install now from wordpress.org"
 msgstr "Instaliuoti iš wordpress.org dabar"
 
 #: captcha.php:122
-#, fuzzy
-msgid "If you have any questions, please contact us via plugin@bestwebsoft.com or fill in the contact form on our website"
-msgstr "Jeigu turite klausimų, susisiekite su mumis adresu plugin@bestwebsoft.com arba užpildykite konktaktų formą mūsų puslapyje"
+msgid "If you have any questions, please contact us via"
+msgstr ""
 
 #: captcha.php:132
 #: captcha.php:296
@@ -178,7 +177,7 @@ msgstr "Parsisiųsti Contact Form"
 
 #: captcha.php:323
 #, fuzzy
-msgid "If you would like to customize this plugin for a custom form, please contact us via <a href=\"Mailto:plugin@bestwebsoft.com\">plugin@bestwebsoft.com</a> or fill in the contact form on our site"
+msgid "If you would like to customize this plugin for a custom form, please contact us via"
 msgstr "Jeigu norite prisidėti prie šio plugin'o, prašome susisiekti su mumis adresu <a href=\"Mailto:plugin@bestwebsoft.com\">plugin@bestwebsoft.com</a> arba užpildykite konktaktinę formą mūsų internetiniame puslapyje."
 
 #: captcha.php:327
@@ -390,6 +389,13 @@ msgstr "Dekodavimo slaptažodis nenustatytas"
 msgid "Decryption password is not set"
 msgstr "Dekodavimo slaptažodis nenustatytas"
 
+#, fuzzy
+#~ msgid ""
+#~ "If you have any questions, please contact us via plugin@bestwebsoft.com "
+#~ "or fill in the contact form on our website"
+#~ msgstr ""
+#~ "Jeigu turite klausimų, susisiekite su mumis adresu plugin@bestwebsoft.com "
+#~ "arba užpildykite konktaktų formą mūsų puslapyje"
 #~ msgid "Increase"
 #~ msgstr "Didėti"
 #~ msgid "Difficulty for CAPTCHA"

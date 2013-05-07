@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: captcha\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-04-18 13:24+0300\n"
-"PO-Revision-Date: 2013-04-18 13:24+0300\n"
+"POT-Creation-Date: 2013-05-07 09:51+0300\n"
+"PO-Revision-Date: 2013-05-07 09:51+0300\n"
 "Last-Translator: \n"
 "Language-Team: Ahto Tanner <ahto2@moonsoftware.com>\n"
 "MIME-Version: 1.0\n"
@@ -120,9 +120,8 @@ msgid "Install now from wordpress.org"
 msgstr "Paigalda kohe wordpress.org'ist"
 
 #: captcha.php:122
-#, fuzzy
-msgid "If you have any questions, please contact us via plugin@bestwebsoft.com or fill in the contact form on our website"
-msgstr "Kui sul on küsimusi siis kirjuta meile aadressil plugin@bestwebsoft.com või kasuda kontaktilehekülge meie kodulehel"
+msgid "If you have any questions, please contact us via"
+msgstr ""
 
 #: captcha.php:132
 #: captcha.php:296
@@ -179,7 +178,7 @@ msgstr "Lae kontaktivorm alla"
 
 #: captcha.php:323
 #, fuzzy
-msgid "If you would like to customize this plugin for a custom form, please contact us via <a href=\"Mailto:plugin@bestwebsoft.com\">plugin@bestwebsoft.com</a> or fill in the contact form on our site"
+msgid "If you would like to customize this plugin for a custom form, please contact us via"
 msgstr "Kui soovite, et valmistame sellest pluginast teie erivajadustele vastava versiooni, siis kontakteeruge e-maili teel <a href=\"Mailto:plugin@bestwebsoft.com\">plugin@bestwebsoft.com</a> või meie veebilehe kontaktivormi kaudu"
 
 #: captcha.php:327
@@ -391,6 +390,13 @@ msgstr "Dekodeerimisparool on määramata"
 msgid "Decryption password is not set"
 msgstr "Dekodeerimisparool on määramata"
 
+#, fuzzy
+#~ msgid ""
+#~ "If you have any questions, please contact us via plugin@bestwebsoft.com "
+#~ "or fill in the contact form on our website"
+#~ msgstr ""
+#~ "Kui sul on küsimusi siis kirjuta meile aadressil plugin@bestwebsoft.com "
+#~ "või kasuda kontaktilehekülge meie kodulehel"
 #~ msgid "Increase"
 #~ msgstr "Suurenda"
 #~ msgid "Difficulty for CAPTCHA"

@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: captcha\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-04-18 13:25+0300\n"
-"PO-Revision-Date: 2013-04-18 13:25+0300\n"
+"POT-Creation-Date: 2013-05-07 09:53+0300\n"
+"PO-Revision-Date: 2013-05-07 09:53+0300\n"
 "Last-Translator: \n"
 "Language-Team: Ciprian <cipibad@gmail.com>\n"
 "MIME-Version: 1.0\n"
@@ -118,9 +118,8 @@ msgid "Install now from wordpress.org"
 msgstr "Instaleaza acum de pe wordpress.org"
 
 #: captcha.php:122
-#, fuzzy
-msgid "If you have any questions, please contact us via plugin@bestwebsoft.com or fill in the contact form on our website"
-msgstr "Daca aveti intrebari va rugam sa ne contactati la adresa plugin@bestwebsoft.com sau sa completati formularul de contact de pe site-ul nostru"
+msgid "If you have any questions, please contact us via"
+msgstr ""
 
 #: captcha.php:132
 #: captcha.php:296
@@ -177,7 +176,7 @@ msgstr "Descarca formularul de contact"
 
 #: captcha.php:323
 #, fuzzy
-msgid "If you would like to customize this plugin for a custom form, please contact us via <a href=\"Mailto:plugin@bestwebsoft.com\">plugin@bestwebsoft.com</a> or fill in the contact form on our site"
+msgid "If you would like to customize this plugin for a custom form, please contact us via"
 msgstr "Daca doriti sa personalizati acest modul pentru un formular personalizat, va rugam sa ne contactati la adresa <a href=\"Mailto:plugin@bestwebsoft.com\">plugin@bestwebsoft.com</a> sau sa completati formularul de contact de pe site-ul nostru "
 
 #: captcha.php:327
@@ -389,6 +388,14 @@ msgstr "Parola pentru decodare nu e setata"
 msgid "Decryption password is not set"
 msgstr "Parola pentru decodare nu e setata"
 
+#, fuzzy
+#~ msgid ""
+#~ "If you have any questions, please contact us via plugin@bestwebsoft.com "
+#~ "or fill in the contact form on our website"
+#~ msgstr ""
+#~ "Daca aveti intrebari va rugam sa ne contactati la adresa "
+#~ "plugin@bestwebsoft.com sau sa completati formularul de contact de pe site-"
+#~ "ul nostru"
 #~ msgid "Increase"
 #~ msgstr "Creste"
 #~ msgid "Difficulty for CAPTCHA"

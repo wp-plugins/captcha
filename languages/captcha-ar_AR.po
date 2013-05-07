@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: captcha\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-04-18 13:23+0300\n"
-"PO-Revision-Date: 2013-04-18 13:23+0300\n"
+"POT-Creation-Date: 2013-05-07 09:50+0300\n"
+"PO-Revision-Date: 2013-05-07 09:50+0300\n"
 "Last-Translator: \n"
 "Language-Team: Albayan Design Hani Aladoli <info@albayan-design.com>\n"
 "MIME-Version: 1.0\n"
@@ -118,9 +118,8 @@ msgid "Install now from wordpress.org"
 msgstr "نزلها الان من wordpress.org"
 
 #: captcha.php:122
-#, fuzzy
-msgid "If you have any questions, please contact us via plugin@bestwebsoft.com or fill in the contact form on our website"
-msgstr "اذا كان لديك اي استفسار او سؤال الرجاء الاتصال بنا عبر بريدنا الالكتروني :  contact us via plugin@bestwebsoft.com  , او المراسلة الفورية من واجهة الاتصال بنا علي موقعنا الخاص"
+msgid "If you have any questions, please contact us via"
+msgstr ""
 
 #: captcha.php:132
 #: captcha.php:296
@@ -177,7 +176,7 @@ msgstr "تحميل الاتصال بنا "
 
 #: captcha.php:323
 #, fuzzy
-msgid "If you would like to customize this plugin for a custom form, please contact us via <a href=\"Mailto:plugin@bestwebsoft.com\">plugin@bestwebsoft.com</a> or fill in the contact form on our site"
+msgid "If you would like to customize this plugin for a custom form, please contact us via"
 msgstr "اذا كنت ترغب في تخصيص بعض الخيارات الاضافية في هذه النموذج الرجاء الاتصال بنا عبر <a href=\"Mailto:plugin@bestwebsoft.com\">plugin@bestwebsoft.com</a>  او عبر نموذج الاتصال علي موقعنا الخاص"
 
 #: captcha.php:327
@@ -389,6 +388,14 @@ msgstr "لم يتم تعيين كلمة المرور من فك التشفير"
 msgid "Decryption password is not set"
 msgstr "لم يتم تعيين كلمة المرور من فك التشفير"
 
+#, fuzzy
+#~ msgid ""
+#~ "If you have any questions, please contact us via plugin@bestwebsoft.com "
+#~ "or fill in the contact form on our website"
+#~ msgstr ""
+#~ "اذا كان لديك اي استفسار او سؤال الرجاء الاتصال بنا عبر بريدنا "
+#~ "الالكتروني :  contact us via plugin@bestwebsoft.com  , او المراسلة "
+#~ "الفورية من واجهة الاتصال بنا علي موقعنا الخاص"
 #~ msgid "Increase"
 #~ msgstr "زيادة"
 #~ msgid "Difficulty for CAPTCHA"

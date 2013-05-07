@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: captcha\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-04-18 13:26+0300\n"
-"PO-Revision-Date: 2013-04-18 13:26+0300\n"
+"POT-Creation-Date: 2013-05-07 09:54+0300\n"
+"PO-Revision-Date: 2013-05-07 09:54+0300\n"
 "Last-Translator: \n"
 "Language-Team: Christer Rönningborg <plugin@bestwebsoft.com>\n"
 "MIME-Version: 1.0\n"
@@ -118,9 +118,8 @@ msgid "Install now from wordpress.org"
 msgstr "Installera nu från wordpress.org"
 
 #: captcha.php:122
-#, fuzzy
-msgid "If you have any questions, please contact us via plugin@bestwebsoft.com or fill in the contact form on our website"
-msgstr "Om du har frågor, vänligen kontakta oss via plugin@bestwebsoft.com eller fyll i kontaktformuläret på vår hemsida"
+msgid "If you have any questions, please contact us via"
+msgstr ""
 
 #: captcha.php:132
 #: captcha.php:296
@@ -177,7 +176,7 @@ msgstr "Hämta kontaktformulär"
 
 #: captcha.php:323
 #, fuzzy
-msgid "If you would like to customize this plugin for a custom form, please contact us via <a href=\"Mailto:plugin@bestwebsoft.com\">plugin@bestwebsoft.com</a> or fill in the contact form on our site"
+msgid "If you would like to customize this plugin for a custom form, please contact us via"
 msgstr "Om du vill anpassa detta tillägg för ett skräddarsytt formulär, vänligen kontakta oss på <a href=\"Mailto:plubin@bestwebsoft.com\">plugin@bestwebsoft.com</a> eller fyll i kontaktformuläret på vår hemsida."
 
 #: captcha.php:327
@@ -389,6 +388,13 @@ msgstr "Lösenordet för avkodning har inte angetts"
 msgid "Decryption password is not set"
 msgstr "Lösenordet för avkodning har inte angetts"
 
+#, fuzzy
+#~ msgid ""
+#~ "If you have any questions, please contact us via plugin@bestwebsoft.com "
+#~ "or fill in the contact form on our website"
+#~ msgstr ""
+#~ "Om du har frågor, vänligen kontakta oss via plugin@bestwebsoft.com eller "
+#~ "fyll i kontaktformuläret på vår hemsida"
 #~ msgid "Increase"
 #~ msgstr "Öka"
 #~ msgid "Difficulty for CAPTCHA"
