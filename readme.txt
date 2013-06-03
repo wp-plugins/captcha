@@ -4,7 +4,7 @@ Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=10
 Tags: captcha, match captcha, text captcha, spam, antispam, login, registration, comment, lost password, capcha, catcha, captha
 Requires at least: 2.9
 Tested up to: 3.5.1
-Stable tag: 3.5
+Stable tag: 3.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -141,6 +141,9 @@ You could add this line to the variable and display this variable in the require
 5. Login form with Captcha.
 
 == Changelog ==
+
+= V3.6 - 03.06.2013 =
+* Update : BWS plugins section is updated.
 
 = V3.5 - 07.05.2013 =
 * Update : The Bulgarian language file is updated in the plugin. 
@@ -305,6 +308,9 @@ You could add this line to the variable and display this variable in the require
 * Select functionality of mathematical actions and level of their difficulty are implemented.
 
 == Upgrade Notice ==
+
+= V3.6 =
+BWS plugins section is updated.
 
 = V3.5 =
 The Bulgarian language file is updated in the plugin. The Brazilian Portuguese language file is updated in the plugin.
