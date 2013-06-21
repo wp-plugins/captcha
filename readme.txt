@@ -1,10 +1,10 @@
-﻿=== Captcha ===
+=== Captcha ===
 Contributors: bestwebsoft
 Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=10&product_id=13
 Tags: captcha, match captcha, text captcha, spam, antispam, login, registration, comment, lost password, capcha, catcha, captha
 Requires at least: 2.9
 Tested up to: 3.5.1
-Stable tag: 3.6
+Stable tag: 3.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -141,6 +141,9 @@ You could add this line to the variable and display this variable in the require
 5. Login form with Captcha.
 
 == Changelog ==
+
+= V3.7 - 21.06.2013 =
+* NEW : Ability to use Captcha with Contact Form Pro.
 
 = V3.6 - 03.06.2013 =
 * Update : BWS plugins section is updated.
@@ -308,6 +311,9 @@ You could add this line to the variable and display this variable in the require
 * Select functionality of mathematical actions and level of their difficulty are implemented.
 
 == Upgrade Notice ==
+
+= V3.7 =
+Ability to use Captcha with Contact Form Pro
 
 = V3.6 =
 BWS plugins section is updated.
