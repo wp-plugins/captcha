@@ -4,7 +4,7 @@ Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=10
 Tags: captcha, match captcha, text captcha, spam, antispam, login, registration, comment, lost password, capcha, catcha, captha
 Requires at least: 2.9
 Tested up to: 3.5.2
-Stable tag: 3.7.4
+Stable tag: 3.7.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -30,10 +30,11 @@ The Captcha plugin allows you to protect your website from spam by means of math
 * Brazilian Portuguese (pt_BR) (thanks to <a href="mailto:brenojac@gmail.com">Breno Jacinto</a>, www.iconis.org.br)
 * Bulgarian (bg_BG) (thanks to <a href="mailto:paharaman@gmail.com">Nick</a>)
 * Chinese (zh_CN) (thanks to Billy Jeans)
+* Croatian (hr) (thanks to <a href="mailto:daniel@geogat.com">Daniel</a>)
 * Czech (cs_CZ) (thanks to Tomas Vesely, <a href="mailto:crysman@seznam.cz">Crysman</a>)
 * Danish (da_DK) (thanks to Byrial Ole Jensed)
 * Dutch (nl_NL) (thanks to <a href="mailto:byrial@vip.cybercity.dk">Bart Duineveld</a>)
-* Estonian (et) (thanks to <a href="mailto:ahto2@moonsoftware.com">Ahto Tanner</a>)
+* Estonian (et) (thanks to Ahto Tanner)
 * Greek (el) (thanks to Aris, www.paraxeno.net)
 * Farsi/Persian (fa_IR) (thanks to <a href="mailto:info[at]mpspace[dot]zio[dot]ir">Meysam Parvizi</a>, www.mpspace.zio.ir)
 * Finnish (fi) (thanks to Mikko Sederholm)
@@ -143,6 +144,9 @@ You could add this line to the variable and display this variable in the require
 5. Login form with Captcha.
 
 == Changelog ==
+
+= V3.7.5 - 30.07.2013 =
+* NEW : The Croatian language file is added to the plugin.
 
 = V3.7.4 - 24.07.2013 =
 * Bugfix : Added html-blocks and attributes in captcha displaying.
@@ -330,6 +334,9 @@ You could add this line to the variable and display this variable in the require
 * Select functionality of mathematical actions and level of their difficulty are implemented.
 
 == Upgrade Notice ==
+
+= V3.7.5 =
+The Croatian language file is added to the plugin.
 
 = V3.7.4 =
 Added html-blocks and attributes in captcha displaying. The Czech language file is updated in the plugin. The Brazilian Portuguese language file is updated in the plugin. The Swedish language file is updated in the plugin.
