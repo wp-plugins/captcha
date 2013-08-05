@@ -3,8 +3,8 @@ Contributors: bestwebsoft
 Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=10&product_id=13
 Tags: captcha, match captcha, text captcha, spam, antispam, login, registration, comment, lost password, capcha, catcha, captha
 Requires at least: 2.9
-Tested up to: 3.5.2
-Stable tag: 3.7.5
+Tested up to: 3.6
+Stable tag: 3.7.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -53,6 +53,7 @@ The Captcha plugin allows you to protect your website from spam by means of math
 * Russian (ru_RU)
 * Serbian (sr_RS) (thanks to Radovan Georgijevic)
 * Slovak (sk_SK) (thanks to Branco Radenovich)
+* Slovenian (sl_SI) (thanks to <a href="mailto:uros.klopcic@gmail.com">Uroš Klopčič</a>, www.klopcic.net)
 * Spain (es_ES) (thanks to Iván García Cubero)
 * Swedish (sv_SE) (thanks to Christer Rönningborg, <a href="mailto:blittan@xbmc.org">Blittan</a>)
 * Turkish (tr_TR) (thanks to Can Atasever, www.candanblog.com)
@@ -144,6 +145,10 @@ You could add this line to the variable and display this variable in the require
 5. Login form with Captcha.
 
 == Changelog ==
+
+= V3.7.6 - 05.08.2013 =
+* NEW : The Slovenian language file is added to the plugin.
+* Update : We updated all functionality for wordpress 3.6.
 
 = V3.7.5 - 30.07.2013 =
 * NEW : The Croatian language file is added to the plugin.
@@ -334,6 +339,9 @@ You could add this line to the variable and display this variable in the require
 * Select functionality of mathematical actions and level of their difficulty are implemented.
 
 == Upgrade Notice ==
+
+= V3.7.6 =
+The Slovenian language file is added to the plugin. We updated all functionality for wordpress 3.6.
 
 = V3.7.5 =
 The Croatian language file is added to the plugin.
