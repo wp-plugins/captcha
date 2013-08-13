@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: captcha\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-23 16:59+0300\n"
-"PO-Revision-Date: 2013-07-23 17:00+0300\n"
+"PO-Revision-Date: 2013-08-13 13:37+0300\n"
 "Last-Translator: \n"
 "Language-Team: bestwebsoft.com <plugin@bestwebsoft.com>\n"
 "MIME-Version: 1.0\n"
@@ -275,7 +275,7 @@ msgstr "Установить с wordpress.org"
 
 #: captcha.php:325
 msgid "If you have any questions, please contact us via"
-msgstr "Если у вас есть какие-то впросы, обращайтесь на"
+msgstr "Если у вас есть какие-то вопросы, обращайтесь на"
 
 #: captcha.php:332
 msgid "System status"
@@ -398,7 +398,7 @@ msgstr "Пожалуйста, заполните КАПЧУ."
 #: captcha.php:794
 #: captcha.php:865
 msgid "Error: You have entered an incorrect CAPTCHA value. Click the BACK button on your browser, and try again."
-msgstr "Ошибка: Вы ввели КАПЧУ неправильно. Надмите НАЗАД в браузере и попробуйте еще раз"
+msgstr "Ошибка: Вы ввели КАПЧУ неправильно. Нажмите НАЗАД в браузере и попробуйте еще раз"
 
 #: captcha.php:875
 #: captcha.php:1098
