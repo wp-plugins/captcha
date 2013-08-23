@@ -4,7 +4,7 @@ Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=10
 Tags: captcha, match captcha, text captcha, spam, antispam, login, registration, comment, lost password, capcha, catcha, captha
 Requires at least: 2.9
 Tested up to: 3.6
-Stable tag: 3.7.7
+Stable tag: 3.7.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -16,6 +16,8 @@ The Captcha plugin allows you to protect your website from spam by means of math
 
 <a href="http://wordpress.org/extend/plugins/captcha/faq/" target="_blank">FAQ</a>
 <a href="http://support.bestwebsoft.com" target="_blank">Support</a>
+
+<a href="http://bestwebsoft.com/plugin/captcha-pro/?k=2d2d85a3c277bf3489697c9a9ff2d352" target="_blank">Upgrade to Pro Version</a>
 
 = Features =
 
@@ -56,6 +58,7 @@ The Captcha plugin allows you to protect your website from spam by means of math
 * Slovenian (sl_SI) (thanks to <a href="mailto:uros.klopcic@gmail.com">Uroš Klopčič</a>, www.klopcic.net)
 * Spain (es_ES) (thanks to Iván García Cubero)
 * Swedish (sv_SE) (thanks to Christer Rönningborg, <a href="mailto:blittan@xbmc.org">Blittan</a>)
+* Tagalog (tl) (thanks to <a href="mailto:rjalali@languageconnect.net">Roozbeh Jalali</a>, www.languageconnect.net)
 * Turkish (tr_TR) (thanks to Can Atasever, www.candanblog.com)
 * Ukrainian (uk_UA) (thanks to Oleg Bondarenko)
 * Vietnamese (vi_VN) (thanks to NDT Solutions)
@@ -145,6 +148,12 @@ You could add this line to the variable and display this variable in the require
 5. Login form with Captcha.
 
 == Changelog ==
+
+= V3.7.8 - 23.08.2013 =
+* Update : The French language file is updated in the plugin.
+* Update : The Brazilian Portuguese language file is updated in the plugin.
+* Bugfix : The bug of displaying captha error when adding a new user in the multisite is fixed.
+* NEW : The Tagalog language file is added to the plugin.
 
 = V3.7.7 - 13.08.2013 =
 * Update : The Japanese language file is updated in the plugin.
@@ -342,6 +351,9 @@ You could add this line to the variable and display this variable in the require
 * Select functionality of mathematical actions and level of their difficulty are implemented.
 
 == Upgrade Notice ==
+
+= V3.7.8 =
+The French language file is updated in the plugin. The Brazilian Portuguese language file is updated in the plugin. The bug of displaying captha error when adding a new user in the multisite is fixed. The Tagalog language file is added to the plugin.
 
 = V3.7.7 =
 The Japanese language file is updated in the plugin.
