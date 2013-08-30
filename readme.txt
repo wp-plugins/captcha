@@ -2,9 +2,9 @@
 Contributors: bestwebsoft
 Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=10&product_id=13
 Tags: captcha, match captcha, text captcha, spam, antispam, login, registration, comment, lost password, capcha, catcha, captha
-Requires at least: 2.9
+Requires at least: 3.0
 Tested up to: 3.6
-Stable tag: 3.7.8
+Stable tag: 3.7.9
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -41,7 +41,7 @@ The Captcha plugin allows you to protect your website from spam by means of math
 * Farsi/Persian (fa_IR) (thanks to <a href="mailto:info[at]mpspace[dot]zio[dot]ir">Meysam Parvizi</a>, www.mpspace.zio.ir)
 * Finnish (fi) (thanks to Mikko Sederholm)
 * French (fr_FR) (thanks to Martel Benjamin, <a href="mailto:lcapronnier@yahoo.com">Capronnier luc</a>)
-* German (de_DE) (thanks to Thomas Hartung)
+* German (de_DE) (thanks to Thomas Hartung, <a href="mailto:lothar.schiborr@web.de">Lothar Schiborr</a>)
 * Hebrew (he_IL) (thanks to Sagive SEO)
 * Hindi (hi_IN) (thanks to <a href="mailto:ash.pr@outshinesolutions.com">Outshine Solutions</a>, www.outshinesolutions.com)
 * Hungarian (hu_HU) (thanks to Bőm Tamás)
@@ -148,6 +148,10 @@ You could add this line to the variable and display this variable in the require
 5. Login form with Captcha.
 
 == Changelog ==
+
+= V3.7.9 - 30.08.2013 =
+* Update : The German language file is updated in the plugin.
+* Update : Function for displaying BWS plugins section placed in a separate file and has own language files.
 
 = V3.7.8 - 23.08.2013 =
 * Update : The French language file is updated in the plugin.
@@ -351,6 +355,9 @@ You could add this line to the variable and display this variable in the require
 * Select functionality of mathematical actions and level of their difficulty are implemented.
 
 == Upgrade Notice ==
+
+= V3.7.9 =
+The German language file is updated in the plugin. Function for displaying BWS plugins section placed in a separate file and has own language files.
 
 = V3.7.8 =
 The French language file is updated in the plugin. The Brazilian Portuguese language file is updated in the plugin. The bug of displaying captha error when adding a new user in the multisite is fixed. The Tagalog language file is added to the plugin.
