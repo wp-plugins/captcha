@@ -16,7 +16,7 @@
 #toplevel_page_bws_plugins .wp-submenu .wp-first-item {
 	display:none;
 }
-.bws_system_info_mata_box {
+.bws_system_info_meta_box {
     width: 850px;
 }
 .bws_system_info {
@@ -65,7 +65,7 @@ table.bws_pro_version td {
     border-width: 10px;
     content: "";
     height: 0;
-    left: -18px;
+    left: -20px;
     position: absolute;
     top: 16px;
     width: 0;
