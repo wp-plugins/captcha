@@ -4,7 +4,7 @@ Plugin Name: Captcha
 Plugin URI:  http://bestwebsoft.com/plugin/
 Description: Plugin Captcha intended to prove that the visitor is a human being and not a spam robot. Plugin asks the visitor to answer a math question.
 Author: BestWebSoft
-Version: 3.8.0
+Version: 3.8.1
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -237,7 +237,7 @@ if ( ! function_exists( 'cptch_settings_page' ) ) {
 							<input disabled='disabled' type="checkbox" name="cptch_contact_form" value="1" <?php if( 1 == $cptch_options['cptch_contact_form'] ) echo "checked=\"checked\""; ?> /> <label for="cptch_contact_form"><?php _e( 'Contact form', 'captcha' ); ?></label> <span style="color: #888888;font-size: 10px;">(<?php _e( 'powered by', 'captcha' ); ?> <a href="http://bestwebsoft.com/plugin/">bestwebsoft.com</a>) <a href="<?php echo bloginfo("url"); ?>/wp-admin/plugins.php"><?php _e( 'Activate contact form', 'captcha' ); ?></a></span><br />
 						<?php }
 					} else { ?>
-							<input disabled='disabled' type="checkbox" name="cptch_contact_form" value="1" <?php if( 1 == $cptch_options['cptch_contact_form'] ) echo "checked=\"checked\""; ?> /> <label for="cptch_contact_form"><?php _e( 'Contact form', 'captcha' ); ?></label> <span style="color: #888888;font-size: 10px;">(<?php _e( 'powered by', 'captcha' ); ?> <a href="http://bestwebsoft.com/plugin/">bestwebsoft.com</a>) <a href="http://bestwebsoft.com/plugin/contact-form-pro/?k=d70b58e1739ab4857d675fed2213cedc&v=<?php echo $plugin_info["Version"]; ?>"><?php _e( 'Download contact form', 'captcha' ); ?></a></span><br />
+							<input disabled='disabled' type="checkbox" name="cptch_contact_form" value="1" <?php if( 1 == $cptch_options['cptch_contact_form'] ) echo "checked=\"checked\""; ?> /> <label for="cptch_contact_form"><?php _e( 'Contact form', 'captcha' ); ?></label> <span style="color: #888888;font-size: 10px;">(<?php _e( 'powered by', 'captcha' ); ?> <a href="http://bestwebsoft.com/plugin/">bestwebsoft.com</a>) <a href="http://bestwebsoft.com/plugin/contact-form-pro/?k=d70b58e1739ab4857d675fed2213cedc&pn=75&v=<?php echo $plugin_info["Version"]; ?>"><?php _e( 'Download contact form', 'captcha' ); ?></a></span><br />
 					<?php } ?>
 							<span style="color: #888888;font-size: 10px;"><?php _e( 'If you would like to customize this plugin for a custom form, please see', 'captcha' ); ?> <a href="http://bestwebsoft.com/plugin/captcha-plugin/#faq" target="_blank">FAQ</a></span>
 						</td>
@@ -258,7 +258,7 @@ if ( ! function_exists( 'cptch_settings_page' ) ) {
 				</table> 
 				<div class="bws_pro_version_tooltip">				
 					<?php _e( 'This functionality is available in the Pro version of the plugin. For more details, please follow the link', 'captcha' ); ?> 
-					<a href="http://bestwebsoft.com/plugin/captcha-pro/?k=9701bbd97e61e52baa79c58c3caacf6d&v=<?php echo $plugin_info["Version"]; ?>" target="_blank" title="Captcha Pro">
+					<a href="http://bestwebsoft.com/plugin/captcha-pro/?k=9701bbd97e61e52baa79c58c3caacf6d&pn=75&v=<?php echo $plugin_info["Version"]; ?>" target="_blank" title="Captcha Pro">
 						Captcha Pro
 					</a>	
 				</div>

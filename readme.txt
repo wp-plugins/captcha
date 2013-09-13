@@ -4,7 +4,7 @@ Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=10
 Tags: captcha, match captcha, text captcha, spam, antispam, login, registration, comment, lost password, capcha, catcha, captha
 Requires at least: 3.0
 Tested up to: 3.6
-Stable tag: 3.8.0
+Stable tag: 3.8.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -150,6 +150,10 @@ You could add this line to the variable and display this variable in the require
 5. Login form with Captcha.
 
 == Changelog ==
+
+= V3.8.1 - 13.09.2013 =
+* Update : The French language file is updated. 
+* Update : We updated all functionality for wordpress 3.6.1.
 
 = V3.8.0 - 06.09.2013 =
 * Update : The German language file is updated in the plugin.
@@ -360,6 +364,9 @@ You could add this line to the variable and display this variable in the require
 * Select functionality of mathematical actions and level of their difficulty are implemented.
 
 == Upgrade Notice ==
+
+= V3.8.1 =
+The French language file is updated. We updated all functionality for wordpress 3.6.1.
 
 = V3.8.0 =
 The German language file is updated in the plugin.

@@ -60,14 +60,11 @@ table.bws_pro_version td {
 	color: #555555;
 }
 .bws_pro_version_tooltip:before {
-    border-color: transparent #FFFFFF transparent transparent;
-    border-style: solid;
-    border-width: 10px;
-    content: "";
+    content: url("../images/arrow.png");
     height: 0;
-    left: -20px;
+    left: -14px;
     position: absolute;
-    top: 16px;
+    top: 12px;
     width: 0;
 }
 .bws_pro_version_tooltip {

@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: captcha\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-09-06 15:11+0300\n"
-"PO-Revision-Date: 2013-09-06 15:11+0300\n"
+"POT-Creation-Date: 2013-09-13 14:13+0300\n"
+"PO-Revision-Date: 2013-09-13 14:13+0300\n"
 "Last-Translator: \n"
 "Language-Team: Luc Capronnier <lcapronnier@yahoo.com>\n"
 "MIME-Version: 1.0\n"
@@ -124,7 +124,7 @@ msgstr "Formulaire de contact"
 #: captcha.php:237
 #: captcha.php:240
 msgid "powered by"
-msgstr ""
+msgstr "propulsé par"
 
 #: captcha.php:237
 msgid "Activate contact form"
@@ -135,17 +135,16 @@ msgid "Download contact form"
 msgstr "Télécharger le formulaire de contact"
 
 #: captcha.php:242
-#, fuzzy
 msgid "If you would like to customize this plugin for a custom form, please see"
-msgstr "Si vous souhaitez personnaliser le pluginavec un formulaire spécifique, merci de nous contacter via"
+msgstr "Si vous souhaitez personnaliser cette extension pour un formulaire spécifique, merci de consultez"
 
 #: captcha.php:255
 msgid "\"Create a Group\" form"
-msgstr ""
+msgstr "Formulaire pour \"Créer un groupe\""
 
 #: captcha.php:260
 msgid "This functionality is available in the Pro version of the plugin. For more details, please follow the link"
-msgstr ""
+msgstr "Cette fonction est disponible dans le version Pro de cette extension. Pour plus d'informations, consultez le lien "
 
 #: captcha.php:267
 msgid "Title for CAPTCHA in the form"
