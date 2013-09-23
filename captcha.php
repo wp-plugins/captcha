@@ -4,7 +4,7 @@ Plugin Name: Captcha
 Plugin URI:  http://bestwebsoft.com/plugin/
 Description: Plugin Captcha intended to prove that the visitor is a human being and not a spam robot. Plugin asks the visitor to answer a math question.
 Author: BestWebSoft
-Version: 3.8.1
+Version: 3.8.2
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -100,8 +100,9 @@ if ( ! function_exists( 'register_cptch_settings' ) ) {
 }
 
 // Add global setting for Captcha
-global $wpmu, $str_key;
-$str_key = "bws-23082013";
+global $wpmu, $str_key, $time;
+$str_key = "bws_23092013";
+$time = time();
 
 if ( 1 == $wpmu )
    $cptch_options = get_site_option( 'cptch_options' ); // get the options from the database
@@ -115,7 +116,7 @@ if ( 1 == $cptch_options['cptch_login_form'] ) {
 	add_filter( 'login_redirect', 'cptch_login_check', 10, 3 ); 
 }
 // Add captcha into comments form
-if( 1 == $cptch_options['cptch_comments_form'] ) {
+if ( 1 == $cptch_options['cptch_comments_form'] ) {
 	global $wp_version;
 	if ( version_compare( $wp_version,'3','>=' ) ) { // wp 3.0 +
 		add_action( 'comment_form_after_fields', 'cptch_comment_form_wp3', 1 );
@@ -328,14 +329,15 @@ if ( ! function_exists( 'cptch_login_post' ) ) {
 			unset( $_SESSION['cptch_error'] );
 
 		if ( isset( $_REQUEST['action'] ) && 'register' == $_REQUEST['action'] )
-			return($errors);
+			return( $errors );
 
 		// If captcha not complete, return error
 		if ( isset( $_REQUEST['cptch_number'] ) && "" ==  $_REQUEST['cptch_number'] ) {	
 			return $errors.'<strong>'. __( 'ERROR', 'captcha' ) .'</strong>: '. __( 'Please fill the form.', 'captcha' );
 		}
 
-		if ( isset( $_REQUEST['cptch_result'] ) && isset( $_REQUEST['cptch_number'] ) && 0 == strcasecmp( trim( decode( $_REQUEST['cptch_result'], $str_key ) ), $_REQUEST['cptch_number'] ) ) {
+		if ( isset( $_REQUEST['cptch_result'] ) && isset( $_REQUEST['cptch_number'] ) && isset( $_REQUEST['cptch_time'] )
+		 && 0 == strcasecmp( trim( decode( $_REQUEST['cptch_result'], $str_key, $_REQUEST['cptch_time'] ) ), $_REQUEST['cptch_number'] ) ) {
 			// captcha was matched						
 		} else {
 			return $errors.'<strong>'. __( 'ERROR', 'captcha' ) .'</strong>: '. __( 'Please enter a valid CAPTCHA value.', 'captcha' );
@@ -360,8 +362,8 @@ if ( ! function_exists( 'cptch_login_check' ) ) {
 			wp_clear_auth_cookie();
 			return $_SERVER["REQUEST_URI"];
 		}
-		if ( isset( $_REQUEST['cptch_result'] ) && isset( $_REQUEST['cptch_number'] ) ) {
-			if ( 0 == strcasecmp( trim( decode( $_REQUEST['cptch_result'], $str_key ) ), $_REQUEST['cptch_number'] ) ) {
+		if ( isset( $_REQUEST['cptch_result'] ) && isset( $_REQUEST['cptch_number'] ) && isset( $_REQUEST['cptch_time'] ) ) {
+			if ( 0 == strcasecmp( trim( decode( $_REQUEST['cptch_result'], $str_key, $_REQUEST['cptch_time'] ) ), $_REQUEST['cptch_number'] ) ) {
 			 $_SESSION['cptch_login'] = true;
 				return $url;		// captcha was matched						
 			} else {
@@ -478,7 +480,7 @@ if ( ! function_exists( 'cptch_comment_post' ) ) {
 		if ( isset( $_REQUEST['cptch_number'] ) && "" ==  $_REQUEST['cptch_number'] )
 			wp_die( __('Please fill the form.', 'captcha' ) );
 
-		if ( isset( $_REQUEST['cptch_result'] ) && isset( $_REQUEST['cptch_number'] ) && 0 == strcasecmp( trim( decode( $_REQUEST['cptch_result'], $str_key ) ), $_REQUEST['cptch_number'] ) ) {
+		if ( isset( $_REQUEST['cptch_result'] ) && isset( $_REQUEST['cptch_number'] ) && isset( $_REQUEST['cptch_time'] ) && 0 == strcasecmp( trim( decode( $_REQUEST['cptch_result'], $str_key, $_REQUEST['cptch_time'] ) ), $_REQUEST['cptch_number'] ) ) {
 			// captcha was matched
 			return($comment);
 		} else {
@@ -516,7 +518,8 @@ if ( ! function_exists( 'cptch_register_post' ) ) {
 			return $errors;
 		}
 
-		if ( isset( $_REQUEST['cptch_result'] ) && isset( $_REQUEST['cptch_number'] ) && 0 == strcasecmp( trim( decode( $_REQUEST['cptch_result'], $str_key ) ), $_REQUEST['cptch_number'] ) ) {
+		if ( isset( $_REQUEST['cptch_result'] ) && isset( $_REQUEST['cptch_number'] ) && isset( $_REQUEST['cptch_time'] )
+		 && 0 == strcasecmp( trim( decode( $_REQUEST['cptch_result'], $str_key, $_REQUEST['cptch_time'] ) ), $_REQUEST['cptch_number'] ) ) {
 			// captcha was matched						
 		} else {
 			$errors->add('captcha_wrong', '<strong>'.__('ERROR', 'captcha').'</strong>: '.__('Please enter a valid CAPTCHA value.', 'captcha'));
@@ -535,7 +538,8 @@ if ( ! function_exists( 'cptch_register_validate' ) ) {
 				return $results;
 			}
 
-			if ( isset( $_REQUEST['cptch_result'] ) && isset( $_REQUEST['cptch_number'] ) && 0 == strcasecmp( trim( decode( $_REQUEST['cptch_result'], $str_key ) ), $_REQUEST['cptch_number'] ) ) {
+			if ( isset( $_REQUEST['cptch_result'] ) && isset( $_REQUEST['cptch_number'] ) && isset( $_REQUEST['cptch_time'] )
+				&& 0 == strcasecmp( trim( decode( $_REQUEST['cptch_result'], $str_key, $_REQUEST['cptch_time'] ) ), $_REQUEST['cptch_number'] ) ) {
 				// captcha was matched						
 			} else {
 				$results['errors']->add( 'captcha_wrong', '<strong>' . __( 'ERROR', 'captcha' ) . '</strong>: ' . __( 'Please enter a valid CAPTCHA value.', 'captcha' ) );
@@ -561,7 +565,8 @@ if ( ! function_exists( 'cptch_lostpassword_post' ) ) {
 		}
 		
 		// Check entered captcha
-		if ( isset( $_REQUEST['cptch_result'] ) && isset( $_REQUEST['cptch_number'] ) && 0 == strcasecmp( trim( decode( $_REQUEST['cptch_result'], $str_key ) ), $_REQUEST['cptch_number'] ) ) {
+		if ( isset( $_REQUEST['cptch_result'] ) && isset( $_REQUEST['cptch_number'] ) && isset( $_REQUEST['cptch_time'] ) 
+			&& 0 == strcasecmp( trim( decode( $_REQUEST['cptch_result'], $str_key, $_REQUEST['cptch_time'] ) ), $_REQUEST['cptch_number'] ) ) {
 			return;
 		} else {
 			wp_die( __( 'Error: You have entered an incorrect CAPTCHA value. Click the BACK button on your browser, and try again.', 'captcha' ) );
@@ -572,7 +577,7 @@ if ( ! function_exists( 'cptch_lostpassword_post' ) ) {
 // Functionality of the captcha logic work
 if ( ! function_exists( 'cptch_display_captcha' ) ) {
 	function cptch_display_captcha() {
-		global $cptch_options, $str_key;
+		global $cptch_options, $str_key, $time;
 		
 		// In letters presentation of numbers 0-9
 		$number_string = array(); 
@@ -703,20 +708,22 @@ if ( ! function_exists( 'cptch_display_captcha' ) ) {
 			$str_math_expretion .= $array_math_expretion[2];
 		}
 		// Add hidden field with encoding result
-	?>
-		<input type="hidden" name="cptch_result" value="<?php echo $str = encode( $array_math_expretion[$rand_input], $str_key ); ?>" /><input type="hidden" value="Version: 2.4" />
+		?>
+		<input type="hidden" name="cptch_result" value="<?php echo $str = encode( $array_math_expretion[$rand_input], $str_key, $time ); ?>" />
+		<input type="hidden" name="cptch_time" value="<?php echo $time; ?>" />
+		<input type="hidden" value="Version: 2.4" />
 		<?php echo $str_math_expretion; ?>
-	<?php 
+	<?php
 	}
 }
 
 // Function for encodinf number
 if ( ! function_exists( 'encode' ) ) {
-	function encode( $String, $Password ) {
+	function encode( $String, $Password, $cptch_time ) {
 		// Check if key for encoding is empty
 		if ( ! $Password ) die ( __( "Encryption password is not set", 'captcha' ) );
 
-		$Salt = '5tOYgjaWC2VtdEWQ';
+		$Salt = md5( $cptch_time, true );
 		$String = substr( pack( "H*", sha1( $String ) ), 0, 1 ).$String;
 		$StrLen = strlen( $String );
 		$Seq = $Password;
@@ -732,13 +739,13 @@ if ( ! function_exists( 'encode' ) ) {
 
 // Function for decoding number
 if ( ! function_exists( 'decode' ) ) {
-	function decode( $String, $Key ) {
+	function decode( $String, $Key, $cptch_time ) {
 		// Check if key for encoding is empty
 		if ( ! $Key ) die ( __( "Decryption password is not set", 'captcha' ) );
 
-		$Salt		=	'5tOYgjaWC2VtdEWQ';
+		$Salt = md5( $cptch_time, true );
 		$StrLen = strlen( $String );
-		$Seq		= $Key;
+		$Seq = $Key;
 		$Gamma	= '';
 		while ( strlen( $Gamma ) < $StrLen ) {
 				$Seq = pack( "H*", sha1( $Seq . $Gamma . $Salt ) );
@@ -791,7 +798,8 @@ if ( ! function_exists( 'cptch_check_custom_form' ) ) {
 			}
 			
 			// Check entered captcha
-			if ( isset( $_REQUEST['cptch_result'] ) && isset( $_REQUEST['cptch_number'] ) && 0 == strcasecmp( trim( decode( $_REQUEST['cptch_result'], $str_key ) ), $_REQUEST['cptch_number'] ) ) {
+			if ( isset( $_REQUEST['cptch_result'] ) && isset( $_REQUEST['cptch_number'] ) && isset( $_REQUEST['cptch_time'] )
+				&& 0 == strcasecmp( trim( decode( $_REQUEST['cptch_result'], $str_key, $_REQUEST['cptch_time'] ) ), $_REQUEST['cptch_number'] ) ) {
 				return true;
 			} else {
 				return false;
@@ -804,7 +812,7 @@ if ( ! function_exists( 'cptch_check_custom_form' ) ) {
 // Functionality of the captcha logic work for custom form
 if ( ! function_exists( 'cptch_display_captcha_custom' ) ) {
 	function cptch_display_captcha_custom() {
-		global $cptch_options, $str_key;
+		global $cptch_options, $str_key, $time;
 		$content = "";
 		
 		// In letters presentation of numbers 0-9
@@ -936,7 +944,9 @@ if ( ! function_exists( 'cptch_display_captcha_custom' ) ) {
 			$str_math_expretion .= $array_math_expretion[2];
 		}
 		// Add hidden field with encoding result
-		$content .= '<input type="hidden" name="cptch_result" value="'.$str = encode( $array_math_expretion[$rand_input], $str_key ).'" /><input type="hidden" value="Version: 2.4" />';
+		$content .= '<input type="hidden" name="cptch_result" value="'.$str = encode( $array_math_expretion[$rand_input], $str_key, $time ).'" />
+		<input type="hidden" name="cptch_time" value="'. $time.'" />
+		<input type="hidden" value="Version: 2.4" />';
 		$content .= $str_math_expretion; 
 		return $content;
 	}
