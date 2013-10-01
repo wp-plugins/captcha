@@ -4,7 +4,7 @@ Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=10
 Tags: captcha, match captcha, text captcha, spam, antispam, login, registration, comment, lost password, capcha, catcha, captha
 Requires at least: 3.0
 Tested up to: 3.6.1
-Stable tag: 3.8.2
+Stable tag: 3.8.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -62,7 +62,7 @@ There is also a premium version of the plugin, allowing compatibility with Buddy
 * Swedish (sv_SE) (thanks to Christer Rönningborg, <a href="mailto:blittan@xbmc.org">Blittan</a>)
 * Tagalog (tl) (thanks to <a href="mailto:rjalali@languageconnect.net">Roozbeh Jalali</a>, www.languageconnect.net)
 * Turkish (tr_TR) (thanks to Can Atasever, www.candanblog.com)
-* Ukrainian (uk_UA) (thanks to Oleg Bondarenko)
+* Ukrainian (uk_UA)
 * Vietnamese (vi_VN) (thanks to NDT Solutions)
 
 If you would like to create your own language pack or update the existing one, you can send <a href="http://codex.wordpress.org/Translating_WordPress" target="_blank">the text of PO and MO files</a> for <a href="http://support.bestwebsoft.com" target="_blank">BestWebSoft</a> and we'll add it to the plugin. You can download the latest version of the program for work with PO and MO files  <a href="http://www.poedit.net/download.php" target="_blank">Poedit</a>.
@@ -150,6 +150,10 @@ You could add this line to the variable and display this variable in the require
 5. Login form with Captcha.
 
 == Changelog ==
+
+= V3.8.3 - 1.10.2013 =
+* Update : The Brazilian Portuguese language file is updated.
+* Update : The Ukrainian language file is updated. 
 
 = V3.8.2 - 23.09.2013 =
 * Bugfix : Captcha protection is improved by changing hidden values in every session.
@@ -367,6 +371,9 @@ You could add this line to the variable and display this variable in the require
 * Select functionality of mathematical actions and level of their difficulty are implemented.
 
 == Upgrade Notice ==
+
+= V3.8.3 =
+The Brazilian Portuguese language file is updated. The Ukrainian language file is updated. 
 
 = V3.8.2 =
 Captcha protection is improved by changing hidden values in every session.
