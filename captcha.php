@@ -4,7 +4,7 @@ Plugin Name: Captcha
 Plugin URI:  http://bestwebsoft.com/plugin/
 Description: Plugin Captcha intended to prove that the visitor is a human being and not a spam robot. Plugin asks the visitor to answer a math question.
 Author: BestWebSoft
-Version: 3.8.3
+Version: 3.8.4
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -669,7 +669,7 @@ if ( ! function_exists( 'cptch_display_captcha' ) ) {
 		$str_math_expretion = "";
 		// First part of mathematical expression
 		if ( 0 == $rand_input )
-			$str_math_expretion .= "<input id=\"cptch_input\" type=\"text\" autocomplete=\"off\" name=\"cptch_number\" value=\"\" maxlength=\"2\" size=\"2\" aria-required=\"true\" style=\"width:20px;margin-bottom:0;display:inline;font-size: 12px;width: 30px;\" />";
+			$str_math_expretion .= "<input id=\"cptch_input\" type=\"text\" autocomplete=\"off\" name=\"cptch_number\" value=\"\" maxlength=\"2\" size=\"2\" aria-required=\"true\" style=\"margin-bottom:0;display:inline;font-size: 12px;width: 30px;\" />";
 		else if ( 0 == $rand_number_string || 0 == $cptch_options["cptch_difficulty_number"] )
 			$str_math_expretion .= $number_string[$array_math_expretion[0]];
 		else
@@ -680,7 +680,7 @@ if ( ! function_exists( 'cptch_display_captcha' ) ) {
 		
 		// Second part of mathematical expression
 		if ( 1 == $rand_input )
-			$str_math_expretion .= " <input id=\"cptch_input\" type=\"text\" autocomplete=\"off\" name=\"cptch_number\" value=\"\" maxlength=\"2\" size=\"2\" aria-required=\"true\" style=\"width:20px;margin-bottom:0;display:inline;font-size: 12px;width: 30px;\" />";
+			$str_math_expretion .= " <input id=\"cptch_input\" type=\"text\" autocomplete=\"off\" name=\"cptch_number\" value=\"\" maxlength=\"2\" size=\"2\" aria-required=\"true\" style=\"margin-bottom:0;display:inline;font-size: 12px;width: 30px;\" />";
 		else if ( 1 == $rand_number_string || 0 == $cptch_options["cptch_difficulty_number"] )
 			$str_math_expretion .= " ".$number_string[$array_math_expretion[1]];
 		else
@@ -691,7 +691,7 @@ if ( ! function_exists( 'cptch_display_captcha' ) ) {
 		
 		// Add result of mathematical expression
 		if ( 2 == $rand_input ) {
-			$str_math_expretion .= " <input id=\"cptch_input\" type=\"text\" autocomplete=\"off\" name=\"cptch_number\" value=\"\" maxlength=\"2\" size=\"2\" aria-required=\"true\" style=\"width:20px;margin-bottom:0;display:inline;font-size: 12px;width: 30px;\" />";
+			$str_math_expretion .= " <input id=\"cptch_input\" type=\"text\" autocomplete=\"off\" name=\"cptch_number\" value=\"\" maxlength=\"2\" size=\"2\" aria-required=\"true\" style=\"margin-bottom:0;display:inline;font-size: 12px;width: 30px;\" />";
 		} else if ( 2 == $rand_number_string || 0 == $cptch_options["cptch_difficulty_number"] ) {
 			if( $array_math_expretion[2] < 10 )
 				$str_math_expretion .= " ".$number_string[$array_math_expretion[2]];
@@ -905,7 +905,7 @@ if ( ! function_exists( 'cptch_display_captcha_custom' ) ) {
 		$str_math_expretion = "";
 		// First part of mathematical expression
 		if( 0 == $rand_input )
-			$str_math_expretion .= "<input type=\"text\" autocomplete=\"off\" name=\"cptch_number\" value=\"\" maxlength=\"1\" size=\"1\" style=\"width:20px;margin-bottom:0;display:inline;font-size: 12px;width: 30px;\" />";
+			$str_math_expretion .= "<input type=\"text\" autocomplete=\"off\" name=\"cptch_number\" value=\"\" maxlength=\"1\" size=\"1\" style=\"margin-bottom:0;display:inline;font-size: 12px;width: 30px;\" />";
 		else if ( 0 == $rand_number_string || 0 == $cptch_options["cptch_difficulty_number"] )
 			$str_math_expretion .= $number_string[$array_math_expretion[0]];
 		else
@@ -916,7 +916,7 @@ if ( ! function_exists( 'cptch_display_captcha_custom' ) ) {
 		
 		// Second part of mathematical expression
 		if( 1 == $rand_input )
-			$str_math_expretion .= " <input type=\"text\" autocomplete=\"off\" name=\"cptch_number\" value=\"\" maxlength=\"1\" size=\"1\" style=\"width:20px;margin-bottom:0;display:inline;font-size: 12px;width: 30px;\" />";
+			$str_math_expretion .= " <input type=\"text\" autocomplete=\"off\" name=\"cptch_number\" value=\"\" maxlength=\"1\" size=\"1\" style=\"margin-bottom:0;display:inline;font-size: 12px;width: 30px;\" />";
 		else if ( 1 == $rand_number_string || 0 == $cptch_options["cptch_difficulty_number"] )
 			$str_math_expretion .= " ". $number_string[$array_math_expretion[1]];
 		else
@@ -927,7 +927,7 @@ if ( ! function_exists( 'cptch_display_captcha_custom' ) ) {
 		
 		// Add result of mathematical expression
 		if( 2 == $rand_input ) {
-			$str_math_expretion .= " <input type=\"text\" autocomplete=\"off\" name=\"cptch_number\" value=\"\" maxlength=\"2\" size=\"1\" style=\"width:20px;margin-bottom:0;display:inline;font-size: 12px;width: 30px;\" />";
+			$str_math_expretion .= " <input type=\"text\" autocomplete=\"off\" name=\"cptch_number\" value=\"\" maxlength=\"2\" size=\"1\" style=\"margin-bottom:0;display:inline;font-size: 12px;width: 30px;\" />";
 		} else if ( 2 == $rand_number_string || 0 == $cptch_options["cptch_difficulty_number"] ) {
 			if( $array_math_expretion[2] < 10 )
 				$str_math_expretion .= " ". $number_string[$array_math_expretion[2]];
@@ -958,7 +958,7 @@ if ( ! function_exists( 'cptch_contact_form_options' ) ) {
 			$all_plugins = get_plugins();
 			if ( array_key_exists( 'contact-form-plugin/contact_form.php', $all_plugins ) ) {
 				$cptch_options = get_option( 'cptch_options' );
-				if ( $cptch_options['cptch_contact_form'] == 1) {
+				if ( $cptch_options['cptch_contact_form'] == 1 ) {
 					add_filter('cntctfrm_display_captcha', 'cptch_custom_form');
 					add_filter('cntctfrm_check_form', 'cptch_check_custom_form');
 				} elseif ( $cptch_options['cptch_contact_form'] == 0 ) {
@@ -967,7 +967,7 @@ if ( ! function_exists( 'cptch_contact_form_options' ) ) {
 				}
 			} elseif ( array_key_exists( 'contact-form-pro/contact_form_pro.php', $all_plugins ) ) {
 				$cptch_options = get_option( 'cptch_options' );
-				if ( $cptch_options['cptch_contact_form'] == 1) {
+				if ( $cptch_options['cptch_contact_form'] == 1 ) {
 					add_filter('cntctfrmpr_display_captcha', 'cptch_custom_form');
 					add_filter('cntctfrmpr_check_form', 'cptch_check_custom_form');
 				} elseif ( $cptch_options['cptch_contact_form'] == 0 ) {
@@ -1049,6 +1049,42 @@ if ( ! function_exists ( 'cptch_admin_head' ) ) {
 			wp_enqueue_script( 'bws_menu_script', plugins_url( 'js/bws_menu.js' , __FILE__ ) );
 	}
 }
+
+if ( ! function_exists ( 'cptch_plugin_banner' ) ) {
+	function cptch_plugin_banner() {
+		global $hook_suffix;	
+		$plugin_info = get_plugin_data( __FILE__ );		
+		if ( $hook_suffix == 'plugins.php' ) {              
+	       	echo '<div class="updated" style="padding: 0; margin: 0; border: none; background: none;">
+	       		<script type="text/javascript" src="' . plugins_url( 'js/c_o_o_k_i_e.js', __FILE__ ).'"></script>
+				<script type="text/javascript">		
+					(function($){
+						$(document).ready(function(){		
+							var hide_message = $.cookie("cptch_hide_banner_on_plugin_page");
+							if ( hide_message == "true") {
+								$(".cptch_message").css("display", "none");
+							};
+							$(".cptch_close_icon").click(function() {
+								$(".cptch_message").css("display", "none");
+								$.cookie( "cptch_hide_banner_on_plugin_page", "true", { expires: 32 } );
+							});	
+						});
+					})(jQuery);				
+				</script>					                      
+				<div class="cptch_message">
+					<a class="button cptch_button" target="_blank" href="http://bestwebsoft.com/plugin/captcha-pro/?k=345f1af66a47b233cd05bc55b2382ff0&pn=75&v=' . $plugin_info["Version"] . '">Learn More</a>				
+					<div class="cptch_text">
+						It’s time to upgrade your <strong>Captcha plugin</strong> to <strong>PRO</strong> version!<br />
+						<span>Extend standard plugin functionality with new great options.</span>
+					</div> 					
+					<img class="cptch_close_icon" title="" src="' . plugins_url( 'images/close_banner.png', __FILE__ ) . '" alt=""/>
+					<img class="cptch_icon" title="" src="' . plugins_url( 'images/banner.png', __FILE__ ) . '" alt=""/>	
+				</div>  
+			</div>';      
+		}
+	}
+}
+
 // Function for delete delete options
 if ( ! function_exists ( 'cptch_delete_options' ) ) {
 	function cptch_delete_options() {
@@ -1071,6 +1107,8 @@ add_action( 'after_setup_theme', 'cptch_contact_form_options' );
 
 add_action( 'admin_enqueue_scripts', 'cptch_admin_head' );
 add_action( 'wp_enqueue_scripts', 'cptch_admin_head' );
+
+add_action('admin_notices', 'cptch_plugin_banner');
 
 register_uninstall_hook( __FILE__, 'cptch_delete_options' );
 ?>

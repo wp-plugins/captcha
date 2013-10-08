@@ -10,5 +10,12 @@
 				$('.bws_system_info_meta_box .inside').css('display','block');
 			}					
 		});
+		$('.bws_system_info_meta_box .handlediv').click( function(){
+			if ( $('.bws_system_info_meta_box .inside').is(":visible") ) {
+				$('.bws_system_info_meta_box .inside').css('display','none');
+			} else {
+				$('.bws_system_info_meta_box .inside').css('display','block');
+			}					
+		});	
 	});
 })(jQuery);
