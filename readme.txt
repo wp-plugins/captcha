@@ -152,7 +152,7 @@ You could add this line to the variable and display this variable in the require
 
 == Changelog ==
 
-= V3.8.5 - 17.10.2013 =
+= V3.8.5 - 17.10.2013 = 
 * Update : The Italian language file is updated. 
 * NEW : The Catalan language file is added to the plugin.
 
