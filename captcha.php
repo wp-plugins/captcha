@@ -4,7 +4,7 @@ Plugin Name: Captcha
 Plugin URI:  http://bestwebsoft.com/plugin/
 Description: Plugin Captcha intended to prove that the visitor is a human being and not a spam robot. Plugin asks the visitor to answer a math question.
 Author: BestWebSoft
-Version: 3.8.4
+Version: 3.8.5
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -100,9 +100,9 @@ if ( ! function_exists( 'register_cptch_settings' ) ) {
 }
 
 // Add global setting for Captcha
-global $wpmu, $str_key, $time;
+global $wpmu, $str_key, $cptch_time;
 $str_key = "bws_23092013";
-$time = time();
+$cptch_time = time();
 
 if ( 1 == $wpmu )
    $cptch_options = get_site_option( 'cptch_options' ); // get the options from the database
@@ -577,7 +577,7 @@ if ( ! function_exists( 'cptch_lostpassword_post' ) ) {
 // Functionality of the captcha logic work
 if ( ! function_exists( 'cptch_display_captcha' ) ) {
 	function cptch_display_captcha() {
-		global $cptch_options, $str_key, $time;
+		global $cptch_options, $str_key, $cptch_time;
 		
 		// In letters presentation of numbers 0-9
 		$number_string = array(); 
@@ -669,7 +669,7 @@ if ( ! function_exists( 'cptch_display_captcha' ) ) {
 		$str_math_expretion = "";
 		// First part of mathematical expression
 		if ( 0 == $rand_input )
-			$str_math_expretion .= "<input id=\"cptch_input\" type=\"text\" autocomplete=\"off\" name=\"cptch_number\" value=\"\" maxlength=\"2\" size=\"2\" aria-required=\"true\" style=\"margin-bottom:0;display:inline;font-size: 12px;width: 30px;\" />";
+			$str_math_expretion .= "<input id=\"cptch_input\" type=\"text\" autocomplete=\"off\" name=\"cptch_number\" value=\"\" maxlength=\"2\" size=\"2\" aria-required=\"true\" required=\"required\" style=\"margin-bottom:0;display:inline;font-size: 12px;width: 30px;\" />";
 		else if ( 0 == $rand_number_string || 0 == $cptch_options["cptch_difficulty_number"] )
 			$str_math_expretion .= $number_string[$array_math_expretion[0]];
 		else
@@ -680,7 +680,7 @@ if ( ! function_exists( 'cptch_display_captcha' ) ) {
 		
 		// Second part of mathematical expression
 		if ( 1 == $rand_input )
-			$str_math_expretion .= " <input id=\"cptch_input\" type=\"text\" autocomplete=\"off\" name=\"cptch_number\" value=\"\" maxlength=\"2\" size=\"2\" aria-required=\"true\" style=\"margin-bottom:0;display:inline;font-size: 12px;width: 30px;\" />";
+			$str_math_expretion .= " <input id=\"cptch_input\" type=\"text\" autocomplete=\"off\" name=\"cptch_number\" value=\"\" maxlength=\"2\" size=\"2\" aria-required=\"true\" required=\"required\" style=\"margin-bottom:0;display:inline;font-size: 12px;width: 30px;\" />";
 		else if ( 1 == $rand_number_string || 0 == $cptch_options["cptch_difficulty_number"] )
 			$str_math_expretion .= " ".$number_string[$array_math_expretion[1]];
 		else
@@ -691,7 +691,7 @@ if ( ! function_exists( 'cptch_display_captcha' ) ) {
 		
 		// Add result of mathematical expression
 		if ( 2 == $rand_input ) {
-			$str_math_expretion .= " <input id=\"cptch_input\" type=\"text\" autocomplete=\"off\" name=\"cptch_number\" value=\"\" maxlength=\"2\" size=\"2\" aria-required=\"true\" style=\"margin-bottom:0;display:inline;font-size: 12px;width: 30px;\" />";
+			$str_math_expretion .= " <input id=\"cptch_input\" type=\"text\" autocomplete=\"off\" name=\"cptch_number\" value=\"\" maxlength=\"2\" size=\"2\" aria-required=\"true\" required=\"required\" style=\"margin-bottom:0;display:inline;font-size: 12px;width: 30px;\" />";
 		} else if ( 2 == $rand_number_string || 0 == $cptch_options["cptch_difficulty_number"] ) {
 			if( $array_math_expretion[2] < 10 )
 				$str_math_expretion .= " ".$number_string[$array_math_expretion[2]];
@@ -709,8 +709,8 @@ if ( ! function_exists( 'cptch_display_captcha' ) ) {
 		}
 		// Add hidden field with encoding result
 		?>
-		<input type="hidden" name="cptch_result" value="<?php echo $str = encode( $array_math_expretion[$rand_input], $str_key, $time ); ?>" />
-		<input type="hidden" name="cptch_time" value="<?php echo $time; ?>" />
+		<input type="hidden" name="cptch_result" value="<?php echo $str = encode( $array_math_expretion[$rand_input], $str_key, $cptch_time ); ?>" />
+		<input type="hidden" name="cptch_time" value="<?php echo $cptch_time; ?>" />
 		<input type="hidden" value="Version: 2.4" />
 		<?php echo $str_math_expretion; ?>
 	<?php
@@ -812,7 +812,7 @@ if ( ! function_exists( 'cptch_check_custom_form' ) ) {
 // Functionality of the captcha logic work for custom form
 if ( ! function_exists( 'cptch_display_captcha_custom' ) ) {
 	function cptch_display_captcha_custom() {
-		global $cptch_options, $str_key, $time;
+		global $cptch_options, $str_key, $cptch_time;
 		$content = "";
 		
 		// In letters presentation of numbers 0-9
@@ -944,8 +944,8 @@ if ( ! function_exists( 'cptch_display_captcha_custom' ) ) {
 			$str_math_expretion .= $array_math_expretion[2];
 		}
 		// Add hidden field with encoding result
-		$content .= '<input type="hidden" name="cptch_result" value="'.$str = encode( $array_math_expretion[$rand_input], $str_key, $time ).'" />
-		<input type="hidden" name="cptch_time" value="'. $time.'" />
+		$content .= '<input type="hidden" name="cptch_result" value="'.$str = encode( $array_math_expretion[$rand_input], $str_key, $cptch_time ).'" />
+		<input type="hidden" name="cptch_time" value="'. $cptch_time.'" />
 		<input type="hidden" value="Version: 2.4" />';
 		$content .= $str_math_expretion; 
 		return $content;

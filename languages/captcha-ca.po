@@ -1,203 +1,167 @@
+# Byrial Ole Jensen <byrial@vip.cybercity.dk>, 2011.
 msgid ""
 msgstr ""
-"Project-Id-Version: сaptcha\n"
+"Project-Id-Version: captcha\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-10-17 16:58+0300\n"
-"PO-Revision-Date: 2013-10-17 17:00+0300\n"
+"POT-Creation-Date: 2013-10-17 17:08+0300\n"
+"PO-Revision-Date: 2013-10-17 17:08+0300\n"
 "Last-Translator: \n"
-"Language-Team: Marco <marco@blackstudio.it>\n"
+"Language-Team: Psiete <psiete@gmail.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Poedit 1.5.4\n"
-"X-Poedit-SourceCharset: utf-8\n"
-"X-Poedit-KeywordsList: __;_e\n"
+"Language: da\n"
+"X-Generator: Poedit 1.5.7\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-Basepath: ..\n"
-"X-Textdomain-Support: yes\n"
+"X-Poedit-KeywordsList: __;_e\n"
 "X-Poedit-SearchPath-0: .\n"
 
-# @ captcha
 #: captcha.php:32
 #: captcha.php:216
 msgid "Captcha Settings"
-msgstr "Impostazioni Captcha"
+msgstr "Opcions de Captcha"
 
-# @ captcha
 #: captcha.php:32
 msgid "Captcha"
 msgstr "Captcha"
 
-# @ captcha
 #: captcha.php:41
 msgid "Login form"
-msgstr "Modulo di login"
+msgstr "Inici de sessió"
 
-# @ captcha
 #: captcha.php:42
 #: captcha.php:254
 msgid "Registration form"
-msgstr "Modulo di registrazione"
+msgstr "Formulari de registre"
 
-# @ captcha
 #: captcha.php:42
 msgid "Register form"
-msgstr "Modulo di registrazione"
+msgstr "Formulari de registre"
 
-# @ captcha
 #: captcha.php:43
 msgid "Reset Password form"
-msgstr "Modulo recupero password"
+msgstr "Formulari per a restablir la contrasenya"
 
-# @ captcha
 #: captcha.php:43
 msgid "Lost password form"
-msgstr "Modulo recupero password"
+msgstr "Formulari de contrasenya oblidada"
 
-# @ captcha
 #: captcha.php:44
 #: captcha.php:255
 msgid "Comments form"
-msgstr "Modulo dei commenti"
+msgstr "Formulari de comentaris"
 
-# @ captcha
 #: captcha.php:45
 msgid "Hide CAPTCHA for registered users"
-msgstr "Nascondi CAPTCHA per gli utenti registrati"
+msgstr "Amagar el CAPTCHA als usuaris registrats"
 
-# @ captcha
 #: captcha.php:50
 msgid "Plus (&#43;)"
-msgstr "Addizione (&#43;)"
+msgstr "Suma (&#43;)"
 
-# @ captcha
 #: captcha.php:50
 msgid "Plus"
-msgstr "Più"
+msgstr "Suma (&#43;)"
 
-# @ captcha
 #: captcha.php:51
 msgid "Minus (&minus;)"
-msgstr "Sottrazione (&minus;)"
+msgstr "Resta (&minus;)"
 
-# @ captcha
 #: captcha.php:51
 msgid "Minus"
-msgstr "Meno"
+msgstr "Resta (&minus;)"
 
-# @ captcha
 #: captcha.php:52
 msgid "Multiplication (&times;)"
-msgstr "Moltiplicazione (&times;)"
+msgstr "Multiplicació (&times;)"
 
-# @ captcha
 #: captcha.php:52
 msgid "Multiply"
-msgstr "Moltiplicazione"
+msgstr "Multiplicar"
 
-# @ captcha
 #: captcha.php:57
 msgid "Numbers"
-msgstr "Numeri"
+msgstr "Números"
 
-# @ captcha
 #: captcha.php:58
 msgid "Words"
-msgstr "Parole"
+msgstr "Paraules"
 
-# @ bestwebsoft
-# @ captcha
 #: captcha.php:149
 #: captcha.php:160
 msgid "Settings"
-msgstr "Impostazioni"
+msgstr "Configuració"
 
-# @ captcha
 #: captcha.php:161
 msgid "FAQ"
 msgstr "FAQ"
 
-# @ captcha
 #: captcha.php:162
 msgid "Support"
-msgstr "Supporto"
+msgstr "Suport"
 
-# @ captcha
 #: captcha.php:205
 msgid "Please select one item in the block Arithmetic and Complexity for CAPTCHA"
-msgstr "Per favole seleziona una opzione nel blocco Aritmetica e Difficolatà per il CAPTCHA"
+msgstr "Si us plau, seleccioneu un element en el bloc d'Aritmètica i la complexitat de CAPTCHA"
 
-# @ captcha
 #: captcha.php:209
 msgid "Options saved."
-msgstr "Impostazioni salvate."
+msgstr "Opcions guardades."
 
-# @ captcha
 #: captcha.php:222
 #: captcha.php:251
 msgid "Enable CAPTCHA for:"
-msgstr "Abilita il CAPTCHA per:"
+msgstr "Habilitar CAPTCHA per:"
 
-# @ captcha
 #: captcha.php:236
 #: captcha.php:238
 #: captcha.php:241
 msgid "Contact form"
-msgstr "Modulo di contatto"
+msgstr "Plugin Contact Form"
 
-# @ captcha
 #: captcha.php:236
 #: captcha.php:238
 #: captcha.php:241
 msgid "powered by"
-msgstr "powered by"
+msgstr "impulsat per"
 
-# @ captcha
 #: captcha.php:238
 msgid "Activate contact form"
-msgstr "Attiva modulo di contatto"
+msgstr "Activar plugin Contact Form"
 
-# @ captcha
 #: captcha.php:241
 msgid "Download contact form"
-msgstr "Scarica il plugin per il modulo di contatto"
+msgstr "Descarregar plugin Contact Form"
 
-# @ captcha
 #: captcha.php:243
 msgid "If you would like to customize this plugin for a custom form, please see"
-msgstr "Se desideri personalizzare il plugin per un modulo di contatto personalizzato, vedi"
+msgstr "Si vols personalitzar aquest plugin per a un formulari personalitzat, consulteu"
 
-# @ captcha
 #: captcha.php:256
 msgid "\"Create a Group\" form"
-msgstr "Modulo \"Crea un gruppo\""
+msgstr ""
 
-# @ captcha
 #: captcha.php:261
 msgid "This functionality is available in the Pro version of the plugin. For more details, please follow the link"
-msgstr "Questa funzionalità è disponibile nella versione Pro del plugin. Per maggiori dettagli, per favore vai al link"
+msgstr "Aquesta funcionalitat està disponible en la versió Pro del plugin. Per a més detalls, si us plau seguiu l'enllaç"
 
-# @ captcha
 #: captcha.php:268
 msgid "Title for CAPTCHA in the form"
-msgstr "Titolo per il CAPTCHA nel modulo"
+msgstr "Títol per al CAPTCHA en el formulari"
 
-# @ captcha
 #: captcha.php:272
 msgid "Arithmetic actions for CAPTCHA"
-msgstr "Operazioni aritmetiche per il  CAPTCHA"
+msgstr "Operacions aritmètiques del CAPTCHA"
 
-# @ captcha
 #: captcha.php:281
 msgid "CAPTCHA complexity level"
-msgstr "Livello complessità CAPTCHA"
+msgstr "Nivell de complexitat de CAPTCHA"
 
-# @ default
 #: captcha.php:291
 msgid "Save Changes"
-msgstr "Salva le modifiche"
+msgstr "Salvar canvis"
 
-# @ captcha
 #: captcha.php:336
 #: captcha.php:343
 #: captcha.php:517
@@ -205,9 +169,8 @@ msgstr "Salva le modifiche"
 #: captcha.php:537
 #: captcha.php:545
 msgid "ERROR"
-msgstr "ERRORE"
+msgstr "ERROR"
 
-# @ captcha
 #: captcha.php:336
 #: captcha.php:360
 #: captcha.php:481
@@ -215,208 +178,207 @@ msgstr "ERRORE"
 #: captcha.php:537
 #: captcha.php:564
 msgid "Please fill the form."
-msgstr "Per favore compila il modulo."
+msgstr "Si us plau ompli el formulari."
 
-# @ captcha
 #: captcha.php:343
 #: captcha.php:371
 #: captcha.php:525
 #: captcha.php:545
 msgid "Please enter a valid CAPTCHA value."
-msgstr "Per favore completa il test di controllo."
+msgstr "Si us plau, introduïu un valor vàlid per al CAPTCHA"
 
-# @ captcha
 #: captcha.php:487
 #: captcha.php:572
 msgid "Error: You have entered an incorrect CAPTCHA value. Click the BACK button on your browser, and try again."
-msgstr "Errore: hai inserito una risposta errata nel codice di controllo. Fai click sul pulsante INDIETRO del tuo browser e prova di nuovo."
+msgstr "Error: S'ha introduït un valor CAPTCHA incorrecte. Feu clic al botó Enrere del navegador i torneu a intentar-ho."
 
-# @ captcha
 #: captcha.php:584
 #: captcha.php:820
 msgid "zero"
 msgstr "zero"
 
-# @ captcha
 #: captcha.php:585
 #: captcha.php:821
 #: captcha.php:1036
 msgid "one"
-msgstr "uno"
+msgstr "un"
 
-# @ captcha
 #: captcha.php:586
 #: captcha.php:822
 msgid "two"
-msgstr "due"
+msgstr "dues"
 
-# @ captcha
 #: captcha.php:587
 #: captcha.php:823
 msgid "three"
-msgstr "tre"
+msgstr "tres"
 
-# @ captcha
 #: captcha.php:588
 #: captcha.php:824
 msgid "four"
-msgstr "quattro"
+msgstr "quatre"
 
-# @ captcha
 #: captcha.php:589
 #: captcha.php:825
 msgid "five"
-msgstr "cinque"
+msgstr "cinc"
 
-# @ captcha
 #: captcha.php:590
 #: captcha.php:826
 #: captcha.php:1036
 msgid "six"
-msgstr "sei"
+msgstr "sis"
 
-# @ captcha
 #: captcha.php:591
 #: captcha.php:827
 #: captcha.php:1024
 #: captcha.php:1030
 msgid "seven"
-msgstr "sette"
+msgstr "set"
 
-# @ captcha
 #: captcha.php:592
 #: captcha.php:828
 #: captcha.php:1027
 msgid "eight"
-msgstr "otto"
+msgstr "vuit"
 
-# @ captcha
 #: captcha.php:593
 #: captcha.php:829
 msgid "nine"
-msgstr "nove"
+msgstr "nou"
 
-# @ captcha
 #: captcha.php:596
 #: captcha.php:832
 msgid "eleven"
-msgstr "undici"
+msgstr "onze"
 
-# @ captcha
 #: captcha.php:597
 #: captcha.php:833
 msgid "twelve"
-msgstr "dodici"
+msgstr "dotze"
 
-# @ captcha
 #: captcha.php:598
 #: captcha.php:834
 msgid "thirteen"
-msgstr "tredici"
+msgstr "tretze"
 
-# @ captcha
 #: captcha.php:599
 #: captcha.php:835
 msgid "fourteen"
-msgstr "quattordici"
+msgstr "catorze"
 
-# @ captcha
 #: captcha.php:600
 #: captcha.php:836
 msgid "fifteen"
-msgstr "quindici"
+msgstr "quinze"
 
-# @ captcha
 #: captcha.php:601
 #: captcha.php:837
 msgid "sixteen"
-msgstr "sedici"
+msgstr "setze"
 
-# @ captcha
 #: captcha.php:602
 #: captcha.php:838
 msgid "seventeen"
-msgstr "diciassette"
+msgstr "disset"
 
-# @ captcha
 #: captcha.php:603
 #: captcha.php:839
 msgid "eighteen"
-msgstr "diciotto"
+msgstr "divuit"
 
-# @ captcha
 #: captcha.php:604
 #: captcha.php:840
 msgid "nineteen"
-msgstr "diciannove"
+msgstr "dinou"
 
-# @ captcha
 #: captcha.php:607
 #: captcha.php:843
 msgid "ten"
-msgstr "dieci"
+msgstr "deu"
 
-# @ captcha
 #: captcha.php:608
 #: captcha.php:844
 msgid "twenty"
-msgstr "venti"
+msgstr "vint"
 
-# @ captcha
 #: captcha.php:609
 #: captcha.php:845
 msgid "thirty"
 msgstr "trenta"
 
-# @ captcha
 #: captcha.php:610
 #: captcha.php:846
 msgid "forty"
 msgstr "quaranta"
 
-# @ captcha
 #: captcha.php:611
 #: captcha.php:847
 msgid "fifty"
 msgstr "cinquanta"
 
-# @ captcha
 #: captcha.php:612
 #: captcha.php:848
 msgid "sixty"
-msgstr "sessanta"
+msgstr "seixanta"
 
-# @ captcha
 #: captcha.php:613
 #: captcha.php:849
 msgid "seventy"
-msgstr "settanta"
+msgstr "setanta"
 
-# @ captcha
 #: captcha.php:614
 #: captcha.php:850
 msgid "eighty"
-msgstr "ottanta"
+msgstr "vuitanta"
 
-# @ captcha
 #: captcha.php:615
 #: captcha.php:851
 msgid "ninety"
-msgstr "novanta"
+msgstr "noranta"
 
-# @ captcha
 #: captcha.php:702
 #: captcha.php:938
 msgid "and"
-msgstr "e"
+msgstr "i"
 
-# @ captcha
 #: captcha.php:724
 msgid "Encryption password is not set"
-msgstr "La password per la decodifica della cifratura non è impostata"
+msgstr "La contrasenya de xifratge no s'ha establert"
 
-# @ captcha
 #: captcha.php:744
 msgid "Decryption password is not set"
-msgstr "La password per la decodifica della cifratura non è impostata"
+msgstr "La contrasenya de desxifrat no s'ha establert"
+
+#, fuzzy
+#~ msgid "PHP XML support"
+#~ msgstr "Soporte"
+#~ msgid "Please enter a valid email address."
+#~ msgstr "Introduïu una adreça de correu electrònic vàlida."
+
+#, fuzzy
+#~ msgid "Pro plugins"
+#~ msgstr "BWS Plugins"
+#~ msgid "Read more"
+#~ msgstr "Leer más"
+#~ msgid "Installed plugins"
+#~ msgstr "Plugins instalados"
+#~ msgid "Recommended plugins"
+#~ msgstr "Plugins recomendados"
+
+#, fuzzy
+#~ msgid "Free plugins"
+#~ msgstr "Plugins recomendados"
+#~ msgid "Download"
+#~ msgstr "Descargar"
+#~ msgid "Install %s"
+#~ msgstr "Instalar %s"
+#~ msgid "Install now from wordpress.org"
+#~ msgstr "Instala ahora desde wordpress.org"
+#~ msgid "Active Plugins"
+#~ msgstr "Plugins actius"
+#~ msgid "Inactive Plugins"
+#~ msgstr "Plugins inactius"
+#~ msgid "Send to support"
+#~ msgstr "Enviar a suport"
 
