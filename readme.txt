@@ -3,8 +3,8 @@ Contributors: bestwebsoft
 Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=10&product_id=13
 Tags: captcha, match captcha, text captcha, spam, antispam, login, registration, comment, lost password, capcha, catcha, captha
 Requires at least: 3.0
-Tested up to: 3.6.1
-Stable tag: 3.8.5
+Tested up to: 3.7
+Stable tag: 3.8.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -26,6 +26,13 @@ There is also a premium version of the plugin, allowing compatibility with Buddy
 * Display: You can use letters and numbers in captcha or just one of these two things - either letters or numbers.
 * Actions: The basic math actions are used - add, subtract, multiply.
 * Label: You can add a label to display captcha in the form.
+
+= Recommended Plugins =
+
+The author of the Captcha also recommends the following plugins:
+
+* <a href="http://wordpress.org/plugins/updater/">Updater</a> - This plugin updates WordPress core and the plugins to the recent versions. You can also use the auto mode or manual mode for updating and set email notifications.
+There is also a premium version of the plugin <a href="http://bestwebsoft.com/plugin/updater-pro/?k=0864088de1701a5e104ffb77c6d7011c">Updater Pro</a> with more useful features available. It allows to update plugins and WordPress core on several websites. It can make backup of all your files and database before updating.
 
 = Translation =
 
@@ -152,7 +159,11 @@ You could add this line to the variable and display this variable in the require
 
 == Changelog ==
 
-= V3.8.5 - 17.10.2013 = 
+= V3.8.6 - 25.10.2013 =
+* NEW : Ability to change required symbol (asterisk).
+* Update : We updated all functionality for wordpress 3.7.
+
+= V3.8.5 - 17.10.2013 =
 * Update : The Italian language file is updated. 
 * NEW : The Catalan language file is added to the plugin.
 
@@ -380,6 +391,9 @@ You could add this line to the variable and display this variable in the require
 * Select functionality of mathematical actions and level of their difficulty are implemented.
 
 == Upgrade Notice ==
+
+= V3.8.6 =
+Ability to change required symbol (asterisk). We updated all functionality for wordpress 3.7.
 
 = V3.8.5 =
 The Italian language file is updated. The Catalan language file is added to the plugin.

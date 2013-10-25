@@ -4,7 +4,7 @@ Plugin Name: Captcha
 Plugin URI:  http://bestwebsoft.com/plugin/
 Description: Plugin Captcha intended to prove that the visitor is a human being and not a spam robot. Plugin asks the visitor to answer a math question.
 Author: BestWebSoft
-Version: 3.8.5
+Version: 3.8.6
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -74,6 +74,7 @@ if ( ! function_exists( 'register_cptch_settings' ) ) {
 			'cptch_math_action_minus'		=> '1',
 			'cptch_math_action_increase'	=> '1',
 			'cptch_label_form'				=> '',
+			'cptch_required_symbol'			=> '*',
 			'cptch_difficulty_number'		=> '1',
 			'cptch_difficulty_word'			=> '1'
 		);
@@ -151,7 +152,8 @@ if ( ! function_exists( 'cptch_plugin_action_links' ) ) {
 			}
 		return $links;
 	}
-} // end function cptch_plugin_action_links
+}
+// end function cptch_plugin_action_links
 
 if ( ! function_exists( 'cptch_register_plugin_links' ) ) {
 	function cptch_register_plugin_links( $links, $file ) {
@@ -178,18 +180,19 @@ if ( ! function_exists( 'cptch_settings_page' ) ) {
 			$cptch_request_options = array();
 			
 			foreach( $cptch_options as $key => $val ) {
-				if( isset( $_REQUEST[$key] ) ) {
-					if( $key != 'cptch_label_form' )
-						$cptch_request_options[$key] = 1;
+				if ( isset( $_REQUEST[ $key ] ) ) {
+					if ( $key == 'cptch_label_form' || $key == 'cptch_required_symbol' )						
+						$cptch_request_options[ $key ] = trim( $_REQUEST[ $key ] );
 					else
-						$cptch_request_options[$key] = $_REQUEST[$key];
+						$cptch_request_options[ $key ] = 1;
 				} else {
-					if( $key != 'cptch_label_form' )
-						$cptch_request_options[$key] = 0;
-					else
-						$cptch_request_options[$key] = "";
+					if ( $key == 'cptch_label_form' || $key == 'cptch_required_symbol' ) {
+						$cptch_request_options['cptch_label_form'] = "";
+						$cptch_request_options['cptch_required_symbol'] = "*";
+					} else						
+						$cptch_request_options[ $key ] = 0;
 				}
-				if( isset( $_REQUEST['cptch_contact_form'] ) ) {
+				if ( isset( $_REQUEST['cptch_contact_form'] ) ) {
 					$cptch_request_options['cptch_contact_form'] = $_REQUEST['cptch_contact_form'];
 				} else {
 					$cptch_request_options['cptch_contact_form'] = 0;
@@ -267,6 +270,12 @@ if ( ! function_exists( 'cptch_settings_page' ) ) {
 					<tr valign="top">
 						<th scope="row"><?php _e( 'Title for CAPTCHA in the form', 'captcha' ); ?></th>
 						<td><input type="text" name="cptch_label_form" value="<?php echo stripslashes( $cptch_options['cptch_label_form'] ); ?>" <?php if( 1 == $cptch_options['cptch_label_form'] ) echo "checked=\"checked\""; ?> /></td>
+					</tr>
+					<tr valign="top">
+						<th scope="row" style="width:200px;"><?php _e( "Required symbol", 'captcha' ); ?></th>
+						<td colspan="2">
+							<input type="text" name="cptch_required_symbol" value="<?php echo $cptch_options['cptch_required_symbol']; ?>" />
+						</td>
 					</tr>
 					<tr valign="top">
 						<th scope="row"><?php _e( 'Arithmetic actions for CAPTCHA', 'captcha' ); ?></th>
@@ -392,7 +401,7 @@ if ( ! function_exists( 'cptch_comment_form' ) ) {
 		// captcha html - comment form
 		echo '<p class="cptch_block">';
 		if( "" != $cptch_options['cptch_label_form'] )	
-			echo '<label for="cptch_input">'. stripslashes( $cptch_options['cptch_label_form'] ) .'<span class="required"> *</span></label>';
+			echo '<label for="cptch_input">'. stripslashes( $cptch_options['cptch_label_form'] ) .'<span class="required"> ' . $cptch_options['cptch_required_symbol'] . '</span></label>';
 		echo '<br />';
 		cptch_display_captcha();
 		echo '</p>';
@@ -432,7 +441,7 @@ if ( ! function_exists( 'cptch_comment_form_wp3' ) ) {
 		// captcha html - comment form
 		echo '<p class="cptch_block">';
 		if( "" != $cptch_options['cptch_label_form'] )	
-			echo '<label for="cptch_input">'. stripslashes( $cptch_options['cptch_label_form'] ) .'<span class="required"> *</span></label>';
+			echo '<label for="cptch_input">'. stripslashes( $cptch_options['cptch_label_form'] ) .'<span class="required"> ' . $cptch_options['cptch_required_symbol'] . '</span></label>';
 		echo '<br />';
 		cptch_display_captcha();
 		echo '</p>';
@@ -774,7 +783,7 @@ if ( ! function_exists( 'cptch_custom_form' ) ) {
 		// captcha html - login form
 		$content .= '<p class="cptch_block" style="text-align:left;">';
 		if ( "" != $cptch_options['cptch_label_form'] )	
-			$content .= '<label for="cptch_input">'. stripslashes( $cptch_options['cptch_label_form'] ) .'<span class="required"> *</span></label><br />';
+			$content .= '<label for="cptch_input">'. stripslashes( $cptch_options['cptch_label_form'] ) .'<span class="required"> ' . $cptch_options['cptch_required_symbol'] . '</span></label><br />';
 		else
 			$content .= '<br />';
 		if ( isset( $error_message['error_captcha'] ) ) {
