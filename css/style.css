@@ -56,6 +56,36 @@
 	direction: ltr;
 }
 /*
+* styles help tooltips
+*/
+.cptch_help_box {
+    background-image: url("../images/tooltip_icons.png");
+    background-repeat: no-repeat;
+    cursor: pointer;
+    float: left;
+    height: 29px;
+    position: relative;
+    margin: -3px 5px 3px;
+    width: 29px;
+    clear: none !important;
+}
+.cptch_hidden_help_text {
+    background: #F4F4F4;
+    border: 1px solid #DCDCDC;
+    border-radius: 4px;
+    left: 40px;
+    padding: 5px 10px;
+    position: absolute;
+    width: 240px;
+    line-height: 1.5;
+}
+.cptch_hidden_help_text:before {
+    content: url("../images/help.png");
+    left: -10px;
+    position: absolute;
+    top: 7px;
+}
+/*
 * styles for pro_version settings, banner and tooltip 
 */
 table.bws_pro_version {	
