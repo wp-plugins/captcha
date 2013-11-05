@@ -4,7 +4,7 @@ Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=10
 Tags: captcha, match captcha, text captcha, spam, antispam, login, registration, comment, lost password, capcha, catcha, captha
 Requires at least: 3.0
 Tested up to: 3.7.1
-Stable tag: 3.8.7
+Stable tag: 3.8.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -158,6 +158,10 @@ You could add this line to the variable and display this variable in the require
 5. Login form with Captcha.
 
 == Changelog ==
+
+= V3.8.8 - 05.11.2013 =
+* NEW : Add checking installed wordpress version.
+* Update : We updated security functionality.
 
 = V3.8.7 - 31.10.2013 =
 * Update : We updated all functionality for wordpress 3.7.1.
@@ -396,6 +400,9 @@ You could add this line to the variable and display this variable in the require
 * Select functionality of mathematical actions and level of their difficulty are implemented.
 
 == Upgrade Notice ==
+
+= V3.8.8 =
+Add checking installed wordpress version. We updated security functionality.
 
 = V3.8.7 =
 We updated all functionality for wordpress 3.7.1. Activation of radio button or checkbox by clicking on its label. We added Tooltips for settings page.
