@@ -8,7 +8,7 @@ Stable tag: 3.8.9
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-This plugin allows you to implement super security captcha form into web forms.
+This plugin allows you to implement super security captcha form into web forms. 
 
 == Description ==
 
