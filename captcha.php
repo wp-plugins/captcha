@@ -4,7 +4,7 @@ Plugin Name: Captcha
 Plugin URI:  http://bestwebsoft.com/plugin/
 Description: Plugin Captcha intended to prove that the visitor is a human being and not a spam robot. Plugin asks the visitor to answer a math question.
 Author: BestWebSoft
-Version: 3.8.8
+Version: 3.8.9
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -28,7 +28,7 @@ require_once( dirname( __FILE__ ) . '/bws_menu/bws_menu.php' );
 
 if ( ! function_exists( 'add_cptch_admin_menu' ) ) {
 	function add_cptch_admin_menu() {
-		add_menu_page( 'BWS Plugins', 'BWS Plugins', 'manage_options', 'bws_plugins', 'bws_add_menu_render', WP_CONTENT_URL."/plugins/captcha/images/px.png", 1001); 
+		add_menu_page( 'BWS Plugins', 'BWS Plugins', 'manage_options', 'bws_plugins', 'bws_add_menu_render', plugins_url( "images/px.png", __FILE__ ), 1001); 
 		add_submenu_page('bws_plugins', __( 'Captcha Settings', 'captcha' ), __( 'Captcha', 'captcha' ), 'manage_options', "captcha.php", 'cptch_settings_page');
 
 		//call register settings function

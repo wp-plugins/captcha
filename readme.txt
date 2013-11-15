@@ -4,7 +4,7 @@ Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=10
 Tags: captcha, match captcha, text captcha, spam, antispam, login, registration, comment, lost password, capcha, catcha, captha
 Requires at least: 3.0
 Tested up to: 3.7.1
-Stable tag: 3.8.8
+Stable tag: 3.8.9
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -32,7 +32,7 @@ There is also a premium version of the plugin, allowing compatibility with Buddy
 The author of the Captcha also recommends the following plugins:
 
 * <a href="http://wordpress.org/plugins/updater/">Updater</a> - This plugin updates WordPress core and the plugins to the recent versions. You can also use the auto mode or manual mode for updating and set email notifications.
-There is also a premium version of the plugin <a href="http://bestwebsoft.com/plugin/updater-pro/?k=0864088de1701a5e104ffb77c6d7011c">Updater Pro</a> with more useful features available. It allows to update plugins and WordPress core on several websites. It can make backup of all your files and database before updating.
+There is also a premium version of the plugin <a href="http://bestwebsoft.com/plugin/updater-pro/?k=0864088de1701a5e104ffb77c6d7011c">Updater Pro</a> with more useful features available. It can make backup of all your files and database before updating. Also it can forbid some plugins or WordPress Core update.
 
 = Translation =
 
@@ -56,6 +56,7 @@ There is also a premium version of the plugin <a href="http://bestwebsoft.com/pl
 * Hindi (hi_IN) (thanks to <a href="mailto:ash.pr@outshinesolutions.com">Outshine Solutions</a>, www.outshinesolutions.com)
 * Hungarian (hu_HU) (thanks to Bőm Tamás)
 * Japanese (ja) (thanks to Foken)
+* Indonesian (id_ID) (thanks to <a href="mailto:nasroel@al-badar.net">Nasrulhaq Muiz</a>, www.al-badar.net)
 * Italian (it_IT) (thanks to Gianluca Di Carlo, <a href="mailto:marco@blackstudio.it">Marco</a>)
 * Latvian (lv) (thanks to <a href="mailto:juris.o@gmail.com">Juris O</a>)
 * Lithuanian (lt_LT) (thanks to <a href="mailto:arnas.metal@gmail.com">Arnas</a>)
@@ -158,6 +159,10 @@ You could add this line to the variable and display this variable in the require
 5. Login form with Captcha.
 
 == Changelog ==
+
+= V3.8.9 - 15.11.2013 =
+* Update : The French language file is updated. 
+* NEW : The Indonesian language file is added to the plugin.
 
 = V3.8.8 - 05.11.2013 =
 * NEW : Add checking installed wordpress version.
@@ -400,6 +405,9 @@ You could add this line to the variable and display this variable in the require
 * Select functionality of mathematical actions and level of their difficulty are implemented.
 
 == Upgrade Notice ==
+
+= V3.8.9 =
+The French language file is updated. The Indonesian language file is added to the plugin.
 
 = V3.8.8 =
 Add checking installed wordpress version. We updated security functionality.

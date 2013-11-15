@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: captcha\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-05 16:34+0300\n"
-"PO-Revision-Date: 2013-11-05 16:34+0300\n"
+"POT-Creation-Date: 2013-11-15 15:42+0300\n"
+"PO-Revision-Date: 2013-11-15 15:42+0300\n"
 "Last-Translator: \n"
 "Language-Team: Luc Capronnier <lcapronnier@yahoo.com>\n"
 "MIME-Version: 1.0\n"
@@ -28,20 +28,19 @@ msgstr "Captcha"
 
 #: captcha.php:49
 msgid "requires"
-msgstr ""
+msgstr "requis"
 
 #: captcha.php:49
 msgid "or higher, that is why it has been deactivated! Please upgrade WordPress and try again."
-msgstr ""
+msgstr "ou supérieure, c'est pourquoi il a été désactivé! Merci de faire la mise à jour de WordPress puis de ré-essayer?"
 
 #: captcha.php:49
 msgid "Back to the WordPress"
-msgstr ""
+msgstr "Retour à WordPress"
 
 #: captcha.php:49
-#, fuzzy
 msgid "Plugins page"
-msgstr "Plugins pro"
+msgstr "Page du plugins"
 
 #: captcha.php:57
 msgid "Login form"
@@ -123,9 +122,8 @@ msgid "Please select one item in the block Arithmetic and Complexity for CAPTCHA
 msgstr "Merci de choisir au moins un élément dans la catégorie mathématique et un dans la catégorie compléxité pour le CAPTCHA"
 
 #: captcha.php:248
-#, fuzzy
 msgid "Settings saved."
-msgstr "Options sauvegardées."
+msgstr "Options enregistrées."
 
 #: captcha.php:261
 #: captcha.php:288
@@ -161,7 +159,6 @@ msgid "\"Create a Group\" form"
 msgstr "Formulaire pour \"Créer un groupe\""
 
 #: captcha.php:299
-#, fuzzy
 msgid "Enable CAPTCHA:"
 msgstr "Activer le CAPTCHA pour :"
 
@@ -175,7 +172,7 @@ msgstr "Le titre du CAPTCHA dans les formulaires"
 
 #: captcha.php:318
 msgid "Required symbol"
-msgstr ""
+msgstr "Symbol obligatoire"
 
 #: captcha.php:324
 msgid "Arithmetic actions for CAPTCHA"
@@ -457,6 +454,8 @@ msgstr ""
 #~ msgstr "Merci d'avoir pris contact avec nous."
 #~ msgid "Sorry, email message could not be delivered."
 #~ msgstr "Désoler, l'e-mail n'a pas pu être envoyé."
+#~ msgid "Pro plugins"
+#~ msgstr "Plugins pro"
 #~ msgid "Activated plugins"
 #~ msgstr "Plugins activés"
 #~ msgid "Read more"
