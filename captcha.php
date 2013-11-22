@@ -4,7 +4,7 @@ Plugin Name: Captcha
 Plugin URI:  http://bestwebsoft.com/plugin/
 Description: Plugin Captcha intended to prove that the visitor is a human being and not a spam robot. Plugin asks the visitor to answer a math question.
 Author: BestWebSoft
-Version: 3.8.9
+Version: 3.9
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -28,7 +28,7 @@ require_once( dirname( __FILE__ ) . '/bws_menu/bws_menu.php' );
 
 if ( ! function_exists( 'add_cptch_admin_menu' ) ) {
 	function add_cptch_admin_menu() {
-		add_menu_page( 'BWS Plugins', 'BWS Plugins', 'manage_options', 'bws_plugins', 'bws_add_menu_render', plugins_url( "images/px.png", __FILE__ ), 1001); 
+		add_menu_page( 'BWS Plugins', 'BWS Plugins', 'manage_options', 'bws_plugins', 'bws_add_menu_render', plugins_url( "images/px.png", __FILE__ ), 1001 ); 
 		add_submenu_page('bws_plugins', __( 'Captcha Settings', 'captcha' ), __( 'Captcha', 'captcha' ), 'manage_options', "captcha.php", 'cptch_settings_page');
 
 		//call register settings function
@@ -937,7 +937,8 @@ if ( ! function_exists( 'cptch_check_custom_form' ) ) {
 		} else
 			return false;
 	}
-} //  end function cptch_check_contact_form
+}
+//  end function cptch_check_contact_form
 
 // Functionality of the captcha logic work for custom form
 if ( ! function_exists( 'cptch_display_captcha_custom' ) ) {
@@ -1194,34 +1195,56 @@ if ( ! function_exists ( 'cptch_admin_head' ) ) {
 if ( ! function_exists ( 'cptch_plugin_banner' ) ) {
 	function cptch_plugin_banner() {
 		global $hook_suffix;	
-		$plugin_info = get_plugin_data( __FILE__ );		
-		if ( $hook_suffix == 'plugins.php' ) {              
-	       	echo '<div class="updated" style="padding: 0; margin: 0; border: none; background: none;">
-	       		<script type="text/javascript" src="' . plugins_url( 'js/c_o_o_k_i_e.js', __FILE__ ) . '"></script>
-				<script type="text/javascript">		
-					(function($) {
-						$(document).ready( function() {		
-							var hide_message = $.cookie( "cptch_hide_banner_on_plugin_page" );
-							if ( hide_message == "true") {
-								$( ".cptch_message" ).css( "display", "none" );
-							};
-							$( ".cptch_close_icon" ).click( function() {
-								$( ".cptch_message" ).css( "display", "none" );
-								$.cookie( "cptch_hide_banner_on_plugin_page", "true", { expires: 32 } );
-							});	
-						});
-					})(jQuery);				
-				</script>					                      
-				<div class="cptch_message">
-					<a class="button cptch_button" target="_blank" href="http://bestwebsoft.com/plugin/captcha-pro/?k=345f1af66a47b233cd05bc55b2382ff0&pn=75&v=' . $plugin_info["Version"] . '">Learn More</a>				
-					<div class="cptch_text">
-						' . __( "It's time to upgrade your", 'captcha' ) . ' <strong>Captcha plugin</strong> ' . __( 'to', 'captcha' ) . ' <strong>PRO</strong> ' . __( 'version', 'captcha' ) . '!<br />
-						<span>' . __( 'Extend standard plugin functionality with new great options', 'captcha' ) . '.</span>
-					</div> 					
-					<img class="cptch_close_icon" title="" src="' . plugins_url( 'images/close_banner.png', __FILE__ ) . '" alt=""/>
-					<img class="cptch_icon" title="" src="' . plugins_url( 'images/banner.png', __FILE__ ) . '" alt=""/>	
-				</div>  
-			</div>';      
+		if ( $hook_suffix == 'plugins.php' ) {   
+			$banner_array = array(
+				array( 'pdtr_hide_banner_on_plugin_page', 'updater/updater.php', '1.12' ),
+				array( 'cntctfrmtdb_hide_banner_on_plugin_page', 'contact-form-to-db/contact_form_to_db.php', '1.2' ),
+				array( 'cntctfrmpr_for_ctfrmtdb_hide_banner_on_plugin_page', 'contact-form-pro/contact_form_pro.php', '1.14' ),
+				array( 'cntctfrm_for_ctfrmtdb_hide_banner_on_plugin_page', 'contact-form-plugin/contact_form.php', '3.62' ),
+				array( 'cntctfrm_hide_banner_on_plugin_page', 'contact-form-plugin/contact_form.php', '3.47' ),	
+				array( 'cptch_hide_banner_on_plugin_page', 'captcha/captcha.php', '3.8.4' ),
+				array( 'gllr_hide_banner_on_plugin_page', 'gallery-plugin/gallery-plugin.php', '3.9.1' )				
+			);
+			$plugin_info = get_plugin_data( __FILE__ );		
+			if ( ! function_exists( 'is_plugin_active_for_network' ) )
+				require_once( ABSPATH . '/wp-admin/includes/plugin.php' );
+			$active_plugins = get_option( 'active_plugins' );			
+			$all_plugins = get_plugins();
+			$this_banner = 'cptch_hide_banner_on_plugin_page';
+			foreach ( $banner_array as $key => $value ) {
+				if ( $this_banner == $value[0] ) {
+					echo '<div class="updated" style="padding: 0; margin: 0; border: none; background: none;">
+			       		<script type="text/javascript" src="' . plugins_url( 'js/c_o_o_k_i_e.js', __FILE__ ) . '"></script>
+						<script type="text/javascript">		
+							(function($) {
+								$(document).ready( function() {		
+									var hide_message = $.cookie( "cptch_hide_banner_on_plugin_page" );
+									if ( hide_message == "true") {
+										$( ".cptch_message" ).css( "display", "none" );
+									};
+									$( ".cptch_close_icon" ).click( function() {
+										$( ".cptch_message" ).css( "display", "none" );
+										$.cookie( "cptch_hide_banner_on_plugin_page", "true", { expires: 32 } );
+									});	
+								});
+							})(jQuery);				
+						</script>					                      
+						<div class="cptch_message">
+							<a class="button cptch_button" target="_blank" href="http://bestwebsoft.com/plugin/captcha-pro/?k=345f1af66a47b233cd05bc55b2382ff0&pn=75&v=' . $plugin_info["Version"] . '">Learn More</a>				
+							<div class="cptch_text">
+								' . __( "It's time to upgrade your <strong>Captcha plugin</strong> to <strong>PRO</strong> version", 'captcha' ) . '!<br />
+								<span>' . __( 'Extend standard plugin functionality with new great options', 'captcha' ) . '.</span>
+							</div> 					
+							<img class="cptch_close_icon" title="" src="' . plugins_url( 'images/close_banner.png', __FILE__ ) . '" alt=""/>
+							<img class="cptch_icon" title="" src="' . plugins_url( 'images/banner.png', __FILE__ ) . '" alt=""/>	
+						</div>  
+					</div>';
+					break;
+				}
+				if ( isset( $all_plugins[ $value[1] ] ) && $all_plugins[ $value[1] ]["Version"] >= $value[2] && ( 0 < count( preg_grep( '/' . str_replace( '/', '\/', $value[1] ) . '/', $active_plugins ) ) || is_plugin_active_for_network( $value[1] ) ) && ! isset( $_COOKIE[ $value[0] ] ) ) {
+					break;
+				}
+			}    
 		}
 	}
 }

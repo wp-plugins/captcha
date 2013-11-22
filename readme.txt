@@ -4,7 +4,7 @@ Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=10
 Tags: captcha, match captcha, text captcha, spam, antispam, login, registration, comment, lost password, capcha, catcha, captha
 Requires at least: 3.0
 Tested up to: 3.7.1
-Stable tag: 3.8.9
+Stable tag: 3.9
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -42,6 +42,7 @@ There is also a premium version of the plugin <a href="http://bestwebsoft.com/pl
 * Bulgarian (bg_BG) (thanks to <a href="mailto:paharaman@gmail.com">Nick</a>)
 * Catalan (ca) (thanks to <a href="mailto:psiete@gmail.com">Psiete</a>)
 * Chinese (zh_CN) (thanks to Billy Jeans)
+* Taiwan (zh_TW) (thanks to <a href="mailto:hh3stuff@gmail.com">Henry H</a>)
 * Croatian (hr) (thanks to <a href="mailto:daniel@geogat.com">Daniel</a>)
 * Czech (cs_CZ) (thanks to Tomas Vesely, <a href="mailto:crysman@seznam.cz">Crysman</a>)
 * Danish (da_DK) (thanks to Byrial Ole Jensed)
@@ -159,6 +160,10 @@ You could add this line to the variable and display this variable in the require
 5. Login form with Captcha.
 
 == Changelog ==
+
+= V3.9 - 22.11.2013 =
+* NEW : The Taiwan language file is added to the plugin.
+* Update : BWS plugins section is updated.
 
 = V3.8.9 - 15.11.2013 =
 * Update : The French language file is updated. 
@@ -405,6 +410,9 @@ You could add this line to the variable and display this variable in the require
 * Select functionality of mathematical actions and level of their difficulty are implemented.
 
 == Upgrade Notice ==
+
+= V3.9 =
+The Taiwan language file is added to the plugin. BWS plugins section is updated.
 
 = V3.8.9 =
 The French language file is updated. The Indonesian language file is added to the plugin.
