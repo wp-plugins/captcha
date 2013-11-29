@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: captcha\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-22 13:56+0300\n"
-"PO-Revision-Date: 2013-11-22 13:56+0300\n"
+"POT-Creation-Date: 2013-11-29 14:37+0300\n"
+"PO-Revision-Date: 2013-11-29 14:38+0300\n"
 "Last-Translator: \n"
 "Language-Team: bestwebsoft.com <plugin@bestwebsoft.com>\n"
 "MIME-Version: 1.0\n"
@@ -27,20 +27,19 @@ msgstr "КАПЧА"
 
 #: captcha.php:49
 msgid "requires"
-msgstr ""
+msgstr "потребує"
 
 #: captcha.php:49
 msgid "or higher, that is why it has been deactivated! Please upgrade WordPress and try again."
-msgstr ""
+msgstr "або вище, тому його було деактивовано! Будь ласка, оновіть WordPress та спробуйте ще раз."
 
 #: captcha.php:49
 msgid "Back to the WordPress"
-msgstr ""
+msgstr "Назад до WordPress"
 
 #: captcha.php:49
-#, fuzzy
 msgid "Plugins page"
-msgstr "Преміум плагіни"
+msgstr "Сторінки плагінів"
 
 #: captcha.php:57
 msgid "Login form"
@@ -122,9 +121,8 @@ msgid "Please select one item in the block Arithmetic and Complexity for CAPTCHA
 msgstr "Будь ласка, виберіть 1 пункт з блоку Арифметичні дії та Складність для КАПЧА"
 
 #: captcha.php:248
-#, fuzzy
 msgid "Settings saved."
-msgstr "Опції збережено"
+msgstr "Опції збережено."
 
 #: captcha.php:261
 #: captcha.php:288
@@ -141,7 +139,7 @@ msgstr "Контактна форма"
 #: captcha.php:275
 #: captcha.php:278
 msgid "powered by"
-msgstr "розроблено за допомогою"
+msgstr "розроблено"
 
 #: captcha.php:275
 msgid "Activate contact form"
@@ -160,9 +158,8 @@ msgid "\"Create a Group\" form"
 msgstr "Форма \"Створити групу\""
 
 #: captcha.php:299
-#, fuzzy
 msgid "Enable CAPTCHA:"
-msgstr "Відображати КАПЧА для:"
+msgstr "Відображати капчу для:"
 
 #: captcha.php:307
 msgid "This functionality is available in the Pro version of the plugin. For more details, please follow the link"
@@ -174,7 +171,7 @@ msgstr "Заголовок для КАПЧА у формі"
 
 #: captcha.php:318
 msgid "Required symbol"
-msgstr ""
+msgstr "Необхідний символ"
 
 #: captcha.php:324
 msgid "Arithmetic actions for CAPTCHA"
@@ -378,11 +375,11 @@ msgstr "Пароль для дешифрування не встановлено
 
 #: captcha.php:1235
 msgid "It's time to upgrade your <strong>Captcha plugin</strong> to <strong>PRO</strong> version"
-msgstr ""
+msgstr "Час оновити ваш плагін КАПЧА до про версії!"
 
 #: captcha.php:1236
 msgid "Extend standard plugin functionality with new great options"
-msgstr ""
+msgstr "Розширити стандартний функціонал плагіну новими опціями."
 
 #, fuzzy
 #~ msgid "to"
