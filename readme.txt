@@ -162,7 +162,7 @@ You could add this line to the variable and display this variable in the require
 
 == Changelog ==
 
-= V3.9.2 - 09.12.2013 =
+= V3.9.2 - 10.12.2013 =
 * NEW : A notice when changing settings on the plugin's settings page was added. 
 * Update : We updated all functionality for wordpress 3.8-RC1.
 
