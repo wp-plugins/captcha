@@ -4,7 +4,7 @@ Plugin Name: Captcha
 Plugin URI:  http://bestwebsoft.com/plugin/
 Description: Plugin Captcha intended to prove that the visitor is a human being and not a spam robot. Plugin asks the visitor to answer a math question.
 Author: BestWebSoft
-Version: 3.9.1
+Version: 3.9.2
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -258,9 +258,10 @@ if ( ! function_exists( 'cptch_settings_page' ) ) {
 		<div class="wrap">
 			<div class="icon32 icon32-bws" id="icon-options-general"></div>
 			<h2><?php _e('Captcha Settings', 'captcha' ); ?></h2>
+			<div id="cptch_settings_notice" class="updated fade" style="display:none"><p><strong><?php _e( "Notice:", 'captcha' ); ?></strong> <?php _e( "The plugin's settings have been changed. In order to save them please don't forget to click the 'Save Changes' button.", 'captcha' ); ?></p></div>
 			<div class="updated fade" <?php if( ! isset( $_REQUEST['cptch_form_submit'] ) || $error != "" ) echo "style=\"display:none\""; ?>><p><strong><?php echo $message; ?></strong></p></div>
 			<div class="error" <?php if( "" == $error ) echo "style=\"display:none\""; ?>><p><strong><?php echo $error; ?></strong></p></div>
-			<form method="post" action="admin.php?page=captcha.php">
+			<form id="cptch_settings_form" method="post" action="admin.php?page=captcha.php">
 				<table class="form-table">
 					<tr valign="top">
 						<th scope="row"><?php _e( 'Enable CAPTCHA for:', 'captcha' ); ?> </th>
@@ -307,13 +308,15 @@ if ( ! function_exists( 'cptch_settings_page' ) ) {
 							<input disabled='disabled' type="checkbox" name="cptchpr_cf7" value="1" /><br />
 						</td>
 					</tr>
+					<tr class="bws_pro_version_tooltip">
+						<th scope="row" colspan="2">
+							<?php _e( 'This functionality is available in the Pro version of the plugin. For more details, please follow the link', 'captcha' ); ?> 
+							<a href="http://bestwebsoft.com/plugin/captcha-pro/?k=9701bbd97e61e52baa79c58c3caacf6d&pn=75&v=<?php echo $plugin_info["Version"]; ?>&wp_v=<?php echo $wp_version; ?>" target="_blank" title="Captcha Pro">
+								Captcha Pro
+							</a>
+						</th>
+					</tr>
 				</table> 
-				<div class="bws_pro_version_tooltip">				
-					<?php _e( 'This functionality is available in the Pro version of the plugin. For more details, please follow the link', 'captcha' ); ?> 
-					<a href="http://bestwebsoft.com/plugin/captcha-pro/?k=9701bbd97e61e52baa79c58c3caacf6d&pn=75&v=<?php echo $plugin_info["Version"]; ?>&wp_v=<?php echo $wp_version; ?>" target="_blank" title="Captcha Pro">
-						Captcha Pro
-					</a>	
-				</div>
 				<table class="form-table">
 					<tr valign="top">
 						<th scope="row"><?php _e( 'Title for CAPTCHA in the form', 'captcha' ); ?></th>
@@ -328,7 +331,7 @@ if ( ! function_exists( 'cptch_settings_page' ) ) {
 					<tr valign="top">
 						<th scope="row"><?php _e( 'Arithmetic actions for CAPTCHA', 'captcha' ); ?></th>
 						<td>
-					<?php foreach( $cptch_admin_fields_actions as $actions ) { ?>
+					<?php foreach ( $cptch_admin_fields_actions as $actions ) { ?>
 							<div style="float:left; width:150px;clear: both;">
 								<label><input type="checkbox" name="<?php echo $actions[0]; ?>" value="<?php echo $cptch_options[$actions[0]]; ?>" <?php if( 1 == $cptch_options[$actions[0]] ) echo "checked=\"checked\""; ?> /> <?php echo __( $actions[1], 'captcha' ); ?></label>
 							</div>
@@ -342,7 +345,7 @@ if ( ! function_exists( 'cptch_settings_page' ) ) {
 					<tr valign="top">
 						<th scope="row"><?php _e( 'CAPTCHA complexity level', 'captcha' ); ?></th>
 						<td>
-					<?php foreach( $cptch_admin_fields_difficulty as $diff ) { ?>
+					<?php foreach ( $cptch_admin_fields_difficulty as $diff ) { ?>
 							<div style="float:left; width:150px;clear: both;">
 								<label><input type="checkbox" name="<?php echo $diff[0]; ?>" value="<?php echo $cptch_options[$diff[0]]; ?>" <?php if( 1 == $cptch_options[$diff[0]] ) echo "checked=\"checked\""; ?> /> <?php echo __( $diff[1], 'captcha' ); ?></label>
 							</div>
@@ -360,6 +363,16 @@ if ( ! function_exists( 'cptch_settings_page' ) ) {
 				</p>
 				<?php wp_nonce_field( plugin_basename(__FILE__), 'cptch_nonce_name' ); ?>
 			</form>
+			<div class="bws-plugin-reviews">
+				<div class="bws-plugin-reviews-rate">
+				<?php _e( 'If you enjoy our plugin, please give it 5 stars on WordPress', 'captcha' ); ?>:<br/>
+				<a href="http://wordpress.org/support/view/plugin-reviews/captcha" target="_blank" title="Captcha reviews"><?php _e( 'Rate the plugin', 'captcha' ); ?></a><br/>
+				</div>
+				<div class="bws-plugin-reviews-support">
+				<?php _e( 'If there is something wrong about it, please contact us', 'captcha' ); ?>:<br/>
+				<a href="http://support.bestwebsoft.com">http://support.bestwebsoft.com</a>
+				</div>
+			</div>
 		</div>
 	<?php } 
 }
@@ -1198,12 +1211,14 @@ if ( ! function_exists ( 'cptch_display_example' ) ) {
 
 if ( ! function_exists ( 'cptch_admin_head' ) ) {
 	function cptch_admin_head() {
-		wp_register_style( 'cptchStylesheet', plugins_url( 'css/style.css', __FILE__ ) );
-		wp_enqueue_style( 'cptchStylesheet' );
+		global $wp_version;
+		if ( $wp_version < 3.8 )
+			wp_enqueue_style( 'cptchStylesheet', plugins_url( 'css/style_wp_before_3.8.css', __FILE__ ) );	
+		else
+			wp_enqueue_style( 'cptchStylesheet', plugins_url( 'css/style.css', __FILE__ ) );
 
-		if ( isset( $_REQUEST['page'] ) && 'captcha.php' == $_REQUEST['page'] ) {
+		if ( isset( $_REQUEST['page'] ) && 'captcha.php' == $_REQUEST['page'] )
 			wp_enqueue_script( 'cptch_script', plugins_url( 'js/script.js', __FILE__ ) );
-		}
 
 		if ( isset( $_GET['page'] ) && "bws_plugins" == $_GET['page'] )
 			wp_enqueue_script( 'bws_menu_script', plugins_url( 'js/bws_menu.js' , __FILE__ ) );

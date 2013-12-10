@@ -3,8 +3,8 @@ Contributors: bestwebsoft
 Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=10&product_id=13
 Tags: captcha, match captcha, text captcha, spam, antispam, login, registration, comment, lost password, capcha, catcha, captha
 Requires at least: 3.0
-Tested up to: 3.7.1
-Stable tag: 3.9.1
+Tested up to: 3.8-RC1
+Stable tag: 3.9.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -158,8 +158,13 @@ You could add this line to the variable and display this variable in the require
 3. Registration form with Captcha.
 4. Lost password form with Captcha.
 5. Login form with Captcha.
+5. Contact form with Captcha.
 
 == Changelog ==
+
+= V3.9.2 - 09.12.2013 =
+* NEW : A notice when changing settings on the plugin's settings page was added. 
+* Update : We updated all functionality for wordpress 3.8-RC1.
 
 = V3.9.1 - 29.11.2013 =
 * Update : The Ukrainian language file is updated to the plugin.
@@ -414,6 +419,9 @@ You could add this line to the variable and display this variable in the require
 * Select functionality of mathematical actions and level of their difficulty are implemented.
 
 == Upgrade Notice ==
+
+= V3.9.2 =
+A notice when changing settings on the plugin's settings page was added. We updated all functionality for wordpress 3.8-RC1.
 
 = V3.9.1 =
 The Ukrainian language file is updated to the plugin. Screenshots are updated.

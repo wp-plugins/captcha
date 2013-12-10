@@ -1,14 +1,24 @@
-#adminmenu #toplevel_page_bws_plugins div.wp-menu-image,
-.admin-color-classic #adminmenu #toplevel_page_bws_plugins div.wp-menu-image,
+#adminmenu #toplevel_page_bws_plugins div.wp-menu-image {
+    background: url("../images/icon_16.png") no-repeat scroll center center transparent;
+}
+.admin-color-classic #adminmenu #toplevel_page_bws_plugins div.wp-menu-image {
+    background: url("../images/icon_16_b.png") no-repeat scroll center center transparent;
+}
 #adminmenu #toplevel_page_bws_plugins:hover div.wp-menu-image,
 #adminmenu #toplevel_page_bws_plugins.wp-has-current-submenu div.wp-menu-image {
-	background: url("../images/icon_16_single.png") no-repeat scroll center center transparent;
+    background: url("../images/icon_16_c.png") no-repeat scroll center center transparent;
+}
+.wrap #icon-options-general.icon32-bws {
+	background: url("../images/icon_36.png") no-repeat scroll left top transparent;
+}
+.admin-color-classic .wrap #icon-options-general.icon32-bws {
+	background: url("../images/icon_36_b.png") no-repeat scroll left top transparent;
 }
 #toplevel_page_bws_plugins .wp-submenu .wp-first-item {
 	display:none;
 }
 .bws_system_info_meta_box {
-    max-width: 850px;
+    width: 850px;
 }
 .bws_system_info_meta_box .hndle {
     cursor: pointer !important;
@@ -16,7 +26,7 @@
 .bws_system_info {
     float: left;
     margin-right: 10px;
-    max-width: 400px;
+    width: 400px;
 }
 .bws_system_info th {
     padding: 10px 0;
@@ -119,7 +129,10 @@ table.bws_pro_version td {
     min-width: 800px;
     border: 1px solid #d4d4d4;
     margin: 12px 0;
-    background: #FFF;
+    background: #ececec;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
     position: relative;
     overflow: hidden
 }
@@ -127,7 +140,7 @@ table.bws_pro_version td {
     color:#000;
     font-size: 15px;
     line-height: 26px;
-    margin-top: 18px;
+    margin-top: 13px;
     float: left;
 }
 .cptch_message .cptch_text span {
@@ -138,7 +151,7 @@ table.bws_pro_version td {
     float: left;
     border: 1px solid #1f75ad; 
     font-size: 14px;
-    margin: 20px 19px 15px 16px;
+    margin: 15px 19px 15px 16px;
     padding: 12px 0;
     color: #FFF;
     text-shadow: 0 1px 3px #636363;
