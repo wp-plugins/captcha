@@ -16,7 +16,7 @@ The Captcha plugin allows you to implement a super security captcha form into we
 This captcha can be used for login, registration, password recovery, comments forms.
 There is also a premium version of the plugin, allowing compatibility with BuddyPress (Registration form, Comments form, "Create a Group" form) and Contact Form 7.
 
-https://www.youtube.com/watch?v=SBZhBkO6Szs
+http://www.youtube.com/watch?v=SBZhBkO6Szs
 
 <a href="http://wordpress.org/plugins/captcha/faq/" target="_blank">FAQ</a>
 
