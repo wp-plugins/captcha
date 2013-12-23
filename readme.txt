@@ -18,6 +18,8 @@ There is also a premium version of the plugin, allowing compatibility with Buddy
 
 http://www.youtube.com/watch?v=SBZhBkO6Szs
 
+<a href="http://www.youtube.com/watch?v=svcdSfwlb2c" target="_blank">Video instruction on Installation</a>
+
 <a href="http://wordpress.org/plugins/captcha/faq/" target="_blank">FAQ</a>
 
 <a href="http://support.bestwebsoft.com" target="_blank">Support</a>
@@ -93,6 +95,10 @@ We can fix some things for free for the users who provide translation of our plu
 1. Upload the `captcha` folder to the `/wp-content/plugins/` directory.
 2. Activate the plugin via the 'Plugins' menu in WordPress.
 3. Plugin settings are located in 'Settings', 'Captcha'.
+
+<a href="http://bestwebsoft.com/wp-content/uploads/manual/wp_plugin/captcha/Captcha_Installation_step-by-step_instruction.pdf" target="_blank">View a PDF version of Step-by-step Instruction on Captcha Installation</a>.
+
+http://www.youtube.com/watch?v=svcdSfwlb2c
 
 == Frequently Asked Questions ==
 
