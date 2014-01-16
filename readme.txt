@@ -4,7 +4,7 @@ Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=10
 Tags: captcha, match captcha, text captcha, spam, antispam, login, registration, comment, lost password, capcha, catcha, captha
 Requires at least: 3.0
 Tested up to: 3.8
-Stable tag: 3.9.3
+Stable tag: 3.9.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -94,7 +94,7 @@ We can fix some things for free for the users who provide translation of our plu
 
 1. Upload the `captcha` folder to the `/wp-content/plugins/` directory.
 2. Activate the plugin via the 'Plugins' menu in WordPress.
-3. Plugin settings are located in 'Settings', 'Captcha'.
+3. Plugin settings are located in "BWS Plugins" > "Captcha".
 
 <a href="http://bestwebsoft.com/wp-content/uploads/manual/wp_plugin/captcha/Captcha_Installation_step-by-step_instruction.pdf" target="_blank">View a PDF version of Step-by-step Instruction on Captcha Installation</a>.
 
@@ -170,6 +170,9 @@ You could add this line to the variable and display this variable in the require
 5. Contact form with Captcha.
 
 == Changelog ==
+
+= V3.9.4 - 16.01.2014 =
+* Update : BWS plugins section is updated.
 
 = V3.9.3 - 25.12.2013 =
 * Update : The French language file is updated.
@@ -432,6 +435,9 @@ You could add this line to the variable and display this variable in the require
 * Select functionality of mathematical actions and level of their difficulty are implemented.
 
 == Upgrade Notice ==
+
+= V3.9.4 =
+BWS plugins section is updated.
 
 = V3.9.3 =
 The French language file is updated. We updated all functionality for wordpress 3.8.
