@@ -4,7 +4,7 @@ Plugin Name: Captcha
 Plugin URI:  http://bestwebsoft.com/plugin/
 Description: Plugin Captcha intended to prove that the visitor is a human being and not a spam robot. Plugin asks the visitor to answer a math question.
 Author: BestWebSoft
-Version: 3.9.5
+Version: 3.9.6
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -167,7 +167,7 @@ if ( 1 == $cptch_options['cptch_comments_form'] ) {
 	}
 	/* For WP before WP 3.0 */
 	add_action( 'comment_form', 'cptch_comment_form' );
-	add_filter( 'preprocess_comment', 'cptch_comment_post' );	
+	add_filter( 'preprocess_comment', 'cptch_comment_post' );	 
 }
 /* Add captcha in the register form */
 if ( 1 == $cptch_options['cptch_register_form'] ) {
@@ -586,21 +586,43 @@ if ( ! function_exists( 'cptch_login_check' ) ) {
 		global $cptch_options;
 		$str_key = $cptch_options['cptch_str_key']['key'];
 
+		if ( "" == session_id() )
+			@session_start();
+
+		if ( isset( $_SESSION["cptch_login"] ) && true === $_SESSION["cptch_login"] )
+			return $user;
+
 		/* Delete errors, if they set */
 		if ( isset( $_SESSION['cptch_error'] ) )
 			unset( $_SESSION['cptch_error'] );
+
+		if ( is_multisite() ) {
+			$active_plugins = (array) array_keys( get_site_option( 'active_sitewide_plugins', array() ) );
+			$active_plugins = array_merge( $active_plugins , get_option( 'active_plugins' ) );
+		} else {
+			$active_plugins = get_option( 'active_plugins' );
+		}
+		if ( 0 < count( preg_grep( '/limit-login-attempts\/limit-login-attempts.php/', $active_plugins ) ) ) { 
+			if ( isset( $_REQUEST['loggedout'] ) && isset( $_REQUEST['cptch_number'] ) && "" ==  $_REQUEST['cptch_number'] ) {
+				return $user;
+			}	
+		}		
 
 		/* Add error if captcha is empty */			
 		if ( ( ! isset( $_REQUEST['cptch_number'] ) || "" ==  $_REQUEST['cptch_number'] ) && isset( $_REQUEST['loggedout'] ) ) {
 			$error = new WP_Error();
 			$error->add( 'cptch_error', __( '<strong>ERROR</strong>: Please fill the form.', 'captcha' ) );
+			wp_clear_auth_cookie();
 			return $error;
 		}
 		if ( isset( $_REQUEST['cptch_result'] ) && isset( $_REQUEST['cptch_number'] ) && isset( $_REQUEST['cptch_time'] ) ) {
 			if ( 0 == strcasecmp( trim( decode( $_REQUEST['cptch_result'], $str_key, $_REQUEST['cptch_time'] ) ), $_REQUEST['cptch_number'] ) ) {
 				/* Captcha was matched */
+				$_SESSION['cptch_login'] = true;
 				return $user;								
 			} else {
+				$_SESSION['cptch_login'] = false;
+				wp_clear_auth_cookie();
 				/* Add error if captcha is incorrect */
 				$error = new WP_Error();
 				$error->add( 'cptch_error', __( '<strong>ERROR</strong>: Please enter a valid CAPTCHA value.', 'captcha' ) );
@@ -1270,16 +1292,7 @@ if ( ! function_exists( 'cptch_contact_form_options' ) ) {
 	function cptch_contact_form_options() {
 		if ( function_exists( 'get_plugins' ) ) {
 			$all_plugins = get_plugins();
-			if ( array_key_exists( 'contact-form-plugin/contact_form.php', $all_plugins ) ) {
-				$cptch_options = get_option( 'cptch_options' );
-				if ( 1 == $cptch_options['cptch_contact_form'] ) {
-					add_filter('cntctfrm_display_captcha', 'cptch_custom_form');
-					add_filter('cntctfrm_check_form', 'cptch_check_custom_form');
-				} elseif ( 0 == $cptch_options['cptch_contact_form'] ) {
-					remove_filter('cntctfrm_display_captcha', 'cptch_custom_form');
-					remove_filter('cntctfrm_check_form', 'cptch_check_custom_form');
-				}
-			} elseif ( array_key_exists( 'contact-form-pro/contact_form_pro.php', $all_plugins ) ) {
+			if ( array_key_exists( 'contact-form-pro/contact_form_pro.php', $all_plugins ) ) {
 				$cptch_options = get_option( 'cptch_options' );
 				if ( 1 == $cptch_options['cptch_contact_form'] ) {
 					add_filter('cntctfrmpr_display_captcha', 'cptch_custom_form');
@@ -1289,12 +1302,33 @@ if ( ! function_exists( 'cptch_contact_form_options' ) ) {
 					remove_filter('cntctfrmpr_check_form', 'cptch_check_custom_form');
 				}
 			}
+			if ( array_key_exists( 'contact-form-plugin/contact_form.php', $all_plugins ) ) {
+				$cptch_options = get_option( 'cptch_options' );
+				if ( 1 == $cptch_options['cptch_contact_form'] ) {
+					add_filter('cntctfrm_display_captcha', 'cptch_custom_form');
+					add_filter('cntctfrm_check_form', 'cptch_check_custom_form');
+				} elseif ( 0 == $cptch_options['cptch_contact_form'] ) {
+					remove_filter('cntctfrm_display_captcha', 'cptch_custom_form');
+					remove_filter('cntctfrm_check_form', 'cptch_check_custom_form');
+				}
+			}
 		} else {
 			if ( is_multisite() ) {
 				$active_plugins = (array) array_keys( get_site_option( 'active_sitewide_plugins', array() ) );
 				$active_plugins = array_merge( $active_plugins , get_option('active_plugins') );
 			} else {
 				$active_plugins = get_option('active_plugins');
+			}
+			if ( 0 < count( preg_grep( '/contact-form-pro\/contact_form_pro.php/', $active_plugins ) ) ) { 
+				$cptch_options = get_option( 'cptch_options' );
+				if ( 1 == $cptch_options['cptch_contact_form'] ) {
+					add_filter('cntctfrmpr_display_captcha', 'cptch_custom_form');
+					add_filter('cntctfrmpr_check_form', 'cptch_check_custom_form');
+				}
+				else if ( 0 == $cptch_options['cptch_contact_form'] ) {
+					remove_filter('cntctfrmpr_display_captcha', 'cptch_custom_form');
+					remove_filter('cntctfrmpr_check_form', 'cptch_check_custom_form');
+				}			
 			}
 			if ( 0 < count( preg_grep( '/contact-form-plugin\/contact_form.php/', $active_plugins ) ) ) { 
 				$cptch_options = get_option( 'cptch_options' );
@@ -1305,16 +1339,6 @@ if ( ! function_exists( 'cptch_contact_form_options' ) ) {
 				else if ( 0 == $cptch_options['cptch_contact_form'] ) {
 					remove_filter('cntctfrm_display_captcha', 'cptch_custom_form');
 					remove_filter('cntctfrm_check_form', 'cptch_check_custom_form');
-				}
-			} elseif ( 0 < count( preg_grep( '/contact-form-pro\/contact_form_pro.php/', $active_plugins ) ) ) { 
-				$cptch_options = get_option( 'cptch_options' );
-				if ( 1 == $cptch_options['cptch_contact_form'] ) {
-					add_filter('cntctfrmpr_display_captcha', 'cptch_custom_form');
-					add_filter('cntctfrmpr_check_form', 'cptch_check_custom_form');
-				}
-				else if ( 0 == $cptch_options['cptch_contact_form'] ) {
-					remove_filter('cntctfrmpr_display_captcha', 'cptch_custom_form');
-					remove_filter('cntctfrmpr_check_form', 'cptch_check_custom_form');
 				}
 			}
 		}

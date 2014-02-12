@@ -4,7 +4,7 @@ Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=10
 Tags: captcha, match captcha, text captcha, spam, antispam, login, registration, comment, lost password, capcha, catcha, captha
 Requires at least: 3.0
 Tested up to: 3.8.1
-Stable tag: 3.9.5
+Stable tag: 3.9.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -178,6 +178,10 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 5. Contact form with Captcha.
 
 == Changelog ==
+
+= V3.9.6 - 12.02.2014 =
+* Bugfix : Comflict with plugin Limit Login Attempts is fixed (a false login when logging out of the WP backend).
+* Bugfix : We fixed displaying captcha in contact form.
 
 = V3.9.5 - 03.02.2014 =
 * Update : We updated all functionality for wordpress 3.8.1.
@@ -447,6 +451,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 * Select functionality of mathematical actions and level of their difficulty are implemented.
 
 == Upgrade Notice ==
+
+= V3.9.6 =
+Comflict with plugin Limit Login Attempts is fixed (a false login when logging out of the WP backend). We fixed displaying captcha in contact form.
 
 = V3.9.5 =
 We updated all functionality for wordpress 3.8.1. Changed filter for captcha in the login form.
