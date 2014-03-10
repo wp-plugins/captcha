@@ -4,7 +4,7 @@ Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=10
 Tags: captcha, match captcha, text captcha, spam, antispam, login, registration, comment, lost password, capcha, catcha, captha
 Requires at least: 3.0
 Tested up to: 3.8.1
-Stable tag: 3.9.7
+Stable tag: 3.9.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -178,6 +178,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 6. Contact form with Captcha.
 
 == Changelog ==
+
+= V3.9.8 - 10.03.2014 =
+* Bugfix : We fixed error related to custom plugins folder.
 
 = V3.9.7 - 10.03.2014 =
 * Budfix : Plugin optimization is done.
@@ -455,6 +458,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 * Select functionality of mathematical actions and level of their difficulty are implemented.
 
 == Upgrade Notice ==
+
+= V3.9.8 =
+We fixed error related to custom plugins folder.
 
 = V3.9.7 =
 Plugin optimization is done. The French language file is updated.
