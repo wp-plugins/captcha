@@ -1,7 +1,7 @@
 <?php
 /*
 * Function for displaying BestWebSoft menu
-* Version: 1.2.5
+* Version: 1.2.6
 */
 
 if ( ! function_exists( 'bws_add_menu_render' ) ) {

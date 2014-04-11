@@ -28,7 +28,7 @@ License: GPLv2 or later
 if ( ! function_exists( 'cptch_admin_menu' ) ) {
 	function cptch_admin_menu() {
 		global $bstwbsftwppdtplgns_options, $wpmu, $bstwbsftwppdtplgns_added_menu;
-		$bws_menu_version = '1.2.5';
+		$bws_menu_version = '1.2.6';
 		$base = plugin_basename(__FILE__);
 
 		if ( ! isset( $bstwbsftwppdtplgns_options ) ) {
@@ -1484,7 +1484,9 @@ if ( ! function_exists ( 'cptch_plugin_banner' ) ) {
 					<div class="updated" style="padding: 0; margin: 0; border: none; background: none;">				                      
 						<div class="cptch_message bws_banner_on_plugin_page" style="display: none;">
 							<img class="cptch_close_icon close_icon" title="" src="<?php echo plugins_url( 'images/close_banner.png', __FILE__ ); ?>" alt=""/>
-							<a class="button" target="_blank" href="http://bestwebsoft.com/plugin/captcha-pro/?k=345f1af66a47b233cd05bc55b2382ff0&pn=75&v=<?php echo $cptch_plugin_info["Version"]; ?>&wp_v=<?php echo $wp_version; ?>"><?php _e( 'Learn More', 'captcha' ); ?></a>				
+							<div class="button_div">
+								<a class="button" target="_blank" href="http://bestwebsoft.com/plugin/captcha-pro/?k=345f1af66a47b233cd05bc55b2382ff0&pn=75&v=<?php echo $cptch_plugin_info["Version"]; ?>&wp_v=<?php echo $wp_version; ?>"><?php _e( 'Learn More', 'captcha' ); ?></a>				
+							</div>
 							<div class="text">
 								<?php _e( "It's time to upgrade your <strong>Captcha plugin</strong> to <strong>PRO</strong> version", 'captcha' ); ?>!<br />
 								<span><?php _e( 'Extend standard plugin functionality with new great options', 'captcha' ); ?>.</span>
