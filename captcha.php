@@ -602,7 +602,7 @@ if ( ! function_exists( 'cptch_login_form' ) ) {
 		/* captcha html - login form */
 		echo '<p class="cptch_block">';
 		if ( "" != $cptch_options['cptch_label_form'] )	
-			echo '<label>' . html_entity_decode( $cptch_options['cptch_label_form'] ) . '</label><br />';
+			echo '<label>' . $cptch_options['cptch_label_form'] . '</label><br />';
 		if ( isset( $_SESSION['cptch_error'] ) ) {
 			echo "<br /><span style='color:red'>" . $_SESSION['cptch_error'] . "</span><br />";
 			unset( $_SESSION['cptch_error'] );
@@ -684,7 +684,7 @@ if ( ! function_exists( 'cptch_comment_form' ) ) {
 		/* captcha html - comment form */
 		echo '<p class="cptch_block">';
 		if ( "" != $cptch_options['cptch_label_form'] )	
-			echo '<label>' . html_entity_decode( $cptch_options['cptch_label_form'] ) . '<span class="required"> ' . html_entity_decode( $cptch_options['cptch_required_symbol'] ) . '</span></label>';
+			echo '<label>' . $cptch_options['cptch_label_form'] . '<span class="required"> ' . $cptch_options['cptch_required_symbol'] . '</span></label>';
 		echo '<br />';
 		cptch_display_captcha();
 		echo '</p>';
@@ -726,7 +726,7 @@ if ( ! function_exists( 'cptch_comment_form_wp3' ) ) {
 		/* captcha html - comment form */
 		echo '<p class="cptch_block">';
 		if ( "" != $cptch_options['cptch_label_form'] )	
-			echo '<label>' . html_entity_decode( $cptch_options['cptch_label_form'] ) . '<span class="required"> ' . html_entity_decode( $cptch_options['cptch_required_symbol'] ) . '</span></label>';
+			echo '<label>' . $cptch_options['cptch_label_form'] . '<span class="required"> ' . $cptch_options['cptch_required_symbol'] . '</span></label>';
 		echo '<br />';
 		cptch_display_captcha();
 		echo '</p>';
@@ -792,7 +792,7 @@ if ( ! function_exists( 'cptch_register_form' ) ) {
 		/* the captcha html - register form */
 		echo '<p class="cptch_block" style="text-align:left;">';
 		if ( "" != $cptch_options['cptch_label_form'] )	
-			echo '<label>'. html_entity_decode( $cptch_options['cptch_label_form'] ) .'</label><br />';
+			echo '<label>'. $cptch_options['cptch_label_form'] .'</label><br />';
 		echo '<br />';
 		cptch_display_captcha();
 		echo '</p>
@@ -1136,7 +1136,7 @@ if ( ! function_exists( 'cptch_custom_form' ) ) {
 		/* captcha html - login form */
 		$content .= '<p class="cptch_block" style="text-align:left;">';
 		if ( "" != $cptch_options['cptch_label_form'] )	
-			$content .= '<label>' . html_entity_decode( $cptch_options['cptch_label_form'] ) .'<span class="required"> ' . html_entity_decode( $cptch_options['cptch_required_symbol'] ) . '</span></label><br />';
+			$content .= '<label>' . $cptch_options['cptch_label_form'] .'<span class="required"> ' . $cptch_options['cptch_required_symbol'] . '</span></label><br />';
 		else
 			$content .= '<br />';
 		if ( isset( $error_message['error_captcha'] ) ) {
